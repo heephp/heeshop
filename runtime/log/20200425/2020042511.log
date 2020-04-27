@@ -1,0 +1,1174 @@
+2020-04-25 11:00:44 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:00:44 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:00:44 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:00:44 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:00:44 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:00:44 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:00:44 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:00:44 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:00:44 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:00:44 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:00:44 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:00:46 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:00:46 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:00:46 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:00:46 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:00:46 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:00:46 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:00:46 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:00:46 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:00:46 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:00:46 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:00:46 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:01:15 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:01:15 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:01:15 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:01:15 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:01:15 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:01:15 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:01:15 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:01:15 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:01:15 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:01:15 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:01:15 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:01:27 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:01:27 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:01:27 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:01:27 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:01:27 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:01:27 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:01:27 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:01:27 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:01:27 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:01:27 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:01:27 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:01:30 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:01:30 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:01:30 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:01:30 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:01:30 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:01:30 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:01:30 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:01:30 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:01:30 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:01:30 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:01:30 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:02:25 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:02:25 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:02:25 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:02:25 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:02:25 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:02:25 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:02:25 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:02:25 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:02:25 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:02:25 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:02:25 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:02:25 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:02:25 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:03:53 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:03:53 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:03:53 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:03:53 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:03:53 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:03:53 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:03:53 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:03:53 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:03:53 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:03:53 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:03:53 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:03:53 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:03:53 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:03:56 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:03:56 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:03:56 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:03:56 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:03:56 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:03:56 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:03:56 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:03:56 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:03:56 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:03:56 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:03:56 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:03:56 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:03:56 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:05:38 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:05:38 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:05:38 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:05:38 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:05:38 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:05:38 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:05:38 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:05:38 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:05:38 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:05:38 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:05:38 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:05:50 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:05:50 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:05:50 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:05:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:05:50 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:05:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:05:50 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:05:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:05:50 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:05:50 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:05:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:05:50 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:05:50 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:05:56 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:05:56 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:05:56 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:05:56 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:05:56 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:05:56 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:05:56 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:05:56 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:05:56 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:05:56 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:05:56 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:05:56 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:05:56 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:07:13 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:07:13 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:07:13 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:07:13 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:07:13 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:07:13 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:07:13 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:07:13 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:07:13 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:07:13 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:07:13 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:07:13 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:07:13 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:07:44 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:07:44 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:07:44 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:07:44 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:07:44 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:07:44 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:07:44 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:07:44 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:07:44 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:07:44 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:07:44 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:07:44 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:07:44 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:08:54 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:08:54 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:08:54 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:08:54 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:08:54 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:08:54 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:08:54 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:08:54 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:08:54 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:08:54 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:08:54 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:08:54 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:08:54 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:09:31 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:09:31 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:09:31 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:09:31 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:09:31 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:09:31 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:09:31 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:09:31 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:09:31 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:09:31 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:09:31 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:09:31 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:09:31 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:10:05 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:10:05 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:10:05 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:10:05 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:10:05 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:10:05 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:10:05 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:10:05 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:10:05 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:10:05 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:10:05 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:10:05 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:10:05 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:10:12 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:10:12 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:10:12 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:10:12 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:10:12 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:10:12 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:10:12 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:10:12 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:10:12 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:10:12 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:10:12 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:10:12 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:10:12 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:10:16 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:10:16 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:10:16 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:10:16 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:10:16 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:10:16 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:10:16 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:10:16 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:10:16 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:10:16 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:10:16 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:10:16 [DEBUG] [root]select * from heecms_category where (parent_id>0) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:10:44 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:10:44 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:10:44 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:10:44 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:10:44 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:10:44 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:10:44 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:10:44 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:10:44 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:10:44 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:10:44 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:10:44 [DEBUG] [root]SHOW COLUMNS FROM `heecms_article`
+2020-04-25 11:10:44 [DEBUG] [root]insert into heecms_article (category_id,title,remark,keyword,author,context,create_time) values ('2','标题2','描述2','关键词2','作者2','&lt;p&gt;内容2&lt;/p&gt;','1587784244')
+2020-04-25 11:10:45 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:10:45 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:10:45 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:10:45 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:10:45 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:10:45 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:10:45 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:10:45 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:10:45 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:10:45 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:10:45 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:10:45 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:10:45 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:11:19 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:11:19 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:11:19 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:11:19 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:11:19 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:11:19 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:11:19 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:11:19 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:11:19 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:11:19 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:11:19 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:11:19 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:11:19 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:11:21 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:11:21 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:11:21 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:11:21 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:11:21 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:11:21 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:11:21 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:11:21 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:11:21 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:11:21 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:11:21 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:11:21 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:11:21 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:11:21 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:11:21 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:11:21 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:11:21 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:11:21 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:11:21 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:11:21 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:11:21 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:11:21 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:11:21 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:11:21 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:11:21 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:11:21 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:12:09 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:12:09 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:12:09 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:12:09 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:12:09 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:12:09 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:12:09 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:12:09 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:12:09 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:12:09 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:12:09 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:12:09 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:12:09 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:12:54 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:12:54 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:12:54 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:12:54 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:12:54 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:12:54 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:12:54 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:12:54 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:12:54 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:12:54 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:12:54 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:12:54 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:12:54 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:14:32 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:14:32 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:14:32 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:14:33 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:14:33 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:14:33 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:14:33 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:14:33 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:14:33 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:14:33 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:14:33 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:14:33 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:14:33 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:14:36 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:14:36 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:14:36 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:14:36 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:14:36 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:14:36 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:14:36 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:14:36 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:14:36 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:14:36 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:14:36 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:14:36 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:14:36 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:16:13 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:16:13 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:16:13 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:16:13 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:16:13 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:16:13 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:16:13 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:16:13 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:16:13 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:16:13 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:16:13 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:16:13 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:16:13 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:16:13 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:16:13 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:16:16 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:16:16 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:16:16 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:16:16 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:16:16 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:16:16 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:16:16 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:16:16 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:16:16 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:16:16 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:16:16 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:16:16 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:16:16 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:16:16 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:16:16 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:18:44 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:18:44 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:18:44 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:18:44 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:18:44 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:18:44 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:18:44 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:18:44 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:18:44 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:18:44 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:18:44 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:18:44 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:18:44 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:18:44 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:18:44 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:20:28 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:20:28 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:20:28 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:20:28 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:20:28 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:20:28 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:20:28 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:20:29 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:20:29 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:20:29 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:20:29 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:20:29 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:20:29 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:20:29 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:20:29 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:20:30 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:20:30 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:20:30 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:20:30 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:20:30 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:20:30 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:20:30 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:20:30 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:20:30 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:20:30 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:20:30 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:20:30 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:20:30 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:20:30 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:20:30 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:23:15 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:23:15 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:23:15 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:23:15 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:23:15 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:23:15 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:23:15 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:23:15 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:23:15 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:23:15 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:23:15 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:23:15 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:23:15 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:23:15 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:23:15 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:23:23 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:23:23 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:23:23 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:23:23 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:23:23 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:23:23 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:23:23 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:23:23 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:23:23 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:23:23 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:23:23 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:23:23 [DEBUG] [root]select * from heecms_category where (parent_id>0) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:23:24 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:23:24 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:23:24 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:23:24 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:23:24 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:23:24 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:23:24 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:23:24 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:23:24 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:23:24 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:23:24 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:23:24 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:23:24 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:23:24 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:23:24 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:23:25 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:23:25 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:23:25 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:23:25 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:23:25 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:23:25 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:23:25 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:23:25 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:23:25 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:23:25 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:23:25 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:23:25 [DEBUG] [root]select * from heecms_category where (parent_id>0) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:23:30 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:23:30 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:23:30 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:23:30 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:23:30 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:23:30 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:23:30 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:23:30 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:23:30 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:23:30 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:23:30 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:23:30 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:23:30 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:23:30 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:23:30 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:23:32 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:23:32 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:23:32 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:23:32 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:23:32 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:23:32 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:23:32 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:23:32 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:23:32 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:23:32 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:23:32 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:23:32 [DEBUG] [root]select * from heecms_category where (parent_id>0) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:23:32 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:25:00 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:25:00 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:25:00 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:25:00 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:25:00 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:25:00 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:25:00 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:25:00 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:25:00 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:25:00 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:25:00 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:25:03 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:25:03 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:25:03 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:25:03 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:25:03 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:25:03 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:25:03 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:25:03 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:25:03 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:25:03 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:25:03 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:25:03 [DEBUG] [root]select * from heecms_category where (parent_id>0) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:25:03 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:25:22 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:25:22 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:25:22 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:25:22 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:25:22 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:25:22 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:25:22 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:25:22 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:25:22 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:25:22 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:25:22 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:25:22 [DEBUG] [root]SHOW COLUMNS FROM `heecms_article`
+2020-04-25 11:25:22 [DEBUG] [root]update `heecms_article` set `category_id`='2',`title`='测试内容标题',`remark`='描述',`keyword`='关键词',`author`='作者',`context`='&lt;p&gt;&lt;img src=\&quot;/upload/20200425/1587782677251926.jpg\&quot;/&gt;&lt;/p&gt;' where `article_id` = '2' 
+2020-04-25 11:25:24 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:25:24 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:25:24 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:25:24 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:25:24 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:25:24 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:25:24 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:25:24 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:25:24 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:25:24 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:25:24 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:25:24 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:25:24 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:25:24 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:25:24 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:25:26 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:25:26 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:25:26 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:25:26 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:25:26 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:25:26 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:25:26 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:25:26 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:25:26 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:25:26 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:25:26 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:25:26 [DEBUG] [root]select * from heecms_category where (parent_id>0) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:25:26 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:30:22 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:30:22 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:30:22 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:30:22 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:30:22 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:30:22 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:30:22 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:30:22 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:30:22 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:30:22 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:30:22 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:30:22 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:30:22 [DEBUG] [root]select * from heecms_category where (`parent_id`='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:30:22 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:30:46 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:30:46 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:30:46 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:30:46 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:30:46 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:30:46 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:30:46 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:30:46 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:30:46 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:30:46 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:30:46 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:30:46 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:30:46 [DEBUG] [root]select * from heecms_category where (`parent_id`='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:30:46 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:31:28 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:31:28 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:31:28 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:31:28 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:31:28 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:31:28 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:31:28 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:31:28 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:31:28 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:31:28 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:31:28 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:31:29 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:31:29 [DEBUG] [root]select * from heecms_category where (`parent_id`='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:31:29 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:32:08 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:32:08 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:32:08 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:32:08 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:32:08 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:32:08 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:32:08 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:32:08 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:32:08 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:32:08 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:32:08 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:32:08 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:32:08 [DEBUG] [root]select * from heecms_category where (`parent_id`='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:32:08 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:32:22 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:32:22 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:32:22 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:32:22 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:32:22 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:32:22 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:32:22 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:32:22 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:32:22 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:32:22 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:32:22 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:32:37 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:32:37 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:32:37 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:32:37 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:32:37 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:32:37 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:32:37 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:32:37 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:32:37 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:32:37 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:32:37 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:32:37 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:32:37 [DEBUG] [root]select * from heecms_category where (`parent_id`='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:32:37 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:32:50 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:32:50 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:32:50 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:32:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:32:50 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:32:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:32:50 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:32:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:32:50 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:32:50 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:32:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:32:52 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:32:52 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:32:52 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:32:52 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:32:52 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:32:52 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:32:52 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:32:52 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:32:52 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:32:52 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:32:52 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:32:52 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:32:52 [DEBUG] [root]select * from heecms_category where (`parent_id`='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:32:52 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:33:01 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:33:01 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:33:01 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:33:01 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:33:01 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:33:01 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:33:01 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:33:01 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:33:01 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:33:01 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:33:01 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:33:01 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:33:01 [DEBUG] [root]select * from heecms_category where (`parent_id`='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:33:01 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:35:28 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:35:28 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:35:28 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:35:28 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:35:28 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:35:28 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:35:28 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:35:28 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:35:28 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:35:28 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:35:28 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:35:28 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:35:28 [DEBUG] [root]select * from heecms_category where (`parent_id`='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:35:28 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:36:22 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:36:22 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:36:22 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:36:22 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:36:22 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:36:22 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:36:22 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:36:22 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:36:22 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:36:22 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:36:22 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:36:22 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:36:22 [DEBUG] [root]select * from heecms_category where (`parent_id`='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:36:22 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:36:34 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:36:34 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:36:34 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:36:34 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:36:34 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:36:34 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:36:34 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:36:34 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:36:34 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:36:34 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:36:34 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:36:34 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:36:34 [DEBUG] [root]select * from heecms_category where (`parent_id`='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:36:34 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:39:23 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:39:23 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:39:23 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:39:23 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:39:23 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:39:23 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:39:23 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:39:23 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:39:23 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:39:23 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:39:23 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:39:23 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:39:23 [DEBUG] [root]select * from heecms_category where (`parent_id`='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:39:23 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:39:34 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:39:34 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:39:34 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:39:34 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:39:34 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:39:34 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:39:34 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:39:34 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:39:34 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:39:34 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:39:34 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:39:34 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:39:34 [DEBUG] [root]select * from heecms_category where (`parent_id`='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:39:34 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:40:06 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:40:06 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:40:06 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:40:07 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:40:07 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:40:07 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:40:07 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:40:07 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:40:07 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:40:07 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:40:07 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:40:07 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:40:07 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:40:07 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:40:10 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:40:10 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:40:10 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:40:10 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:40:10 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:40:10 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:40:10 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:40:10 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:40:10 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:40:10 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:40:10 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:40:10 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:40:10 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:40:10 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:40:38 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:40:38 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:40:38 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:40:38 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:40:38 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:40:38 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:40:38 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:40:38 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:40:38 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:40:38 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:40:38 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:40:41 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:40:41 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:40:41 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:40:41 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:40:41 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:40:41 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:40:41 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:40:41 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:40:41 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:40:41 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:40:41 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:40:41 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:40:41 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:40:41 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:40:54 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:40:54 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:40:54 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:40:54 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:40:54 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:40:54 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:40:54 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:40:54 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:40:54 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:40:54 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:40:54 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:43:19 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:43:19 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:43:19 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:43:19 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:43:19 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:43:19 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:43:19 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:43:19 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:43:19 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:43:19 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:43:19 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:43:19 [DEBUG] [root]SHOW COLUMNS FROM `heecms_article`
+2020-04-25 11:43:19 [DEBUG] [root]update `heecms_article` set `category_id`='2',`title`='测试内容标题',`remark`='描述',`keyword`='关键词',`author`='作者',`context`='&lt;p&gt;&lt;img src=\&quot;/upload/20200425/1587782677251926.jpg\&quot;/&gt;&lt;/p&gt;' where `article_id` = '2' 
+2020-04-25 11:43:20 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:43:20 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:43:20 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:43:20 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:43:20 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:43:20 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:43:20 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:43:20 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:43:20 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:43:20 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:43:20 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:43:20 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:43:20 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:43:20 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:45:50 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:45:50 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:45:50 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:45:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:45:50 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:45:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:45:50 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:45:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:45:50 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:45:50 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:45:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:45:50 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:45:50 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:45:50 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:45:51 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:45:51 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:45:51 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:45:51 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:45:51 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:45:51 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:45:51 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:45:51 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:45:51 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:45:51 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:45:51 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:45:51 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:45:51 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:45:51 [DEBUG] [root]select * from heecms_article where (article_id = '%22') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:45:57 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:45:57 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:45:57 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:45:57 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:45:57 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:45:57 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:45:57 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:45:57 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:45:57 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:45:57 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:45:57 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:45:57 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:45:57 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:45:57 [DEBUG] [root]select * from heecms_article where (article_id = '%22') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:45:58 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:45:58 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:45:58 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:45:58 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:45:58 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:45:58 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:45:58 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:45:58 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:45:58 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:45:58 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:45:58 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:45:58 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:45:58 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:45:58 [DEBUG] [root]select * from heecms_article where (article_id = '%22') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:46:00 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:46:00 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:46:00 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:46:00 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:46:00 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:46:00 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:46:00 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:46:00 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:46:00 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:46:00 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:46:00 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:46:00 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:46:00 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:46:00 [DEBUG] [root]select * from heecms_article where (article_id = '%22') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:46:10 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:46:10 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:46:10 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:46:10 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:46:10 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:46:10 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:46:10 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:46:10 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:46:10 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:46:10 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:46:10 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:46:10 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:46:10 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:46:10 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:46:13 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:46:13 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:46:13 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:46:13 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:46:13 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:46:13 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:46:13 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:46:13 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:46:13 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:46:13 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:46:13 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:46:13 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:46:13 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:46:13 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:47:04 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:47:04 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:47:04 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:47:04 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:47:04 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:47:04 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:47:04 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:47:04 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:47:04 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:47:04 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:47:04 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:47:11 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:47:11 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:47:11 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:47:11 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:47:11 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:47:11 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:47:11 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:47:11 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:47:11 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:47:11 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:47:11 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:50:41 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:50:41 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:50:41 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:50:41 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:50:41 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:50:41 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:50:41 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:50:41 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:50:41 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:50:41 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:50:41 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:50:41 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:50:41 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:50:41 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:50:44 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:50:44 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:50:44 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:50:44 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:50:44 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:50:45 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:50:45 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:50:45 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:50:45 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:50:45 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:50:45 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:50:45 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:50:45 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:50:45 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:50:50 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:50:50 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:50:50 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:50:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:50:50 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:50:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:50:50 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:50:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:50:50 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:50:50 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:50:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:50:50 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:50:50 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:50:50 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:51:07 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:51:07 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:51:07 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:51:07 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:51:07 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:51:07 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:51:07 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:51:07 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:51:07 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:51:07 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:51:07 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:51:07 [DEBUG] [root]SHOW COLUMNS FROM `heecms_article`
+2020-04-25 11:51:07 [DEBUG] [root]update `heecms_article` set `category_id`='2',`title`='测试内容标题',`remark`='描述',`keyword`='关键词',`author`='作者',`context`='&lt;p&gt;&lt;img src=\&quot;/upload/20200425/1587782677251926.jpg\&quot;/&gt;&lt;/p&gt;' where `article_id` = '2' 
+2020-04-25 11:51:08 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:51:08 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:51:08 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:51:08 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:51:08 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:51:08 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:51:08 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:51:08 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:51:08 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:51:08 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:51:08 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:51:08 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:51:08 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:51:08 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:51:10 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:51:10 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:51:10 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:51:10 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:51:10 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:51:10 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:51:10 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:51:10 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:51:10 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:51:10 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:51:10 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:51:10 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:51:10 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:51:10 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:51:10 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:51:13 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:51:13 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:51:13 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:51:13 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:51:13 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:51:13 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:51:13 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:51:13 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:51:13 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:51:13 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:51:14 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:51:14 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:51:14 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:51:14 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:51:17 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:51:17 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:51:17 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:51:17 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:51:17 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:51:17 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:51:17 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:51:17 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:51:17 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:51:17 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:51:17 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:51:17 [DEBUG] [root]SHOW COLUMNS FROM `heecms_article`
+2020-04-25 11:51:17 [DEBUG] [root]update `heecms_article` set `category_id`='2',`title`='测试内容标题',`remark`='描述',`keyword`='关键词',`author`='作者',`context`='&lt;p&gt;&lt;img src=\&quot;/upload/20200425/1587782677251926.jpg\&quot;/&gt;&lt;/p&gt;' where `article_id` = '2' 
+2020-04-25 11:51:18 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:51:18 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:51:18 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:51:18 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:51:18 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:51:18 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:51:18 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:51:18 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:51:18 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:51:18 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:51:18 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:51:18 [DEBUG] [root]select * from heecms_category where (parent_id<0 or parent_id is NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:51:18 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:51:18 [DEBUG] [root]select * from heecms_article where (article_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:55:50 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:55:50 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:55:50 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:55:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:55:50 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:55:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:55:50 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:55:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:55:50 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:55:50 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:55:50 [DEBUG] [root]select * from heecms_menus where (parent_id=0 or parent_id IS NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-04-25 11:55:50 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:55:50 [DEBUG] [root]select * from heecms_menus where (`parent_id`='8') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-04-25 11:55:50 [DEBUG] [root]select * from heecms_users where (`users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:55:50 [DEBUG] [root]select * from heecms_menus where (`parent_id`='10') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-04-25 11:55:50 [DEBUG] [root]select * from heecms_menus where (`parent_id`='5') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-04-25 11:55:50 [DEBUG] [root]select count(*) c from `heecms_category` where (parent_id<1 or parent_id IS NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:55:50 [DEBUG] [root]select * from heecms_category where (parent_id<1 or parent_id IS NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:55:50 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:55:52 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:55:52 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:55:52 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:55:52 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:55:52 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:55:52 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:55:52 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:55:52 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:55:52 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:55:52 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:55:52 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:55:52 [DEBUG] [root]select count(*) c from `heecms_article` where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:55:52 [DEBUG] [root]select * from heecms_article where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:55:52 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:55:52 [DEBUG] [root]select * from heecms_category where (`category_id`='2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:55:55 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:55:55 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:55:55 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:55:55 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:55:55 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:55:55 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:55:55 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:55:55 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:55:55 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:55:55 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:55:55 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:55:55 [DEBUG] [root]select count(*) c from `heecms_link_group` where 1=1
+2020-04-25 11:55:55 [DEBUG] [root]select * from heecms_link_group where 1=1  limit 0,5
+2020-04-25 11:55:58 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:55:58 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:55:58 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:55:58 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:55:58 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:55:58 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:55:58 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:55:58 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:55:58 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:55:58 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:55:58 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:55:58 [DEBUG] [root]select count(*) c from `heecms_category` where (parent_id<1 or parent_id IS NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:55:58 [DEBUG] [root]select * from heecms_category where (parent_id<1 or parent_id IS NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:55:58 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 
+2020-04-25 11:56:00 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:56:00 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:56:00 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:56:00 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:56:00 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:56:00 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:56:00 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:56:00 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:56:00 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:56:00 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:56:00 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:56:00 [DEBUG] [root]select * from heecms_category where (parent_id<1 or parent_id IS NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:56:00 [DEBUG] [root]select * from heecms_category where (category_id = '2') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:56:03 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-04-25 11:56:03 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-04-25 11:56:03 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-04-25 11:56:03 [DEBUG] [root]SHOW COLUMNS FROM `heecms_users_group`
+2020-04-25 11:56:03 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-04-25 11:56:03 [DEBUG] [root]SHOW COLUMNS FROM `heecms_message`
+2020-04-25 11:56:03 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-04-25 11:56:03 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:56:03 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-04-25 11:56:03 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-04-25 11:56:04 [DEBUG] [root]SHOW COLUMNS FROM `heecms_menus`
+2020-04-25 11:56:04 [DEBUG] [root]select count(*) c from `heecms_category` where (parent_id<1 or parent_id IS NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-04-25 11:56:04 [DEBUG] [root]select * from heecms_category where (parent_id<1 or parent_id IS NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  limit 0,5
+2020-04-25 11:56:04 [DEBUG] [root]select * from heecms_category where (`parent_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by parent_id asc 

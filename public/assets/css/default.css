@@ -1,0 +1,11 @@
+.pagination{line-height: 50px;}
+.pagination li{margin:5px;}
+
+.avatar-img{
+    opacity:0.5;
+    filter:alpha(opacity=50); /* 针对 IE8 以及更早的版本 */
+}
+.avatar-img:hover{
+    opacity:0.9;
+    filter:alpha(opacity=90); /* 针对 IE8 以及更早的版本 */
+}

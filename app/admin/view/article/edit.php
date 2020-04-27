@@ -1,0 +1,104 @@
+<?import('/layout/header.php');?>
+<div class="page-inner">
+    <div class="page-header">
+        <h4 class="page-title">信息</h4>
+        <ul class="breadcrumbs">
+            <li class="nav-home">
+                <a href="#">
+                    <i class="flaticon-home"></i>
+                </a>
+            </li>
+            <li class="separator">
+                <i class="flaticon-right-arrow"></i>
+            </li>
+            <li class="nav-item">
+                <a href="#">管理</a>
+            </li>
+            <li class="separator">
+                <i class="flaticon-right-arrow"></i>
+            </li>
+            <li class="nav-item">
+                <a href="#">信息编辑</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <?import('/layout/toolsbar.php')?>
+                <div class="card-body">
+                    <form action="<?=url('save')?>" method="post">
+                        <input type="hidden" name="article_id" value="<?=$m['article_id']?>">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label for="parent_id">栏目</label>
+                                    <select class="form-control" name="category_id">
+                                        <option value="0">无</option>
+                                        <?foreach ($plist as $p){?>
+                                            <optgroup label="<?=$p['name']?>">
+                                                <?foreach ($p['child'] as $c){?>
+                                                <option value="<?=$c['category_id']?>" <?=($c['category_id']==$m['category_id'])?'selected':''?>><?=$c['name']?></option>
+                                                <?}?>
+                                            </optgroup>
+                                        <?}?>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="title">标题</label>
+                                    <input type="text" class="form-control" name="title" placeholder="标题" value="<?=$m['title']?>">
+                                </div>
+                                <div class="form-group">
+                                    <label for="remark">描述</label>
+                                    <textarea type="text" class="form-control" name="remark" placeholder="描述" >
+                                        <?=$m['remark']?>
+                                    </textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="link">关键词</label>
+                                    <input type="text" class="form-control" name="keyword" placeholder="关键词" value="<?=$m['keyword']?>">
+                                </div>
+                                <div class="form-group">
+                                    <label for="link">作者</label>
+                                    <input type="text" class="form-control" name="author" placeholder="作者" value="<?=$m['author']?>">
+                                </div>
+                                <div class="form-group">
+                                    <label for="container">内容</label>
+                                    <script id="container" name="context" type="text/plain">
+                                        <?= html_entity_decode($m['context'])?>
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p></p><p></p>
+                        <div class="card-action">
+                            <input type="submit" class="btn btn-success" value="提交">
+                            <input type="reset" class="btn btn-danger" value="重置">
+                        </div>
+
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <?
+    import('/layout/bottom.php');
+
+    ?>
+
+    <?function js(){?>
+        <!-- 配置文件 -->
+        <script type="text/javascript" src="/assets/plugin/ueditor/ueditor.config.js"></script>
+        <!-- 编辑器源码文件 -->
+        <script type="text/javascript" src="/assets/plugin/ueditor/ueditor.all.js"></script>
+        <!-- 实例化编辑器 -->
+        <script type="text/javascript">
+            var ue = UE.getEditor('container',{autoHeightEnabled:false,initialFrameHeight:500});
+        </script>
+
+    <?}?>
