@@ -93,7 +93,13 @@ class model{
         }
         if(empty($where)){
             $where='`'.$this->key.'` = \''.$data[$this->key].'\'';
+        }else if(is_array($where)){
+            $where='`'.array_key_first($where).'` = \''.array_values($where)[0].'\'';
         }
+
+        if($this->autotimespan)
+            $data[$this->field_updatetime]=time();
+
         $this->set_autofield($data);
         return $this->db->update($this->table,$data,$where);
     }
@@ -136,7 +142,7 @@ class model{
         $pagesize=config('pagesize')??20;
 
         //$url = request('ser.REQUEST_URI');
-        $url='/'.APP.'/'.CONTROLLER.'/'.METHOD.'/'.implode('/',PARMS);
+        $url=url('/'.APP.'/'.CONTROLLER.'/'.METHOD.'/'.implode('/',PARMS));
 
         //下划线分隔取出page数值
         preg_match('/'.$pname.'_\d+/',$url,$match);
@@ -396,7 +402,7 @@ class model{
         if($name=='data')
             return $this->data;
         if($name=='key')
-            return $this->key;
+            return empty($this->key)?$this->db->getKeyFiled($this->table):$this->key;
         if($name=='table')
             return $this->table;
 

@@ -841,7 +841,7 @@ class pdo implements databaseInterface {
 
             if ($this->adapter == "mysql") {
 
-                return $this->query("DESCRIBE `" . $table . "`");
+                return $this->query("show full columns from `" . $table . "`");
 
             } else if ($this->adapter == "sqlite") {
 

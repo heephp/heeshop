@@ -1,5 +1,8 @@
 <?php
 //url获取
+use heephp\logger;
+use heephp\route;
+
 function urlget(){
     $url=$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$_SERVER['REQUEST_URI'];//print_r($_SERVER['REQUEST_URI']);
     $urlstrs=parse_url($url);
@@ -160,58 +163,69 @@ function cache($name='',$value='',$exp_time=1){
 /*
  * 上传文件
  */
-function uploadfile($fname,$allowedExts,$allowfilesize,$dir,$nametype='md5'){
+function uploadfile($fname,$allowedExts,$allowfilesize,$dir,$nametype='md5')
+{
     $info = [];
     // 允许上传的图片后缀
-    //$allowedExts = array("gif", "jpeg", "jpg", "png");
     $temp = explode(".", $_FILES[$fname]["name"]);
-    //echo $_FILES["file"]["size"];
     $extension = end($temp);     // 获取文件后缀名
-    if (($_FILES[$fname]["size"] < $allowfilesize)   // 小于 200 kb
-        && in_array($extension, $allowedExts))
+    if ((($_FILES[$fname]["size"] / 1024) > $allowfilesize))  // 文件大小
     {
-        if ($_FILES[$fname]["error"] > 0)
-        {
-            $info['error']= $_FILES[$fname]["error"];
+        $info['error'] = "文件大小不符合要求,应该小于" . $allowfilesize . 'K';
+        return $info;
+    }
+    if (!in_array($extension, $allowedExts)) {
+
+        $info['error'] = "非法的文件格式，应该为：" . implode(',', $allowedExts);
+        return $info;
+    }  //文件类型
+
+    if ($_FILES[$fname]["error"] > 0) {
+        $info['error'] = $_FILES[$fname]["error"];
+        return $info;
+    } else {
+        //如果未选择要上传的文件
+        if (empty($_FILES[$fname]['name'])) {
+            return NULL;
         }
-        else {
-            $info['source_name'] = $_FILES[$fname]["name"];
-            $info['type'] = $_FILES[$fname]["type"];
-            $info['size'] = ($_FILES[$fname]["size"] / 1024);
-            $info['temp_name'] = $_FILES[$fname]["tmp_name"];
 
-            // 判断当期目录下的 dir 目录是否存在该文件
-            if (!is_dir($dir)) {
-                $res = mkdir($dir, 0777, true);
-                if (!$res) {
-                    $info['error'] = "目录 $dir 创建失败";
-                }
+        $info['source_name'] = $_FILES[$fname]["name"];
+        $info['type'] = $_FILES[$fname]["type"];
+        $info['size'] = ($_FILES[$fname]["size"] / 1024);
+        $info['temp_name'] = $_FILES[$fname]["tmp_name"];
+
+        // 判断当期目录下的 dir 目录是否存在该文件
+        if (!is_dir($dir)) {
+            $res = mkdir($dir, 0777, true);
+            if (!$res) {
+                $info['error'] = "目录 $dir 创建失败";
+                return $info;
             }
-            // 如果没有 dir 目录，你需要创建它，upload 目录权限为 777
-            if (file_exists($dir . $_FILES[$fname]["name"])) {
-                $info['error'] = $_FILES[$fname]["name"] . " 文件已经存在。 ";
-            }
-
-            //生成文件名 默认 md5
-            $filename = md5(time() . rand(1, 999999)) . '.' . $extension;
-
-            if ($nametype == 'timespan')
-                $filename = time() . rand(1, 999999) . '.' . $extension;
-            else if ($nametype == 'guid')
-                $filename = guid() . '.' . $extension;
-
-            $info['name']= $filename;
-            $info['ext']=$extension;
-
-            move_uploaded_file($_FILES[$fname]["tmp_name"], $dir .'\\'.$filename);
+        }
+        // 如果没有 dir 目录，你需要创建它，upload 目录权限为 777
+        if (file_exists($dir . $_FILES[$fname]["name"])) {
+            $info['error'] = $_FILES[$fname]["name"] . " 文件已经存在。 ";
             return $info;
-
         }
+
+        //生成文件名 默认 md5
+        $filename = md5(time() . rand(1, 999999)) . '.' . $extension;
+
+        if ($nametype == 'timespan')
+            $filename = time() . rand(1, 999999) . '.' . $extension;
+        else if ($nametype == 'guid')
+            $filename = guid() . '.' . $extension;
+
+        $info['name'] = $filename;
+        $info['ext'] = $extension;
+        $info['fullpath'] = $dir . '\\' . $filename;
+
+
+        move_uploaded_file($_FILES[$fname]["tmp_name"], $dir . '\\' . $filename);
+        return $info;
+
     }
-    else
-    {
-        $info['error']= "非法的文件格式或文件大小不符合要求";
-    }
+
     return $info;
 }
 
@@ -571,38 +585,38 @@ function sendmail($to,$subject,$body,$attachment='',$conf=[])
  * 生成URL路径
  * @path 路径
  */
-function url($path,$parm=''){
+function url($path,$parm='')
+{
 
     //清除多余字符
-    while (strpos($path,"//")>-1){
-        $path = str_replace("//","/",$path);
+    while (strpos($path, "//") > -1) {
+        $path = str_replace("//", "/", $path);
     }
 
 
-    $allpath = explode('/',$path);
+    $allpath = explode('/', $path);
 
     $result_url = '';
 
-    if(strstr($path,'/')==$path){
+    if (strstr($path, '/') == $path) {
 
-        $result_url= $path;
+        $result_url = $path;
 
-    }else{
+    } else {
 
-        if(APPS){
-            $result_url = '/'.APP.'/'.CONTROLLER.'/'.$path;
-        }else
-            $result_url= '/'.CONTROLLER.'/'.$path;
+        if (APPS) {
+            $result_url = '/' . APP . '/' . CONTROLLER . '/' . $path;
+        } else
+            $result_url = '/' . CONTROLLER . '/' . $path;
     }
 
-    if(is_array($parm)) {
+    if (is_array($parm)) {
         if (count($parm) > 0)
             $result_url .= '/' . implode('/', $parm);
-    }else {
+    } else {
         $result_url .= '/' . $parm;
     }
-
-    return $result_url;
+    return route::set($result_url);
 }
 
 function config($name=''){
@@ -831,13 +845,33 @@ function htmldecode($fString)
 }
 
 /**
+ * 遍历目录
+ * @param $path 目录路径
+ * @param callable $callback
+ */
+function foreach_dir($path,callable $callback){
+    //如果是目录则继续
+    if (is_dir($path)) {
+        //扫描一个文件夹内的所有文件夹和文件并返回数组
+        $p = scandir($path);
+        foreach ($p as $val) {
+            if ($val != "." && $val != "..") {
+                //如果是目录则递归子目录，继续操作
+                call_user_func($callback, $val, $path);
+            }
+        }
+    }
+}
+
+
+/**
  * 清空空格和换行
  * @param $str
  */
 function space($str)
 {
-    $search = array("  ","  ","  ", "\n", "\r", "\t");
-    $replace = array(" ", " "," ", " ", " ", " ");
+    $search = array('    ','   ','  ','  ','  ', "\n", "\r", "\t");
+    $replace = array(' ',' ',' ',' ',' ','','','');
     return str_replace($search, $replace, $str);
 }
 
@@ -846,6 +880,24 @@ spl_autoload_register(function ($class_name) {
     $backtrace=debug_backtrace();
     \heephp\logger::warn('自动加载类：'.$class_name);
 
-    $class_name = str_replace('\\','/',$class_name);
-    require_once './../'.$class_name . '.php';
+    $file='./../'.$class_name . '.php';
+    if(is_file($file)) {
+
+        $class_name = str_replace('\\', '/', $class_name);
+        require_once $file;
+
+    }else{
+
+        foreach_dir('./../plugin/',function ($val,$path) use ($class_name){
+            $file = './../plugin/'.$val.'/'.$class_name . '.php';
+            echo $file;
+            if(is_file($file)){
+                require_once $file;
+                return;
+            }
+        });
+
+
+    }
+
 });

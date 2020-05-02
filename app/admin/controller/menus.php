@@ -57,7 +57,7 @@ class menus extends adminBase {
         }
         if($result){
             cache()->clear();
-            return $this->success('保存成功','manager');
+            return $this->success('保存成功',url('manager'));
         }else{
             return $this->error('保存失败');
         }

@@ -37,11 +37,12 @@ class form{
 
         $group_cls = ($type=='checkbox'||$type=='radio')?'form-check':'form-group';
         $input_cls = ($type=='checkbox'||$type=='radio')?'form-check-input':'form-control';
+        $label_cls = ($type=='checkbox'||$type=='radio')?'class="form-check-sign"':'';
         $checkedstr = ($type=='checkbox'||$type=='radio')&&$checked?'checked':'';
         $colwidthstr = $colwidth>0?" col-sm-".$colwidth:'';
 
 
-        $label = " <label for=\"$name-$value\">$lable</label>";
+        $label = " <label for=\"$name-$value\" $label_cls>$lable</label>";
         $input = "<input type=\"$type\" class=\"$input_cls\" id=\"$name-$value\" name=\"$name\" value=\"$value\"  placeholder=\"$placehoder\" $range $checkedstr>";
         $desc = empty($desc)?'':"<small class=\"form-text text-muted\">$desc</small>";
 
@@ -87,17 +88,17 @@ class form{
     }
 
     private function _select($lable,$name,$items=[],$value='',$multiple=false,$desc='',$colwidth=0){
-        $vs = $multiple?'':'"<option value=\"\">未选择</option>';
+        $vs = $multiple?'':'<option value="">未选择</option>';
         foreach ($items as $k=>$v){
             $sed = $k==$value?'selected':'';
             $vs.="<option value=\"$k\" $sed>$v</option>";
         }
 
         $multiplestr = $multiple?'multiple':'';
-        $select = "<select class=\"form-control\" id=\"$lable\" name='$name' $multiplestr>
+        $select = "<select class=\"form-control\" id=\"$lable\" name=\"$name\" $multiplestr>
                         $vs                    
                     </select>
-                    <small class=\"form - text text - muted\">$desc</small>";
+                    <small class=\"form-text text-muted\">$desc</small>";
 
         $colwidthstr = $colwidth&&!$this->is_row>0?'col-sm-'.$colwidth:'';
         $row_cls = $this->is_row?'row':'';
@@ -270,7 +271,7 @@ class form{
             $ht = "<div class=\"form-group row\">
                     <label for=\"$name\" class=\"col-sm-".$this->row_width[0]." col-form-label\">$label</label>
                     <div class=\"col-sm-".$this->row_width[1]."\">
-                         <script id=\"$name\" name=\"$name\" type=\"text/plain\">
+                         <script id=\"$name\" class=\"ueditor\" name=\"$name\" type=\"text/plain\">
                             $value
                         </script>
                     </div>
@@ -279,7 +280,7 @@ class form{
             $ht="<div class=\"form-group\">
                     <label for=\"$name\">$label</label>
                     <div>
-                    <script id=\"$name\" name=\"$name\" type=\"text/plain\">
+                    <script id=\"$name\" class=\"ueditor\" name=\"$name\" type=\"text/plain\">
                             $value
                         </script>
                     </div>
@@ -297,7 +298,7 @@ class form{
         $this->html_form.=$this->input($type,$lable,$name,$value,$placehoder,$desc,$min,$max,$step,$checked,$colwidth);
         return $this;
     }
-    public function rowSelect($lable,$name,$items=[],$value='',$multiplestr=false,$colwidth=6,$desc=''){
+    public function rowSelect($lable,$name,$items=[],$value='',$colwidth=6,$multiplestr=false,$desc=''){
         $this->html_form.=$this->_select($lable,$name,$items,$value,$multiplestr,$desc,$colwidth);
         return $this;
     }
@@ -305,7 +306,10 @@ class form{
         $this->html_form.=$this->is_row?'':"</div>";
         return $this;
     }
-
+    public function hidden($name,$value){
+        $this->html_form.="  <input type=\"hidden\" name=\"$name\" value=\"$value\">";
+        return $this;
+    }
     /*color:primary secondary success danger warning info light dark*/
     public function submit($color='primary',$title="提交"){
         $this->html_form.="  <input type=\"submit\" class=\"btn btn-$color\" value='$title'/>";
@@ -313,6 +317,15 @@ class form{
     }
     public function rest($color='secondary',$title="重置"){
         $this->html_form.="  <input type=\"reset\" class=\"btn btn-$color\" value='$title'/>";
+        return $this;
+    }
+    public function button($title,$click='',$color='secondary'){
+        $click=empty($click)?'':"onclick=\"$click\"";
+        $this->html_form.="  <input type=\"button\" class=\"btn btn-$color\" value='$title' $click/>";
+        return $this;
+    }
+    public function customer($html){
+        $this->html_form.=$html;
         return $this;
     }
 

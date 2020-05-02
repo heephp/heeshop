@@ -11,7 +11,7 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 27/04/2020 00:20:28
+ Date: 27/04/2020 13:51:11
 */
 
 SET NAMES utf8mb4;
@@ -624,7 +624,7 @@ CREATE TABLE `heecms_users_group_sys_resources`  (
   `users_group_id` int(11) DEFAULT NULL,
   `sys_resources_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`users_group_sys_resources_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 394 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Fixed;
+) ENGINE = MyISAM AUTO_INCREMENT = 421 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Fixed;
 
 -- ----------------------------
 -- Records of heecms_users_group_sys_resources
@@ -988,5 +988,32 @@ INSERT INTO `heecms_users_group_sys_resources` VALUES (390, 8, 19);
 INSERT INTO `heecms_users_group_sys_resources` VALUES (391, 8, 19);
 INSERT INTO `heecms_users_group_sys_resources` VALUES (392, 8, 18);
 INSERT INTO `heecms_users_group_sys_resources` VALUES (393, 8, 19);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (394, 2, 2);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (395, 2, 3);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (396, 2, 4);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (397, 2, 5);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (398, 2, 11);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (399, 2, 7);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (400, 2, 8);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (401, 2, 9);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (402, 2, 10);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (403, 2, 12);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (404, 2, 14);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (405, 2, 15);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (406, 2, 16);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (407, 2, 33);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (408, 2, 34);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (409, 2, 38);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (410, 2, 18);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (411, 2, 19);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (412, 2, 20);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (413, 2, 21);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (414, 2, 22);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (415, 2, 25);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (416, 2, 27);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (417, 2, 28);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (418, 2, 30);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (419, 2, 36);
+INSERT INTO `heecms_users_group_sys_resources` VALUES (420, 2, 37);
 
 SET FOREIGN_KEY_CHECKS = 1;

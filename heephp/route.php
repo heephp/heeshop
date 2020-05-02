@@ -26,11 +26,37 @@ class route{
         $url=($xstart==0)?substr($url,$xstart+1):$url;
 
         foreach ($rs as $k=>$v){
+            $k = ltrim($k,'/');
+            $k='^'.$k;
+            $k = str_replace('/','\\/',$k);
             $single=preg_match('/'.$k.'/i',$url);
             if($single){
+                //return $v;
                 return preg_replace('/'.$k.'/i',$v,$url);
             }
         }
+        return false;
+    }
+
+    /**
+     * 反向匹配网址
+     * @param $url
+     */
+    public static function set($url){
+
+        $route = new route();
+        $rs= $route->routes;
+
+        foreach ($rs as $k=>$v){
+            $v='^'.$v;
+            $v = str_replace('/',"\\/",$v);
+            $single=preg_match('/'.$v.'/i',$url);
+            if($single){
+                $k = str_replace('$','',$k);
+                return preg_replace('/^'.$v.'/i',$k,$url,1);
+            }
+        }
+
         return false;
     }
 

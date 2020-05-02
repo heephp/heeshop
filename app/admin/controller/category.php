@@ -1,6 +1,8 @@
 <?php
 namespace app\admin\controller;
 
+use app\admin\model\sysmodel;
+
 class category extends adminBase
 {
 
@@ -22,6 +24,10 @@ class category extends adminBase
         $cate->select('parent_id<1 or parent_id IS NULL or parent_id=\'\'');
         $this->assign('plist',$cate->data);
 
+        $sysm =new sysmodel();
+        $sysm->select();
+        $this->assign('mlist',$sysm->data);
+
         return $this->fetch('edit');
     }
 
@@ -31,6 +37,10 @@ class category extends adminBase
 
         $cate->select('parent_id<1 or parent_id IS NULL or parent_id=\'\'');
         $this->assign('plist',$cate->data);
+
+        $sysm =new sysmodel();
+        $sysm->select();
+        $this->assign('mlist',$sysm->data);
 
         $cate->get($id);
 
@@ -59,10 +69,26 @@ class category extends adminBase
         }
         if($result){
             cache()->clear();
-            return $this->success('保存成功','manager');
+            return $this->success('保存成功',url('manager'));
         }else{
             return $this->error('保存失败');
         }
+    }
+
+    /**
+     * 信息管理
+     * @return false|string
+     */
+    function managerinfo()
+    {
+        $cate=model('category');
+        $cate->page('parent_id<1 or parent_id IS NULL or parent_id=\'\'');
+        $cate->child();
+        $cate->create_user();
+        $this->assign('list',$cate->data);
+        $this->assign('pager',$cate->pager['show']);
+
+        return $this->fetch();
     }
 
 }

@@ -69,7 +69,7 @@ class mysqli implements databaseInterface {
 
     //获取表所有字段信息
     public function getFileds($table){
-        $sql="SHOW COLUMNS FROM `$this->table_prefix$table`";
+        $sql="show full columns from `$this->table_prefix$table`";
         $filedinfo = $this->getAll($sql);
         return $filedinfo;
     }
