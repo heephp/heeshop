@@ -1,5 +1,8 @@
 <?php
-function conf($name,$value=''){
+
+use heephp\sysExcption;
+
+function conf($name, $value=''){
     $db = db();
     //设置配置
     if(!empty($value)){
@@ -28,6 +31,26 @@ function get_arr_val($arr,$key){
             $rearr[]=$v;
     }
     return $rearr;
+}
+
+function modeluser($name)
+{
+    //取出用户模型表前缀
+    $user_model_pre = config('user_model_prefix');
+    //从数据表中取出验证规则
+    $mt = model('model_table')->find("`name`='$name'");
+    if (!$mt) {
+        throw new sysExcption('自定义模型表名：' . $name . '不存在！');
+        return;
+    }
+    $validate_rule = $mt['validate_rule'];
+    $validate_msg = $mt['validate_msg'];
+    $model = model($user_model_pre . $name);
+    $model->softdel = true;
+    $model->autotimespan = true;
+    $model->validate_rule = $validate_rule;
+    $model->validate_msg = $validate_msg;
+    return $model;
 }
 
 /**

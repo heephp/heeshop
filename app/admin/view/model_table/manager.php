@@ -41,8 +41,9 @@
                                 <td><?=$m['create_time']?></td>
                                 <td>
 
-                                    <a href="<?=url('edit/',$m['model_table_id'])?>" class="btn btn-primary btn-sm">编辑</a>
-
+                                    <a href="<?=url('edit/',$m['model_table_id'])?>" class="btn btn-primary btn-sm">表详细编辑</a>
+                                    <a href="<?=url('field_show/',$m['model_table_id'])?>" class="btn btn-primary btn-sm">字段权限设置</a>
+                                    <a href="<?=url('field_validate/',$m['model_table_id'])?>" class="btn btn-primary btn-sm">验证规则</a>
                                     <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete/'.$m['model_table_id'])?>">删除</a>
 
                                 </td>

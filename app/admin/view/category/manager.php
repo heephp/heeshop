@@ -66,7 +66,7 @@
                                     <tr>
                                         <td><?=$c['category_id']?></td>
                                         <td><i class="<?=$c['icon']?>"></i></td>
-                                        <td> -- <?=$c['name']?></td>
+                                        <td> + <?=$c['name']?></td>
                                         <td><?=sstr($c['keyword'],10)?></td>
                                         <td> <?=$c['ord']?></td>
                                         <td><?=sstr($c['remark'],10)?></td>

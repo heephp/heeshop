@@ -8,12 +8,10 @@ use heephp\validata;
 
 class info extends adminBase
 {
-    private $user_model_pre ;
 
     public function __construct()
     {
         parent::__construct();
-        $this->user_model_pre=config('user_model_prefix');
     }
 
     public function manager($category_id)
@@ -39,7 +37,7 @@ class info extends adminBase
         if($d['model']['is_sys']=='1'){
             return $this->rediect('/'.APP.'/'.$d['model']['table_name'].'/add/');
         }else{
-            $this->bulider_form($d['model']['model_table_id']);
+            $this->bulider_form($d['model']['model_table_id'],0,$category_id);
         }
         $this->assign('category_id',$category_id);
         return $this->fetch('edit');
@@ -54,11 +52,36 @@ class info extends adminBase
         if($d['model']['is_sys']=='1'){
             return $this->rediect('/'.APP.'/'.$d['model']['table_name'].'/edit/'.$id);
         }else{
-            $this->bulider_form($d['model']['model_table_id'],$id);
+            $this->bulider_form($d['model']['model_table_id'],$id,$category_id);
         }
 
         $this->assign('category_id',$category_id);
         return $this->fetch();
+    }
+
+    public function delete($category_id,$id){
+
+        $cate = model('category');
+        $cate->get($category_id);
+        $cate->model();
+        $d=$cate->data;
+        if($d['model']['is_sys']=='1'){
+            return $this->rediect('/'.APP.'/'.$d['model']['table_name'].'/delete/'.$id);
+        }else {
+
+            $mt = model('model_table');
+            $mt->get($d['model']['model_table_id']);
+            $tbname = $mt->data['name'];
+
+            $model = modeluser($tbname);
+            $result = $model->delete($id);
+            if($result){
+                return $this->success('删除成功！',url('manager',$category_id));
+            }else{
+                return $this->error('删除失败！');
+            }
+
+        }
     }
 
     public function save(){
@@ -70,17 +93,19 @@ class info extends adminBase
         $cate->get($category_id);
         $cate->model();
         $d=$cate->data;
+        $model_table_id=$d['model']['model_table_id'];
         if($d['model']['is_sys']=='1'){
             return $this->rediect('/'.APP.'/'.$d['model']['table_name'].'/manager');
         }
 
         //取出表 ，并从表中读取数据
         $mt = model('model_table');
-        $tbname = $mt->getByname('model_table_id='.$d['model']['model_table_id']);
+        $mt->get($model_table_id);
+        $tbname=$mt->data['name'];
 
         //判断字段中是否有上传文件的字段 并上传
         $mtf=model('model_table_field');
-        $fields = $mtf->select('model_table_id='.$d['model']['model_table_id']);
+        $fields = $mtf->select('model_table_id='.$model_table_id);
         $upload = ['dir'=>conf('upload_dir'),'size'=>conf('upload_size'),'ext'=>explode(',',conf('upload_ext')),'file_name'=>conf('upload_file_name')];
         for($k=0;$k<count($fields);$k++){//var_dump($data[$fields[$k]['field_name']]);
             if($fields[$k]['input_type']=='file'){
@@ -95,7 +120,7 @@ class info extends adminBase
         }
 
         //从表中获取主键 并 保存
-        $dm = model($this->user_model_pre.$tbname);
+        $dm = modeluser($tbname);
         $keyfield = $dm->key;
 
         $result = 0;
@@ -114,24 +139,25 @@ class info extends adminBase
     }
 
     private function bulider_table($model_table_id,$category_id){
-        //$model = model($this->user_model_pre.$model_name);
-        //$fields = db()->getFileds($this->user_model_pre.$model_name);
-        /*$mt = model('model_table');
-        $mtinfo = $mt->find("`model_table_id`='$model_table_id'");
-        $model_table_id = $mtinfo['model_table_id'];*/
 
         //取出表 ，并从表中读取数据
         $mt = model('model_table');
-        $tbname = $mt->getByname("model_table_id=$model_table_id");
+        $mtdata = $mt->get($model_table_id);
+        $tbname = $mtdata['name'];
+        $allow_manager =[];
+        //取出允许显示在后台管理表格的字段
+        if(!empty($mtdata['allow_manager']))
+            $allow_manager = explode(',',$mtdata['allow_manager']);
 
-        $dm = model($this->user_model_pre.$tbname);
+        $dm = modeluser($tbname);
         $dm->page('category_id='.$category_id);
-
 
         //读取标题，并构造列
         $mtf = model('model_table_field');
         $mtf->select("model_table_id=$model_table_id");
-        $fields = $mtf->data;
+        $fields = array_filter($mtf->data,function ($val) use($allow_manager){
+            return empty($allow_manager)||in_array($val['field_name'],$allow_manager);
+        });
 
         //限制显示长度的列
         $column_len=[];
@@ -167,17 +193,16 @@ class info extends adminBase
     }
 
 
-    private function bulider_form($model_table_id,$id=0){
+    private function bulider_form($model_table_id,$id=0,$category_id=0){
 
         //取出表 ，并从表中读取数据
         $mt = model('model_table');
         $tbname = $mt->getByname("model_table_id=$model_table_id");
 
-        $dm = model($this->user_model_pre.$tbname);
+        $dm = modeluser($tbname);
         $keyfield = $dm->key;
         $dm->get($id);
         $data = $dm->data;
-
 
         //读取字段，并构造表单
         $mtf = model('model_table_field');
@@ -185,6 +210,7 @@ class info extends adminBase
         $fields = $mtf->data;
 
         $form =new form(url('save'),'post');
+        $form->hidden('category_id',$category_id);
         $i=0;
         foreach ($fields as $f){
 
@@ -205,7 +231,7 @@ class info extends adminBase
                     $form->textarea($f['field_title'], $f['field_name'],$data[$f['field_name']]??'');
                     break;
                 case 'editor':
-                    $form->ueditor($f['field_title'], $f['field_name'],$data[$f['field_name']]??'');
+                    $form->ueditor($f['field_title'], $f['field_name'],html_entity_decode($data[$f['field_name']]??''));
                     break;
                 case 'file':
                     $form->file($f['field_title'], $f['field_name'],$data[$f['field_name']]??'');

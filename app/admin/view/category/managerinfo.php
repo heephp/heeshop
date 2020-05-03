@@ -45,14 +45,13 @@
                         <?foreach($list as $m){?>
                             <tr>
                                 <td><?=$m['category_id']?></td>
-                                <td> <i class="<?=$m['icon']?>"></i><a href="<?=url('/'.APP.'/info/manager/'.$m['category_id'])?>"> <?=$m['name']?></a></td>
+                                <td> <i class="<?=$m['icon']?>"></i><?=$m['name']?></td>
                                 <td><?=sstr($m['keyword'],10)?></td>
                                 <td> <?=$m['ord']?></td>
                                 <td><?=sstr($m['remark'],10)?></td>
                                 <td><?=$m['create_user']['username']?></td>
                                 <td><?=$m['create_time']?></td>
                                 <td>
-                                    <a href="<?=url('/'.APP.'/info/manager/'.$m['category_id'])?>" class="btn btn-primary btn-sm">信息管理</a>
 
                                 </td>
                             </tr>
@@ -61,7 +60,7 @@
                                 foreach($m['child'] as $c){?>
                                     <tr>
                                         <td><?=$c['category_id']?></td>
-                                        <td> ———— <i class="<?=$c['icon']?>"></i> <a href="<?=url('/'.APP.'/info/manager/'.$c['category_id'])?>"> <?=$c['name']?></a></td>
+                                        <td>      + <i class="<?=$c['icon']?>"></i> <a href="<?=url('/'.APP.'/info/manager/'.$c['category_id'])?>"> <?=$c['name']?></a></td>
                                         <td><?=sstr($c['keyword'],10)?></td>
                                         <td> <?=$c['ord']?></td>
                                         <td><?=sstr($c['remark'],10)?></td>

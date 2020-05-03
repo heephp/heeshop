@@ -208,6 +208,16 @@ class model{
     }
 
     /**
+     * 取所有的数据  包含软删除
+     * @param $where
+     */
+    public function count($where=''){
+        $where = empty($where)?'':' where '.$where;
+        $row = $this->db->getRow('select count(*) c from `'.$this->table_prefix.$this->table.'`'.$where);
+        return $row['c'];
+    }
+
+    /**
      * 根据软删除获取sql 条件 where
      * @onlySoftDel true只查找已被软删除的  False只查找未被软删除的
      */
@@ -414,6 +424,16 @@ class model{
     {
         if($name=='data'){
             $this->data=$value;
+        }elseif ($name=='validate_rule'){
+            $this->insert_validata=$value;
+            $this->update_validata=$value;
+        }elseif ($name=='validate_msg'){
+            $this->insert_message_validata=$value;
+            $this->update_message_validata=$value;
+        }elseif ($name=='autotimespan'){
+            $this->autotimespan = $value;
+        }elseif ($name='softdel'){
+            $this->softdel=$value;
         }
     }
 

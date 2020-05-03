@@ -50,6 +50,35 @@ class category extends adminBase
 
     function delete($id){
         $cate = model('category');
+        $m = $cate->get($id);
+        $model_id=$m['model_id'];
+
+        //判断是否是栏目模型表是否存在数据
+        $model = new sysmodel();
+        $sysm = $model->get($model_id);
+        if($sysm['is_sys']==1){
+            //如果是系统模型 取表名并取数据量
+            $_m =model($sysm['table_name']);
+            $mcount = $_m->count('category_id='.$id);
+            if($mcount>0){
+                return $this->error('栏目存在数据（包括回收站），清空后再删除！');
+            }
+        }else{
+            //如果是用户模型 取表名并取数据量
+            $mt= model('model_table');
+            $mtda = $mt->get($sysm['model_table_id']);
+            if(!$mtda){
+                return $this->error('用户模型表记录不存在！');
+            }
+
+
+            $_m =modeluser($mtda['name']);
+            $mcount = $_m->count('category_id='.$id);
+            if($mcount>0){
+                return $this->error('栏目存在数据（包括回收站），清空后再删除！');
+            }
+        }
+
         $re = $cate->delete($id);
         if($re){
             cache()->clear();

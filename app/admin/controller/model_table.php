@@ -3,15 +3,17 @@
 namespace app\admin\controller;
 
 //表管理类
+use app\admin\model\sysmodel;
 use app\home\model\config;
 use heephp\bulider\form;
 use heephp\database\mysqlmanager;
 use heephp\sysExcption;
 use mysql_xdevapi\Exception;
 
-class model_table extends adminBase{
+class model_table extends adminBase
+{
 
-    private $user_model_pre='';
+    private $user_model_pre = '';
 
     public function __construct()
     {
@@ -21,11 +23,11 @@ class model_table extends adminBase{
 
     public function manager()
     {
-        $tb=model('model_table');
+        $tb = model('model_table');
         $tb->page();
         $tb->create_user();
-        $this->assign('list',$tb->data);
-        $this->assign('pager',$tb->pager['show']);
+        $this->assign('list', $tb->data);
+        $this->assign('pager', $tb->pager['show']);
         return $this->fetch();
     }
 
@@ -35,11 +37,12 @@ class model_table extends adminBase{
         return $this->fetch('edit');
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
 
-        $tb=model('model_table');
+        $tb = model('model_table');
         $m = $tb->get($id);
-        if(empty($m)){
+        if (empty($m)) {
             return $this->error('数据表不存在！');
         }
 
@@ -48,28 +51,28 @@ class model_table extends adminBase{
 
     }
 
-    private function builder_form($model_table_id=0,$fieldscount = 1)
+    private function builder_form($model_table_id = 0, $fieldscount = 1)
     {
         $mtf = model('model_table_field');
         $mt = model('model_table');
-        $m = empty($model_table_id)?'':$mt->get($model_table_id);
+        $m = empty($model_table_id) ? '' : $mt->get($model_table_id);
 
         $fields = [];
         if (!empty($m)) {
-            $sfields = db()->getFileds($this->user_model_pre.$m['name']);
-            $fields = array_filter($sfields,function ($var){
-                return $var['Field']!='create_time'&&$var['Field']!='update_time';
+            $sfields = db()->getFileds($this->user_model_pre . $m['name']);
+            $fields = array_filter($sfields, function ($var) {
+                return $var['Field'] != 'create_time' && $var['Field'] != 'update_time' && $var['Field'] != 'delete_time' && $var['Field'] != 'category_id';
             });
             $fieldscount = count($fields) > 0 ? count($fields) : $fieldscount;
-        }else
-            $fields[]=[];
+        } else
+            $fields[] = [];
 
         $f = new form(url('save'), 'post');
-        $f->hidden('model_table_id',$model_table_id);
-        $f->rowStart()->rowInput('表名：', 'tablename', $m['name']??'', 2)->rowEnd();
+        $f->hidden('model_table_id', $model_table_id);
+        $f->rowStart()->rowInput('表名：', 'tablename', $m['name'] ?? '', 2)->rowEnd();
 
-        $i=0;
-        foreach ($fields as $fi){
+        $i = 0;
+        foreach ($fields as $fi) {
             //从表中读取字段的输入框类型和选择值列表
             $mfinfo = empty($model_table_id) || empty($fi['Field']) ? '' : $mtf->find("model_table_id=$model_table_id and field_name='" . $fi['Field'] . "'");
             $type = explode('(', $fi['Type']);
@@ -82,14 +85,14 @@ class model_table extends adminBase{
                 ->rowSelect('主键', 'key[]', ['1' => '是', '0' => '否'], $fi['Key'] == 'PRI' ? '1' : '0', 1)
                 ->rowInput('默认值', 'default[]', $fi['Default'], 1)
                 ->rowInput('备注', 'comment[]', $fi['Comment'], 2)
-                ->rowSelect('输入框类型', 'input_type[]', ['text' => 'text', 'number' => 'number', 'email' => 'email', 'date' => 'date', 'time' => 'time', 'month' => 'month', 'week' => 'week', 'datetime' => 'datetime', 'datetime_local' => 'datetime_local', 'url' => 'url', 'textarea' => 'textarea', 'select' => 'select', 'radios' => 'radios', 'checkboxs' => 'checkboxs', 'editor' => 'editor','file'=>'file'], $mfinfo['input_type'] ?? '', 1)
+                ->rowSelect('输入框类型', 'input_type[]', ['text' => 'text', 'number' => 'number', 'email' => 'email', 'date' => 'date', 'time' => 'time', 'month' => 'month', 'week' => 'week', 'datetime' => 'datetime', 'datetime_local' => 'datetime_local', 'url' => 'url', 'textarea' => 'textarea', 'select' => 'select', 'radios' => 'radios', 'checkboxs' => 'checkboxs', 'editor' => 'editor', 'file' => 'file'], $mfinfo['input_type'] ?? '', 1)
                 ->rowInput('数据列表(,分隔)：', 'input_type_values[]', $mfinfo['input_type_values'] ?? '', 2)
                 ->rowEnd();
             $i++;
         }
         $f->customer('<div id="addfield"></div>');
         $f->submit()
-            ->button('添加字段','addfield()','info');
+            ->button('添加字段', 'addfield()', 'info');
         $this->assign('form', $f->show());
     }
 
@@ -97,28 +100,80 @@ class model_table extends adminBase{
     {
         $data = request('post.');// var_dump($data);exit;
 
-        $user_model_pre=$this->user_model_pre;
+        $user_model_pre = $this->user_model_pre;
         $tbname = $data['tablename'];
-        $tb_pre=config('db.table_prefix');
-        $tb=$tb_pre.$user_model_pre.$tbname;
+        $tb_pre = config('db.table_prefix');
+        $tb = $tb_pre . $user_model_pre . $tbname;
 
         $mm = new mysqlmanager();
         $tables = $mm->tables();
-        $true_table_exic = in_array($tb,$tables);//是否表实体存在
+        $true_table_exic = in_array($tb, $tables);//是否表实体存在
 
-        $mtb=model('model_table');
-        if(empty($data[$mtb->key]))
-            $m=[];
+        $mtb = model('model_table');
+        //如果新建表时表实体已经存在
+        if(empty($data[$mtb->key])&&$true_table_exic){
+            return $this->error('表‘'.$tbname.'’实体已经存在！');
+        }
+
+
+        $key = '';
+        $info = [];
+
+        $count = count($data['key']);
+        for ($i = 0; $i < $count; $i++) {
+            if (!empty($data['key'][$i])) {
+
+                if (!empty($key))
+                    return $this->error('有多个主键！');
+
+                $key = $data['filed'][$i];//var_dump($data['isnull'][$i]);exit;
+                //continue;
+            }
+            if (!empty($data['filed'])) {
+                $s['name'] = $data['filed'][$i];
+                $s['type'] = empty($data['type'][$i]) ? 'varchar' : $data['type'][$i];
+                $s['length'] = $data['len'][$i];
+                $s['isNull'] = empty($data['isnull'][$i])?'1':$data['isnull'][$i];
+                $s['default'] = $data['default'][$i];
+                $s['comment'] = $data['comment'][$i];
+                $s['input_title'] = $data['input_title'][$i];
+                $s['input_type'] = empty($data['input_type'][$i])?'text':$data['input_type'][$i];
+                $s['input_type_values'] = $data['input_type_values'][$i];
+                //过滤主键
+                if($key!=$s['name'])
+                    $info[] = $s;
+            }
+        }
+
+        if (empty($key)) {
+            return $this->error('缺少主键！');
+        }
+
+        ///////创建表实体
+        if (!$true_table_exic) {
+            $re = $mm->createTable($tb, $key);
+            $mm->addField($tb, ['name' => 'category_id', 'type' => 'int', 'length' => 11,'isNull' => 'NO']);
+            $mm->addField($tb, ['name' => 'create_time', 'type' => 'int', 'length' => 11, 'isNull' => 'YES']);
+            $mm->addField($tb, ['name' => 'update_time', 'type' => 'int', 'length' => 11, 'isNull' => 'YES']);
+            $mm->addField($tb, ['name' => 'delete_time', 'type' => 'int', 'length' => 11, 'isNull' => 'YES']);
+
+        }
+        ////////////
+
+        ///////新增 或 修改 表信息
+        $mtb = model('model_table');
+        if (empty($data[$mtb->key]))
+            $m = [];
         else
             $m = $mtb->get($data[$mtb->key]);//查找模型表中记录
 
-        if(empty($m)){
-            $m[$mtb->key] =$mtb->insert(['name'=>$tbname,'create_users_id'=>request($this->session_id_str)]);
-            if(empty($m[$mtb->key])){
+        if (empty($m)) {
+            $m[$mtb->key] = $mtb->insert(['name' => $tbname, 'create_users_id' => request($this->session_id_str)]);
+            if (empty($m[$mtb->key])) {
                 return $this->error('新建表失败！');
             }
             $m['name'] = $tbname;
-        }else {
+        } else {
             $effort = $mtb->update(['name' => $tbname], [$mtb->key => $data[$mtb->key]]);
 
             if (($m['name'] != $tbname) && $true_table_exic) {
@@ -130,87 +185,133 @@ class model_table extends adminBase{
             }
 
         }
+        //////////
 
-
-        $key = '';
-        $info = [];
-
-        $count = count($data['key']);
-        for ($i = 0; $i < $count; $i++) {
-            if (!empty($data['key'][$i])) {
-
-                if(!empty($key))
-                    return $this->error('有多个主键！');
-
-                $key = $data['filed'][$i];//var_dump($data['isnull'][$i]);exit;
-                //continue;
-            }
-            if (!empty($data['filed'])) {
-                $s['name'] = $data['filed'][$i];
-                $s['type'] = empty($data['type'][$i]) ? 'varchar' : $data['type'][$i];
-                $s['length'] = $data['len'][$i];
-                $s['isNull'] = $data['isnull'][$i];
-                $s['default'] = $data['default'][$i];
-                $s['comment'] = $data['comment'][$i];
-                $s['input_title'] = $data['input_title'][$i];
-                $s['input_type'] = $data['input_type'][$i];
-                $s['input_type_values'] =  $data['input_type_values'][$i];
-                $info[] = $s;
-            }
-        }
-
-        if(empty($key)){
-            return $this->error('缺少主键！');
-        }
-
-        if(!$true_table_exic) {
-            $re = $mm->createTable($tb, $key);
-            $mm->addField($tb, ['name'=>'category_id','type'=>'int','length'=>11]);
-            $mm->addField($tb, ['name'=>'create_time','type'=>'int','length'=>11,'isNull'=>'NO']);
-            $mm->addField($tb, ['name'=>'update_time','type'=>'int','length'=>11,'isNull'=>'NO']);
-        }
-
-        $finfo = array_column($mm->checkTable($tb),'Field');
+        $finfo = array_column($mm->checkTable($tb), 'Field');
 
         $mtbf = model('model_table_field');
         foreach ($info as $f) {
             //判断表中是否已经存在字段
-            if(!in_array($f['name'],$finfo))
+            if (!in_array($f['name'], $finfo))
                 $mm->addField($tb, $f);
             else
-                $mm->editField($tb,$f);
+                $mm->editField($tb, $f);
 
             //修改输入框类型和列表
             //判断字段是否在表中有记录
-            $fd = $mtbf->find('`model_table_id`=\''.$m['model_table_id'].'\' and `field_name`=\''.$f['name'].'\'');
+            $fd = $mtbf->find('`model_table_id`=\'' . $m['model_table_id'] . '\' and `field_name`=\'' . $f['name'] . '\'');
             //var_dump($f);
-            $mtdata = ['model_table_id'=>$m['model_table_id'],'field_title'=>$f['input_title'],'field_name'=>$f['name'],'input_type'=>$f['input_type'],'input_type_values'=>$f['input_type_values']];
-            if(empty($fd)){
-                $mtbf->insert(array_merge($mtdata,['create_users_id'=>request($this->session_id_str)]));
-            }else{
-                $mtbf->update($mtdata,[$mtbf->key => $fd[$mtbf->key]]);
+            $mtdata = ['model_table_id' => $m['model_table_id'], 'field_title' => $f['input_title'], 'field_name' => $f['name'], 'input_type' => $f['input_type'], 'input_type_values' => $f['input_type_values']];
+            if (empty($fd)) {
+                $mtbf->insert(array_merge($mtdata, ['create_users_id' => request($this->session_id_str)]));
+            } else {
+                $mtbf->update($mtdata, [$mtbf->key => $fd[$mtbf->key]]);
             }
         }
         //exit;
         return $this->rediect('manager');
 
     }
-    public function delete($id){
 
-        $tb=model('model_table');
-        $tbname = $tb->getByname($tb->key.'='.$id);
+    public function delete($id)
+    {
+        $model = new sysmodel();
+        $mt=$model->find('model_table_id='.$id);
+        if($mt){
+            return $this->error('存在关联的自定义模型，需要删除后再删除表！');
+
+        }
+
+        $tb = model('model_table');
+        $tbname = $tb->getByname($tb->key . '=' . $id);
         $isdel = $tb->delete($id);
-        if($isdel){
+        if ($isdel) {
+            model('model_table_field')->deleteByWhere("model_table_id=$id");
             $mm = new mysqlmanager();
-            $reslut = $mm->droptable(config('db.table_prefix').$this->user_model_pre.$tbname);
-            if($reslut){
-                return $this->success('成功删除表！',url('manager'));
+            $reslut = $mm->droptable(config('db.table_prefix') . $this->user_model_pre . $tbname);
+            if ($reslut) {
 
-            }else {
+                return $this->success('成功删除表！', url('manager'));
+
+            } else {
                 return $this->error('删除表失败！');
             }
         }
 
+    }
+
+    public function field_show($id)
+    {
+        return $this->_model_field_($id, 'field_show');
+    }
+
+    public function field_show_save()
+    {
+
+        $data = request('post.');//var_dump($data);exit;
+
+
+        $mt = model('model_table');
+        $d = ['model_table_id' => $data['model_table_id'], 'allow_manger' => implode(',', $data['allow_manger']), 'allow_edit' => implode(',', $data['allow_edit']), 'allow_delete' => $data['allow_delete'] == 'on' ? 1 : 0, 'allow_user_manager' => implode(',', $data['allow_user_manager']), 'allow_user_edit' => implode(',', $data['allow_user_edit']), 'allow_user_delete' => $data['allow_user_delete'] == 'on' ? 1 : 0];
+        $result = $mt->update($d);
+
+        if ($result)
+            return $this->success('字段设置修改成功！', url('field_show'));
+        else
+            return $this->error('字段设置修改失败！');
+
+    }
+
+    public function field_validate($id)
+    {
+
+        return $this->_model_field_($id, 'field_validate');
+    }
+
+    public function field_validate_save()
+    {
+        $data = request('post.');
+        $mt = model('model_table');
+        $d = ['model_table_id' => $data['model_table_id'], 'validate_rule' => $data['validate_rule'], 'validate_msg' => $data['validate_msg']];
+        $result = $mt->update($d);
+
+        if ($result)
+            return $this->success('验证规则修改成功！', url('field_show'));
+        else
+            return $this->error('验证规则修改失败！');
+    }
+
+    /**
+     * 获取模型和字段信息
+     * @param $id
+     * @return false|string
+     */
+    private function _model_field_($id,$template){
+
+        $model_table = model('model_table');
+        $model_table->get($id);
+        $tablename = $model_table->data['name'];
+        if(empty($tablename)){
+            return $this->error('表名不存在！');
+        }
+
+        //获得主键
+        $usermodelpre=config('user_model_prefix');
+        $keyfield = db()->getKeyFiled($usermodelpre.$tablename);
+
+        //取字段列表
+        $mtf=model('model_table_field');
+        $mtf->select('model_table_id='.$id,'create_time asc','field_title as title,field_name as name');
+        $fields = $mtf->data;
+        $fields = array_filter($fields,function ($val) use ($keyfield){
+            $val = $val['name'];
+            if($val!='create_time'&&$val!='update_time'&&$val!='delete_time'&&$val!='category_id'&&$val!=$keyfield)
+                return true;
+        });
+
+        $this->assign('fields',$fields);
+        $this->assign('m',$model_table->data);
+        return $this->fetch($template);
     }
 
 }

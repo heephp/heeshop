@@ -7,6 +7,7 @@ class sysmodel extends model
 {
     protected $autotimespan=true;
     protected $table='model';
+    protected $softdel=true;
     public function __construct()
     {
         parent::__construct('model');

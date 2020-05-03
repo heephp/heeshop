@@ -75,7 +75,7 @@ class mysqli implements databaseInterface {
     }
 
     //获取表主键
-    public function getKeyFiled($table){
+    public function getKeyFiled($table,&$fileds=[]){
         $fileds = $this->getFileds($table);
         foreach ($fileds as $f){
             if($f['Key']=='PRI'){

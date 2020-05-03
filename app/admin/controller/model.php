@@ -1,8 +1,7 @@
 <?php
 namespace app\admin\controller;
-
-
 use app\admin\model\sysmodel;
+use heephp\database\mysqlmanager;
 
 class model extends adminBase
 {
@@ -18,7 +17,6 @@ class model extends adminBase
         return $this->fetch();
 
     }
-
 
     public function add(){
         $mt = model('model_table');
@@ -72,13 +70,19 @@ class model extends adminBase
         }
     }
 
-    public function del($id){
+    public function delete($id){
         $sysmodel  = new sysmodel();
         $m = $sysmodel->get($id);
         if(!$m){
             return $this->error('模型不存在！');
         }elseif ($m['is_sys']){
             return $this->error('系统模型无法删除！');
+        }
+
+        $cate=model('category');
+        $mc = $cate->find('model_id='.$id);
+        if($mc){
+            return $this->error('请先删除关联的栏目后，再删除模型！');
         }
 
         $isdel = $sysmodel->delete($id);
@@ -89,5 +93,6 @@ class model extends adminBase
             return $this->success('删除失败！');
         }
     }
+
 
 }
