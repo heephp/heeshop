@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>HeeCMS v1.0</title>
+    <title>商城管理HeeCMS v1.0</title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
     <!--link rel="icon" href="/assets/img/icon.ico" type="image/x-icon"/-->
 

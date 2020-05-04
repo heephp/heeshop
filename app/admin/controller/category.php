@@ -82,9 +82,9 @@ class category extends adminBase
         $re = $cate->delete($id);
         if($re){
             cache()->clear();
-            return $this->success('删除成功！',url('manager'));
+            return $this->success('栏目删除成功！',url('manager'));
         }else
-            return $this->error('删除失败');
+            return $this->error('栏目删除失败');
     }
 
     function save(){

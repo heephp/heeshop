@@ -48,6 +48,11 @@ $('.vcode').on('click',function(e){
 	$(e).attr('src','/admin/index/vcode');
 })
 
+$(document).ready(function() {
+	$('.select2').select2({theme: "classic"});
+	$('.select2input').select2({theme: "classic",tags: true});
+})
+
 function uploadfile(url,file,form,success){
 	var fileName = $('#'+file).val();　　　　　　　　　　　　　　　　　　//获得文件名称
 	var fileType = fileName.substr(fileName.length-4,fileName.length);　　//截取文件类型,如(.xls)

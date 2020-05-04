@@ -51,7 +51,7 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for="parent_id">父级</label>
-                                            <select class="form-control" name="parent_id">
+                                            <select class="form-control select2" name="parent_id">
                                                 <option value="0">无</option>
                                                 <?foreach ($plist as $p){?>
                                                     <option value="<?=$p['category_id']?>" <?=$p['category_id']==$m['parent_id']?'selected':''?>><?=$p['name']?></option>
