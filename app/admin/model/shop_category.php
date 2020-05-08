@@ -29,6 +29,11 @@ class shop_category extends model
 
     }
 
+    /*public function attrs(){
+        $re = new relation($this,'shop_product_attr',$this->key,'shop_product_id','attrs');
+        return $re->hasmore();
+    }*/
+
     public function create_user(){
         $re = new relation($this,'users','create_users_id','users_id','create_user');
         return $re->belong();
@@ -38,5 +43,10 @@ class shop_category extends model
         $re = new relation($this,'shop_category','shop_category_id','parent_id','child');
         $re->set_rmodel_methods('create_user');
         return $re->hasmore(false);
+    }
+
+    public function attrs(){
+        $re = new relation($this,'shop_attr',$this->key,'shop_attr_id','attrs','shop_category_attr');
+        return $re->moretomore();
     }
 }

@@ -91,10 +91,18 @@ class model{
             validata::showerror();
             return false;
         }
-        if(empty($where)){
-            $where='`'.$this->key.'` = \''.$data[$this->key].'\'';
-        }else if(is_array($where)){
-            $where='`'.array_key_first($where).'` = \''.array_values($where)[0].'\'';
+
+        if(is_array($where)) {
+            $arr_where = $where;
+            $where = '';
+            foreach ($arr_where as $k => $v) {
+                $where .= '`' . $k . '` = \'' . $v . '\' and ';
+            }
+            $where = substr($where, 0, strlen($where) - 4);
+        }else {
+            if (empty($where)) {
+                $where = '`' . $this->key . '` = \'' . $data[$this->key] . '\'';
+            }
         }
 
         if($this->autotimespan)
@@ -523,6 +531,41 @@ class model{
         return true;
     }
 
+    /**
+     * 保存数据 如果有主键则更新，没有则新增
+     * @param $data
+     * @return bool|int|mixed
+     */
+    public function save($data){
+        if(empty($data[$this->key])){
+            return $this->insert($data);
+        }else{
+            return $this->update($data);
+        }
+    }
+
+    /**
+     * 根据条件保存数据
+     * @param $data
+     * @param array|string $where
+     * @return bool|int|mixed
+     */
+    public function saveByWhere($data,$where){
+        $result=false;
+        if(!empty($where)) {
+            $result = $this->find($where);
+            if(!$result){
+                return $this->insert($data);
+            }else{
+                $result=  $this->update($data,$where);
+                if(!empty($result)){
+                    $result = $data[$this->key];
+                }else
+                    return false;
+            }
+        }
+        return $result;
+    }
 
     public function __toString()
     {

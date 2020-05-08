@@ -37,6 +37,9 @@
                                 <a class="nav-link active show" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="false">基本</a>
                             </li>
                             <li class="nav-item submenu">
+                                <a class="nav-link" id="pills-attr-tab" data-toggle="pill" href="#pills-attr" role="tab" aria-controls="pills-attr" aria-selected="true">属性</a>
+                            </li>
+                            <li class="nav-item submenu">
                                 <a class="nav-link" id="pills-sku-tab" data-toggle="pill" href="#pills-sku" role="tab" aria-controls="pills-sku" aria-selected="true">SKU</a>
                             </li>
                         </ul>
@@ -81,6 +84,30 @@
 
                             </div>
 
+                            <div class="tab-pane fade" id="pills-attr" role="tabpanel" aria-labelledby="pills-attr-tab">
+                                <div class="row">
+                                    <div class="col-lg-6">
+
+                                        <div class="form-group">
+                                            <label for="skus">属性</label>
+                                            <select class="form-control select2" multiple="true" name="attrs[]">
+                                                <option value="0">无</option>
+                                                <?
+                                                $attrsnames = array_column($m['attrs'],'name');
+                                                foreach ($attrs as $s){
+                                                    ?>
+                                                    <option value="<?=$s['name']?>" <?=(isset($m)&&!empty($m['attrs'])&&in_array($s['name'],$attrsnames))?'selected':''?>><?=$s['name']?></option>
+                                                <?}?>
+                                            </select>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
                             <div class="tab-pane fade" id="pills-sku" role="tabpanel" aria-labelledby="pills-sku-tab">
                                 <div class="row">
                                     <div class="col-lg-6">
@@ -117,7 +144,6 @@
 
     <?
     import('/layout/bottom.php');
-    import('/share/icon/select.php');
 
     ?>
 

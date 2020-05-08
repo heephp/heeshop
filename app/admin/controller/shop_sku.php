@@ -5,11 +5,23 @@ use heephp\validata;
 
 class shop_sku extends adminBase
 {
-
-    function manager()
+    public function __construct()
     {
+        parent::__construct();
+
         $msku = model('shop_sku');
-        $msku->page('',$msku->key.' desc');
+        $this->assign('skucls',$msku->skucls());
+
+        $this->assign('cls',request('get.cls'));
+    }
+
+    function manager($cls='')
+    {
+        $cls = urldecode($cls);
+        $this->assign('cls',$cls);
+
+        $msku = model('shop_sku');
+        $msku->page(empty($cls)?'':"cls='$cls'",$msku->key.' desc');
         $this->assign('list', $msku->data);
         $this->assign('pager', $msku->pager['show']);
         return $this->fetch();
@@ -17,8 +29,7 @@ class shop_sku extends adminBase
 
     function add()
     {
-        $msku = model('shop_sku');
-        $this->assign('skucls',$msku->skucls());
+
 
         return $this->fetch('edit');
     }
@@ -31,9 +42,6 @@ class shop_sku extends adminBase
         $msku->get($id);
         $this->assign('m', $msku->data);
 
-
-        $msku = model('shop_sku');
-        $this->assign('skucls',$msku->skucls());
 
         return $this->fetch();
     }

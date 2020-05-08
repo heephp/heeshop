@@ -17,7 +17,6 @@
         </ul>
     </div>
 
-
     <div class="row">
         <div class="col-md-12">
             <div class="card">
@@ -33,7 +32,7 @@
                                     <label for="title">分类</label>
                                     <select class="form-control select2input" name="cls">
                                         <?foreach ($skucls as $s){?>
-                                        <option value="_blank" <?=$s['cls']==$m['cls']?'selected':''?>><?=$s['cls']?></option>
+                                        <option value="<?=$s['cls']?>" <?=$s['cls']==$m['cls']?'selected':''?>><?=$s['cls']?></option>
                                         <?}?>
                                     </select>
                                 </div>

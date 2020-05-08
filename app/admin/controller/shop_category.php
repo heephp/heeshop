@@ -39,11 +39,17 @@ class shop_category extends adminBase
 
         $cate->get($id);
         $cate->skus();
+        $cate->attrs();
 
-
+        //sku类别
         $msku = model('shop_sku');
         $skus = $msku->skucls();
         $this->assign('skus',$skus);
+
+        //属性类别
+        $mattr = model('shop_attr');
+        $attrs = $mattr->select();
+        $this->assign('attrs',$attrs);
 
         $this->assign('m',$cate->data);
         return $this->fetch();
@@ -70,7 +76,9 @@ class shop_category extends adminBase
     function save(){
         $data=request('post.');
         $skus = $data['skus'];
+        $attrs = $data['attrs'];
         unset($data['skus']);
+        unset($data['attrs']);
         $cate = model('shop_category');
 
         if(!empty($data[$cate->key])){
@@ -97,9 +105,13 @@ class shop_category extends adminBase
 
             $catesku->deleteByWhere('shop_category_id=' . $data[$cate->key]);
 
+        //保存属性
+        $cate->get($data[$cate->key]);
+            $attrids = model('shop_attr')->getByshop_attr_id("`name` in ('".implode('\',\'',$attrs??[])."')");
+            $cate->attrs()->save($attrids??'');
+
 
         if($result){
-
             cache()->clear();
             return $this->success('保存成功',url('manager'));
         }else{

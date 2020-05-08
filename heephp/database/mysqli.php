@@ -192,6 +192,15 @@ class mysqli implements databaseInterface {
      * @return int 最新添加的id
      */
     public function insert($table,$data){
+
+        $sql = $this->bulid_insert_sql($table,$data);
+        $this->query($sql);
+        //返回上一次增加操做产生ID值
+        return $this->getInsertid();
+    }
+
+    private function bulid_insert_sql($table,$data)
+    {
         //获取表字段信息  并判断是否是自增
         $fields = $this->getFileds($table);
         $keyfield = '';
@@ -222,9 +231,7 @@ class mysqli implements databaseInterface {
         $v_str=trim($v_str,',');
         //判断数据是否为空
         $sql="insert into $this->table_prefix$table ($key_str) values ($v_str)";
-        $this->query($sql);
-        //返回上一次增加操做产生ID值
-        return $this->getInsertid();
+        return $sql;
     }
 
     /*
@@ -233,6 +240,13 @@ class mysqli implements databaseInterface {
     * @return 受影响的行数
     */
     public function delete($table, $where){
+        $sql = $this->bulid_delete_sql($table,$where);
+        $this->query($sql);
+        //返回受影响的行数
+        return mysqli_affected_rows(self::$link);
+    }
+
+    private function bulid_delete_sql($table,$where){
         if(is_array($where)){
             foreach ($where as $key => $val) {
                 if(is_array($val)){
@@ -245,9 +259,7 @@ class mysqli implements databaseInterface {
             $condition = $where;
         }
         $sql = "delete from $this->table_prefix$table where $condition";
-        $this->query($sql);
-        //返回受影响的行数
-        return mysqli_affected_rows(self::$link);
+        return $sql;
     }
     /**
      * [修改操作description]
@@ -257,6 +269,13 @@ class mysqli implements databaseInterface {
      * @return [type]
      */
     public function update($table,$data,$where,$limit=0){
+        $sql = $this->bulid_update_sql($table,$data,$where,$limit);
+        $this->query($sql);
+        //返回受影响的行数
+        return mysqli_affected_rows(self::$link);
+    }
+
+    private function bulid_update_sql($table,$data,$where,$limit){
         //遍历数组，得到每一个字段和字段的值
         $str='';
         $keyfiled=$this->getKeyFiled($table);
@@ -284,9 +303,68 @@ class mysqli implements databaseInterface {
         }
         //修改SQL语句
         $sql="update `$this->table_prefix$table` set $str where $condition $limit";
-        $this->query($sql);
-        //返回受影响的行数
-        return mysqli_affected_rows(self::$link);
+        return $sql;
+    }
+/*
+    public function begin_trans(){
+        mysqli_begin_transaction(self::$link);
     }
 
+    public function query_trans($type,$table,$data,$where=''){
+        if($type=='i'||$type=='insert'){
+            return $this->insert_trans($table,$data);
+        }else if($type=='u'||$type=='update'){
+            return $this->update_trans($table,$data,$where);
+        }else if($type=='d'||$type=='delete'){
+            return $this->delete_trans($table,$where);
+        }else{
+            throw new sysExcption('调用了不存在的事务语句类型：'.$type);
+        }
+    }
+
+
+    private function insert_trans($table,$data){
+
+        $sql = $this->bulid_insert_sql($table,$data);
+        $query=$this->query($sql);
+        if(!$query) {
+            mysqli_query(self::$link, "ROLLBACK");
+            return false;
+        }
+
+        return mysqli_insert_id($this->db);
+    }
+
+    private function update_trans($table,$data,$where){
+
+        $sql = $this->bulid_update_sql($table,$data,$where);
+        $query=$this->query($sql);
+        if(!$query) {
+            mysqli_query(self::$link, "ROLLBACK");
+            return false;
+        }
+
+        return mysqli_affected_rows($this->db);
+    }
+
+    private function delete_trans($table,$where){
+
+        $sql = $this->bulid_delete_sql($table,$where);
+        $query=$this->query($sql);
+        if(!$query) {
+            mysqli_query(self::$link, "ROLLBACK");
+            return false;
+        }
+
+        return mysqli_affected_rows($this->db);
+    }
+
+    public function commit_trans(){
+        mysqli_commit(self::$link);
+    }
+
+    public function close_trans(){
+        mysqli_close(self::$link);
+    }
+*/
 }

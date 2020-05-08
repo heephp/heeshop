@@ -183,17 +183,24 @@ class relation{
 
             //从关联表读取数据
             if(!is_array($list)){
+
                 $this->rmodel->find("`$this->fkey`='".$list."'");
                 $this->call_rmodel_methods();
 
-                $tdata[$itemname]=[$this->rmodel->data];
+                $d=$this->rmodel->data;
+                if(!empty($d))
+                    $tdata[$itemname]=[$this->rmodel->data];
+
             }else{
                 for($i = 0; $i < count($list); $i++) {
                     $it=$list[$i];
                     $this->rmodel->find("`$this->fkey`='".$it."'");
                     $this->call_rmodel_methods();
 
-                    $tdata[$itemname][]=$this->rmodel->data;
+                    $d=$this->rmodel->data;
+                    if(!empty($d))
+                        $tdata[$itemname][]=$this->rmodel->data;
+
                 }
             }
 
@@ -218,14 +225,18 @@ class relation{
                     $this->rmodel->get($list);
                     $this->call_rmodel_methods();
 
-                    $di[$itemname]=$this->rmodel->data;
+                    $d=$this->rmodel->data;
+                    if(!empty($d))
+                        $di[$itemname]=$this->rmodel->data;
                 }else{
 
                     $idlist = implode(',',$list);
                     $this->rmodel->select('`'.$this->fkey.'` in ('.$idlist.')');
                     $this->call_rmodel_methods();
 
-                    $di[$itemname]=$this->rmodel->data;
+                    $d=$this->rmodel->data;
+                    if(!empty($d))
+                        $di[$itemname]=$this->rmodel->data;
                 }
 
                 $tdata[$i]=$di;
@@ -235,7 +246,9 @@ class relation{
 
 
         }
-        $this->model->data=$tdata;
+
+            $this->model->data=$tdata;
+
         return $this;
 
     }
@@ -313,7 +326,7 @@ class relation{
 
                 if($this->issingleline($tdata)){
 
-                    if(array_key_first()==0){
+                    if(array_key_first($data)==0){
                         //如果是id列表
                         $data = implode(',',$data);
                     }else{
@@ -332,12 +345,17 @@ class relation{
                 //如果为字符串 用,分割的Id
                 //清除中间表数据库中没有
                 $midmodel=model($this->mid_table);
-                $midmodel->deleteByWhere('`'.$this->key."`='".$tdata[$this->key]."' and $this->fkey not in (".$data.")");
+                $sql= '`'.$this->key."`='".$tdata[$this->key]."'";
+                if(!empty($data))
+                    $sql.=" and $this->fkey not in (".$data.")";
+                $midmodel->deleteByWhere($sql);
 
                 //新增中间表没有的数据
                 $rearr = [];
                 $ds = explode(',',$data);
                 foreach ($ds as $item) {
+                    if(empty($item))
+                        continue;
                     $rearr = $midmodel->insert([$this->key => $tdata[$this->key], $this->fkey => $item]);
                 }
 

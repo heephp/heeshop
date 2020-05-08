@@ -95,6 +95,11 @@ $mtrash = 'show';//CONTROLLER=='trash'?'show':'';
                                 </a>
                             </li>
 
+                            <li>
+                                <a href="<?=url('/'.APP.'/shop_attr/manager')?>">
+                                    <span class="sub-item">商品属性管理</span>
+                                </a>
+                            </li>
 
                         </ul>
                     </div>

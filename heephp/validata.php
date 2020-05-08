@@ -28,10 +28,11 @@ class validata{
     }
 
     public function double($wei=0){
+        $d=$this->data;
         if($wei==0)
-            return is_double($this->data);
+            return is_float($d);
 
-        return is_double($this->data)&&strlen(strstr($this->data,'.'))==$wei+1;
+        return is_float(floatval($d))&&strlen(strstr($d,'.'))==$wei+1;
     }
 
     public function alphaNumDashChinese($min=1,$max=0){
