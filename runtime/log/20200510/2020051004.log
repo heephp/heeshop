@@ -1,0 +1,548 @@
+2020-05-10 04:16:05 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:16:05 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:16:05 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:16:05 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:16:05 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:16:05 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-05-10 04:16:05 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:16:05 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:16:05 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:16:05 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:16:05 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:16:06 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:16:06 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:16:06 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:16:06 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:16:06 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:16:12 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:16:12 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:16:12 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:16:12 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:16:12 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:16:12 [DEBUG] [root]select * from heecms_users where (`username`='admin' and `password`='e10adc3949ba59abbe56e057f20f883e') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-05-10 04:16:12 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-10 04:16:12 [DEBUG] [root]select * from heecms_users_group where (`users_group_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-05-10 04:16:12 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:16:12 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:16:12 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:16:12 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-10 04:16:12 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:16:12 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-10 04:16:12 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-05-10 04:16:12 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:16:12 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:16:12 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:16:12 [DEBUG] [root]select * from heecms_menus where (parent_id=0 or parent_id IS NULL or parent_id='') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 04:16:12 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:16:12 [DEBUG] [root]select * from heecms_menus where (`parent_id`='8') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 04:16:12 [DEBUG] [root]select * from heecms_users where (`users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')
+2020-05-10 04:16:12 [DEBUG] [root]select * from heecms_menus where (`parent_id`='10') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 04:16:12 [DEBUG] [root]select * from heecms_menus where (`parent_id`='5') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 04:16:12 [DEBUG] [root]select * from heecms_menus where (`parent_id`='15') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 04:16:12 [DEBUG] [root]select * from heecms_menus where (`parent_id`='12') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 04:16:18 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:16:18 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:16:18 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:16:18 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-10 04:16:18 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:16:18 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-10 04:16:18 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-05-10 04:16:18 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:16:18 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:16:18 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:16:18 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:16:18 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:16:18 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-05-10 04:17:18 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:17:18 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:17:18 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:17:18 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-10 04:17:18 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:17:18 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-10 04:17:18 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-05-10 04:17:18 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:17:18 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:17:18 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:17:18 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:17:18 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:17:18 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-05-10 04:20:23 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:20:23 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:20:23 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:20:23 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-10 04:20:23 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:20:23 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-10 04:20:23 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-05-10 04:20:23 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:20:23 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:20:23 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:20:23 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:20:23 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:20:23 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-05-10 04:31:38 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:31:38 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:31:38 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:31:38 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-10 04:31:38 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:31:38 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-10 04:31:38 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-05-10 04:31:38 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:31:38 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:31:38 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:31:38 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:31:38 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:31:38 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-05-10 04:32:32 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:32:32 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:32:32 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:32:32 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-10 04:32:32 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:32:32 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-10 04:32:32 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-05-10 04:32:32 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:32:32 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:32:32 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:32:32 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:32:32 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:32:32 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-05-10 04:33:03 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:33:03 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:33:03 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:33:03 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-10 04:33:03 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:33:03 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-10 04:33:03 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-05-10 04:33:03 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:33:03 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:33:03 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:33:03 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:33:03 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:33:03 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-05-10 04:33:43 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:33:43 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:33:43 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:33:43 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-10 04:33:43 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:33:43 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-10 04:33:43 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-05-10 04:33:43 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:33:43 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:33:43 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:33:43 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:33:43 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:33:43 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-05-10 04:34:13 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:34:13 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:34:13 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:34:13 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-10 04:34:13 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:34:13 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-10 04:34:13 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-05-10 04:34:13 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:34:13 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:34:13 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:34:13 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:34:13 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:34:13 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-05-10 04:41:16 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:41:16 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:41:16 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:41:16 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-10 04:41:16 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:41:16 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-10 04:41:16 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-05-10 04:41:16 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:41:16 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:41:16 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:41:16 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:41:16 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:41:16 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-05-10 04:42:21 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:42:21 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:42:21 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:42:21 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-10 04:42:21 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:42:21 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-10 04:42:21 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-05-10 04:42:21 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:42:21 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:42:21 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:42:21 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:42:22 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:42:22 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-05-10 04:47:47 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:47:47 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:47:47 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-10 04:47:47 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-10 04:47:47 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:47:47 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:47:47 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='company_name' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='company_address' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='company_contact' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='company_contact_mobile' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='company_email' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='company_desc' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='HeeCMS官网' where `name`='website_name' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='website_url' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='website_logo' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='HeeCMS HeePHP框架' where `name`='website_keyword' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='website_description' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='/upload/' where `name`='upload_dir' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='500' where `name`='upload_size' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='jpg,png,gif,jpge' where `name`='upload_ext' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='md5' where `name`='upload_file_name' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='1' where `name`='watermark' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='水印文字' where `name`='watermark_txt' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='16' where `name`='watermark_fontsize' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='watermark_font' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='watermark_img' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='8' where `name`='watermark_postion' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='1' where `name`='is_vcode' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='lower' where `name`='vcode_char' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='4' where `name`='vcode_num' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='100' where `name`='vcode_width' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='36' where `name`='vcode_heigh' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='20' where `name`='vcode_line_count' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='mail_smtp_server' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='25' where `name`='mail_smtp_port' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='mail_sender' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='mail_smtp_username' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='mail_smtp_password' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='sms_accessKeyId' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='sms_accessKeySecret' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='sms_SingName' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='sms_TemplateCode' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_qq_appid' 
+2020-05-10 04:47:47 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:47 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_qq_appkey' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_qq_callback' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_wx_appid' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_wx_appsecrt' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_wb_appkey' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_wb_appsecrt' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_bd_domain' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_bd_appid' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_bd_appsecrt' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_bd_callback' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_ali_appid' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_ali_private_key' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_ali_public_key' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='lvstech@foxmail.com' where `name`='pay_ali_account' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='2088611498447905' where `name`='pay_ali_appid' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='MIIEowIBAAKCAQEAjIE8pEP9KNTvakTLGia3YmawOcvtQ+MYR4zNzLMaANf0YInIQJWiL2HY+ocPaEJlLo24uIMxVWkB48Xonz/OAdHkQ1+XM9daU8FVcrXyu4JLuhomnxelJNDdrmNMa+iXK9T+lA3xPi9C5pcgvt5Wtfz8EMZWZaPpOc7wC0YDLFCOpS3SpOTtpGfWk7S4tdxIelW2XtjiaDS+AVxROlArShgk/TEdbxP18me4FAQ3eYv/F1uD/f+1fvAeiR2cEU78aVpG3H0uBa7bSSbhmLGTFvnP0hc+i4TUeIXrmnkmIKC9hZictGcvcXZ/LnLFCAaQI8yb1bpbaOsN/23YtIAmGQIDAQABAoIBAQCB4tbUY6WcIXxRmNbIjhHo/VTbmRD1OPIw8pEtMkRPk1NuCvD8A1eyxZl3v3MWxooSxyCEMYNhmXkNvt6UmL8wH4AMaEm2utXdp1P+fwStIn4uxA3/9DPOHOdRVqpG9vUIqBXPeDQTcE1ALWUwDQnLotrCBxfHTgdEUXDGeypjw5Su6h+FIhtR3ULqxQD87+NV+AXyqThH0LXNq6ERStLi/qgYl1hrHJKn1YlFMlAufnV++Es2GkOUkt7+0xu+CRPZuNGlOdFc7QXrGh2DMwBYeh5TNXl5IbcVehwjGQA0w6EU/TvQl+anlgJk5u/ylaVztxEuLq4FqaYhTH1JVIqBAoGBAM5/Eu7em1Z8sBzfw0HQsESMQ/YTF8AjQ7SMP1kxlGqUTMPEJfKa8wT11cA4CRPMN1c092PR1izATI0xf5AAXOYQn+LFUYVmjegMBFULMGEmSDQuzOhf5Q6RqH66QthMW1Vbeo0CHvSqgoNKFWI1MkXtlrq+ynCq8mEAG+z3DSuFAoGBAK4wLwsxiqltLt2JC7+Q9jKfbSQ1yP9yTYB0mZxWBwRt64O9fcJ24BSQXJ7OpaAkH/Aij59ih71ZXicFQt23NWrhG9WlvhIyn6ukCP2JwA5dBrLOGrhpXwDK1gyURBUMIih5fz7LhKzEdzQynbqbXdbmRyqXftuLrAZ/qfQIA4KFAoGAeC3g2QDZq0Y6QTPBsgZA8EQqMYb/JaXge628GK8QT88rtivsYfvoQBTLaGm0br9F3g1HheLUIYtxgiMyuJ5dctBuHU71mQwMvuZvhwdSCth64VPzkbJt30LKq6a/zJ7z8QOimXqIhaDPAJYXR+bp8WTLergbneL/2ZB0sD9AfPkCgYBNHtg1RIH38XdGbl7dOflHAH76ATY0ow7dSMKaDRyeQWx8r3D2oFslv6TCSwvZkyTw1Nxx3NXsZ5zf+dxY/byQzYndVbyJohA/lijE2DBIK7fDgq0h6MU/PI74ksxx5SVadjB4RPNA6ts8KQzcid1KQDpSCTEJUxWe6vb8LHAhYQKBgAu2m0E0afgXoYDDVrl+ltQB8z/4swJBoaZkuVBRKMoMqXTrNgPj72PNr1vMaEEV3sehuGXiXjKJQPavlexhdOdc9eQVG3Zghqly0SKdJiDsITr6QvlLASjvOE2Y/Q9Jj2Kvuus3493OEldxIlDR8zN1+WG0oZiHA0NBg17CZAQJ' where `name`='pay_ali_private_key' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjIE8pEP9KNTvakTLGia3YmawOcvtQ+MYR4zNzLMaANf0YInIQJWiL2HY+ocPaEJlLo24uIMxVWkB48Xonz/OAdHkQ1+XM9daU8FVcrXyu4JLuhomnxelJNDdrmNMa+iXK9T+lA3xPi9C5pcgvt5Wtfz8EMZWZaPpOc7wC0YDLFCOpS3SpOTtpGfWk7S4tdxIelW2XtjiaDS+AVxROlArShgk/TEdbxP18me4FAQ3eYv/F1uD/f+1fvAeiR2cEU78aVpG3H0uBa7bSSbhmLGTFvnP0hc+i4TUeIXrmnkmIKC9hZictGcvcXZ/LnLFCAaQI8yb1bpbaOsN/23YtIAmGQIDAQAB' where `name`='pay_ali_public_key' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='pay_wx_appid' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='pay_wx_appsecrt' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='pay_wx_mchid' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='pay_wx_key' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='pay_wx_apiclient_cert' 
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='pay_wx_apiclient_key' 
+2020-05-10 04:47:48 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:47:48 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:47:48 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-10 04:47:48 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-10 04:47:48 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:47:48 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:47:48 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:47:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:47:48 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-05-10 04:48:46 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:48:46 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:48:46 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-10 04:48:46 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-10 04:48:46 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:48:46 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:48:46 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='company_name' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='company_address' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='company_contact' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='company_contact_mobile' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='company_email' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='company_desc' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='HeeCMS官网' where `name`='website_name' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='website_url' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='website_logo' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='HeeCMS HeePHP框架' where `name`='website_keyword' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='website_description' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='/upload/' where `name`='upload_dir' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='500' where `name`='upload_size' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='jpg,png,gif,jpge' where `name`='upload_ext' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='md5' where `name`='upload_file_name' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='1' where `name`='watermark' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='水印文字' where `name`='watermark_txt' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='16' where `name`='watermark_fontsize' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='watermark_font' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='watermark_img' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='8' where `name`='watermark_postion' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='1' where `name`='is_vcode' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='lower' where `name`='vcode_char' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='4' where `name`='vcode_num' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='100' where `name`='vcode_width' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='36' where `name`='vcode_heigh' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='20' where `name`='vcode_line_count' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='mail_smtp_server' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='25' where `name`='mail_smtp_port' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='mail_sender' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='mail_smtp_username' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='mail_smtp_password' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='sms_accessKeyId' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='sms_accessKeySecret' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='sms_SingName' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='sms_TemplateCode' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_qq_appid' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_qq_appkey' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_qq_callback' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_wx_appid' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_wx_appsecrt' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_wb_appkey' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_wb_appsecrt' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_bd_domain' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_bd_appid' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_bd_appsecrt' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_bd_callback' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_ali_appid' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_ali_private_key' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='login_ali_public_key' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='lvstech@foxmail.com' where `name`='pay_ali_account' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='2088611498447905' where `name`='pay_ali_appid' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='MIIEowIBAAKCAQEAjIE8pEP9KNTvakTLGia3YmawOcvtQ+MYR4zNzLMaANf0YInIQJWiL2HY+ocPaEJlLo24uIMxVWkB48Xonz/OAdHkQ1+XM9daU8FVcrXyu4JLuhomnxelJNDdrmNMa+iXK9T+lA3xPi9C5pcgvt5Wtfz8EMZWZaPpOc7wC0YDLFCOpS3SpOTtpGfWk7S4tdxIelW2XtjiaDS+AVxROlArShgk/TEdbxP18me4FAQ3eYv/F1uD/f+1fvAeiR2cEU78aVpG3H0uBa7bSSbhmLGTFvnP0hc+i4TUeIXrmnkmIKC9hZictGcvcXZ/LnLFCAaQI8yb1bpbaOsN/23YtIAmGQIDAQABAoIBAQCB4tbUY6WcIXxRmNbIjhHo/VTbmRD1OPIw8pEtMkRPk1NuCvD8A1eyxZl3v3MWxooSxyCEMYNhmXkNvt6UmL8wH4AMaEm2utXdp1P+fwStIn4uxA3/9DPOHOdRVqpG9vUIqBXPeDQTcE1ALWUwDQnLotrCBxfHTgdEUXDGeypjw5Su6h+FIhtR3ULqxQD87+NV+AXyqThH0LXNq6ERStLi/qgYl1hrHJKn1YlFMlAufnV++Es2GkOUkt7+0xu+CRPZuNGlOdFc7QXrGh2DMwBYeh5TNXl5IbcVehwjGQA0w6EU/TvQl+anlgJk5u/ylaVztxEuLq4FqaYhTH1JVIqBAoGBAM5/Eu7em1Z8sBzfw0HQsESMQ/YTF8AjQ7SMP1kxlGqUTMPEJfKa8wT11cA4CRPMN1c092PR1izATI0xf5AAXOYQn+LFUYVmjegMBFULMGEmSDQuzOhf5Q6RqH66QthMW1Vbeo0CHvSqgoNKFWI1MkXtlrq+ynCq8mEAG+z3DSuFAoGBAK4wLwsxiqltLt2JC7+Q9jKfbSQ1yP9yTYB0mZxWBwRt64O9fcJ24BSQXJ7OpaAkH/Aij59ih71ZXicFQt23NWrhG9WlvhIyn6ukCP2JwA5dBrLOGrhpXwDK1gyURBUMIih5fz7LhKzEdzQynbqbXdbmRyqXftuLrAZ/qfQIA4KFAoGAeC3g2QDZq0Y6QTPBsgZA8EQqMYb/JaXge628GK8QT88rtivsYfvoQBTLaGm0br9F3g1HheLUIYtxgiMyuJ5dctBuHU71mQwMvuZvhwdSCth64VPzkbJt30LKq6a/zJ7z8QOimXqIhaDPAJYXR+bp8WTLergbneL/2ZB0sD9AfPkCgYBNHtg1RIH38XdGbl7dOflHAH76ATY0ow7dSMKaDRyeQWx8r3D2oFslv6TCSwvZkyTw1Nxx3NXsZ5zf+dxY/byQzYndVbyJohA/lijE2DBIK7fDgq0h6MU/PI74ksxx5SVadjB4RPNA6ts8KQzcid1KQDpSCTEJUxWe6vb8LHAhYQKBgAu2m0E0afgXoYDDVrl+ltQB8z/4swJBoaZkuVBRKMoMqXTrNgPj72PNr1vMaEEV3sehuGXiXjKJQPavlexhdOdc9eQVG3Zghqly0SKdJiDsITr6QvlLASjvOE2Y/Q9Jj2Kvuus3493OEldxIlDR8zN1+WG0oZiHA0NBg17CZAQJ' where `name`='pay_ali_private_key' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjIE8pEP9KNTvakTLGia3YmawOcvtQ+MYR4zNzLMaANf0YInIQJWiL2HY+ocPaEJlLo24uIMxVWkB48Xonz/OAdHkQ1+XM9daU8FVcrXyu4JLuhomnxelJNDdrmNMa+iXK9T+lA3xPi9C5pcgvt5Wtfz8EMZWZaPpOc7wC0YDLFCOpS3SpOTtpGfWk7S4tdxIelW2XtjiaDS+AVxROlArShgk/TEdbxP18me4FAQ3eYv/F1uD/f+1fvAeiR2cEU78aVpG3H0uBa7bSSbhmLGTFvnP0hc+i4TUeIXrmnkmIKC9hZictGcvcXZ/LnLFCAaQI8yb1bpbaOsN/23YtIAmGQIDAQAB' where `name`='pay_ali_public_key' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='wx9d24e93197f03db3' where `name`='pay_wx_appid' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='eaef8076232ef6970799d70168187aa7' where `name`='pay_wx_appsecrt' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='eaef8076232ef6970799d70168187aa7' where `name`='pay_wx_mchid' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='wangyingzhe1986091288wangyingzhe' where `name`='pay_wx_key' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='pay_wx_apiclient_cert' 
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]update `heecms_config` set `value`='' where `name`='pay_wx_apiclient_key' 
+2020-05-10 04:48:46 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:48:46 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:48:46 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-10 04:48:46 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-10 04:48:46 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:48:46 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:48:46 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:48:46 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:48:46 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-05-10 04:52:00 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:52:00 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:52:00 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:52:00 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:52:00 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:52:00 [DEBUG] [root]select `name`,`value` from heecms_config where 1=1  order by id asc 
+2020-05-10 04:52:00 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:52:00 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 04:52:00 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 04:52:00 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:52:00 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:52:00 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:52:00 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:52:00 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:52:00 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:52:00 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 04:52:00 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 04:52:00 [DEBUG] [root]自动加载类：We
+2020-05-10 04:52:00 [DEBUG] [root]自动加载类：AliPay\Web
+2020-05-10 04:52:00 [DEBUG] [root]自动加载类：WeChat\Contracts\BasicAliPay
+2020-05-10 04:52:00 [DEBUG] [root]自动加载类：WeChat\Contracts\DataArray
+2020-05-10 04:52:00 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:52:00 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:52:00 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:52:00 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-10 04:52:00 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:52:00 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-10 04:52:00 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-05-10 04:52:00 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:52:00 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:52:00 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:52:00 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:52:24 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:52:24 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:52:24 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:52:24 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:52:24 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:52:24 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:52:24 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 04:52:25 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 04:52:25 [DEBUG] [root]自动加载类：We
+2020-05-10 04:52:25 [DEBUG] [root]自动加载类：AliPay\Web
+2020-05-10 04:52:25 [DEBUG] [root]自动加载类：WeChat\Contracts\BasicAliPay
+2020-05-10 04:52:25 [DEBUG] [root]自动加载类：WeChat\Contracts\DataArray
+2020-05-10 04:56:15 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:56:15 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:56:15 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:56:15 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:56:15 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:56:15 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:56:15 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 04:56:15 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 04:56:16 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-05-10 04:56:16 [DEBUG] [root]自动加载类：AliPay\Web
+2020-05-10 04:56:16 [DEBUG] [root]自动加载类：WeChat\Contracts\BasicAliPay
+2020-05-10 04:56:16 [DEBUG] [root]自动加载类：WeChat\Contracts\DataArray
+2020-05-10 04:57:22 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-10 04:57:22 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:57:22 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:57:22 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-10 04:57:22 [DEBUG] [root]select name from heecms_users_group where (`users_group_id`=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:57:22 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-10 04:57:22 [DEBUG] [root]select * from heecms_message where (`isread`=0 and `receiver_users_id`='1') and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by create_time desc limit 0,5
+2020-05-10 04:57:23 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:57:23 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:57:23 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:57:23 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-10 04:57:31 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:57:31 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:57:31 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:57:31 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:57:31 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:57:31 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:57:31 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 04:57:31 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 04:57:36 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 04:57:36 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 04:57:36 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 04:57:36 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 04:57:36 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 04:57:36 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 04:57:36 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 04:57:36 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 04:57:36 [DEBUG] [root]自动加载类：AliPay\Web
+2020-05-10 04:57:36 [DEBUG] [root]自动加载类：WeChat\Contracts\BasicAliPay
+2020-05-10 04:57:36 [DEBUG] [root]自动加载类：WeChat\Contracts\DataArray

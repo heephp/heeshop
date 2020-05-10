@@ -109,12 +109,12 @@
 
                                     <div class="form-group">
                                         <label for="title">列表模板</label>
-                                        <input type="text" class="form-control" name="template_list" placeholder="列表模板" value="<?=$m['template_list']??'list.php'?>">
+                                        <input type="text" class="form-control" name="template_list" id="template_list" placeholder="列表模板" value="<?=$m['template_list']??'list.php'?>">
                                         <small class="text-small">列表页使用的模板,相对view根目录的路径以'/'开头，相对view/栏目名/目录的无需'/'开头</small>
                                     </div>
                                     <div class="form-group">
                                         <label for="title">详细页模板</label>
-                                        <input type="text" class="form-control" name="template_detail" placeholder="详细页模板" value="<?=$m['template_detail']??'detail.php'?>">
+                                        <input type="text" class="form-control" name="template_detail" id="template_detail" placeholder="详细页模板" value="<?=$m['template_detail']??'detail.php'?>">
                                         <small class="text-small">详细页使用的模板,相对view根目录的路径以'/'开头，相对view/栏目名/目录的无需'/'开头</small>
                                     </div>
                                 </div>
@@ -135,6 +135,28 @@
     </div>
 
 
+    <!--列表模板-->
+    <div class="modal" tabindex="-1" role="dialog" id="modal_selectfile">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">请选择文件：</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="fileTree"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <?
     import('/layout/bottom.php');
     import('/share/icon/select.php');
@@ -143,5 +165,52 @@
 
     <?function js(){?>
 
+        <script src="/assets/plugin/fileTree/jquery.easing.js" type="text/javascript"></script>
+        <script src="/assets/plugin/fileTree/jqueryFileTree.js" type="text/javascript"></script>
+        <link href="/assets/plugin/fileTree/jqueryFileTree.css" rel="stylesheet" type="text/css" media="screen" />
+        <style>
+            #fileTree{
+                border: 1px solid #f5f5f5;
+                padding: 10px;
+                font-size: 16px !important;
+            }
+        </style>
+        <script>
 
+            $(document).ready(function () {
+
+                $('#template_list').on('click',function () {
+
+                    $('#modal_selectfile').modal('show');
+
+                    $('#fileTree').fileTree({
+                        root: '/',
+                        script: '<?=url('ajax_template_dir')?>'
+                    }, function (file) {
+                        $('#template_list').val(file);
+                        $('#modal_selectfile').modal('hide');
+                    });
+
+                })
+
+                $('#template_detail').on('click',function () {
+
+                    $('#modal_selectfile').modal('show');
+
+                    $('#fileTree').fileTree({
+                        root: '/',
+                        script: '<?=url('ajax_template_dir')?>'
+                    }, function (file) {
+                        $('#template_detail').val(file);
+                        $('#modal_selectfile').modal('hide');
+                    });
+
+                })
+
+
+            })
+            
+
+
+            </script>
     <?}?>

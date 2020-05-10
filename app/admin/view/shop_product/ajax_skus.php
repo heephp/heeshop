@@ -1,4 +1,3 @@
-<? var_dump($result);?>
     <div style="margin-left: 10px;">
 
         <table style="border: solid 1px #f5f5f5;">

@@ -72,6 +72,23 @@ class index extends adminBase {
             $m[$item['name']]=$item['value'];
         }
 
+        //读取本地模板列表
+        $skins=[];
+        foreach_dir(ROOT.'\\skins\\',function ($val,$path) use(&$skins){
+            $a['name']=$val;
+            if(file_exists($path.$val.'\\img.jpg'))
+                $a['img']=imgToBase64($path.$val.'\\img.jpg');
+
+            $skins[]=$a;
+        });
+        $this->assign('skins',$skins);
+
+        //读取在线模板列表
+        $skinjson = getcurl('http://skins.heecms.cn/skins.json');
+        $skins_online = json_decode($skinjson,true);
+        $this->assign('so',$skins_online);
+
+
         $this->assign('m',$m);
         return $this->fetch();
     }
@@ -156,6 +173,8 @@ class index extends adminBase {
             return $this->error('清空缓存失败！');
 
     }
+
+
 
 }
 

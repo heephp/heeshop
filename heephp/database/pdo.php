@@ -144,14 +144,15 @@ class pdo implements databaseInterface {
             $str.="`$key`='$v',";
         }
         $str=rtrim($str,',');
+
+        $condition = '';
         if(is_array($where)){
-            foreach ($where as $key => $val) {
-                if(is_array($val)){
-                    $condition = '`'.$key.'` in ('.implode(',', $val) .')';
-                } else {
-                    $condition = '`'.$key. '`=' .$val;
-                }
+            $arr = $where;
+            $relation = 'and';
+            foreach ($arr as $k=>$v){
+                $condition.=" `$k`='$v'  $relation ";
             }
+            $condition = substr($condition,0,strlen($condition)-4);
         } else {
             $condition = $where;
         }
@@ -170,17 +171,18 @@ class pdo implements databaseInterface {
     public function select($table, $where, $fields = '*', $order = '', $skip = 0, $limit = 0)
     {
 
+        $condition = '';
         if(is_array($where)){
-            foreach ($where as $key => $val) {
-                if (is_numeric($val)) {
-                    $condition = $key.'='.$val;
-                }else{
-                    $condition = $key.'=\"'.$val.'\"';
-                }
+            $arr = $where;
+            $relation = 'and';
+            foreach ($arr as $k=>$v){
+                $condition.=" `$k`='$v'  $relation ";
             }
+            $condition = substr($condition,0,strlen($condition)-4);
         } else {
             $condition = $where;
         }
+
         if (!empty($order)) {
             $order = " order by ".$order;
         }
@@ -284,14 +286,14 @@ class pdo implements databaseInterface {
     }
     public function delete($table, $where)
     {
-        if (is_array($where)) {
-            foreach ($where as $key => $val) {
-                if (is_array($val)) {
-                    $condition = $key . ' in (' . implode(',', $val) . ')';
-                } else {
-                    $condition = $key . '=' . $val;
-                }
+        $condition = '';
+        if(is_array($where)){
+            $arr = $where;
+            $relation = 'and';
+            foreach ($arr as $k=>$v){
+                $condition.=" `$k`='$v'  $relation ";
             }
+            $condition = substr($condition,0,strlen($condition)-4);
         } else {
             $condition = $where;
         }

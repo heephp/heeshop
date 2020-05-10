@@ -3,9 +3,10 @@
 use heephp\logger;
 use heephp\route;
 
-function urlget(){
-    $url=$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$_SERVER['REQUEST_URI'];//print_r($_SERVER['REQUEST_URI']);
-    $urlstrs=parse_url($url);
+function urlget()
+{
+    $url = $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . $_SERVER['REQUEST_URI'];//print_r($_SERVER['REQUEST_URI']);
+    $urlstrs = parse_url($url);
     return $urlstrs;
 }
 
@@ -15,34 +16,43 @@ function urlget(){
  * @param $controller
  * @param $method
  */
-function urlpaser(&$app,&$controller,&$method,&$parms){
+function urlpaser(&$app, &$controller, &$method, &$parms)
+{
 
-    $urlinfo=urlget();
+    $urlinfo = urlget();
 
     //将querystring 的值拼接入path
-    $querys = explode('&',$urlinfo['query']);
-    foreach ($querys as $qstr){
-        $sq = explode('=',$qstr);
-        if(!empty($sq[1])){
-            $urlinfo['path'].='/'.$sq[1];
+    $querys = explode('&', $urlinfo['query']);
+    foreach ($querys as $qstr) {
+        $sq = explode('=', $qstr);
+        if (!empty($sq[1])) {
+            $urlinfo['path'] .= '/' . $sq[1];
         }
     }
 
     //清除多余字符
-    while (strpos($urlinfo['path'],"//")>-1){
-        $urlinfo['path'] = str_replace("//","/",$urlinfo['path']);
+    while (strpos($urlinfo['path'], "//") > -1) {
+        $urlinfo['path'] = str_replace("//", "/", $urlinfo['path']);
+    }
+    //删除文件后缀
+    $format_suffix = config('format_suffix');
+    $splitpoint = substr($urlinfo['path'],strlen($urlinfo['path']) - strlen($format_suffix) - 1,1);
+    if (!empty($format_suffix)&&$splitpoint=='.') {
+        $urlinfo['path'] = substr($urlinfo['path'], 0, strlen($urlinfo['path']) - strlen($format_suffix) - 1);
     }
 
     //检测路由是否存在 如果存在则替换为实际控制器方法
     $route = \heephp\route::get($urlinfo['path']);
-    if($route){ $urlinfo['path'] = $route; }
+    if ($route) {
+        $urlinfo['path'] = $route;
+    }
 
     $urlinfos = explode('/', $urlinfo['path']);
 
     //过滤page等参数
     //-----------------------
     $pagetags = \heephp\route::get_pagetag();
-    if(is_array($pagetags)) {
+    if (is_array($pagetags)) {
         foreach ($pagetags as $p) {
             for ($i = 3; $i > 0; $i--) {
                 if (strstr($urlinfos[$i], $p . '_') == $urlinfos[$i]) {
@@ -53,28 +63,31 @@ function urlpaser(&$app,&$controller,&$method,&$parms){
     }
     //-------------------------
 
-    if(APPS) {
-        $app=$urlinfos[1]; $controller=$urlinfos[2]; $method=$urlinfos[3];
-        for($i=4;$i<count($urlinfos);$i++){
-            array_push($parms,$urlinfos[$i]);
+    if (APPS) {
+        $app = $urlinfos[1];
+        $controller = $urlinfos[2];
+        $method = $urlinfos[3];
+        for ($i = 4; $i < count($urlinfos); $i++) {
+            array_push($parms, $urlinfos[$i]);
         }
-    }else {
-        $controller=$urlinfos[1]; $method=$urlinfos[2];
-        for($i=3;$i<count($urlinfos);$i++){
-            array_push($parms,$urlinfos[$i]);
+    } else {
+        $controller = $urlinfos[1];
+        $method = $urlinfos[2];
+        for ($i = 3; $i < count($urlinfos); $i++) {
+            array_push($parms, $urlinfos[$i]);
         }
     }
 
     //如果为空则选择默认的控制器方法
-    $app = APPS?(empty($app)?config('default_app'):$app):'';
-    $controller = empty($controller)?config('default_controller'):$controller;
-    $method = empty($method)?config('default_method'):$method;
+    $app = APPS ? (empty($app) ? config('default_app') : $app) : '';
+    $controller = empty($controller) ? config('default_controller') : $controller;
+    $method = empty($method) ? config('default_method') : $method;
 
 
     /*echo $app.'|';
     echo $controller.'|';
     echo $method;*/
-    if(!PATHINFO) {
+    /*if (!PATHINFO) {
         //获取参数为数组
         if (isset($urlinfo['query']) && !empty($urlinfo['query'])) {
             $query = $urlinfo['query'];
@@ -84,86 +97,85 @@ function urlpaser(&$app,&$controller,&$method,&$parms){
                 $parms[$arr[0]] = $arr[1];
             }
         }
-    }
+    }*/
 
 }
 
 /***
-从get或Post中获取数据
+ * 从get或Post中获取数据
  ***/
-function request($name,$value=''){
+function request($name, $value = '')
+{
     $gets = $_GET;
     $posts = $_POST;
-    if(strpos($name,'.')>-1){
+    if (strpos($name, '.') > -1) {
         $action = '';
         $var = '';
         //$value = '';
 
-        list($action,$var/*,$value*/)=explode('.',$name);
-        if($action=='get'||$action=='g'||$action=="GET"||$action=='G'){
-            if(empty($var))
+        list($action, $var/*,$value*/) = explode('.', $name);
+        if ($action == 'get' || $action == 'g' || $action == "GET" || $action == 'G') {
+            if (empty($var))
                 return inputfilter($gets);
             return inputfilter($gets[$var] ?? '');
-        }else if($action=='post'||$action=='p'||$action=="POST"||$action=='P'){
-            if(empty($var))
+        } else if ($action == 'post' || $action == 'p' || $action == "POST" || $action == 'P') {
+            if (empty($var))
                 return inputfilter($posts);
             return inputfilter($posts[$var] ?? '');
-        }else if($action=='server'||$action=='ser'){
+        } else if ($action == 'server' || $action == 'ser') {
             return $_SERVER[strtoupper($var)];
-        }else if($action=='session'){
-            if(empty($value)) {
+        } else if ($action == 'session') {
+            if (empty($value)) {
                 return $_SESSION[$var];
-            }else {
+            } else {
                 $_SESSION[$var] = $value;
                 return $_SESSION[$var];
             }
-        }
-        else if($action=='cookie'){
-            if(empty($value))
+        } else if ($action == 'cookie') {
+            if (empty($value))
                 return $_COOKIE[$var];
             else {
                 $_COOKIE[$var] = $value;
                 return $_COOKIE[$var];
             }
         }
-    }else{
+    } else {
         return $gets[$name] ?? '';
     }
 }
 
-function cache($name='',$value='',$exp_time=1){
+function cache($name = '', $value = '', $exp_time = 1)
+{
 
     $cache = null;
     $diver = config('cache.diver');
 
-    if($diver=='redis'){
+    if ($diver == 'redis') {
 
         $cache = new \heephp\cache\redis($exp_time);
 
-    }
-    else if($diver=='memcache'){
+    } else if ($diver == 'memcache') {
 
         $cache = new \heephp\cache\memcache($exp_time);
-    }
-    else {
+    } else {
 
         $cache = new \heephp\cache\file($exp_time);
     }
 
-    if(empty($name)&&empty($value))
+    if (empty($name) && empty($value))
         return $cache;
 
-    if(empty($value)){
+    if (empty($value)) {
         return $cache->get($name);
-    }else{
-        return $cache->set($name,$value);
+    } else {
+        return $cache->set($name, $value);
     }
 }
 
 /*
  * 上传文件
  */
-function uploadfile($fname,$allowedExts,$allowfilesize,$dir,$nametype='md5')
+function uploadfile($fname, $allowedExts, $allowfilesize, $dir, $nametype = 'md5')
 {
     $info = [];
     // 允许上传的图片后缀
@@ -229,23 +241,25 @@ function uploadfile($fname,$allowedExts,$allowfilesize,$dir,$nametype='md5')
     return $info;
 }
 
-function guid() {
+function guid()
+{
     $charid = strtoupper(md5(uniqid(mt_rand(), true)));
     $hyphen = chr(45);// "-"
     $uuid = chr(123)// "{"
-        .substr($charid, 0, 8).$hyphen
-        .substr($charid, 8, 4).$hyphen
-        .substr($charid,12, 4).$hyphen
-        .substr($charid,16, 4).$hyphen
-        .substr($charid,20,12)
-        .chr(125);// "}"
+        . substr($charid, 0, 8) . $hyphen
+        . substr($charid, 8, 4) . $hyphen
+        . substr($charid, 12, 4) . $hyphen
+        . substr($charid, 16, 4) . $hyphen
+        . substr($charid, 20, 12)
+        . chr(125);// "}"
     return $uuid;
 }
 
 
-function inputfilter($content){
+function inputfilter($content)
+{
 
-   return escapeString($content);
+    return escapeString($content);
 }
 
 /**
@@ -253,42 +267,42 @@ function inputfilter($content){
  * @param $content 要转义内容
  * @return array|string
  */
- function escapeString($content)
- {
-     $pattern = "/(select[\s])|(insert[\s])|(update[\s])|(delete[\s])|(from[\s])|(where[\s])|(drop[\s])/i";
-     if (is_array($content)) {
-         foreach ($content as $key => $value) {
+function escapeString($content)
+{
+    $pattern = "/(select[\s])|(insert[\s])|(update[\s])|(delete[\s])|(from[\s])|(where[\s])|(drop[\s])/i";
+    if (is_array($content)) {
+        foreach ($content as $key => $value) {
 
-             if(is_array($value)){
+            if (is_array($value)) {
 
-                 for($i=0;$i<count($value);$i++){
-                     //$content[$key][$i] = htmlencode(addslashes(trim($value[$i])));
-                     $content[$key][$i] = htmlentities(addslashes(trim($value[$i])),ENT_QUOTES,"UTF-8");
-                     if (preg_match($pattern, $content[$key][$i])) {
-                         $content[$key][$i] = '';
-                     }
-                 }
+                for ($i = 0; $i < count($value); $i++) {
+                    //$content[$key][$i] = htmlencode(addslashes(trim($value[$i])));
+                    $content[$key][$i] = htmlentities(addslashes(trim($value[$i])), ENT_QUOTES, "UTF-8");
+                    if (preg_match($pattern, $content[$key][$i])) {
+                        $content[$key][$i] = '';
+                    }
+                }
 
-             }else {
+            } else {
 
-                 //$content[$key] = htmlencode(addslashes(trim($value)));
-                 $content[$key] = htmlentities(addslashes(trim($value)),ENT_QUOTES,"UTF-8");
-                 if (preg_match($pattern, $content[$key])) {
-                     $content[$key] = '';
-                 }
+                //$content[$key] = htmlencode(addslashes(trim($value)));
+                $content[$key] = htmlentities(addslashes(trim($value)), ENT_QUOTES, "UTF-8");
+                if (preg_match($pattern, $content[$key])) {
+                    $content[$key] = '';
+                }
 
-             }
+            }
 
-         }
-     } else {
-         //$content = htmlencode(addslashes(trim($content)));
-         $content = htmlentities(addslashes(trim($content)),ENT_QUOTES,"UTF-8");
-         if (preg_match($pattern, $content)) {
-             $content = '';
-         }
-     }
-     return $content;
- }
+        }
+    } else {
+        //$content = htmlencode(addslashes(trim($content)));
+        $content = htmlentities(addslashes(trim($content)), ENT_QUOTES, "UTF-8");
+        if (preg_match($pattern, $content)) {
+            $content = '';
+        }
+    }
+    return $content;
+}
 
 
 /**
@@ -297,48 +311,54 @@ function inputfilter($content){
  * @param $string
  * @return string
  */
-function safe_replace($string) {
-    $string = str_replace('%20','',$string);
-    $string = str_replace('%27','',$string);
-    $string = str_replace('%2527','',$string);
-    $string = str_replace('*','',$string);
-    $string = str_replace('"','&quot;',$string);
-    $string = str_replace("'",'',$string);
-    $string = str_replace('"','',$string);
-    $string = str_replace(';','',$string);
-    $string = str_replace('<','&lt;',$string);
-    $string = str_replace('>','&gt;',$string);
-    $string = str_replace("{",'',$string);
-    $string = str_replace('}','',$string);
-    $string = str_replace('\\','',$string);
+function safe_replace($string)
+{
+    $string = str_replace('%20', '', $string);
+    $string = str_replace('%27', '', $string);
+    $string = str_replace('%2527', '', $string);
+    $string = str_replace('*', '', $string);
+    $string = str_replace('"', '&quot;', $string);
+    $string = str_replace("'", '', $string);
+    $string = str_replace('"', '', $string);
+    $string = str_replace(';', '', $string);
+    $string = str_replace('<', '&lt;', $string);
+    $string = str_replace('>', '&gt;', $string);
+    $string = str_replace("{", '', $string);
+    $string = str_replace('}', '', $string);
+    $string = str_replace('\\', '', $string);
     return $string;
 }
 
 
-
-    /**生成随机数字
+/**生成随机数字
  * @param int $size
  * @return string
  */
-function randChar($len = 4,$format='all')
+function randChar($len = 4, $format = 'all')
 {
-    switch($format){
+    switch ($format) {
         case 'all'://生成包含数字和字母的验证码
-            $chars='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'; break;
+            $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            break;
         case 'char'://仅生成包含字母的验证码
-            $chars='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'; break;
+            $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+            break;
         case 'upper':
-            $chars='ABCDEFGHIJKLMNOPQRSTUVWXYZ';break;
+            $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            break;
         case 'lower':
-            $chars='abcdefghijklmnopqrstuvwxyz';break;
+            $chars = 'abcdefghijklmnopqrstuvwxyz';
+            break;
         case 'number'://仅生成包含数字的验证码
-            $chars='0123456789'; break;
+            $chars = '0123456789';
+            break;
         default :
-            $chars='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'; break;
+            $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            break;
     }
-    $string='';
-    while(strlen($string)<$len)
-        $string.=substr($chars,(mt_rand()%strlen($chars)),1);
+    $string = '';
+    while (strlen($string) < $len)
+        $string .= substr($chars, (mt_rand() % strlen($chars)), 1);
     return $string;
 
 }
@@ -350,14 +370,13 @@ function randChar($len = 4,$format='all')
  * @param int $linecount
  * @return bool
  */
-function vercode($code = '',$fontsize=20,$width = 80,$height = 25,$linecount=12)
+function vercode($code = '', $fontsize = 20, $width = 80, $height = 25, $linecount = 12)
 {
-    if(empty($code) || !isset($code))
-    {
+    if (empty($code) || !isset($code)) {
         return false;
     }
 
-    request('session.vcode',$code);
+    request('session.vcode', $code);
 
     $img = imagecreatetruecolor($width, $height);
     $black = imagecolorallocate($img, 0x00, 0x00, 0x00);
@@ -366,21 +385,21 @@ function vercode($code = '',$fontsize=20,$width = 80,$height = 25,$linecount=12)
     $red = imagecolorallocate($img, 0xFF, 0x00, 0x00);
     $blue = imagecolorallocate($img, 0x00, 0x00, 0xFF);
 
-    $crand = rand(0,4);
-    $bgcolor = $crand==1?$white:($crand==2?$green:($crand==3?$black:($crand==4?$blue:$red)));
-    $fontcolor = $crand==1?$red:($crand==2?$black:($crand==3?$white:($crand==4?$white:$white)));
-    $lincolor = $crand==1?$white:($crand==2?$blue:($crand==3?$green:($crand==4?$black:$red)));
-    imagefill($img,0,0,$bgcolor);
+    $crand = rand(0, 4);
+    $bgcolor = $crand == 1 ? $white : ($crand == 2 ? $green : ($crand == 3 ? $black : ($crand == 4 ? $blue : $red)));
+    $fontcolor = $crand == 1 ? $red : ($crand == 2 ? $black : ($crand == 3 ? $white : ($crand == 4 ? $white : $white)));
+    $lincolor = $crand == 1 ? $white : ($crand == 2 ? $blue : ($crand == 3 ? $green : ($crand == 4 ? $black : $red)));
+    imagefill($img, 0, 0, $bgcolor);
 
-    imagettftext($img,$fontsize,rand(-10,10),rand(0,$width/3),rand(0,$height/3)+20,$fontcolor,ROOT.'/public/assets/fonts/arial.ttf',$code);
+    imagettftext($img, $fontsize, rand(-10, 10), rand(0, $width / 3), rand(0, $height / 3) + 20, $fontcolor, ROOT . '/public/assets/fonts/arial.ttf', $code);
     //imagestring($img, 5, rand(0,$width/3), rand(0,$height/3), $code, $fontcolor);
     //加入噪点干扰
-    for($i=0;$i<$linecount;$i++) {
-        imagesetpixel($img, rand(0, $width) , rand(0, $height) , $black);  //imagesetpixel — 画一个单一像素，语法: bool imagesetpixel ( resource $image , int $x , int $y , int $color )
-        imagesetpixel($img, rand(0, $width) , rand(0, $height) , $green);
-        imagesetpixel($img, rand(0, $width) , rand(0, $height) , $white);
-        imagesetpixel($img, rand(0, $width) , rand(0, $height) , $red);
-        imageline($img, rand(0, $width) , rand(0, $height), rand(0, $width) , rand(0, $height),$lincolor);
+    for ($i = 0; $i < $linecount; $i++) {
+        imagesetpixel($img, rand(0, $width), rand(0, $height), $black);  //imagesetpixel — 画一个单一像素，语法: bool imagesetpixel ( resource $image , int $x , int $y , int $color )
+        imagesetpixel($img, rand(0, $width), rand(0, $height), $green);
+        imagesetpixel($img, rand(0, $width), rand(0, $height), $white);
+        imagesetpixel($img, rand(0, $width), rand(0, $height), $red);
+        imageline($img, rand(0, $width), rand(0, $height), rand(0, $width), rand(0, $height), $lincolor);
     }
 
     //输出验证码
@@ -396,25 +415,26 @@ function vercode($code = '',$fontsize=20,$width = 80,$height = 25,$linecount=12)
  * @param string $vcodename
  * @return bool
  */
-function checkvcode($vcodename = 'vcode'){
+function checkvcode($vcodename = 'vcode')
+{
 
-    $vcodename= empty($vcodename)?'vcode':$vcodename;
+    $vcodename = empty($vcodename) ? 'vcode' : $vcodename;
 
-    $vcode =request('session.'.config('validata_code_session'));
+    $vcode = request('session.' . config('validata_code_session'));
     $data = request('post.');
 
-    return $data[$vcodename]==$vcode;
+    return $data[$vcodename] == $vcode;
 }
 
 /**
-*@$originalImage => 原始图片
-*@$waterPos => 水印位置
-*@$waterImage => 水印图片
-*@$waterText => 水印文字
-*@$textFont => 文字大小
-*@$textColor => 文字顔色
-*/
-function imageWaterMark($originalImage, $waterPos = 5, $waterImage = '', $waterText = '', $textFont = 5, $textColor = '#FFFFFF',$fontFile='arial.ttf')
+ *@$originalImage => 原始图片
+ *@$waterPos => 水印位置
+ *@$waterImage => 水印图片
+ *@$waterText => 水印文字
+ *@$textFont => 文字大小
+ *@$textColor => 文字顔色
+ */
+function imageWaterMark($originalImage, $waterPos = 5, $waterImage = '', $waterText = '', $textFont = 5, $textColor = '#FFFFFF', $fontFile = 'arial.ttf')
 {
     $isWaterImage = FALSE;
 
@@ -464,7 +484,7 @@ function imageWaterMark($originalImage, $waterPos = 5, $waterImage = '', $waterT
         $h = $waterImageHeight;
         $label = "图片的";
     } else {
-        $fontFile=ROOT.'/public/assets/fonts/'.$fontFile;
+        $fontFile = ROOT . '/public/assets/fonts/' . $fontFile;
         $temp = imagettfbbox(ceil($textFont * 2.5), 0, $fontFile, $waterText);
         $w = $temp[2] - $temp[6];
         $h = $temp[3] - $temp[7];
@@ -553,19 +573,18 @@ function imageWaterMark($originalImage, $waterPos = 5, $waterImage = '', $waterT
     }
 //销毁图像
 
-    $waterIm==null?'':imagedestroy($waterIm);
-    $originalIm==null?'':imagedestroy($originalIm);
+    $waterIm == null ? '' : imagedestroy($waterIm);
+    $originalIm == null ? '' : imagedestroy($originalIm);
 }
-
 
 
 /**
  * 发送邮件
  *
  * */
-function sendmail($to,$subject,$body,$attachment='',$conf=[])
+function sendmail($to, $subject, $body, $attachment = '', $conf = [])
 {
-    if(empty($conf)){
+    if (empty($conf)) {
         $conf = config('mail');
     }
     $server = $conf['server'];
@@ -585,7 +604,7 @@ function sendmail($to,$subject,$body,$attachment='',$conf=[])
  * 生成URL路径
  * @path 路径
  */
-function url($path,$parm='')
+function url($path, $parm = '')
 {
 
     //清除多余字符
@@ -616,45 +635,54 @@ function url($path,$parm='')
     } else {
         $result_url .= '/' . $parm;
     }
-    return route::set($result_url);
+
+    //反向匹配路由
+    $result_url = route::set($result_url);
+    $result_url = rtrim ($result_url,'/');
+    //增加后缀
+    $format_suffix = config('format_suffix');
+    return $result_url. (empty($format_suffix) ? '' : ('.' . $format_suffix));
 }
 
-function config($name=''){
-     $config = \heephp\config::get($name);
-     return $config;
+function config($name = '')
+{
+    $config = \heephp\config::get($name);
+    return $config;
 }
 
-function db(){
-    $config= config();
-    $dbconfig =$config['db'];
+function db()
+{
+    $config = config();
+    $dbconfig = $config['db'];
 
-    $db=null;
-    if($dbconfig['diver']=='mysqli')
-        $db = new \heephp\database\mysqli($dbconfig['db_host'],$dbconfig['db_port'],$dbconfig['db_username'],$dbconfig['db_password'],$dbconfig['db_name'],$dbconfig['charset'],$config['pagesize']);
+    $db = null;
+    if ($dbconfig['diver'] == 'mysqli')
+        $db = new \heephp\database\mysqli($dbconfig['db_host'], $dbconfig['db_port'], $dbconfig['db_username'], $dbconfig['db_password'], $dbconfig['db_name'], $dbconfig['charset'], $config['pagesize']);
     else
-        $db = new \heephp\database\pdo('mysql:host='.$dbconfig['db_host'].';database='.$dbconfig['db_name'].';', $dbconfig['db_username'], $dbconfig['db_password']);
+        $db = new \heephp\database\pdo('mysql:host=' . $dbconfig['db_host'] . ';database=' . $dbconfig['db_name'] . ';', $dbconfig['db_username'], $dbconfig['db_password']);
 
     return $db;
 }
 
-function model($table){
+function model($table)
+{
     include_once 'model.php';
     $modelINSTANCE = null;
     //$modelNAME = 'heephp\\';
-    if(APPS){
-        $fname='./../app/'.APP.'/model/'.$table.'.php';
-        if(is_file($fname)) {
+    if (APPS) {
+        $fname = './../app/' . APP . '/model/' . $table . '.php';
+        if (is_file($fname)) {
             include_once $fname;
-            $modelNAME = '\\app\\'.APP . '\\model\\' . $table;
-        }else{
+            $modelNAME = '\\app\\' . APP . '\\model\\' . $table;
+        } else {
             $modelNAME = '\\heephp\\model';
         }
-    }else{
-        $fname = './../app/model/'.$table.'.php';
-        if(is_file($fname)) {
+    } else {
+        $fname = './../app/model/' . $table . '.php';
+        if (is_file($fname)) {
             include_once $fname;
             $modelNAME = '\\app\model\\' . $table;
-        }else{
+        } else {
             $modelNAME = '\\heephp\\model';
         }
     }
@@ -664,18 +692,19 @@ function model($table){
 }
 
 //多语言
-function lang($tag){
+function lang($tag)
+{
 
-    if(config('lang.on')==false){
+    if (config('lang.on') == false) {
         return '';
     }
 
-    $langcach = cache('lang_'.config('lang.default'));
+    $langcach = cache('lang_' . config('lang.default'));
 
-    if(!$langcach) {
+    if (!$langcach) {
         $lang = new \heephp\lang();
         $langcach = $lang->get();
-        cache('lang_'.config('lang.default'),$langcach,31104000);
+        cache('lang_' . config('lang.default'), $langcach, 31104000);
     }
 
     return $langcach[$tag] ?? '';
@@ -683,11 +712,12 @@ function lang($tag){
 }
 
 //切面
-function aop($name,&$parms=[]){
-    $aop=new \heephp\aop();
-    $aop->invoke($name,$parms);
+function aop($name, &$parms = [])
+{
+    $aop = new \heephp\aop();
+    $aop->invoke($name, $parms);
 
-    if(is_array($parms)) {
+    if (is_array($parms)) {
         if (array_key_exists('result', $parms)) {
             return $parms['result'];
         } else
@@ -697,17 +727,18 @@ function aop($name,&$parms=[]){
 
 
 //视图中导入
-function import($file,$vars=[]){
+function import($file, $vars = [])
+{
     //传递变量
-    foreach($vars as $k=>$v){
+    foreach ($vars as $k => $v) {
         $$k = $v;
     }
 
-    $backtrace=debug_backtrace();
+    $backtrace = debug_backtrace();
     //获取引用页面的变量
-    for ($i=0;$i<count($backtrace);$i++){
+    for ($i = 0; $i < count($backtrace); $i++) {
 
-        if($backtrace[$i]['function']=='fetch'&&$backtrace[$i]['class']=='heephp\controller') {
+        if ($backtrace[$i]['function'] == 'fetch' && $backtrace[$i]['class'] == 'heephp\controller') {
 
             $pagevars = $backtrace[$i]['object']->pagevar;
             foreach ($pagevars as $item) {
@@ -724,13 +755,13 @@ function import($file,$vars=[]){
     $fname = '';
     //判断是否是否使用独立目录
     $skindir = config('skin_dir');
-    $skindir = empty($skindir)?'':($skindir.'/');
+    $skindir = empty($skindir) ? '' : ($skindir . '/');
 
     //判断是否使用皮肤
     $skin = config('skin');
-    $skin = empty($skin)?'':($skin);
+    $skin = empty($skin) ? '' : ($skin);
 
-    if(!empty($skindir)) {
+    if (!empty($skindir)) {
         //如果使用了指定目录
 
         if (strstr($file, '/') == $file) {
@@ -741,29 +772,28 @@ function import($file,$vars=[]){
             include dirname($currtfile) . '/' . $file;
         }
 
-    }else if(APPS) {
+    } else if (APPS) {
 
-        if(strstr($file, '/') == $file) {
+        if (strstr($file, '/') == $file) {
             $fname = './../app/' . APP . '/view/' . $file;
             include $fname;
-        }else {
+        } else {
             $currtfile = $backtrace[0]['file'];
             include dirname($currtfile) . '/' . $file;
         }
-    }else{
-        if(strstr($file, '/') == $file) {
+    } else {
+        if (strstr($file, '/') == $file) {
             $fname = './../app/view/' . CONTROLLER . '/' . $file;
             include $fname;
-        }else/*if (strpos($file,'/')>0)*/{
+        } else/*if (strpos($file,'/')>0)*/ {
             $currtfile = $backtrace[0]['file'];
-            include dirname($currtfile).'/'.$file;
+            include dirname($currtfile) . '/' . $file;
         }/*
         else {
             include $file;
             return;
         }*/
     }
-
 
 
 }
@@ -776,70 +806,61 @@ function import($file,$vars=[]){
  */
 function transfer_time($time)
 {
-    $rtime = date("m-d H:i",$time);
-    $htime = date("H:i",$time);
+    $rtime = date("m-d H:i", $time);
+    $htime = date("H:i", $time);
     $time = time() - $time;
-    if ($time < 60)
-    {
+    if ($time < 60) {
         $str = '刚刚';
-    }
-    elseif ($time < 60 * 60)
-    {
-        $min = floor($time/60);
-        $str = $min.'分钟前';
-    }
-    elseif ($time < 60 * 60 * 24)
-    {
-        $h = floor($time/(60*60));
-        $str = $h.'小时前 '.$htime;
-    }
-    elseif ($time < 60 * 60 * 24 * 3)
-    {
-        $d = floor($time/(60*60*24));
-        if($d==1)
-            $str = '昨天 '.$rtime;
+    } elseif ($time < 60 * 60) {
+        $min = floor($time / 60);
+        $str = $min . '分钟前';
+    } elseif ($time < 60 * 60 * 24) {
+        $h = floor($time / (60 * 60));
+        $str = $h . '小时前 ' . $htime;
+    } elseif ($time < 60 * 60 * 24 * 3) {
+        $d = floor($time / (60 * 60 * 24));
+        if ($d == 1)
+            $str = '昨天 ' . $rtime;
         else
-            $str = '前天 '.$rtime;
-    }
-    else
-    {
+            $str = '前天 ' . $rtime;
+    } else {
         $str = $rtime;
     }
     return $str;
 }
 
 //截取字符串
-function sstr($str,$max){
-    if(mb_strlen($str)>$max-2){
-        return mb_substr($str,0,$max-2).'..';
-    }else
+function sstr($str, $max)
+{
+    if (mb_strlen($str) > $max - 2) {
+        return mb_substr($str, 0, $max - 2) . '..';
+    } else
         return $str;
 }
 
 
 function htmlencode($fString)
 {
-    if($fString!="")
-    {
-        $fString = str_replace( '>', '&gt;',$fString);
-        $fString = str_replace( '<', '&lt;',$fString);
-        $fString = str_replace( chr(32), '&nbsp;',$fString);
-        $fString = str_replace( chr(13), ' ',$fString);
-        $fString = str_replace( chr(10) & chr(10), '<br>',$fString);
-        $fString = str_replace( chr(10), '<BR>',$fString);
+    if ($fString != "") {
+        $fString = str_replace('>', '&gt;', $fString);
+        $fString = str_replace('<', '&lt;', $fString);
+        $fString = str_replace(chr(32), '&nbsp;', $fString);
+        $fString = str_replace(chr(13), ' ', $fString);
+        $fString = str_replace(chr(10) & chr(10), '<br>', $fString);
+        $fString = str_replace(chr(10), '<BR>', $fString);
     }
     return $fString;
 }
+
 function htmldecode($fString)
 {
-    if($fString!="")
-    {
-        $fString = str_replace("&gt;" , ">", $fString);
+    if ($fString != "") {
+        $fString = str_replace("&gt;", ">", $fString);
         $fString = str_replace("&lt;", "<", $fString);
-        $fString = str_replace("&nbsp;",chr(32),$fString);
-        $fString = str_replace("",chr(13),$fString);
-        $fString = str_replace("<br>",chr(10) & chr(10),$fString);
-        $fString = str_replace("<BR>",chr(10),$fString);
+        $fString = str_replace("&nbsp;", chr(32), $fString);
+        $fString = str_replace("", chr(13), $fString);
+        $fString = str_replace("<br>", chr(10) & chr(10), $fString);
+        $fString = str_replace("<BR>", chr(10), $fString);
     }
     return $fString;
 }
@@ -849,18 +870,55 @@ function htmldecode($fString)
  * @param $path 目录路径
  * @param callable $callback
  */
-function foreach_dir($path,callable $callback){
+function foreach_dir($path, callable $callback)
+{
     //如果是目录则继续
     if (is_dir($path)) {
         //扫描一个文件夹内的所有文件夹和文件并返回数组
         $p = scandir($path);
         foreach ($p as $val) {
             if ($val != "." && $val != "..") {
-                //如果是目录则递归子目录，继续操作
                 call_user_func($callback, $val, $path);
             }
         }
     }
+}
+
+/**
+ * 获取图片的Base64编码(不支持url)
+ * @param $img_file 传入本地图片地址
+ * @return string
+ */
+function imgToBase64($img_file) {
+
+    $img_base64 = '';
+    if (file_exists($img_file)) {
+        $app_img_file = $img_file; // 图片路径
+        $img_info = getimagesize($app_img_file); // 取得图片的大小，类型等
+
+        //echo '<pre>' . print_r($img_info, true) . '</pre><br>';
+        $fp = fopen($app_img_file, "r"); // 图片是否可读权限
+
+        if ($fp) {
+            $filesize = filesize($app_img_file);
+            $content = fread($fp, $filesize);
+            $file_content = chunk_split(base64_encode($content)); // base64编码
+            switch ($img_info[2]) {           //判读图片类型
+                case 1: $img_type = "gif";
+                    break;
+                case 2: $img_type = "jpg";
+                    break;
+                case 3: $img_type = "png";
+                    break;
+            }
+
+            $img_base64 = 'data:image/' . $img_type . ';base64,' . $file_content;//合成图片的base64编码
+
+        }
+        fclose($fp);
+    }
+
+    return $img_base64; //返回图片的base64
 }
 
 
@@ -870,28 +928,64 @@ function foreach_dir($path,callable $callback){
  */
 function space($str)
 {
-    $search = array('    ','   ','  ','  ','  ', "\n", "\r", "\t");
-    $replace = array(' ',' ',' ',' ',' ','','','');
+    $search = array('    ', '   ', '  ', '  ', '  ', "\n", "\r", "\t");
+    $replace = array(' ', ' ', ' ', ' ', ' ', '', '', '');
     return str_replace($search, $replace, $str);
+}
+
+function widget($path,$parm)
+{
+    $path = explode('/', $path);
+    if (APPS) {
+        //如果以/开头
+        if ($path & '/' == '/' && count($path) > 3) {
+            $clsname = 'app/' . $path[1] . '/' . $path[2];
+            $cls = new $clsname();
+            echo $cls->$path[3]($parm);
+        } elseif ($path & '/' == '/' && count($path) > 2) {
+            $clsname = 'app/' . APP . '/' . $path[1];
+            $cls = new $clsname();
+            echo $cls->$path[2]($parm);
+        } elseif ($path & '/' == '/') {
+            $clsname = 'app/' . APP . '/' . CONTROLLER;
+            $cls = new $clsname();
+            echo $cls->$path[1]($parm);
+        } else {
+            $clsname = 'app/' . APP . '/' . CONTROLLER;
+            $cls = new $clsname();
+            echo $cls->$path[0]($parm);
+        }
+    } else {
+        //如果以/开头
+        if ($path & '/' == '/' && count($path) > 2) {
+            $clsname = 'app/' . $path[1] ;
+            $cls = new $clsname();
+            echo $cls->$path[2]($parm);
+
+        } elseif( count($path) > 2) {
+            $clsname = 'app/' .$path[0];
+            $cls = new $clsname();
+            echo $cls->$path[1]($parm);
+        }
+    }
 }
 
 spl_autoload_register(function ($class_name) {
 
-    $backtrace=debug_backtrace();
-    \heephp\logger::warn('自动加载类：'.$class_name);
+    //$backtrace = debug_backtrace();
+    \heephp\logger::warn('自动加载类：' . $class_name);
 
-    $file='./../'.$class_name . '.php';
-    if(is_file($file)) {
+    $file = './../' . $class_name . '.php';
+    if (is_file($file)) {
 
         $class_name = str_replace('\\', '/', $class_name);
         require_once $file;
 
-    }else{
+    } else {
 
-        foreach_dir('./../plugin/',function ($val,$path) use ($class_name){
-            $file = './../plugin/'.$val.'/'.$class_name . '.php';
-            echo $file;
-            if(is_file($file)){
+        foreach_dir('./../plugin/', function ($val, $path) use ($class_name) {
+            $file = './../plugin/' . $val . '/' . $class_name . '.php';
+            if (is_file($file)) {
                 require_once $file;
                 return;
             }

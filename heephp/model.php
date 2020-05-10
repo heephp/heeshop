@@ -92,18 +92,18 @@ class model{
             return false;
         }
 
-        if(is_array($where)) {
+        /*if(is_array($where)) {
             $arr_where = $where;
             $where = '';
             foreach ($arr_where as $k => $v) {
                 $where .= '`' . $k . '` = \'' . $v . '\' and ';
             }
             $where = substr($where, 0, strlen($where) - 4);
-        }else {
+        }else {*/
             if (empty($where)) {
                 $where = '`' . $this->key . '` = \'' . $data[$this->key] . '\'';
             }
-        }
+        //}
 
         if($this->autotimespan)
             $data[$this->field_updatetime]=time();
@@ -231,6 +231,16 @@ class model{
      */
     private function softdelwhere($where,$onlySoftDel){
 
+        if(is_array($where)){
+            $arr = $where;
+            $where = '';
+            $relation = 'and';
+            foreach ($arr as $k=>$v){
+                $where.=" `$k`='$v'  $relation ";
+            }
+            $where = substr($where,0,strlen($where)-4);
+        }
+
         if($this->softdel){
 
             if($onlySoftDel){
@@ -255,6 +265,7 @@ class model{
         return $where;
 
     }
+
 
     public function find($where,$onlysoftdel=false){
         $where = $this->softdelwhere($where,$onlysoftdel);

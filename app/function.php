@@ -6,7 +6,7 @@ function conf($name, $value=''){
     $db = db();
     //设置配置
     if(!empty($value)){
-        return $db->update('config',["`value`='$value'"],"`name`='$name'")>0;
+        return $db->update('config',"`value`='$value'","`name`='$name'")>0;
     }
     //获取配置
     $all = cache(config('customer_config_name'));
@@ -53,20 +53,12 @@ function modeluser($name)
     return $model;
 }
 
-/**
- * 对传入的值进行编码
- */
-function en($str){
-    $b64 = base64_encode($str);
-    $str =strtr($b64,'-abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_','cdlmuvwMnGHIJopDEFqrst2A3xyzBKL45+abfgCXW786hijkRVQ?NOPSTUYZ190e');
-    return $str;
-}
-
-/**
- * 对传入值进行解码
- */
-function de($str){
-    $str =strtr($str,'cdlmuvwMnGHIJopDEFqrst2A3xyzBKL45+abfgCXW786hijkRVQ?NOPSTUYZ190e','-abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_');
-    $str = base64_decode($str);
-    return $str;
+function getcurl($url){
+    $curl = curl_init();
+    curl_setopt($curl,CURLOPT_RETURNTRANSFER,1);
+    curl_setopt($curl,CURLOPT_URL, $url);
+    curl_setopt($curl,CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+    $resp = curl_exec($curl);
+    curl_close($curl);
+    return $resp;
 }

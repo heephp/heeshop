@@ -6,6 +6,7 @@ return [
     'debug'=>true,
     'logger'=>true,
     'pagesize'=>5,
+    'format_suffix'=>'htm',
     'validata_error_page'=>'message/validataError.php',
     'success_page'=>'message/sysSuccess.php',
     'error_page'=>'message/sysError.php',

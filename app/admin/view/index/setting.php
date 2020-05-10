@@ -22,7 +22,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                     <ul class="nav nav-pills nav-secondary  nav-pills-no-bd nav-pills-icons justify-content-center" id="pills-tab-with-icon" role="tablist">
                         <li class="nav-item submenu">
                             <a class="nav-link active show" id="pills-home-tab-icon" role="tab" aria-selected="false" aria-controls="pills-basic-icon" href="#pills-basic-icon" data-toggle="pill">
@@ -66,6 +66,24 @@
                                 短信
                             </a>
                         </li>
+                        <li class="nav-item submenu">
+                            <a class="nav-link" id="pills-contact-tab-icon" role="tab" aria-selected="true" aria-controls="pills-skins-icon" href="#pills-skins-icon" data-toggle="pill">
+                                <i class="icon-screen-desktop"></i>
+                                模板
+                            </a>
+                        </li>
+                        <li class="nav-item submenu">
+                            <a class="nav-link" id="pills-contact-tab-icon" role="tab" aria-selected="true" aria-controls="pills-login-icon" href="#pills-login-icon" data-toggle="pill">
+                                <i class="icon-user-following"></i>
+                                登录
+                            </a>
+                        </li>
+                        <li class="nav-item submenu">
+                            <a class="nav-link" id="pills-contact-tab-icon" role="tab" aria-selected="true" aria-controls="pills-pay-icon" href="#pills-pay-icon" data-toggle="pill">
+                                <i class="icon-paypal"></i>
+                                支付
+                            </a>
+                        </li>
                     </ul>
                     </div>
                 </div>
@@ -80,6 +98,11 @@
                         import('setting/setting-vcode.php');
                         import('setting/setting-mail.php');
                         import('setting/setting-sms.php');
+                        import('setting/setting-skins.php');
+                        import('setting/setting-login.php');
+                        import('setting/setting-pay.php');
+
+
                         ?>
                     </div>
                     <div class="card-action">

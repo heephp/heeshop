@@ -1,0 +1,96 @@
+2020-05-10 05:02:07 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 05:02:07 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 05:02:07 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 05:02:07 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 05:02:07 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 05:02:07 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 05:02:07 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 05:02:07 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 05:02:11 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 05:02:11 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 05:02:11 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 05:02:11 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 05:02:11 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 05:02:11 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 05:02:12 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 05:02:12 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 05:02:12 [DEBUG] [root]自动加载类：AliPay\Web
+2020-05-10 05:02:12 [DEBUG] [root]自动加载类：WeChat\Contracts\BasicAliPay
+2020-05-10 05:02:12 [DEBUG] [root]自动加载类：WeChat\Contracts\DataArray
+2020-05-10 05:02:15 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 05:02:15 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 05:02:15 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 05:02:15 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 05:02:15 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 05:02:15 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 05:02:15 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 05:02:15 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 05:02:19 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 05:02:19 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 05:02:19 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 05:02:19 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 05:02:19 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 05:02:19 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 05:02:19 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 05:02:19 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 05:02:19 [DEBUG] [root]自动加载类：AliPay\Web
+2020-05-10 05:02:19 [DEBUG] [root]自动加载类：WeChat\Contracts\BasicAliPay
+2020-05-10 05:02:19 [DEBUG] [root]自动加载类：WeChat\Contracts\DataArray
+2020-05-10 05:02:20 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 05:02:20 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 05:02:20 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 05:02:20 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 05:02:20 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 05:02:20 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 05:02:20 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 05:02:20 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 05:02:20 [DEBUG] [root]自动加载类：AliPay\Web
+2020-05-10 05:02:20 [DEBUG] [root]自动加载类：WeChat\Contracts\BasicAliPay
+2020-05-10 05:02:20 [DEBUG] [root]自动加载类：WeChat\Contracts\DataArray
+2020-05-10 05:02:48 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 05:02:48 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 05:02:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 05:02:48 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 05:02:48 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 05:02:48 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 05:02:48 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 05:02:48 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 05:02:53 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 05:02:53 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 05:02:53 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 05:02:53 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 05:02:53 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 05:02:53 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 05:02:53 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 05:02:53 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 05:03:25 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 05:03:25 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 05:03:25 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 05:03:25 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 05:03:25 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 05:03:25 [DEBUG] [root]select `name`,`value` from heecms_config where 1=1  order by id asc 
+2020-05-10 05:03:25 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 05:03:25 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 05:03:25 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 05:03:25 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-05-10 05:03:25 [DEBUG] [root]自动加载类：AliPay\Web
+2020-05-10 05:03:25 [DEBUG] [root]自动加载类：WeChat\Contracts\BasicAliPay
+2020-05-10 05:03:52 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 05:03:52 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 05:03:52 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 05:03:52 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 05:03:52 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 05:03:52 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 05:03:52 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 05:03:52 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 05:03:52 [DEBUG] [root]自动加载类：AliPay\Web
+2020-05-10 05:03:52 [DEBUG] [root]自动加载类：WeChat\Contracts\BasicAliPay
+2020-05-10 05:03:52 [DEBUG] [root]自动加载类：WeChat\Contracts\DataArray
+2020-05-10 05:04:07 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 05:04:07 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 05:04:07 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 05:04:07 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 05:04:07 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 05:04:07 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 05:04:07 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 05:04:07 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 

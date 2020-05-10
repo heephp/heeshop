@@ -9,11 +9,11 @@ class route{
             $this->routes=require $rfile;
         }
 
-        aop('route_init');
+        aop('route_init',$this->routes);
     }
 
 
-    /*
+    /**
      * 当前url匹配的路由
      * 没有匹配的路由返回false
      */
@@ -60,7 +60,7 @@ class route{
         return false;
     }
 
-    /*
+    /**
      * 注册pagetag以过滤url中的page参数
      */
     public static function reg_pagetag($tag){
