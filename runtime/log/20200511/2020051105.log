@@ -1,0 +1,1058 @@
+2020-05-11 05:20:03 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:20:03 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:20:03 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:20:03 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:20:03 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:20:03 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:20:03 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:20:03 [DEBUG] [root]select * from heecms_users_group   where  (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:20:03 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:20:03 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:20:03 [DEBUG] [root]select * from heecms_users_group   where (1) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:20:03 [DEBUG] [root]自动加载类：app\admin\model\sys_resources
+2020-05-11 05:20:03 [DEBUG] [root]show full columns from `heecms_users_group_sys_resources`
+2020-05-11 05:20:03 [DEBUG] [root]select * from heecms_users_group_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:04 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_sys_resources       
+2020-05-11 05:20:05 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:20:05 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_message   where  (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')    
+2020-05-11 05:20:05 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:20:05 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_menus   where  (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')    
+2020-05-11 05:20:05 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_menus   where  (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')    
+2020-05-11 05:20:05 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_menus   where  (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')    
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_menus   where  (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')    
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_menus   where  (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')    
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_menus   where  (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')    
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_menus   where  (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')    
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_menus   where  (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')    
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_menus   where  (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')    
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_menus   where  (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')    
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_menus   where  (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')    
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_menus   where  (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')    
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_menus   where  (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')    
+2020-05-11 05:20:05 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:20:05 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:20:05 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:20:05 [DEBUG] [root]select count(*) c from `heecms_link` where 
+2020-05-11 05:21:11 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:21:11 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:21:11 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:21:11 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:21:11 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:21:11 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:21:11 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:21:12 [DEBUG] [root]select * from heecms_users_group   where  (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:21:12 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:21:12 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:21:12 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:21:12 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:21:12 [DEBUG] [root]select * from heecms_message   where  (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')    
+2020-05-11 05:21:12 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:21:12 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:21:12 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:21:12 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:21:12 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:21:12 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:21:12 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:21:12 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:21:12 [DEBUG] [root]select  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:22:43 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:22:43 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:22:43 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:22:43 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:22:43 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:22:43 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:22:44 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:22:44 [DEBUG] [root]select * from heecms_users_group   where  (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:22:44 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:22:44 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:22:44 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:22:44 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:22:44 [DEBUG] [root]select * from heecms_message   where  (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')    
+2020-05-11 05:22:44 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:22:44 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:22:44 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:22:44 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:22:44 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:22:44 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:22:44 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:22:44 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:22:44 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:22:44 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:22:44 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:22:44 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:22:44 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:22:44 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:22:51 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:22:51 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:22:51 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:22:51 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:22:51 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:22:51 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:22:51 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:22:51 [DEBUG] [root]select * from heecms_users_group   where  (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:22:51 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:22:51 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:22:51 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:22:51 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:22:51 [DEBUG] [root]select * from heecms_message   where  (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')    
+2020-05-11 05:22:51 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:22:51 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:22:51 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:22:51 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:22:51 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:22:51 [DEBUG] [root]select * from heecms_link_group   where 2.htm    
+2020-05-11 05:23:00 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:23:00 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:23:00 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:23:00 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:23:00 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:23:00 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:23:00 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:23:00 [DEBUG] [root]select * from heecms_users_group   where  (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:23:00 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:23:00 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:23:00 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:23:00 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:23:00 [DEBUG] [root]select * from heecms_message   where  (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')    
+2020-05-11 05:23:00 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:23:00 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:23:00 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:23:00 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:23:00 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:23:00 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:23:00 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:23:00 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:23:00 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:23:00 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:23:01 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:23:01 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:23:01 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:23:01 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:25:44 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:25:44 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:25:44 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:25:44 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:25:44 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:25:44 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:25:44 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:25:44 [DEBUG] [root]select * from heecms_users_group   where  (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:25:44 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:25:44 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:25:44 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:25:44 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:25:44 [DEBUG] [root]select * from heecms_message   where  (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')    
+2020-05-11 05:25:44 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:25:44 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:25:44 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:25:44 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:25:44 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:25:44 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:25:44 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:25:44 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:25:44 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:25:44 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:25:44 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:25:45 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:25:45 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:25:45 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:26:43 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:26:43 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:26:43 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:26:43 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:26:43 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:26:43 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:26:43 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:26:43 [DEBUG] [root]select * from heecms_users_group   where  (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:26:43 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:26:43 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:26:43 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:26:43 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:26:43 [DEBUG] [root]select * from heecms_message   where  (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')    
+2020-05-11 05:26:43 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:26:43 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:26:43 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:26:43 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:26:43 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:26:43 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:26:43 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:26:43 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:26:43 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:26:43 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:26:43 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:26:43 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:26:43 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:26:43 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:27:42 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:27:42 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:27:42 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:27:42 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:27:42 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:27:42 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:27:42 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:27:42 [DEBUG] [root]select * from heecms_users_group   where  (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:27:42 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:27:42 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:27:42 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:27:42 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:27:42 [DEBUG] [root]select * from heecms_message   where  (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')    
+2020-05-11 05:27:42 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:27:42 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:27:42 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:27:42 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:27:42 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:27:42 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:27:42 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:27:42 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:27:42 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:27:42 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:27:42 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:27:42 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:27:42 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:27:42 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:31:05 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:31:05 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:31:05 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:31:05 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:31:05 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:31:06 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:31:06 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:31:06 [DEBUG] [root]select * from heecms_users_group   where  (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:31:06 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:31:06 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:31:06 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:31:06 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:31:06 [DEBUG] [root]select * from heecms_message   where  (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')    
+2020-05-11 05:31:06 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:31:06 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:31:06 [DEBUG] [root]select * from heecms_menus   where ( `parent_id=0 or parent_id IS NULL or parent_id=''` IS NULL or `parent_id=0 or parent_id IS NULL or parent_id=''`='' or `parent_id=0 or parent_id IS NULL or parent_id=''`=0 ) and (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='') order by ord asc   
+2020-05-11 05:31:36 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:31:36 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:31:36 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:31:36 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:31:36 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:31:36 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:31:36 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:31:36 [DEBUG] [root]select * from heecms_users_group   where  (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:31:36 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:31:36 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:31:36 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:31:36 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:31:36 [DEBUG] [root]select * from heecms_message   where  (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')    
+2020-05-11 05:31:36 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:31:36 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:31:36 [DEBUG] [root]select * from heecms_menus   where ( `parent_id` IS NULL or `parent_id`='' or `parent_id`=0 ) and (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='') order by ord asc   
+2020-05-11 05:31:36 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:31:36 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:31:37 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:31:37 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:31:37 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:31:37 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:31:37 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:31:37 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:31:37 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:31:37 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:31:37 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:31:37 [DEBUG] [root]select * from heecms_link       
+2020-05-11 05:53:30 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:53:30 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:53:30 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:53:30 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:53:30 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:53:30 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:53:30 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:53:30 [DEBUG] [root]select * from heecms_users_group   where  (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:53:30 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:53:30 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:53:30 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:53:30 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:53:30 [DEBUG] [root]select * from heecms_message   where  (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')    
+2020-05-11 05:53:30 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:53:30 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:53:30 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:53:30 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:53:30 [DEBUG] [root]select * from heecms_users   where ((`users_id`='1')) and (`heecms_users`.delete_time IS NULL or `heecms_users`.delete_time <=0 or `heecms_users`.delete_time='')    
+2020-05-11 05:53:30 [DEBUG] [root]select * from heecms_users   where ((`users_id`='1') and (`users_id`='1')) and (`heecms_users`.delete_time IS NULL or `heecms_users`.delete_time <=0 or `heecms_users`.delete_time='')    
+2020-05-11 05:53:30 [DEBUG] [root]select * from heecms_users   where ((`users_id`='1') and (`users_id`='1') and (`users_id`='1')) and (`heecms_users`.delete_time IS NULL or `heecms_users`.delete_time <=0 or `heecms_users`.delete_time='')    
+2020-05-11 05:53:30 [DEBUG] [root]select * from heecms_users   where ((`users_id`='1') and (`users_id`='1') and (`users_id`='1') and (`users_id`='1')) and (`heecms_users`.delete_time IS NULL or `heecms_users`.delete_time <=0 or `heecms_users`.delete_time='')    
+2020-05-11 05:53:30 [DEBUG] [root]select * from heecms_users   where ((`users_id`='1') and (`users_id`='1') and (`users_id`='1') and (`users_id`='1') and (`users_id`='1')) and (`heecms_users`.delete_time IS NULL or `heecms_users`.delete_time <=0 or `heecms_users`.delete_time='')    
+2020-05-11 05:53:30 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:53:30 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:53:30 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:53:30 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:53:30 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:53:30 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') order by parent_id asc   
+2020-05-11 05:53:30 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') order by parent_id asc   
+2020-05-11 05:53:30 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') order by parent_id asc   
+2020-05-11 05:53:30 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') order by parent_id asc   
+2020-05-11 05:53:30 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') and (`parent_id`='12') order by parent_id asc   
+2020-05-11 05:53:32 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:53:32 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:53:32 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:53:32 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:53:32 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:53:32 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:53:32 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:53:32 [DEBUG] [root]select * from heecms_users_group   where  (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:53:32 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:53:32 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:53:32 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:53:32 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:53:32 [DEBUG] [root]select * from heecms_message   where  (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')    
+2020-05-11 05:53:32 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:53:32 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:53:32 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:53:32 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:53:32 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:53:32 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:53:32 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:53:32 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:53:32 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:53:32 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') order by parent_id asc   
+2020-05-11 05:53:32 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') order by parent_id asc   
+2020-05-11 05:53:32 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') order by parent_id asc   
+2020-05-11 05:53:32 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') order by parent_id asc   
+2020-05-11 05:53:32 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') and (`parent_id`='12') order by parent_id asc   
+2020-05-11 05:53:33 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:53:33 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:53:33 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:53:33 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:53:33 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:53:33 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:53:33 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:53:33 [DEBUG] [root]select * from heecms_users_group   where  (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:53:33 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:53:33 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:53:33 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:53:33 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:53:33 [DEBUG] [root]select * from heecms_message   where  (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')    
+2020-05-11 05:53:33 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:53:33 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:53:33 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:53:33 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:53:33 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:53:33 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:53:33 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:53:33 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:53:33 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:53:33 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') order by parent_id asc   
+2020-05-11 05:53:33 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') order by parent_id asc   
+2020-05-11 05:53:33 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') order by parent_id asc   
+2020-05-11 05:53:33 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') order by parent_id asc   
+2020-05-11 05:53:33 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') and (`parent_id`='12') order by parent_id asc   
+2020-05-11 05:53:38 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:53:38 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:53:38 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:53:38 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:53:38 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:53:38 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:53:38 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:53:38 [DEBUG] [root]select * from heecms_users_group   where  (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:53:38 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:53:38 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:53:38 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:53:38 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:53:38 [DEBUG] [root]select * from heecms_message   where  (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')    
+2020-05-11 05:53:38 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:53:38 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:53:38 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:53:38 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:53:38 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:53:38 [DEBUG] [root]select * from heecms_link_group   where 2.htm    
+2020-05-11 05:53:41 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:53:41 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:53:41 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:53:41 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:53:41 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:53:41 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:53:41 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:53:41 [DEBUG] [root]select * from heecms_users_group   where  (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:53:41 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:53:41 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:53:41 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:53:41 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:53:41 [DEBUG] [root]select * from heecms_message   where  (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')    
+2020-05-11 05:53:41 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:53:41 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:53:41 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:53:41 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:53:41 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:53:41 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:53:41 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:53:41 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:53:41 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:53:41 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') order by parent_id asc   
+2020-05-11 05:53:41 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') order by parent_id asc   
+2020-05-11 05:53:41 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') order by parent_id asc   
+2020-05-11 05:53:41 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') order by parent_id asc   
+2020-05-11 05:53:41 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') and (`parent_id`='12') order by parent_id asc   
+2020-05-11 05:54:43 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:54:43 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:54:43 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:54:43 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:54:43 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:54:43 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:54:43 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:54:43 [DEBUG] [root]select * from heecms_users_group   where  (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:54:43 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:54:43 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:54:43 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:54:43 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:54:43 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='') order by create_time desc   limit 5
+2020-05-11 05:54:43 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:54:43 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:54:43 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:54:43 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:54:43 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:54:43 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:54:43 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:54:43 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:54:43 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:54:44 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') order by parent_id asc   
+2020-05-11 05:54:44 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') order by parent_id asc   
+2020-05-11 05:54:44 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') order by parent_id asc   
+2020-05-11 05:54:44 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') order by parent_id asc   
+2020-05-11 05:54:44 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') and (`parent_id`='12') order by parent_id asc   
+2020-05-11 05:55:07 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:55:07 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:55:07 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:55:07 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:55:07 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:55:07 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:55:07 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:55:07 [DEBUG] [root]select * from heecms_users_group   where  (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:55:07 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:55:07 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:55:07 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:55:07 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:55:07 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='') order by create_time desc   limit 5
+2020-05-11 05:55:07 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:55:07 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:55:07 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:55:07 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:55:07 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:55:07 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:55:07 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:55:07 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:55:07 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:55:07 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') order by parent_id asc   
+2020-05-11 05:55:07 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') order by parent_id asc   
+2020-05-11 05:55:07 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') order by parent_id asc   
+2020-05-11 05:55:07 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') order by parent_id asc   
+2020-05-11 05:55:07 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') and (`parent_id`='12') order by parent_id asc   
+2020-05-11 05:56:28 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:56:28 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:56:28 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:56:28 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:56:28 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:56:28 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:56:28 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:56:28 [DEBUG] [root]select * from heecms_users_group   where  (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:56:28 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:56:28 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:56:28 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:56:28 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:57:33 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:57:33 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:57:33 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:57:33 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:57:33 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:57:33 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:57:33 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:57:33 [DEBUG] [root]select * from heecms_users_group   where  (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:57:33 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:57:33 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:57:33 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:57:33 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:57:33 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='') order by create_time desc   limit 5
+2020-05-11 05:57:33 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:57:33 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:57:33 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:57:33 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:57:33 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:57:33 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:57:33 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:57:33 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:57:33 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:57:33 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') order by parent_id asc   
+2020-05-11 05:57:33 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') order by parent_id asc   
+2020-05-11 05:57:33 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') order by parent_id asc   
+2020-05-11 05:57:33 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') order by parent_id asc   
+2020-05-11 05:57:33 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') and (`parent_id`='12') order by parent_id asc   
+2020-05-11 05:58:33 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:58:33 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:58:33 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:58:33 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:58:33 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:58:33 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:58:33 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:58:33 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:58:33 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:58:33 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:58:33 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='') order by create_time desc   limit 5
+2020-05-11 05:58:33 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:58:33 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:58:33 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:58:33 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:58:33 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:58:33 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:58:33 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:58:33 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:58:33 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:58:33 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:58:33 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:58:34 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') order by parent_id asc   
+2020-05-11 05:58:34 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') order by parent_id asc   
+2020-05-11 05:58:34 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') order by parent_id asc   
+2020-05-11 05:58:34 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') order by parent_id asc   
+2020-05-11 05:58:34 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') and (`parent_id`='12') order by parent_id asc   
+2020-05-11 05:58:35 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:58:35 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:58:35 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:58:35 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:58:35 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:58:35 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:58:35 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:58:35 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:58:35 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:58:35 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:58:35 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='') order by create_time desc   limit 5
+2020-05-11 05:58:35 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:58:35 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:58:35 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:58:35 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:58:35 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:58:35 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:58:35 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:58:35 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:58:35 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:58:35 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:58:35 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:58:35 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') order by parent_id asc   
+2020-05-11 05:58:35 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') order by parent_id asc   
+2020-05-11 05:58:35 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') order by parent_id asc   
+2020-05-11 05:58:35 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') order by parent_id asc   
+2020-05-11 05:58:35 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') and (`parent_id`='12') order by parent_id asc   
+2020-05-11 05:58:58 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:58:58 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:58:58 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:58:58 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:58:58 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:58:58 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:58:58 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:58:58 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:58:58 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:58:58 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:58:58 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='') order by create_time desc   limit 5
+2020-05-11 05:58:58 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:58:58 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:58:58 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:58:58 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:58:58 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:58:58 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:58:58 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:58:58 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:58:58 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:58:58 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:58:58 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:58:58 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') order by parent_id asc   
+2020-05-11 05:58:58 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') order by parent_id asc   
+2020-05-11 05:58:58 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') order by parent_id asc   
+2020-05-11 05:58:58 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') order by parent_id asc   
+2020-05-11 05:58:58 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') and (`parent_id`='12') order by parent_id asc   
+2020-05-11 05:59:00 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:59:00 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:59:00 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:59:00 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:59:00 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:59:00 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:59:00 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:59:00 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:59:00 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:59:00 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:59:00 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='') order by create_time desc   limit 5
+2020-05-11 05:59:00 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:59:00 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:59:00 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:59:00 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:59:00 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:59:00 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:59:00 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:59:00 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:59:00 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:59:00 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:59:00 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:59:00 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') order by parent_id asc   
+2020-05-11 05:59:00 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') order by parent_id asc   
+2020-05-11 05:59:00 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') order by parent_id asc   
+2020-05-11 05:59:00 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') order by parent_id asc   
+2020-05-11 05:59:00 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') and (`parent_id`='12') order by parent_id asc   
+2020-05-11 05:59:19 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:59:19 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:59:19 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:59:19 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:59:19 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:59:19 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:59:19 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:59:19 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:59:19 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:59:19 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:59:19 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='') order by create_time desc   limit 5
+2020-05-11 05:59:19 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:59:19 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:59:19 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:59:19 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:59:19 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:59:19 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:59:19 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:59:19 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:59:19 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:59:19 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:59:19 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:59:19 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') order by parent_id asc   
+2020-05-11 05:59:19 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') order by parent_id asc   
+2020-05-11 05:59:19 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') order by parent_id asc   
+2020-05-11 05:59:19 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') order by parent_id asc   
+2020-05-11 05:59:19 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') and (`parent_id`='12') order by parent_id asc   
+2020-05-11 05:59:20 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:59:20 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:59:20 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:59:20 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:59:20 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:59:20 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:59:20 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:59:20 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:59:20 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:59:20 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:59:20 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='') order by create_time desc   limit 5
+2020-05-11 05:59:20 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:59:20 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:59:20 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:59:20 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:59:20 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:59:20 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:59:21 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:59:21 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:59:21 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:59:21 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:59:21 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:59:21 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') order by parent_id asc   
+2020-05-11 05:59:21 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') order by parent_id asc   
+2020-05-11 05:59:21 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') order by parent_id asc   
+2020-05-11 05:59:21 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') order by parent_id asc   
+2020-05-11 05:59:21 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') and (`parent_id`='12') order by parent_id asc   
+2020-05-11 05:59:47 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-11 05:59:47 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-11 05:59:47 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 05:59:47 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 05:59:47 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 05:59:47 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 05:59:47 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-11 05:59:47 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-11 05:59:47 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-11 05:59:47 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-11 05:59:47 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='') order by create_time desc   limit 5
+2020-05-11 05:59:47 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-11 05:59:47 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:59:47 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 05:59:47 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 05:59:47 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-11 05:59:47 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-11 05:59:47 [DEBUG] [root]自动加载类：app\admin\model\link_group
+2020-05-11 05:59:47 [DEBUG] [root]select * from heecms_link_group   where 2    
+2020-05-11 05:59:47 [DEBUG] [root]自动加载类：app\admin\model\link
+2020-05-11 05:59:47 [DEBUG] [root]select count(*) c from `heecms_link` where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))
+2020-05-11 05:59:47 [DEBUG] [root]select  *  from heecms_link where (link_group_id=2 and (parent_id<1 or parent_id is NULL or parent_id=''))  limit 0,5
+2020-05-11 05:59:47 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') order by parent_id asc   
+2020-05-11 05:59:47 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') order by parent_id asc   
+2020-05-11 05:59:47 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') order by parent_id asc   
+2020-05-11 05:59:47 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') order by parent_id asc   
+2020-05-11 05:59:47 [DEBUG] [root]select * from heecms_link   where (`parent_id`='8') and (`parent_id`='9') and (`parent_id`='10') and (`parent_id`='11') and (`parent_id`='12') order by parent_id asc   

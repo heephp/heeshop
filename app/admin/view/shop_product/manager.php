@@ -42,12 +42,12 @@
                                 </select>
                             </th>
                             <th scope="col">商品名</th>
-                            <th scope="col">单价</th>
-                            <th scope="col">库存</th>
-                            <th scope="col">销量</th>
-                            <th scope="col">点击</th>
-                            <th scope="col">评分</th>
-                            <th scope="col">创建时间</th>
+                            <th scope="col"><?=mtitle('price',$field,$order,'单价')?></th>
+                            <th scope="col"><?=mtitle('stock',$field,$order,'库存')?></th>
+                            <th scope="col"><?=mtitle('sellcount',$field,$order,'销量')?></th>
+                            <th scope="col"><?=mtitle('hit',$field,$order,'点击')?></th>
+                            <th scope="col"><?=mtitle('rate',$field,$order,'评分')?></th>
+                            <th scope="col"><?=mtitle('create_time',$field,$order,'创建时间')?></th>
                             <th scope="col">操作</th>
                         </tr>
                         </thead>

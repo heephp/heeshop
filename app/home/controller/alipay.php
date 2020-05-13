@@ -1,13 +1,15 @@
 <?php
 namespace app\home\controller;
+use app\admin\controller\model;
 use heephp\bulider\form;
+use heephp\bulider\pager;
 use heephp\bulider\table;
 use  heephp\controller;
 use heephp\formbulider;
 use heephp\logger;
 use heephp\route;
 
-class alipay extends controller
+class alipay extends base
 {
     private function config()
     {
@@ -34,17 +36,22 @@ class alipay extends controller
     }
 
     public function pay($orderid){
+
+
+
         $config=$this->config();
 
         try {
             // 实例支付对象
             $pay = \AliPay\Web::instance($config);
 
+            $re = $this->_order_do_pay($orderid);
+
             // 参考链接：https://docs.open.alipay.com/api_1/alipay.trade.page.pay
             $result = $pay->apply([
-                'out_trade_no' => time(), // 商户订单号
-                'total_amount' => '1', // 支付金额
-                'subject'      => '支付订单描述', // 支付订单描述
+                'out_trade_no' => $re['pay_id'], // 商户订单号
+                'total_amount' => $re['money'], // 支付金额
+                'subject'      => '订单号：'.$re['desc'], // 支付订单描述
             ]);
 
             echo $result;
@@ -65,10 +72,15 @@ class alipay extends controller
 
             $data = $pay->notify();
             if (in_array($data['trade_status'], ['TRADE_SUCCESS', 'TRADE_FINISHED'])) {
+                $out_trade_on = $data['out_trade_no'];
+                $money=$data['total_amount'];
                 // @todo 更新订单状态，支付完成
                 logger::info("收到来自支付宝的异步通知\r\n");
                 logger::info( '订单号：' . $data['out_trade_no'] );
                 logger::info('订单金额：' . $data['total_amount'] );
+
+                parent::_order_do_action($data,$out_trade_on,'支付宝',$money);
+
             } else {
                 logger::info( "收到异步通知\r\n");
             }

@@ -1,0 +1,207 @@
+2020-05-11 23:00:00 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-11 23:00:00 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 23:00:00 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 23:00:00 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 23:00:00 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 23:00:00 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200511220617659533279431') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-11 23:00:00 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-11 23:00:00 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:00:00 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:00:00 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200511230000346271540601','200511220617659533279431','12.00','0')
+2020-05-11 23:00:01 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-11 23:00:01 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 23:00:01 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 23:00:01 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 23:00:01 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 23:00:01 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200511220617659533279431') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-11 23:00:01 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-11 23:00:01 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:00:01 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:00:01 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200511230001449868663824','200511220617659533279431','12.00','0')
+2020-05-11 23:00:02 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-11 23:00:02 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 23:00:02 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 23:00:02 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 23:00:02 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 23:00:02 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200511220617659533279431') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-11 23:00:02 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-11 23:00:02 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:00:02 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:00:02 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200511230002583170069133','200511220617659533279431','12.00','0')
+2020-05-11 23:00:37 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-11 23:00:37 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 23:00:37 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 23:00:37 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 23:00:37 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 23:00:37 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200511220617659533279431%20OK') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-11 23:00:37 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-11 23:00:37 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:00:37 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:00:37 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200511230037939483028366','200511220617659533279431%20OK','','0')
+2020-05-11 23:00:42 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-11 23:00:42 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 23:00:42 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 23:00:42 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 23:00:42 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 23:00:42 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200511220617659533279431') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-11 23:00:42 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-11 23:00:42 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:00:42 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:00:42 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200511230042969459419034','200511220617659533279431','12.00','0')
+2020-05-11 23:01:20 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-11 23:01:20 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 23:01:20 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 23:01:20 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 23:01:20 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 23:01:20 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200511220617659533279431') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-11 23:01:20 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-11 23:01:20 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:01:20 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:01:20 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200511230120556624740054','200511220617659533279431','12.00','0')
+2020-05-11 23:02:20 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-11 23:02:20 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 23:02:20 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 23:02:20 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 23:02:20 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 23:02:20 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200511220617659533279431') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-11 23:02:20 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-11 23:02:20 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:02:20 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:02:20 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200511230220733474126125','200511220617659533279431','12.00','0')
+2020-05-11 23:02:21 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-11 23:02:21 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 23:02:21 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 23:02:21 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 23:02:21 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 23:02:21 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200511220617659533279431') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-11 23:02:21 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-11 23:02:21 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:02:21 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:02:21 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200511230221818979957942','200511220617659533279431','12.00','0')
+2020-05-11 23:02:35 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-11 23:02:35 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 23:02:35 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 23:02:35 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 23:02:35 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 23:02:35 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200511220617659533279431') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-11 23:02:35 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-11 23:02:35 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:02:35 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:02:35 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200511230235578780039601','200511220617659533279431','12.00','0')
+2020-05-11 23:04:36 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-11 23:04:36 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 23:04:36 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 23:04:36 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 23:04:36 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 23:04:36 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200511220617659533279431') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-11 23:04:36 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-11 23:04:36 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:04:36 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:04:36 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200511230436304955662205','200511220617659533279431','12.00','0')
+2020-05-11 23:06:49 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-11 23:06:49 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 23:06:49 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 23:06:49 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 23:06:49 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 23:06:49 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200511220617659533279431') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-11 23:06:49 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-11 23:06:49 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:06:49 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:06:49 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200511230649080805878415','200511220617659533279431','12.00','0')
+2020-05-11 23:06:49 [DEBUG] [root]select * from heecms_shop_pay   where  `shop_pay_id` = '200511230649080805878415'    
+2020-05-11 23:06:49 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 23:06:49 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 23:06:49 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-05-11 23:06:49 [DEBUG] [root]自动加载类：AliPay\Web
+2020-05-11 23:06:49 [DEBUG] [root]自动加载类：WeChat\Contracts\BasicAliPay
+2020-05-11 23:06:49 [DEBUG] [root]自动加载类：WeChat\Contracts\DataArray
+2020-05-11 23:06:50 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-11 23:06:50 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 23:06:50 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 23:06:50 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 23:06:50 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 23:06:50 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200511220617659533279431') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-11 23:06:50 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-11 23:06:50 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:06:50 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:06:50 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200511230650391298429052','200511220617659533279431','12.00','0')
+2020-05-11 23:06:50 [DEBUG] [root]select * from heecms_shop_pay   where  `shop_pay_id` = '200511230650391298429052'    
+2020-05-11 23:06:50 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 23:06:50 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 23:06:50 [DEBUG] [root]自动加载类：AliPay\Web
+2020-05-11 23:06:50 [DEBUG] [root]自动加载类：WeChat\Contracts\BasicAliPay
+2020-05-11 23:06:50 [DEBUG] [root]自动加载类：WeChat\Contracts\DataArray
+2020-05-11 23:06:52 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-11 23:06:52 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 23:06:52 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 23:06:52 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 23:06:52 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 23:06:52 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200511220617659533279431') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-11 23:06:52 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-11 23:06:52 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:06:52 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:06:52 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200511230652049541923340','200511220617659533279431','12.00','0')
+2020-05-11 23:06:52 [DEBUG] [root]select * from heecms_shop_pay   where  `shop_pay_id` = '200511230652049541923340'    
+2020-05-11 23:06:52 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 23:06:52 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 23:06:52 [DEBUG] [root]自动加载类：AliPay\Web
+2020-05-11 23:06:52 [DEBUG] [root]自动加载类：WeChat\Contracts\BasicAliPay
+2020-05-11 23:06:52 [DEBUG] [root]自动加载类：WeChat\Contracts\DataArray
+2020-05-11 23:38:44 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-11 23:38:44 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 23:38:44 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 23:38:44 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 23:38:44 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 23:38:44 [DEBUG] [root]自动加载类：WeChat\Pay
+2020-05-11 23:38:44 [DEBUG] [root]自动加载类：WeChat\Contracts\BasicWePay
+2020-05-11 23:38:44 [DEBUG] [root]自动加载类：WeChat\Contracts\DataArray
+2020-05-11 23:38:44 [DEBUG] [root]自动加载类：WeChat\Contracts\Tools
+2020-05-11 23:38:44 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-11 23:38:44 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 23:38:44 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 23:38:44 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200511220617659533279431') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-11 23:38:44 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-11 23:38:44 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:38:44 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:38:44 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200511233844766535975570','200511220617659533279431','12.00','0')
+2020-05-11 23:38:44 [DEBUG] [root]select * from heecms_shop_pay   where  `shop_pay_id` = '200511233844766535975570'    
+2020-05-11 23:38:44 [DEBUG] [root]自动加载类：WePay\Order
+2020-05-11 23:38:45 [DEBUG] [root]自动加载类：WeChat\Exceptions\InvalidResponseException
+2020-05-11 23:39:07 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-11 23:39:07 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 23:39:07 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 23:39:07 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 23:39:07 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 23:39:07 [DEBUG] [root]自动加载类：WeChat\Pay
+2020-05-11 23:39:07 [DEBUG] [root]自动加载类：WeChat\Contracts\BasicWePay
+2020-05-11 23:39:07 [DEBUG] [root]自动加载类：WeChat\Contracts\DataArray
+2020-05-11 23:39:07 [DEBUG] [root]自动加载类：WeChat\Contracts\Tools
+2020-05-11 23:39:07 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-11 23:39:07 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 23:39:07 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 23:39:07 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200511220617659533279431') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-11 23:39:07 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-11 23:39:07 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:39:07 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:39:07 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200511233907958738137314','200511220617659533279431','12.00','0')
+2020-05-11 23:39:07 [DEBUG] [root]select * from heecms_shop_pay   where  `shop_pay_id` = '200511233907958738137314'    
+2020-05-11 23:39:07 [DEBUG] [root]自动加载类：WePay\Order
+2020-05-11 23:39:55 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-11 23:39:55 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-11 23:39:55 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-11 23:39:55 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-11 23:39:55 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-11 23:39:55 [DEBUG] [root]自动加载类：WeChat\Pay
+2020-05-11 23:39:55 [DEBUG] [root]自动加载类：WeChat\Contracts\BasicWePay
+2020-05-11 23:39:55 [DEBUG] [root]自动加载类：WeChat\Contracts\DataArray
+2020-05-11 23:39:55 [DEBUG] [root]自动加载类：WeChat\Contracts\Tools
+2020-05-11 23:39:55 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-11 23:39:55 [DEBUG] [root]自动加载类：heephp\model
+2020-05-11 23:39:55 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-11 23:39:55 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200511220617659533279431') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-11 23:39:55 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-11 23:39:55 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:39:55 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-11 23:39:55 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200511233955562554181345','200511220617659533279431','12.00','0')
+2020-05-11 23:39:55 [DEBUG] [root]select * from heecms_shop_pay   where  `shop_pay_id` = '200511233955562554181345'    
+2020-05-11 23:39:55 [DEBUG] [root]自动加载类：WePay\Order

@@ -38,7 +38,7 @@ function modeluser($name)
     //取出用户模型表前缀
     $user_model_pre = config('user_model_prefix');
     //从数据表中取出验证规则
-    $mt = model('model_table')->find("`name`='$name'");
+    $mt = model('model_table')->where("`name`='$name'")->find();
     if (!$mt) {
         throw new sysExcption('自定义模型表名：' . $name . '不存在！');
         return;
@@ -51,6 +51,22 @@ function modeluser($name)
     $model->validate_rule = $validate_rule;
     $model->validate_msg = $validate_msg;
     return $model;
+}
+
+/**
+ * 管理表格 表头标题
+ * @param $field 当前字段
+ * @param $curfield 排序的字段
+ * @param $order
+ * @param $title 标题
+ * @return string 链接
+ */
+function mtitle($field,$curfield,$order,$title){
+    $cls =$field==$curfield?" class='$order' ":'';
+
+    $order=($order=='asc')?'desc':'asc';
+    $url = url('manager',[$field,$order]);
+    return "<a href='$url' $cls>$title</a>";
 }
 
 function getcurl($url){

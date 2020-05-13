@@ -80,7 +80,7 @@ class model extends adminBase
         }
 
         $cate=model('category');
-        $mc = $cate->find('model_id='.$id);
+        $mc = $cate->where('model_id='.$id)->find();
         if($mc){
             return $this->error('请先删除关联的栏目后，再删除模型！');
         }

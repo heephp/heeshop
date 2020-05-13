@@ -1,6 +1,7 @@
 <?php
 //url获取
 use heephp\logger;
+use heephp\orm;
 use heephp\route;
 
 function urlget()
@@ -434,7 +435,7 @@ function checkvcode($vcodename = 'vcode')
  *@$textFont => 文字大小
  *@$textColor => 文字顔色
  */
-function imageWaterMark($originalImage, $waterPos = 5, $waterImage = '', $waterText = '', $textFont = 5, $textColor = '#FFFFFF', $fontFile = 'arial.ttf')
+/*function imageWaterMark($originalImage, $waterPos = 5, $waterImage = '', $waterText = '', $textFont = 5, $textColor = '#FFFFFF', $fontFile = 'arial.ttf')
 {
     $isWaterImage = FALSE;
 
@@ -575,7 +576,7 @@ function imageWaterMark($originalImage, $waterPos = 5, $waterImage = '', $waterT
 
     $waterIm == null ? '' : imagedestroy($waterIm);
     $originalIm == null ? '' : imagedestroy($originalIm);
-}
+}*/
 
 
 /**
@@ -604,7 +605,7 @@ function sendmail($to, $subject, $body, $attachment = '', $conf = [])
  * 生成URL路径
  * @path 路径
  */
-function url($path, $parm = '')
+function url($path, $parm = '',$havesuffix=true)
 {
 
     //清除多余字符
@@ -612,17 +613,12 @@ function url($path, $parm = '')
         $path = str_replace("//", "/", $path);
     }
 
-
     $allpath = explode('/', $path);
-
     $result_url = '';
 
-    if (strstr($path, '/') == $path) {
-
+    if (strpos($path, '/') === 0) {
         $result_url = $path;
-
     } else {
-
         if (APPS) {
             $result_url = '/' . APP . '/' . CONTROLLER . '/' . $path;
         } else
@@ -640,8 +636,10 @@ function url($path, $parm = '')
     $result_url = route::set($result_url);
     $result_url = rtrim ($result_url,'/');
     //增加后缀
-    $format_suffix = config('format_suffix');
-    return $result_url. (empty($format_suffix) ? '' : ('.' . $format_suffix));
+    $format_suffix = $havesuffix ? config('format_suffix') : '';
+    $format_suffix = (empty($format_suffix) ? '' : ('.' . $format_suffix));
+
+    return $result_url . $format_suffix;
 }
 
 function config($name = '')
@@ -652,27 +650,23 @@ function config($name = '')
 
 function db()
 {
-    $config = config();
-    $dbconfig = $config['db'];
+    $db=null;
+    $dbconfig = config('db.');
 
-    $db = null;
-    if ($dbconfig['diver'] == 'mysqli')
-        $db = new \heephp\database\mysqli($dbconfig['db_host'], $dbconfig['db_port'], $dbconfig['db_username'], $dbconfig['db_password'], $dbconfig['db_name'], $dbconfig['charset'], $config['pagesize']);
-    else
+    if ($dbconfig['diver'] == 'pdo')
         $db = new \heephp\database\pdo('mysql:host=' . $dbconfig['db_host'] . ';database=' . $dbconfig['db_name'] . ';', $dbconfig['db_username'], $dbconfig['db_password']);
+    else
+        $db = new \heephp\database\mysqli($dbconfig['db_host'], $dbconfig['db_port'], $dbconfig['db_username'], $dbconfig['db_password'], $dbconfig['db_name'], $dbconfig['charset'], $config['pagesize']);
 
     return $db;
 }
 
 function model($table)
 {
-    include_once 'model.php';
     $modelINSTANCE = null;
-    //$modelNAME = 'heephp\\';
     if (APPS) {
         $fname = './../app/' . APP . '/model/' . $table . '.php';
         if (is_file($fname)) {
-            include_once $fname;
             $modelNAME = '\\app\\' . APP . '\\model\\' . $table;
         } else {
             $modelNAME = '\\heephp\\model';
@@ -680,7 +674,6 @@ function model($table)
     } else {
         $fname = './../app/model/' . $table . '.php';
         if (is_file($fname)) {
-            include_once $fname;
             $modelNAME = '\\app\model\\' . $table;
         } else {
             $modelNAME = '\\heephp\\model';
@@ -689,6 +682,12 @@ function model($table)
 
     $modelINSTANCE = new $modelNAME($table);
     return $modelINSTANCE;
+}
+
+//orm
+function table($table){
+    $orm = new \heephp\orm\orm();
+    return $orm->table($table);
 }
 
 //多语言

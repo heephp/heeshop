@@ -22,8 +22,8 @@ class link extends adminBase
         $lg = $lp->get($link_group_id);
         $this->assign('group',$lg);
 
-        $link = model('link');
-        $link->page("link_group_id=$link_group_id and (parent_id<1 or parent_id is NULL or parent_id='')");
+        $link = new \app\admin\model\link();
+        $link->where("link_group_id=$link_group_id and (parent_id<1 or parent_id is NULL or parent_id='')")->page();
         $link->create_user();
         $link->child();
         $this->assign('list', $link->data);
@@ -34,7 +34,7 @@ class link extends adminBase
     function add($parent_id=0,$link_group_id=0)
     {
         $link = model('link');
-        $link->select('link_group_id='.$link_group_id.' and (parent_id<1 or parent_id IS NULL or parent_id=\'\')');
+        $link->where('link_group_id='.$link_group_id.' and (parent_id<1 or parent_id IS NULL or parent_id=\'\')')->select();
         $this->assign('plist',$link->data);
 
         $lp = model('link_group');
@@ -54,7 +54,7 @@ class link extends adminBase
         $link->get($id);
         $this->assign('m', $link->data);
 
-        $link->select('link_group_id='.$link->data['link_group_id'].' and (parent_id<1 or parent_id IS NULL or parent_id=\'\')');
+        $link->where('link_group_id='.$link->data['link_group_id'].' and (parent_id<1 or parent_id IS NULL or parent_id=\'\')')->select();
         $this->assign('plist',$link->data);
 
         $lp = model('link_group');
@@ -67,7 +67,7 @@ class link extends adminBase
     function delete($id)
     {
         $link = model('link');
-        $link_group_id=$link->getBylink_group_id('link_id='.$id);
+        $link_group_id=$link->where('link_id='.$id)->getBylink_group_id();
         $re = $link->delete($id);
         if ($re) {
             return $this->success('删除成功！', url('manager',$link_group_id));

@@ -4,11 +4,11 @@
             <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
                 <div>
                     <h2 class="text-white pb-2 fw-bold">首页</h2>
-                    <h5 class="text-white op-7 mb-2">欢迎使用HeeFramework</h5>
+                    <h5 class="text-white op-7 mb-2">欢迎使用HeeCMS</h5>
                 </div>
                 <div class="ml-md-auto py-2 py-md-0">
-                    <a href="#" class="btn btn-white btn-border btn-round mr-2">用户管理</a>
-                    <a href="#" class="btn btn-secondary btn-round">添加用户</a>
+                    <a href="<?=url('/admin/category/manager')?>" class="btn btn-white btn-border btn-round mr-2">栏目管理</a>
+                    <a href="<?=url('/admin/category/managerinfo')?>" class="btn btn-secondary btn-round">信息管理</a>
                 </div>
             </div>
         </div>
@@ -104,12 +104,12 @@
                         <div class="card-head-row">
                             <div class="card-title">服务器</div>
                             <div class="card-tools">
-                                <ul class="nav nav-pills nav-secondary nav-pills-no-bd nav-sm" id="pills-tab" role="tablist">
+                                <ul class="nav nav-pills nav-secondary nav-pills-no-bd nav-sm" id="pills-tab" role="tabstag">
                                     <li class="nav-item">
-                                        <a class="nav-link" id="pills-today" data-toggle="pill" href="#pills-today" role="tab" aria-selected="true">环境变量</a>
+                                        <a class="nav-link active" data-toggle="pill" href="#pills-env" role="tabstag" aria-selected="true">环境变量</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link active" id="pills-week" data-toggle="pill" href="#pills-week" role="tab" aria-selected="false">系统配置</a>
+                                        <a class="nav-link " data-toggle="pill" href="#pills-sys" role="tabstag" aria-selected="false">系统配置</a>
                                     </li>
 
                                 </ul>
@@ -117,70 +117,74 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="d-flex">
-                            <div class="avatar avatar-online">
-                                <span class="avatar-title rounded-circle border border-white bg-info">J</span>
+
+                        <div class="tab-content row" id="pills-tabContent">
+                            <div class="tab-pane fade show active col-md-12" id="pills-env" role="tablist"
+                                 aria-labelledby="pills-env-tab">
+                                    <table class="table table-sm table-hover">
+
+                                        <tbody>
+                                        <tr>
+                                            <td>域名：</td>
+                                            <td><?=$_SERVER['SERVER_NAME']?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>服务器：</td>
+                                            <td><?=$_SERVER['SERVER_ADDR']?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>端口：</td>
+                                            <td><?=$_SERVER['SERVER_PORT']?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>运行环境：</td>
+                                            <td><?=$_SERVER['SERVER_SOFTWARE']?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>系统目录：</td>
+                                            <td><?=$_SERVER['SYSTEMROOT']?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>网站目录：</td>
+                                            <td><?=ROOT?></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                             </div>
-                            <div class="flex-1 ml-3 pt-1">
-                                <h6 class="text-uppercase fw-bold mb-1">Joko Subianto <span class="text-warning pl-3">pending</span></h6>
-                                <span class="text-muted">I am facing some trouble with my viewport. When i start my</span>
-                            </div>
-                            <div class="float-right pt-1">
-                                <small class="text-muted">8:40 PM</small>
+                            <div class="tab-pane fade col-md-12" id="pills-sys" role="tablist"
+                                 aria-labelledby="pills-sys-tab">
+                                <table class="table table-sm table-hover">
+
+                                    <tbody>
+                                    <tr>
+                                        <td>网站名称：</td>
+                                        <td><?=conf('website_name')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>公司名称：</td>
+                                        <td><?=conf('company_name')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>开启验证码：</td>
+                                        <td><?=conf('is_vcode')?'是':'否'?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>开启水印：</td>
+                                        <td><?=conf('watermark')?'是':'否'?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>网站模板：</td>
+                                        <td><?=conf('website_skin')?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>支付宝：</td>
+                                        <td><?=conf('pay_ali_account')?></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                        <div class="separator-dashed"></div>
-                        <div class="d-flex">
-                            <div class="avatar avatar-offline">
-                                <span class="avatar-title rounded-circle border border-white bg-secondary">P</span>
-                            </div>
-                            <div class="flex-1 ml-3 pt-1">
-                                <h6 class="text-uppercase fw-bold mb-1">Prabowo Widodo <span class="text-success pl-3">open</span></h6>
-                                <span class="text-muted">I have some query regarding the license issue.</span>
-                            </div>
-                            <div class="float-right pt-1">
-                                <small class="text-muted">1 Day Ago</small>
-                            </div>
-                        </div>
-                        <div class="separator-dashed"></div>
-                        <div class="d-flex">
-                            <div class="avatar avatar-away">
-                                <span class="avatar-title rounded-circle border border-white bg-danger">L</span>
-                            </div>
-                            <div class="flex-1 ml-3 pt-1">
-                                <h6 class="text-uppercase fw-bold mb-1">Lee Chong Wei <span class="text-muted pl-3">closed</span></h6>
-                                <span class="text-muted">Is there any update plan for RTL version near future?</span>
-                            </div>
-                            <div class="float-right pt-1">
-                                <small class="text-muted">2 Days Ago</small>
-                            </div>
-                        </div>
-                        <div class="separator-dashed"></div>
-                        <div class="d-flex">
-                            <div class="avatar avatar-offline">
-                                <span class="avatar-title rounded-circle border border-white bg-secondary">P</span>
-                            </div>
-                            <div class="flex-1 ml-3 pt-1">
-                                <h6 class="text-uppercase fw-bold mb-1">Peter Parker <span class="text-success pl-3">open</span></h6>
-                                <span class="text-muted">I have some query regarding the license issue.</span>
-                            </div>
-                            <div class="float-right pt-1">
-                                <small class="text-muted">2 Day Ago</small>
-                            </div>
-                        </div>
-                        <div class="separator-dashed"></div>
-                        <div class="d-flex">
-                            <div class="avatar avatar-away">
-                                <span class="avatar-title rounded-circle border border-white bg-danger">L</span>
-                            </div>
-                            <div class="flex-1 ml-3 pt-1">
-                                <h6 class="text-uppercase fw-bold mb-1">Logan Paul <span class="text-muted pl-3">closed</span></h6>
-                                <span class="text-muted">Is there any update plan for RTL version near future?</span>
-                            </div>
-                            <div class="float-right pt-1">
-                                <small class="text-muted">2 Days Ago</small>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>

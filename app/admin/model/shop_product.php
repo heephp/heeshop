@@ -75,11 +75,11 @@ class shop_product extends model
             $pd['url']=$p;
             $pd['title']=$dat['name'];
             $pd['ord']=$i++;
-            $result = $mspp->saveByWhere($pd,"shop_product_id=$pid and url='$p'");
+            $result = $mspp->where("shop_product_id=$pid and url='$p'")->save($pd);
         }
         //删除不需要的图片
         $urls = '\''.implode('\',\'',$pics).'\'';
-        $mspp->deleteByWhere("shop_product_id=$pid and url not in ($urls)");
+        $mspp->where("shop_product_id=$pid and url not in ($urls)")->delete();
 
         //获取SKU 和 属性
         $skurecord=[];
@@ -97,7 +97,7 @@ class shop_product extends model
                 $d['shop_product_id']=$pid;
                 $d['shop_attr_name']=$attrname;
                 $d['value']=$val;
-                $result = $mspa->saveByWhere($d,"shop_product_id='$pid' and shop_attr_name='$attrname'");
+                $result = $mspa->where("shop_product_id='$pid' and shop_attr_name='$attrname'")->save($d);
 
 
             }elseif (($key&'sku_')=='sku_'){
@@ -115,7 +115,7 @@ class shop_product extends model
 
         //删除不需要的属性
         $attrlist=trim($attrlist,',');
-        $mspa->deleteByWhere("shop_product_id=$pid and shop_attr_name not in($attrlist)");
+        $mspa->where("shop_product_id=$pid and shop_attr_name not in($attrlist)")->delete();
 
         //保存SKU
         $msku=model('shop_product_sku');
@@ -123,13 +123,13 @@ class shop_product extends model
         $skulist = '';
         foreach ($skurecord as $k=>$v){
             if(!empty($v['markprice'])||!empty($v['price'])||!empty($v['stock'])) {
-                $insertid = $msku->saveByWhere(['shop_product_id' => $pid, 'shop_sku_cls' => $k, 'markprice' => $v['markprice'] ?? 0, 'price' => $v['price'] ?? 0, 'stock' => $v['stock']] ?? 0, "shop_product_id=$pid and shop_sku_cls='$k'");
+                $insertid = $msku->where("shop_product_id=$pid and shop_sku_cls='$k'")->save(['shop_product_id' => $pid, 'shop_sku_cls' => $k, 'markprice' => $v['markprice'] ?? 0, 'price' => $v['price'] ?? 0, 'stock' => $v['stock']]);
                 $skulist .= '\'' . $v . '\',';
             }
         }
         $skulist = trim($skulist,',');
         //删除不需要的SKU
-        $msku->deleteByWhere("shop_product_id=$pid".(!empty($skulist)?" and shop_sku_cls not in($skulist)":''));
+        $msku->where("shop_product_id=$pid".(!empty($skulist)?" and shop_sku_cls not in($skulist)":''))->delete();
 
         if($pid){
             return true;

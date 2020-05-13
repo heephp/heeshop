@@ -22,7 +22,7 @@ class shop_sku extends model
     }
 
     public function skucls() : array{
-        $data = $this->db->getAll('select cls from '.$this->table_prefix.'shop_sku group by cls');
+        $data = $this->field('cls')->group('cls')->select();//db->getAll('select cls from '.$this->table_prefix.'shop_sku group by cls');
         return $data;
     }
 }

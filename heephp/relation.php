@@ -50,7 +50,6 @@ class relation{
         $this->mid_table=$mid_table;
 
         $this->db=db();
-
     }
 
 
@@ -72,24 +71,24 @@ class relation{
 
 
         //如果是单行记录
-        if(/*count($tdata) == count($tdata,1)*/$this->issingleline($tdata)) {
-
+        if($this->issingleline($tdata)) {
             //如果无值则不调用
             if(!empty($tdata[$this->key])) {
 
-                $this->rmodel->find("`$this->fkey`='" . $tdata[$this->key] . "'");
+                $this->rmodel->where("`$this->fkey`='" . $tdata[$this->key] . "'")->find();
                 $this->call_rmodel_methods();
 
                 $tdata[$itemname] = $this->rmodel->data;
             }
 
         }else{
+
             //如果多条记录
             for($i=0;$i<count($tdata);$i++){
 
                 //如果无值则不调用
                 if(!empty($tdata[$i][$this->key])) {
-                    $this->rmodel->find("`$this->fkey`='".$tdata[$i][$this->key]."'");
+                    $this->rmodel->where("`$this->fkey`='".$tdata[$i][$this->key]."'")->find();
                     $this->call_rmodel_methods();
 
                     $tdata[$i][$itemname] = $this->rmodel->data;
@@ -127,8 +126,15 @@ class relation{
         //如果是单行记录
         if ($this->issingleline($tdata)) {
 
-            $parms = ['`'.$this->fkey.'`=\''.$tdata[$this->key].'\'', empty($this->rmodel_order)?"$this->fkey asc":$this->rmodel_order, '*', $onlysoftdel, $pageparm];
-            call_user_func_array([$this->rmodel, $method], $parms);
+            //$parms = ['`'.$this->fkey.'`=\''.$tdata[$this->key].'\'', , '*', $onlysoftdel, $pageparm];
+            //call_user_func_array([$this->rmodel, $method], $parms);
+            $this->rmodel
+                ->where('`'.$this->fkey.'`=\''.$tdata[$this->key].'\'')
+                ->order(empty($this->rmodel_order)?"$this->fkey asc":$this->rmodel_order)
+                ->pageparm($pageparm)
+                ->softdel($onlysoftdel)
+                ->$method();
+
             $this->call_rmodel_methods();
 
             $tdata[$itemname] = $this->rmodel->data;
@@ -138,8 +144,15 @@ class relation{
 
             for ($i = 0; $i < count($tdata); $i++) {
 
-                $parms = ['`'.$this->fkey.'`=\''.$tdata[$i][$this->key].'\'', empty($this->rmodel_order)?"$this->fkey asc":$this->rmodel_order, '*', $onlysoftdel, $pageparm];
-                call_user_func_array([$this->rmodel, $method], $parms);
+                //$parms = ['`'.$this->fkey.'`=\''.$tdata[$i][$this->key].'\'', empty($this->rmodel_order)?"$this->fkey asc":$this->rmodel_order, '*', $onlysoftdel, $pageparm];
+                //call_user_func_array([$this->rmodel, $method], $parms);
+                $this->rmodel
+                    ->where('`'.$this->fkey.'`=\''.$tdata[$i][$this->key].'\'')
+                    ->order(empty($this->rmodel_order)?"$this->fkey asc":$this->rmodel_order)
+                    ->pageparm($pageparm)
+                    ->softdel($onlysoftdel)
+                    ->$method();
+
                 $this->call_rmodel_methods();
 
                 $tdata[$i][$itemname] = $this->rmodel->data;
@@ -179,12 +192,12 @@ class relation{
             //从中间表读出关联id列表
             $midmodel=model($this->mid_table);
             $methodname = 'getBy'.$this->fkey;
-            $list = $midmodel->$methodname($this->key."='".$tdata[$this->key]."'",empty($this->rmodel_order)?'':$this->rmodel_order);
+            $list = $midmodel->where($this->key."='".$tdata[$this->key]."'")->order(empty($this->rmodel_order)?'':$this->rmodel_order)->$methodname();
 
             //从关联表读取数据
             if(!is_array($list)){
 
-                $this->rmodel->find("`$this->fkey`='".$list."'");
+                $this->rmodel->where("`$this->fkey`='".$list."'")->find();
                 $this->call_rmodel_methods();
 
                 $d=$this->rmodel->data;
@@ -194,7 +207,7 @@ class relation{
             }else{
                 for($i = 0; $i < count($list); $i++) {
                     $it=$list[$i];
-                    $this->rmodel->find("`$this->fkey`='".$it."'");
+                    $this->rmodel->where("`$this->fkey`='".$it."'")->find();
                     $this->call_rmodel_methods();
 
                     $d=$this->rmodel->data;
@@ -215,7 +228,7 @@ class relation{
                 $di=$tdata[$i];
 
                 //从中间表读出关联id列表
-                $list = $midmodel->$methodname('`'.$this->key."`='".$di[$this->key]."'");
+                $list = $midmodel->where('`'.$this->key."`='".$di[$this->key]."'")->$methodname();
 
                 if(empty($list))
                     continue;
@@ -230,8 +243,7 @@ class relation{
                         $di[$itemname]=$this->rmodel->data;
                 }else{
 
-                    $idlist = implode(',',$list);
-                    $this->rmodel->select('`'.$this->fkey.'` in ('.$idlist.')');
+                    $this->rmodel->whereIn($this->fkey,$list)->select();
                     $this->call_rmodel_methods();
 
                     $d=$this->rmodel->data;
@@ -313,6 +325,8 @@ class relation{
                     }
 
                 }
+
+                return;
             }
 
             throw new sysExcption('一对多保存数据必须为单条数组或多条数组记录');
@@ -348,7 +362,7 @@ class relation{
                 $sql= '`'.$this->key."`='".$tdata[$this->key]."'";
                 if(!empty($data))
                     $sql.=" and $this->fkey not in (".$data.")";
-                $midmodel->deleteByWhere($sql);
+                $midmodel->where($sql)->delete();
 
                 //新增中间表没有的数据
                 $rearr = [];

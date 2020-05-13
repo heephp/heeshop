@@ -7,7 +7,7 @@ class trash extends adminBase
 
     public function users(){
         $users=model('users');
-        $list = $users->page('1=1','delete_time desc','*',true);
+        $list = $users->order('delete_time desc')->softdel()->page();
         $users->users_group();
         $this->assign('list',$users->data);
         $this->assign('pager',$users->pager['show']);
@@ -38,7 +38,7 @@ class trash extends adminBase
 
     public function users_group(){
         $ug=model('users_group');
-        $list = $ug->page('1=1','delete_time desc','*',true);
+        $list = $ug->order('delete_time desc')->softdel()->page();
         $ug->create_user();
         $this->assign('list',$ug->data);
         $this->assign('pager',$ug->pager['show']);
@@ -71,7 +71,7 @@ class trash extends adminBase
 
     public function menus(){
         $mun = model('menus');
-        $mun->page('1=1','delete_time desc','*',true);
+        $mun->order('delete_time desc')->softdel()->page();
         $mun->child();
         $mun->create_user();
         $this->assign('list',$mun->data);
@@ -104,7 +104,7 @@ class trash extends adminBase
     public function message(){
         $mes = model('message');
 
-        $mes->page('1=1','delete_time desc','*','*',true);
+        $mes->page('delete_time desc')->softdel()->page();
         $mes->sender();
         $mes->receiver();
         $this->assign('list',$mes->data);

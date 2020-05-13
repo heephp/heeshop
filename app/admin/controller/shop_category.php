@@ -8,7 +8,7 @@ class shop_category extends adminBase
     function manager()
     {
         $cate=model('shop_category');
-        $cate->page('parent_id<1 or parent_id IS NULL or parent_id=\'\'');
+        $cate->whereEmpty('parent_id')->page();
         $cate->child();
         $cate->create_user();
         $this->assign('list',$cate->data);
@@ -20,7 +20,7 @@ class shop_category extends adminBase
 
     function add(){
         $cate = model('shop_category');
-        $cate->select('parent_id<1 or parent_id IS NULL or parent_id=\'\'');
+        $cate->whereEmpty('parent_id')->select();
         $this->assign('plist',$cate->data);
 
         $msku = model('shop_sku');
@@ -34,7 +34,7 @@ class shop_category extends adminBase
 
         $cate = model('shop_category');
 
-        $cate->select('parent_id<1 or parent_id IS NULL or parent_id=\'\'');
+        $cate->whereEmpty('parent_id')->select();
         $this->assign('plist',$cate->data);
 
         $cate->get($id);
@@ -58,7 +58,7 @@ class shop_category extends adminBase
     function delete($id){
 
         $product  = model('shop_product');
-        $count = $product->count('category_id='.$id);
+        $count = $product->where('category_id='.$id)->count()->value();
         if($count>0)
         {
             return $this->error('该分类中有未被删除的商品，请删除后再删除分类！');
@@ -93,21 +93,21 @@ class shop_category extends adminBase
         $catesku = model('shop_category_sku');
         if(is_array($skus)&&count($skus)>0) {
             foreach ($skus as $sku) {
-                $m = $catesku->select('shop_category_id=' . $data[$cate->key] . " and shop_sku_cls='$sku'");
+                $m = $catesku->where('shop_category_id=' . $data[$cate->key] . " and shop_sku_cls='$sku'")->select();
                 if (empty($m)) {
                     $catesku->insert(['shop_category_id' => $data[$cate->key], 'shop_sku_cls' => $sku]);
                 } else {
                     $catesku->update(['shop_category_sku_id' => $m['shop_category_sku_id'], 'shop_category_id' => $data[$cate->key], 'shop_sku_cls' => $sku]);
                 }
             }
-            $catesku->deleteByWhere('shop_category_id=' . $data[$cate->key] . ' and shop_sku_cls not in(\'' . implode('\',\'', $skus) . '\')');
+            $catesku->where('shop_category_id=' . $data[$cate->key] . ' and shop_sku_cls not in(\'' . implode('\',\'', $skus) . '\')')->delete();
         }else
 
-            $catesku->deleteByWhere('shop_category_id=' . $data[$cate->key]);
+            $catesku->where('shop_category_id=' . $data[$cate->key])->delete();
 
         //保存属性
         $cate->get($data[$cate->key]);
-            $attrids = model('shop_attr')->getByshop_attr_id("`name` in ('".implode('\',\'',$attrs??[])."')");
+            $attrids = model('shop_attr')->where("`name` in ('".implode('\',\'',$attrs??[])."')")->getByshop_attr_id();
             $cate->attrs()->save($attrids??'');
 
 

@@ -46,7 +46,7 @@
                                 <td><?=$m['link_group_id']?></td>
                                 <td> <?=$m['tag']?></td>
                                 <td><?=sstr($m['title'],10)?></td>
-                                <td><?=$m['disable']===1?'启用':'停用'?></td>
+                                <td><?=$m['disable']==1?'停用':'启用'?></td>
                                 <td><?=$m['create_user']['username']?></td>
                                 <td><?=$m['create_time']?></td>
                                 <td>

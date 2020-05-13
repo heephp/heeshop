@@ -279,7 +279,7 @@ class pdo implements databaseInterface {
     {
 
         $result = $this->query($sql);
-        $list = $this->fetchAssoc($result);
+        $list = $this->fetch($result);
 
         return $list;
         // TODO: Implement getAll() method.
@@ -392,7 +392,7 @@ class pdo implements databaseInterface {
 
     }
 
-    private function query($queryText) {
+    public function query($queryText) {
 
         if ($this->conn) {
 

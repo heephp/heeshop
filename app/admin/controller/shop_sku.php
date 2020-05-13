@@ -21,7 +21,7 @@ class shop_sku extends adminBase
         $this->assign('cls',$cls);
 
         $msku = model('shop_sku');
-        $msku->page(empty($cls)?'':"cls='$cls'",$msku->key.' desc');
+        $msku->where(empty($cls)?'1=1':"cls='$cls'")->order($msku->key.' desc')->page();
         $this->assign('list', $msku->data);
         $this->assign('pager', $msku->pager['show']);
         return $this->fetch();
@@ -71,11 +71,7 @@ class shop_sku extends adminBase
     {
         $data = request('post.');
         $msku = model('shop_sku');
-        if (!empty($data[$msku->key])) {
-            $result = $msku->update($data);
-        } else {
-            $result = $msku->insert($data);
-        }
+        $result = $msku->save($data);
         if ($result) {
             return $this->success('SKU保存成功！', url('manager'));
         } else

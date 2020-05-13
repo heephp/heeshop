@@ -16,7 +16,7 @@ class message extends adminBase{
             $wsql = "`receiver_users_id`=$receiver_users_id";
         }
 
-        $mes->page($wsql);
+        $mes->where($wsql)->page;
         $mes->sender();
         $mes->receiver();//var_dump($mes->data);
         $this->assign('list',$mes->data);
@@ -96,7 +96,7 @@ class message extends adminBase{
                 $data['`all`'] = 0;
                 $rs = explode(',',$receiver);
                 foreach ($rs as $r){
-                    $ruid = $users->getByusers_id("`username`='$r'");
+                    $ruid = $users->where("`username`='$r'")->getByusers_id();
 
                     //如果是自己则不发送
                     if($ruid==$data['users_id']||empty($ruid)){

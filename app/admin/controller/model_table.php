@@ -74,7 +74,7 @@ class model_table extends adminBase
         $i = 0;
         foreach ($fields as $fi) {
             //从表中读取字段的输入框类型和选择值列表
-            $mfinfo = empty($model_table_id) || empty($fi['Field']) ? '' : $mtf->find("model_table_id=$model_table_id and field_name='" . $fi['Field'] . "'");
+            $mfinfo = empty($model_table_id) || empty($fi['Field']) ? '' : $mtf->where("model_table_id=$model_table_id and field_name='" . $fi['Field'] . "'")->find();
             $type = explode('(', $fi['Type']);
             $f->rowStart()
                 ->rowInput('标题：', 'input_title[]', $mfinfo['field_title'] ?? '', 1)
@@ -199,7 +199,7 @@ class model_table extends adminBase
 
             //修改输入框类型和列表
             //判断字段是否在表中有记录
-            $fd = $mtbf->find('`model_table_id`=\'' . $m['model_table_id'] . '\' and `field_name`=\'' . $f['name'] . '\'');
+            $fd = $mtbf->where('`model_table_id`=\'' . $m['model_table_id'] . '\' and `field_name`=\'' . $f['name'] . '\'')->find();
             //var_dump($f);
             $mtdata = ['model_table_id' => $m['model_table_id'], 'field_title' => $f['input_title'], 'field_name' => $f['name'], 'input_type' => $f['input_type'], 'input_type_values' => $f['input_type_values']];
             if (empty($fd)) {
@@ -216,17 +216,17 @@ class model_table extends adminBase
     public function delete($id)
     {
         $model = new sysmodel();
-        $mt=$model->find('model_table_id='.$id);
+        $mt=$model->where('model_table_id='.$id)->find();
         if($mt){
             return $this->error('存在关联的自定义模型，需要删除后再删除表！');
 
         }
 
         $tb = model('model_table');
-        $tbname = $tb->getByname($tb->key . '=' . $id);
+        $tbname = $tb->where($tb->key . '=' . $id)->getByname();
         $isdel = $tb->delete($id);
         if ($isdel) {
-            model('model_table_field')->deleteByWhere("model_table_id=$id");
+            model('model_table_field')->where("model_table_id=$id")->delete();
             $mm = new mysqlmanager();
             $reslut = $mm->droptable(config('db.table_prefix') . $this->user_model_pre . $tbname);
             if ($reslut) {
@@ -301,7 +301,7 @@ class model_table extends adminBase
 
         //取字段列表
         $mtf=model('model_table_field');
-        $mtf->select('model_table_id='.$id,'create_time asc','field_title as title,field_name as name');
+        $mtf->where('model_table_id='.$id)->order('create_time asc')->field('field_title as title,field_name as name')->select();
         $fields = $mtf->data;
         $fields = array_filter($fields,function ($val) use ($keyfield){
             $val = $val['name'];

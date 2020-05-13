@@ -7,8 +7,8 @@
                 <h5 class="text-white op-7 mb-2">欢迎使用HeeCMS商城管理</h5>
             </div>
             <div class="ml-md-auto py-2 py-md-0">
-                <a href="#" class="btn btn-white btn-border btn-round mr-2">用户管理</a>
-                <a href="#" class="btn btn-secondary btn-round">添加用户</a>
+                <a href="<?=url('/admin/shop_category/manager')?>" class="btn btn-white btn-border btn-round mr-2">商品分类</a>
+                <a href="<?=url('/admin/shop_product/manager')?>" class="btn btn-secondary btn-round">商品管理</a>
             </div>
         </div>
     </div>

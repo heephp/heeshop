@@ -38,7 +38,7 @@ return [
         'default'=>'zh-cn'
     ],
     'cache'=>[
-        'diver'=>'file',
+        'diver'=>'memcache',
         'exp_time'=>3600,
         'redis'=>[
             'host'=>'127.0.0.1',

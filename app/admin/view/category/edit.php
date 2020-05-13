@@ -109,12 +109,18 @@
 
                                     <div class="form-group">
                                         <label for="title">列表模板</label>
-                                        <input type="text" class="form-control" name="template_list" id="template_list" placeholder="列表模板" value="<?=$m['template_list']??'list.php'?>">
+                                        <div class="row">
+                                            <input type="text" class="form-control col-md-9" name="template_list" id="template_list" placeholder="列表模板" value="<?=$m['template_list']??'list.php'?>">
+                                            <input type="button" class="btn btn-primary col-md-3" value="选择模板" onclick="$('#template_list').click()">
+                                        </div>
                                         <small class="text-small">列表页使用的模板,相对view根目录的路径以'/'开头，相对view/栏目名/目录的无需'/'开头</small>
                                     </div>
                                     <div class="form-group">
                                         <label for="title">详细页模板</label>
-                                        <input type="text" class="form-control" name="template_detail" id="template_detail" placeholder="详细页模板" value="<?=$m['template_detail']??'detail.php'?>">
+                                        <div class="row">
+                                            <input type="text" class="form-control col-md-9" name="template_detail" id="template_detail" placeholder="详细页模板" value="<?=$m['template_detail']??'detail.php'?>">
+                                            <input type="button" class="btn btn-primary col-md-3" value="选择模板" onclick="$('#template_detail').click()">
+                                        </div>
                                         <small class="text-small">详细页使用的模板,相对view根目录的路径以'/'开头，相对view/栏目名/目录的无需'/'开头</small>
                                     </div>
                                 </div>

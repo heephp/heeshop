@@ -1,0 +1,1111 @@
+2020-05-12 06:03:00 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:03:00 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:03:00 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:03:00 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:03:00 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:03:00 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:03:00 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:03:00 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:03:00 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:03:00 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:03:00 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:03:00 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:03:00 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:03:00 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:03:00 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:03:00 [DEBUG] [root]select * from heecms_menus   where ( `parent_id` IS NULL or `parent_id`='' or `parent_id`=0 ) and (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')  order by ord asc  
+2020-05-12 06:03:00 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:03:00 [DEBUG] [root]select * from heecms_menus   where ((`parent_id`='8')) and (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')  order by ord asc  
+2020-05-12 06:03:00 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:03:00 [DEBUG] [root]select * from heecms_users   where ((`users_id`='1')) and (`heecms_users`.delete_time IS NULL or `heecms_users`.delete_time <=0 or `heecms_users`.delete_time='')    
+2020-05-12 06:03:00 [DEBUG] [root]select * from heecms_menus   where ((`parent_id`='10')) and (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')  order by ord asc  
+2020-05-12 06:03:00 [DEBUG] [root]select * from heecms_menus   where ((`parent_id`='5')) and (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')  order by ord asc  
+2020-05-12 06:03:00 [DEBUG] [root]select * from heecms_menus   where ((`parent_id`='15')) and (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')  order by ord asc  
+2020-05-12 06:03:00 [DEBUG] [root]select * from heecms_users   where ((`users_id`='1') and (`users_id`='1')) and (`heecms_users`.delete_time IS NULL or `heecms_users`.delete_time <=0 or `heecms_users`.delete_time='')    
+2020-05-12 06:03:00 [DEBUG] [root]select * from heecms_menus   where ((`parent_id`='12')) and (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')  order by ord asc  
+2020-05-12 06:03:00 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:03:00 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:03:00 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:03:00 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:03:00 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-05-12 06:05:22 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:05:22 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:05:22 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:05:22 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:05:22 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:05:22 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:05:22 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:05:22 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:05:22 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:05:22 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:05:22 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:05:22 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:05:22 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:05:22 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:05:22 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:05:22 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:05:22 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:05:22 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:05:22 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:05:22 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:05:22 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:06:03 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:06:03 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:06:03 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:06:03 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:06:03 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:06:03 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:06:03 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:06:03 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:06:03 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:06:03 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:06:03 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:06:03 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:06:03 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:06:03 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:06:03 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:06:03 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:06:03 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:06:04 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:06:04 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:06:04 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:06:04 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:06:15 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-12 06:06:57 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-12 06:07:18 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-12 06:07:36 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:07:36 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:07:36 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:07:36 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:07:36 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:07:36 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:07:36 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:07:36 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:07:36 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:07:36 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:07:36 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:07:36 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:07:36 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:07:36 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:07:36 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:07:36 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:07:36 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:07:36 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:07:36 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:07:36 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:07:36 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:07:53 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-12 06:07:59 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-12 06:08:04 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:08:04 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:08:04 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:08:04 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:08:04 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:08:04 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:08:04 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:08:04 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:08:04 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:08:04 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:08:04 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:08:04 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:08:04 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:08:04 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:08:04 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:08:04 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:08:04 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:08:04 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:08:04 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:08:04 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:08:04 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:08:33 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:08:33 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:08:33 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:08:33 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:08:33 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:08:33 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:08:33 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:08:33 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:08:33 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:08:33 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:08:33 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:08:33 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:08:33 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:08:33 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:08:33 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:08:33 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:08:33 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:08:33 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:08:33 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:08:33 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:08:33 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:09:22 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:09:22 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:09:22 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:09:22 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:09:22 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:09:22 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:09:22 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:09:22 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:09:22 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:09:22 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:09:22 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:09:22 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:09:22 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:09:22 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:09:22 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:09:22 [DEBUG] [root]select * from heecms_menus   where ( `parent_id` IS NULL or `parent_id`='' or `parent_id`=0 ) and (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')  order by ord asc  
+2020-05-12 06:09:22 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:09:22 [DEBUG] [root]select * from heecms_menus   where ((`parent_id`='8')) and (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')  order by ord asc  
+2020-05-12 06:09:22 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:09:22 [DEBUG] [root]select * from heecms_users   where ((`users_id`='1')) and (`heecms_users`.delete_time IS NULL or `heecms_users`.delete_time <=0 or `heecms_users`.delete_time='')    
+2020-05-12 06:09:22 [DEBUG] [root]select * from heecms_menus   where ((`parent_id`='10')) and (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')  order by ord asc  
+2020-05-12 06:09:22 [DEBUG] [root]select * from heecms_menus   where ((`parent_id`='5')) and (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')  order by ord asc  
+2020-05-12 06:09:22 [DEBUG] [root]select * from heecms_menus   where ((`parent_id`='15')) and (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')  order by ord asc  
+2020-05-12 06:09:22 [DEBUG] [root]select * from heecms_users   where ((`users_id`='1') and (`users_id`='1')) and (`heecms_users`.delete_time IS NULL or `heecms_users`.delete_time <=0 or `heecms_users`.delete_time='')    
+2020-05-12 06:09:22 [DEBUG] [root]select * from heecms_menus   where ((`parent_id`='12')) and (`heecms_menus`.delete_time IS NULL or `heecms_menus`.delete_time <=0 or `heecms_menus`.delete_time='')  order by ord asc  
+2020-05-12 06:09:22 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:09:22 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:09:22 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:09:22 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:09:22 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-05-12 06:11:42 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:11:42 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:11:42 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:11:42 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:11:42 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:11:42 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:11:42 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:11:42 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:11:42 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:11:42 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:11:42 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:11:42 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:11:42 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:11:42 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:11:42 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:11:42 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:11:42 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:11:42 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:11:42 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:11:42 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:11:42 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:12:00 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:12:00 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:12:00 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:12:00 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:12:00 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:12:00 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:12:00 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:12:00 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:12:00 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:12:00 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:12:00 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:12:00 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:12:00 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:12:00 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:12:00 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:12:00 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:12:00 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:12:00 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:12:00 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:12:00 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:12:00 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:12:13 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:12:13 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:12:13 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:12:13 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:12:13 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:12:13 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:12:13 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:12:13 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:12:13 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:12:13 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:12:13 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:12:13 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:12:13 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:12:13 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:12:13 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:12:13 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:12:13 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:12:13 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:12:13 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:12:13 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:12:13 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:12:27 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:12:27 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:12:27 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:12:27 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:12:27 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:12:27 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:12:27 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:12:27 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:12:27 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:12:27 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:12:27 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:12:27 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:12:27 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:12:27 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:12:27 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:12:27 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:12:27 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:12:27 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:12:27 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:12:27 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:12:27 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:12:45 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-12 06:12:45 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:12:45 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:12:45 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:12:45 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:12:45 [DEBUG] [root]自动加载类：WeChat\Pay
+2020-05-12 06:12:45 [DEBUG] [root]自动加载类：WeChat\Contracts\BasicWePay
+2020-05-12 06:12:45 [DEBUG] [root]自动加载类：WeChat\Contracts\DataArray
+2020-05-12 06:12:45 [DEBUG] [root]自动加载类：WeChat\Contracts\Tools
+2020-05-12 06:12:45 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-12 06:12:45 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:12:45 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:12:45 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200511220617659533279431') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-12 06:12:45 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-12 06:12:45 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-12 06:12:45 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-12 06:12:45 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200512061245951805600967','200511220617659533279431','12.00','0')
+2020-05-12 06:12:45 [DEBUG] [root]select * from heecms_shop_pay   where  `shop_pay_id` = '200512061245951805600967'    
+2020-05-12 06:12:45 [DEBUG] [root]自动加载类：WePay\Order
+2020-05-12 06:14:15 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:14:15 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:14:15 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:14:15 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:14:15 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:14:15 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:14:15 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:14:15 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:14:15 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:14:15 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:14:15 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:14:15 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:14:15 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:14:15 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:14:15 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:14:15 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:14:15 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:14:15 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:14:15 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:14:15 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:14:15 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:14:31 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:14:31 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:14:31 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:14:31 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:14:31 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:14:31 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:14:31 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:14:31 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:14:31 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:14:31 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:14:31 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:14:31 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:14:31 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:14:31 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:14:31 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:14:31 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:14:31 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:14:31 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:14:31 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:14:31 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:14:31 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:15:33 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:15:33 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:15:33 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:15:33 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:15:33 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:15:33 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:15:33 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:15:33 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:15:33 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:15:33 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:15:33 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:15:33 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:15:33 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:15:33 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:15:33 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:15:33 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:15:33 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:15:34 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:15:34 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:15:34 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:15:34 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:15:43 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-12 06:15:43 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:15:43 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:15:43 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:15:43 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:15:43 [DEBUG] [root]自动加载类：AliPay\Web
+2020-05-12 06:15:43 [DEBUG] [root]自动加载类：WeChat\Contracts\BasicAliPay
+2020-05-12 06:15:43 [DEBUG] [root]自动加载类：WeChat\Contracts\DataArray
+2020-05-12 06:15:43 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-12 06:15:43 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:15:43 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:15:43 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200511220617659533279431') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-12 06:15:43 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-12 06:15:43 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-12 06:15:43 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-12 06:15:43 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200512061543477278811629','200511220617659533279431','12.00','0')
+2020-05-12 06:15:43 [DEBUG] [root]select * from heecms_shop_pay   where  `shop_pay_id` = '200512061543477278811629'    
+2020-05-12 06:16:39 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:16:39 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:16:39 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:16:39 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:16:39 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:16:39 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:16:39 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:16:39 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:16:39 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:16:39 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:16:39 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:16:39 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:16:39 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:16:39 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:16:39 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:16:39 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:16:39 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:16:45 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:16:45 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:16:45 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:16:45 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:16:45 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:16:45 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:16:45 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:16:45 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:16:45 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:16:45 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:16:45 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:16:45 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:16:45 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:16:45 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:16:45 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:16:45 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:16:45 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:16:45 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:16:45 [DEBUG] [root]show full columns from `heecms_shop_order`
+2020-05-12 06:16:45 [DEBUG] [root]insert into heecms_shop_order (`shop_order_id`,`contact`,`address`,`mobile`,`sumprice`,`create_time`) values ('200512061645483897243571','1','1','1','23','1589235405')
+2020-05-12 06:16:46 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:16:46 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:16:46 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:16:46 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:16:46 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:16:46 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:16:46 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:16:46 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:16:46 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:16:46 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:16:46 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:16:46 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:16:46 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:16:46 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:16:46 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:16:46 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:16:46 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:16:50 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:16:50 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:16:50 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:16:50 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:16:50 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:16:50 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:16:50 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:16:50 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:16:50 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:16:50 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:16:50 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:16:50 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:16:50 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:16:50 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:16:50 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:16:50 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:16:50 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:16:50 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:16:50 [DEBUG] [root]show full columns from `heecms_shop_order`
+2020-05-12 06:16:50 [DEBUG] [root]insert into heecms_shop_order (`shop_order_id`,`contact`,`address`,`mobile`,`sumprice`,`create_time`) values ('200512061650242004001193','1','1','1','123','1589235410')
+2020-05-12 06:16:51 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:16:51 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:16:51 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:16:51 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:16:51 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:16:51 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:16:51 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:16:51 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:16:51 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:16:51 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:16:51 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:16:51 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:16:51 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:16:51 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:16:51 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:16:51 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:16:51 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:19:30 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:19:30 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:19:30 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:19:30 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:19:30 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:19:30 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:19:30 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:19:30 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:19:30 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:19:30 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:19:30 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:19:30 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:19:30 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:19:30 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:19:30 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:19:30 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:19:30 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:19:30 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:21:37 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:21:37 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:21:37 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:21:37 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:21:37 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:21:37 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:21:37 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:21:37 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:21:37 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:21:37 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:21:37 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:21:37 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:21:37 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:21:37 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:21:37 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:21:37 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:21:37 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:21:38 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:21:38 [DEBUG] [root]show full columns from `heecms_shop_order`
+2020-05-12 06:21:38 [DEBUG] [root]insert into heecms_shop_order (`shop_order_id`,`contact`,`address`,`mobile`,`sumprice`,`create_time`) values ('200512062138032811971442','1','1','1','123','1589235698')
+2020-05-12 06:22:20 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:22:20 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:22:20 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:22:20 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:22:20 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:22:20 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:22:20 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:22:20 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:22:20 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:22:20 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:22:20 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:22:21 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:22:21 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:22:21 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:22:21 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:22:21 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:22:21 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:22:21 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:22:21 [DEBUG] [root]show full columns from `heecms_shop_order`
+2020-05-12 06:22:21 [DEBUG] [root]insert into heecms_shop_order (`shop_order_id`,`contact`,`address`,`mobile`,`sumprice`,`create_time`) values ('200512062221070932610004','1','1','1','123','1589235741')
+2020-05-12 06:29:29 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:29:29 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:29:29 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:29:29 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:29:29 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:29:29 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:29:29 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:29:29 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:29:29 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:29:29 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:29:29 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:29:29 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:29:29 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:29:29 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:29:29 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:29:29 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:29:29 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:29:29 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:29:29 [DEBUG] [root]show full columns from `heecms_shop_order`
+2020-05-12 06:29:29 [DEBUG] [root]update `heecms_shop_order` set `contact`='1',`address`='1',`mobile`='1',`sumprice`='123',`update_time`='1589236169' where `shop_order_id` = '200512062929804469178367' 
+2020-05-12 06:29:29 [DEBUG] [root]select * from heecms_shop_order   where ((shop_order_id=200512062929804469178367)) and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-12 06:29:30 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:29:30 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:29:30 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:29:30 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:29:30 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:29:30 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:29:30 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:29:30 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:29:30 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:29:30 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:29:30 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:29:30 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:29:30 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:29:30 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:29:30 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:29:30 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:29:30 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:29:35 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:29:35 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:29:35 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:29:35 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:29:35 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:29:35 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:29:35 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:29:35 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:29:35 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:29:36 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:29:36 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:29:36 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:29:36 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:29:36 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:29:36 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:29:36 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:29:36 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:29:36 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:29:36 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:29:36 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:29:36 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:29:42 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-12 06:29:42 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:29:42 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:29:42 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:29:42 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:29:42 [DEBUG] [root]自动加载类：AliPay\Web
+2020-05-12 06:29:42 [DEBUG] [root]自动加载类：WeChat\Contracts\BasicAliPay
+2020-05-12 06:29:42 [DEBUG] [root]自动加载类：WeChat\Contracts\DataArray
+2020-05-12 06:29:42 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-12 06:29:42 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:29:42 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:29:42 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200511220617659533279431') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-12 06:29:42 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-12 06:29:42 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-12 06:29:42 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-12 06:29:42 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200512062942601170228269','200511220617659533279431','12.00','0')
+2020-05-12 06:29:42 [DEBUG] [root]select * from heecms_shop_pay   where  `shop_pay_id` = '200512062942601170228269'    
+2020-05-12 06:29:56 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:29:56 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:29:56 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:29:56 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:29:56 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:29:56 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:29:56 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:29:56 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:29:56 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:29:56 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:29:56 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:29:56 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:29:56 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:29:56 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:29:56 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:29:56 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:29:56 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:29:59 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:29:59 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:29:59 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:29:59 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:29:59 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:29:59 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:29:59 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:29:59 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:29:59 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:29:59 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:29:59 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:29:59 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:29:59 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:29:59 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:29:59 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:29:59 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:29:59 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:29:59 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:29:59 [DEBUG] [root]show full columns from `heecms_shop_order`
+2020-05-12 06:29:59 [DEBUG] [root]update `heecms_shop_order` set `contact`='1',`address`='1',`mobile`='1',`sumprice`='23',`update_time`='1589236199' where `shop_order_id` = '200512062959863184144640' 
+2020-05-12 06:29:59 [DEBUG] [root]select * from heecms_shop_order   where ((shop_order_id=200512062959863184144640)) and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-12 06:30:00 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:30:00 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:30:00 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:30:00 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:30:00 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:30:00 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:30:00 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:30:00 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:30:00 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:30:01 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:30:01 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:30:01 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:30:01 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:01 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:30:01 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:30:01 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:01 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:30:04 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:30:04 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:30:04 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:30:04 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:30:04 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:30:04 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:30:04 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:30:04 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:30:04 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:30:04 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:30:04 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:30:04 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:30:04 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:04 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:30:04 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:30:04 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:04 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:30:04 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:30:04 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:30:04 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:30:04 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:30:08 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:30:08 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:30:08 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:30:08 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:30:08 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:30:08 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:30:08 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:30:08 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:30:08 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:30:08 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:30:08 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:30:08 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:30:08 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:08 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:30:08 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:30:08 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:08 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:30:11 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:30:11 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:30:11 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:30:11 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:30:11 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:30:11 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:30:11 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:30:11 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:30:11 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:30:11 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:30:11 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:30:11 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:30:11 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:11 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:30:11 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:30:11 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:11 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:30:11 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:30:11 [DEBUG] [root]show full columns from `heecms_shop_order`
+2020-05-12 06:30:11 [DEBUG] [root]update `heecms_shop_order` set `contact`='1',`address`='1',`mobile`='1',`sumprice`='33',`update_time`='1589236211' where `shop_order_id` = '200512063011357852084857' 
+2020-05-12 06:30:11 [DEBUG] [root]select * from heecms_shop_order   where ((shop_order_id=200512063011357852084857)) and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-12 06:30:12 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:30:12 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:30:12 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:30:12 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:30:12 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:30:12 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:30:12 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:30:12 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:30:12 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:30:12 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:30:12 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:30:12 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:30:12 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:12 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:30:12 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:30:12 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:12 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:30:13 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:30:13 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:30:13 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:30:13 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:30:13 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:30:13 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:30:13 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:30:13 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:30:13 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:30:13 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:30:13 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:30:13 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:30:13 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:13 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:30:13 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:30:13 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:13 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:30:13 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:30:13 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:30:13 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:30:13 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:30:17 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:30:17 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:30:17 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:30:17 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:30:17 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:30:17 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:30:17 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:30:17 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:30:17 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:30:17 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:30:17 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:30:17 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:30:17 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:17 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:30:17 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:30:17 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:17 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:30:17 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:30:17 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:30:17 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:30:17 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:30:42 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:30:43 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:30:43 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:30:43 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:30:43 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:30:43 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:30:43 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:30:43 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:30:43 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:30:43 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:30:43 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:30:43 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:30:43 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:43 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:30:43 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:30:43 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:43 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:30:46 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:30:46 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:30:46 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:30:46 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:30:46 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:30:46 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:30:46 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:30:46 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:30:46 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:30:46 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:30:46 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:30:46 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:30:46 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:46 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:30:46 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:30:46 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:46 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:30:46 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:30:46 [DEBUG] [root]show full columns from `heecms_shop_order`
+2020-05-12 06:30:46 [DEBUG] [root]update `heecms_shop_order` set `contact`='1',`address`='1',`mobile`='1',`sumprice`='123',`update_time`='1589236246' where `shop_order_id` = '200512063046367872823845' 
+2020-05-12 06:30:46 [DEBUG] [root]select * from heecms_shop_order   where ((shop_order_id=200512063046367872823845)) and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-12 06:30:47 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:30:47 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:30:47 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:30:47 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:30:47 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:30:47 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:30:47 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:30:47 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:30:47 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:30:47 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:30:47 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:30:47 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:30:47 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:47 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:30:47 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:30:47 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:47 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:30:51 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:30:51 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:30:51 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:30:51 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:30:51 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:30:51 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:30:51 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:30:51 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:30:51 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:30:51 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:30:51 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:30:51 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:30:51 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:51 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:30:51 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:30:51 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:51 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:30:51 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:30:51 [DEBUG] [root]show full columns from `heecms_shop_order`
+2020-05-12 06:30:51 [DEBUG] [root]update `heecms_shop_order` set `contact`='1',`address`='1',`mobile`='1',`sumprice`='44',`update_time`='1589236251' where `shop_order_id` = '200512063051339059275378' 
+2020-05-12 06:30:51 [DEBUG] [root]select * from heecms_shop_order   where ((shop_order_id=200512063051339059275378)) and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-12 06:30:52 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:30:52 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:30:52 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:30:52 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:30:52 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:30:52 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:30:52 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:30:52 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:30:52 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:30:52 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:30:52 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:30:52 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:30:52 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:52 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:30:52 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:30:52 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:52 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:30:53 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:30:53 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:30:53 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:30:53 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:30:53 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:30:53 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:30:53 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:30:53 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:30:53 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:30:53 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:30:53 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:30:53 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:30:53 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:53 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:30:53 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:30:54 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:30:54 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:30:54 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:30:54 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:30:54 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:30:54 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:32:19 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:32:19 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:32:19 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:32:19 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:32:19 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:32:19 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:32:19 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:32:19 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:32:19 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:32:19 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:32:19 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:32:19 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:32:19 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:32:19 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:32:19 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:32:19 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:32:19 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:32:24 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:32:24 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:32:24 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:32:24 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:32:24 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:32:24 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:32:24 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:32:24 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:32:24 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:32:24 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:32:24 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:32:24 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:32:24 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:32:24 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:32:24 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:32:24 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:32:24 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:32:24 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:32:24 [DEBUG] [root]show full columns from `heecms_shop_order`
+2020-05-12 06:32:24 [DEBUG] [root]insert into heecms_shop_order (`shop_order_id`,`contact`,`address`,`mobile`,`sumprice`,`create_time`) values ('200512063224171210783816','1','1','1','235','1589236344')
+2020-05-12 06:32:24 [DEBUG] [root]select * from heecms_shop_order   where ((shop_order_id=200512063224171210783816)) and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-12 06:32:25 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:32:25 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:32:25 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:32:25 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:32:25 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:32:25 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:32:25 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:32:25 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:32:25 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:32:25 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:32:25 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:32:25 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:32:25 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:32:25 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:32:25 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:32:25 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:32:25 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:32:25 [DEBUG] [root]自动加载类：app\admin\model\shop_order
+2020-05-12 06:32:25 [DEBUG] [root]select count(*) c from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:32:25 [DEBUG] [root]select  *  from heecms_shop_order   where  (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')  order by create_time desc  
+2020-05-12 06:32:25 [DEBUG] [root]自动加载类：heephp\bulider\pager
+2020-05-12 06:32:35 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-12 06:32:35 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:32:35 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:32:35 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:32:35 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:32:35 [DEBUG] [root]自动加载类：AliPay\Web
+2020-05-12 06:32:35 [DEBUG] [root]自动加载类：WeChat\Contracts\BasicAliPay
+2020-05-12 06:32:35 [DEBUG] [root]自动加载类：WeChat\Contracts\DataArray
+2020-05-12 06:32:35 [DEBUG] [root]自动加载类：app\home\model\shop_order
+2020-05-12 06:32:35 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:32:35 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:32:35 [DEBUG] [root]select * from heecms_shop_order   where ( `shop_order_id` = '200512063224171210783816') and (`heecms_shop_order`.delete_time IS NULL or `heecms_shop_order`.delete_time <=0 or `heecms_shop_order`.delete_time='')    
+2020-05-12 06:32:35 [DEBUG] [root]自动加载类：app\home\model\shop_pay
+2020-05-12 06:32:35 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-12 06:32:35 [DEBUG] [root]show full columns from `heecms_shop_pay`
+2020-05-12 06:32:35 [DEBUG] [root]insert into heecms_shop_pay (`shop_pay_id`,`shop_order_id`,`money`,`state`) values ('200512063235946554847679','200512063224171210783816','235.00','0')
+2020-05-12 06:32:35 [DEBUG] [root]select * from heecms_shop_pay   where  `shop_pay_id` = '200512063235946554847679'    
+2020-05-12 06:37:05 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:37:05 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:37:05 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:37:05 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:37:05 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:37:05 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:37:05 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:37:05 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:37:05 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:37:05 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:37:05 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:37:05 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:37:05 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:37:05 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:37:05 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:37:05 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:37:05 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:41:03 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:41:03 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:41:03 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:41:03 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:41:03 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:41:03 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:41:03 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:41:03 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:41:03 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:41:03 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:41:03 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:41:03 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:41:03 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:41:03 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:41:03 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:41:03 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:41:03 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:41:12 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:41:12 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:41:12 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:41:12 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:41:12 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:41:12 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:41:12 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:41:12 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:41:12 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:41:12 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:41:12 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:41:12 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:41:12 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:41:12 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:41:12 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:41:12 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:41:12 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:43:19 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:43:19 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:43:19 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:43:19 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:43:19 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:43:19 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:43:19 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:43:19 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:43:19 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:43:19 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:43:19 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:43:19 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:43:19 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:43:19 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:43:19 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:43:19 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:43:19 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:47:29 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:47:29 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:47:29 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:47:29 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:47:29 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:47:29 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:47:29 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:47:29 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:47:29 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:47:29 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:47:29 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:47:29 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:47:29 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:47:29 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:47:29 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:47:29 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:47:29 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:49:06 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:49:06 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:49:06 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:49:06 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:49:06 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:49:06 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:49:06 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:49:06 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:49:06 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:49:06 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:49:06 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:49:06 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:49:06 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:49:06 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:49:06 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:49:06 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:49:06 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:49:15 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:49:15 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:49:15 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:49:15 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:49:15 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:49:15 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:49:15 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:49:15 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:49:15 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:49:15 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:49:15 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:49:15 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:49:15 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:49:15 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:49:15 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:49:15 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:49:15 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:55:07 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:55:07 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:55:07 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:55:07 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:55:07 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:55:07 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:55:07 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:55:07 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:55:07 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:55:07 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:55:07 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:55:07 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:55:07 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:55:07 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:55:07 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:55:07 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:55:07 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:56:13 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:56:13 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:56:13 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:56:13 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:56:13 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:56:13 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:56:13 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:56:13 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:56:13 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:56:13 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:56:13 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:56:13 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:56:13 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:56:13 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:56:13 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:56:13 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:56:13 [DEBUG] [root]自动加载类：app\admin\model\users
+2020-05-12 06:56:31 [DEBUG] [root]自动加载类：app\admin\controller\adminBase
+2020-05-12 06:56:31 [DEBUG] [root]自动加载类：app\admin\model\users_group
+2020-05-12 06:56:31 [DEBUG] [root]自动加载类：heephp\model
+2020-05-12 06:56:31 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-12 06:56:31 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-12 06:56:31 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-12 06:56:31 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-05-12 06:56:31 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-05-12 06:56:31 [DEBUG] [root]自动加载类：app\admin\model\message
+2020-05-12 06:56:31 [DEBUG] [root]show full columns from `heecms_message`
+2020-05-12 06:56:31 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-05-12 06:56:31 [DEBUG] [root]自动加载类：app\admin\model\menus
+2020-05-12 06:56:31 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:56:31 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-12 06:56:31 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-12 06:56:31 [DEBUG] [root]show full columns from `heecms_menus`
+2020-05-12 06:56:31 [DEBUG] [root]自动加载类：app\admin\model\users

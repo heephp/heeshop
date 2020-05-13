@@ -39,7 +39,7 @@ class shop_attr extends adminBase
     {
         $data = request('post.');
         $mattr = model('shop_attr');
-        $m=$mattr->find("`name`='".$data['name']."'");
+        $m=$mattr->where("`name`='".$data['name']."'")->find();
         /*$result = 0;
         if (empty($data[$mattr->key])) {
             $result = $mattr->update($data);
@@ -68,7 +68,7 @@ class shop_attr extends adminBase
         $val = urldecode($val);
 
         $mattr = model('shop_attr');
-        $m = $mattr->find("`name`='$name'");
+        $m = $mattr->where("`name`='$name'")->find();
         $result = $mattr->del($name,$val);
         if($result){
             return $this->success('删除成功！',url('edit',$m['shop_attr_id']));

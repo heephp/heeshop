@@ -3,21 +3,25 @@ namespace app\admin\controller;
 
 class shop_product extends adminBase
 {
-    function manager()
+    function manager($field='create_time',$order='asc')
     {
         $product= model('shop_product');
-        $product->page();
+        $product->order("$field $order")->page();
         $product->category();
         $product->create_user();
         $this->assign('list', $product->data);
         $this->assign('pager', $product->pager['show']);
+
+        $this->assign('field',$field);
+        $this->assign('order',$order);
+
         return $this->fetch();
     }
 
     function add()
     {
         $category = model('shop_category');
-        $category->select('parent_id<0 or parent_id is NULL or parent_id=\'\'');
+        $category->whereEmpty('parent_id')->select();
         $category->child();
         $this->assign('plist',$category->data);
 
@@ -30,7 +34,7 @@ class shop_product extends adminBase
             return '';
         //获取商品分类的SKU
         $category = model('shop_category_sku');
-        $cskulist = $category->select('shop_category_id='.$category_id);
+        $cskulist = $category->where('shop_category_id='.$category_id)->select();
 
         if(empty($cskulist))
             return '';
@@ -80,7 +84,7 @@ class shop_product extends adminBase
         $product = model('shop_product');
 
         $category = model('shop_category');
-        $category->select('parent_id<0 or parent_id is NULL or parent_id=\'\'');
+        $category->whereEmpty('parent_id')->select();
         $category->child();
         $this->assign('plist',$category->data);
 

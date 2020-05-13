@@ -69,7 +69,7 @@ class adminBase extends controller {
 
         //如果是超级管理员 权限通过
         $ug = model('users_group');
-        $ugname = $ug->getByname("`$ug->key`=$user_group_id");
+        $ugname = $ug->where("`$ug->key`=$user_group_id")->getByname();
         if($ugname==$this->superadmin){
             return true;
         }
@@ -86,7 +86,6 @@ class adminBase extends controller {
             cache($this->cache_users_group_sys_resources_list.$user_group_id,$ugrlist);
 
         }
-
 
         //判断当前请求是否存在
         foreach ($ugrlist as $item){
@@ -106,7 +105,7 @@ class adminBase extends controller {
     private function get_message_list(){
 
         $message = model('message');
-        $message->selectTop("`isread`=0 and `receiver_users_id`='".request($this->session_id_str)."'",'create_time desc',);
+        $sql = $message->where("`isread`=0 and `receiver_users_id`='".request($this->session_id_str)."'")->order('create_time desc')->limit(5)->select();
         $this->assign('message_list',$message->data);
 
     }
@@ -114,7 +113,7 @@ class adminBase extends controller {
     private function get_menus_list(){
 
         $menus = model('menus');
-        $menus->select("parent_id=0 or parent_id IS NULL or parent_id=''",'ord asc');
+        $menus->whereEmpty("parent_id")->order('ord asc')->select();
         $menus->child();
 
         $this->assign('menus',$menus->data);

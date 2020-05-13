@@ -9,7 +9,7 @@ class category extends adminBase
     function manager()
     {
         $cate=model('category');
-        $cate->page('parent_id<1 or parent_id IS NULL or parent_id=\'\'');
+        $cate->whereEmpty('parent_id')->page();
         $cate->child();
         $cate->create_user();
         $this->assign('list',$cate->data);
@@ -21,7 +21,7 @@ class category extends adminBase
 
     function add(){
         $cate = model('category');
-        $cate->select('parent_id<1 or parent_id IS NULL or parent_id=\'\'');
+        $cate->whereEmpty('parent_id')->page;
         $this->assign('plist',$cate->data);
 
         $sysm =new sysmodel();
@@ -35,7 +35,7 @@ class category extends adminBase
 
         $cate = model('category');
 
-        $cate->select('parent_id<1 or parent_id IS NULL or parent_id=\'\'');
+        $cate->whereEmpty('parent_id')->select();
         $this->assign('plist',$cate->data);
 
         $sysm =new sysmodel();
@@ -59,7 +59,7 @@ class category extends adminBase
         if($sysm['is_sys']==1){
             //如果是系统模型 取表名并取数据量
             $_m =model($sysm['table_name']);
-            $mcount = $_m->count('category_id='.$id);
+            $mcount = $_m->where('category_id='.$id)->count()->value();
             if($mcount>0){
                 return $this->error('栏目存在数据（包括回收站），清空后再删除！');
             }
@@ -73,7 +73,7 @@ class category extends adminBase
 
 
             $_m =modeluser($mtda['name']);
-            $mcount = $_m->count('category_id='.$id);
+            $mcount = $_m->where('category_id='.$id)->count()->value();
             if($mcount>0){
                 return $this->error('栏目存在数据（包括回收站），清空后再删除！');
             }
@@ -111,7 +111,7 @@ class category extends adminBase
     function managerinfo()
     {
         $cate=model('category');
-        $cate->page('parent_id<1 or parent_id IS NULL or parent_id=\'\'');
+        $cate->whereEmpty('parent_id')->select();
         $cate->child();
         $cate->create_user();
         $this->assign('list',$cate->data);
@@ -138,7 +138,7 @@ class category extends adminBase
                 }
                 // All files
                 foreach( $files as $file ) {
-                    if( file_exists($root . $dir . $file) && $file != '.' && $file != '..' && !is_dir($root . $dir . $file) ) {
+                    if( file_exists($root . $dir . $file) && $file != '.' && $file != '..' && !is_dir($root . $dir . $file)&&pathinfo($file,PATHINFO_EXTENSION)=='php' ) {
                         $ext = preg_replace('/^.*\./', '', $file);
                         $str.= "<li class=\"file ext_$ext\"><a href=\"#\" rel=\"" . htmlentities($dir . $file) . "\">" . htmlentities($file) . "</a></li>";
                     }

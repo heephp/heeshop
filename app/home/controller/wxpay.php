@@ -6,7 +6,7 @@ use  heephp\controller;
 use heephp\formbulider;
 use heephp\route;
 
-class wxpay extends controller
+class wxpay extends base
 {
 
     private function config()
@@ -29,20 +29,22 @@ class wxpay extends controller
         ];
     }
 
-    public function create()
+    public function pay($orderid)
     {
         $config = $this->config();
         try {
 
             $wechat = \WeChat\Pay::instance($config);
 
+            $re = $this->_order_do_pay($orderid);
+
             // 4. 组装参数，可以参考官方商户文档
             $options = [
-                'body' => '测试商品',
-                'out_trade_no' => time(),
-                'total_fee' => '1',
-                'openid' => 'oQRNGt4yLABG34Q_NXV3RFQblAaU',
-                'trade_type' => 'NATIVE',
+                'body' => $re['desc'],
+                'out_trade_no' => $re['pay_id'],
+                'total_fee' => $re['money']*100,
+                //'openid' => 'oQRNGt4yLABG34Q_NXV3RFQblAaU',
+                'trade_type' => 'NATIVE',//JSAPI  NATIVE
                 'notify_url' => 'http://a.com/text.html',
                 'spbill_create_ip' => '127.0.0.1',
             ];
@@ -101,54 +103,24 @@ class wxpay extends controller
         }
     }
 
-    public function qrcode()
-    {
-
-        try {
-
-            // 2. 准备公众号配置参数
-            $config = $this->config();
-
-            // 3. 创建接口实例
-            $wechat = \WeChat\Qrcode::instance($config);
-
-            // 4. 获取用户列表
-            $result = $wechat->create('场景内容');
-            echo var_export($result, true) . PHP_EOL;
-
-            // 5. 创建二维码链接
-            $url = $wechat->url($result['ticket']);
-            echo var_export($url, true);
-
-
-        } catch (Exception $e) {
-
-            // 出错啦，处理下吧
-            echo $e->getMessage() . PHP_EOL;
-
-        }
-    }
-
-    public function user_get()
-    {
+    public function notify(){
 
         try {
 
             $config = $this->config();
 
             // 3. 创建接口实例
-            $wechat = \WeChat\User::instance($config);
+            $wechat = \WeChat\Pay::instance($config);
 
-            // 4. 获取用户列表
-            $result = $wechat->getUserList();
-
-            echo '<pre>';
-            var_export($result);
-
-            // 5. 批量获取用户资料
-            foreach (array_chunk($result['data']['openid'], 100) as $item) {
-                $userList = $wechat->getBatchUserInfo($item);
-                var_export($userList);
+            // 4. 获取通知参数
+            $data = $wechat->getNotify();
+            if ($data['return_code'] === 'SUCCESS' && $data['result_code'] === 'SUCCESS') {
+                // @todo 去更新下原订单的支付状态
+                $order_no = $data['out_trade_no'];
+                parent::_order_do_action($data,$order_no);
+                // 返回接收成功的回复
+                ob_clean();
+                echo $wechat->getNotifySuccessReply();
             }
 
         } catch (Exception $e) {
@@ -158,4 +130,5 @@ class wxpay extends controller
 
         }
     }
+
 }

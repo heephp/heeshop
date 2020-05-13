@@ -27,7 +27,7 @@ class shop_attr extends model
     }
 
     //将值转为数组
-    public function get($id,$softdel=false){
+    public function get($id=''){
         $m = parent::get($id);
         $m['values']=explode(',',$m['values']);
         return $m;
@@ -36,7 +36,7 @@ class shop_attr extends model
     //如果不存在则添加，存在则更新值
     public function savedata($name,$value){
 
-        $m = $this->find("`name`='$name'");
+        $m = $this->where("`name`='$name'")->find();
         if($m){
             $values = ','.$m['values'];
             if(strpos($values,','.$value.',')>-1){
@@ -55,7 +55,7 @@ class shop_attr extends model
     }
 
     public function del($name,$val){
-        $m = $this->find("`name`='$name'");
+        $m = $this->where("`name`='$name'")->find();
         if($m){
             $values = $m['values'];
             $m['values'] = str_replace($val.',','',$values);

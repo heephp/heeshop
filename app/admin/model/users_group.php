@@ -33,24 +33,24 @@ class users_group extends model
 
     }
 
-    public function find($where, $onlysoftdel = false)
+    public function find()
     {
-        $cachename = md5($where.'_'.$onlysoftdel);
+        $cachename = md5($this->where.'_'.$this->softdel);
         $this->data = cache($cachename);
         if (empty($this->data)) {
-            $this->data = parent::find($where,$onlysoftdel);
+            $this->data = parent::find();
             cache($cachename, $this->data);
             return $this->data;
         }
         return $this->data;
     }
 
-    public function get($id, $onlysoftdel = false)
+    public function get($id='')
     {
-        $cachename = md5($id.'_'.$onlysoftdel);
+        $cachename = md5('get_'.$this->where.'_'.$id.'_'.$this->softdel);
         $this->data = cache($cachename);
         if (empty($this->data)) {
-            $this->data = parent::get($id,$onlysoftdel);
+            $this->data = parent::get($id);
             cache($cachename, $this->data);
             return $this->data;
         }

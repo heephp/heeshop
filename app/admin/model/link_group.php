@@ -31,4 +31,5 @@ class link_group extends model
         $re = new relation($this,'users','create_users_id','users_id','create_user');
         return $re->belong();
     }
+
 }

@@ -6,7 +6,7 @@ class sys_resources extends adminBase{
 
     function manager(){
         $res = model('sys_resources');
-        $res->page('parent_id<1 or parent_id IS NULL or parent_id=\'\'');
+        $res->whereEmpty('parent_id')->page();
         $res->child();
         $res->create_user();
         $this->assign('list',$res->data);
@@ -18,7 +18,7 @@ class sys_resources extends adminBase{
 
         $res = model('sys_resources');
 
-        $plist = $res->select("parent_id=0 OR parent_id='' OR parent_id IS NULL");
+        $plist = $res->whereEmpty("parent_id")-all();
         $this->assign('plist',$plist);
 
         return $this->fetch('edit');
@@ -28,7 +28,7 @@ class sys_resources extends adminBase{
 
         $res = model('sys_resources');
 
-        $plist = $res->select("parent_id=0 OR parent_id='' OR parent_id IS NULL");
+        $plist = $res->whereEmpty("parent_id")-all();
         $this->assign('plist',$plist);
 
         $m=$res->get($id);

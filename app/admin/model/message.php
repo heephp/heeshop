@@ -28,9 +28,5 @@ class message extends model
         return $relation->belong();
     }
 
-    public function selectTop($where = '1=1', $order = '', $fields = '*', $onlySoftDel = false, $pname = 'page', $page = 1)
-    {
-        return parent::select($where, $order, $fields, $onlySoftDel, $pname, $page);
-    }
 
 }

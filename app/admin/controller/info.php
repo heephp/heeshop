@@ -105,7 +105,7 @@ class info extends adminBase
 
         //判断字段中是否有上传文件的字段 并上传
         $mtf=model('model_table_field');
-        $fields = $mtf->select('model_table_id='.$model_table_id);
+        $fields = $mtf->where('model_table_id='.$model_table_id)->select();
         $upload = ['dir'=>conf('upload_dir'),'size'=>conf('upload_size'),'ext'=>explode(',',conf('upload_ext')),'file_name'=>conf('upload_file_name')];
         for($k=0;$k<count($fields);$k++){//var_dump($data[$fields[$k]['field_name']]);
             if($fields[$k]['input_type']=='file'){
@@ -150,11 +150,11 @@ class info extends adminBase
             $allow_manager = explode(',',$mtdata['allow_manager']);
 
         $dm = modeluser($tbname);
-        $dm->page('category_id='.$category_id);
+        $dm->where('category_id='.$category_id)->page;
 
         //读取标题，并构造列
         $mtf = model('model_table_field');
-        $mtf->select("model_table_id=$model_table_id");
+        $mtf->where("model_table_id=$model_table_id")->select();
         $fields = array_filter($mtf->data,function ($val) use($allow_manager){
             return empty($allow_manager)||in_array($val['field_name'],$allow_manager);
         });
@@ -197,7 +197,7 @@ class info extends adminBase
 
         //取出表 ，并从表中读取数据
         $mt = model('model_table');
-        $tbname = $mt->getByname("model_table_id=$model_table_id");
+        $tbname = $mt->where("model_table_id=$model_table_id")->getByname();
 
         $dm = modeluser($tbname);
         $keyfield = $dm->key;
@@ -206,7 +206,7 @@ class info extends adminBase
 
         //读取字段，并构造表单
         $mtf = model('model_table_field');
-        $mtf->select("model_table_id=$model_table_id");
+        $mtf->where("model_table_id=$model_table_id")->select();
         $fields = $mtf->data;
 
         $form =new form(url('save'),'post');

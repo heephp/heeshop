@@ -19,7 +19,7 @@ class article extends adminBase
     function add()
     {
         $category = model('category');
-        $category->select('parent_id<0 or parent_id is NULL or parent_id=\'\'');
+        $category->whereEmpty('parent_id')->select();
         $category->child();
         $this->assign('plist',$category->data);
 
@@ -32,7 +32,7 @@ class article extends adminBase
         $article = model('article');
 
         $category = model('category');
-        $category->select('parent_id<0 or parent_id is NULL or parent_id=\'\'');
+        $category->whereEmpty('parent_id')->select();
         $category->child();
         $this->assign('plist',$category->data);
 

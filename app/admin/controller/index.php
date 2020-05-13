@@ -34,7 +34,7 @@ class index extends adminBase {
         $password = $data['password'];
 
         $users = model('users');
-        $m = $users->find("`username`='$username' and `password`='" . md5($password) . "'");
+        $m = $users->where("`username`='$username' and `password`='" . md5($password) . "'")->find();
         if ($m != false) {
             $users->users_group();
             if(empty($users->data['users_group']['isadmin'])){

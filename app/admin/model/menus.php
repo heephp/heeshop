@@ -26,18 +26,18 @@ class menus extends model
 
     public function child(){
 
-        $relation = new relation($this,/*'belong',*/'menus',$this->key,'parent_id','child');
+        $relation = new relation($this,'menus',$this->key,'parent_id','child');
         $relation->set_rmodel_methods('create_user');
         $relation->set_rmodel_order('ord asc');
         return $relation->hasmore(false);
     }
 
-    public function select($where = '1=1', $order = '', $fields = '*', $onlySoftDel = false, $pname = 'page', $page = 0)
+    public function select()
     {
-        $cachename = md5(implode('_',func_get_args()));
+        $cachename = md5($this->where.$this->order);
         $this->data = cache($cachename);
         if (empty($this->data)) {
-            $this->data = parent::select($where,$order,$fields,$onlySoftDel,$pname,$page);
+            parent::select();
             cache($cachename, $this->data);
             return $this->data;
         }

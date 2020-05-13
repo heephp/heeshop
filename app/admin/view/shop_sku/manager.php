@@ -28,7 +28,7 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">
-                                <select class=" select2" name="cls" style="width: auto;" onchange="location.href='<?=url('manager')?>'+$(this).select2('val');">
+                                <select class=" select2" name="cls" style="width: auto;" onchange="location.href='<?=url('manager','',false)?>/'+$(this).select2('val');">
                                     <option value="">全部类别</option>
                                     <?foreach ($skucls as $s){?>
                                         <option value="<?=$s['cls']?>" <?=$s['cls']==$cls?'selected':''?>><?=$s['cls']?></option>

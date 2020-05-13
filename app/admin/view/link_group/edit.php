@@ -47,8 +47,8 @@
                                 <div class="form-group">
                                     <label for="parent_id">启用</label>
                                     <select class="form-control" name="disable">
-                                        <option value="1" <?=$m['disable']===1?'selected':''?>>启用</option>
-                                        <option value="0"<?=$m['disable']===0?'selected':''?>>停用</option>
+                                        <option value="0" <?=$m['disable']===1?'selected':''?>>启用</option>
+                                        <option value="1"<?=$m['disable']===0?'selected':''?>>停用</option>
                                     </select>
                                 </div>
                             </div>

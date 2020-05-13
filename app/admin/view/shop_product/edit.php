@@ -213,12 +213,12 @@
 
             function select_category(e) {
                 //读取SKU
-                var url = '<?=url('ajax_skus')?>/' + $(e).select2('val') + '?rnd=' + Math.random();
+                var url = '<?=url('ajax_skus','',false)?>/' + $(e).select2('val') + '?rnd=' + Math.random();
                 $.get(url, function (result) {
                     $('#pills-sku').html(result);
                 })
                 //读取属性
-                var url2 = '<?=url('ajax_attrs')?>/' + $(e).select2('val') + '?rnd=' + Math.random();
+                var url2 = '<?=url('ajax_attrs','',false)?>/' + $(e).select2('val') + '?rnd=' + Math.random();
                 $.get(url2, function (result) {
                     $('#pills-attr').html(result);
                 })

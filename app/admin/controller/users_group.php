@@ -40,7 +40,7 @@ class users_group extends adminBase{
 
         //用户组存在用户不能被删除
         $users=model('users');
-        $ulist = $users->getByusers_group_id('users_group_id='.$id);
+        $ulist = $users->where('users_group_id='.$id)->getByusers_group_id();
         if(is_array($ulist)&&count($ulist)>0){
             return $this->error('当前用户组存在用户，不能被删除');
         }
@@ -76,16 +76,16 @@ class users_group extends adminBase{
     function sys_resource($ugid=0){
 
         $ug=model('users_group');
-        $ug->select("`name`<>'$this->superadmin' and isadmin=1");
+        $ug->where("`name`<>'$this->superadmin' and isadmin=1")->select();
         $this->assign('uglist',$ug->data);
 
         $res = model('sys_resources');
-        $res->select("parent_id<1 or parent_id IS NULL or parent_id=''");
+        $res->whereEmpty("parent_id")->page();
         $res->child();
         $this->assign('resplist',$res->data);
 
         if($ugid>0){
-            $ug->select($ug->key.'='.$ugid);
+            $ug->where($ug->key.'='.$ugid)->select();
             $ug->sys_resources();
             foreach ($ug->data as $item) {
 

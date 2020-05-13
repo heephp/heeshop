@@ -1,0 +1,230 @@
+2020-05-10 19:05:27 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:05:27 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:05:27 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:05:27 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:05:27 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:05:27 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:05:27 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:05:27 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:05:27 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:05:27 [DEBUG] [root]select distinct users_id  from heecms_users where ( EXISTS (select * from heecms_users  (users_id in (1)) and (delete_time IS NULL or delete_time <=0 or delete_time='')  )) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:07:33 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:07:33 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:07:33 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:07:33 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:07:33 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:07:33 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:07:33 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:07:33 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:07:33 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:07:33 [DEBUG] [root]select distinct users_id  from heecms_users where ( EXISTS (select * from heecms_users  where (users_id in (1)) and (delete_time IS NULL or delete_time <=0 or delete_time='')  )) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:08:29 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:08:29 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:08:29 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:08:29 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:08:29 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:08:29 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:08:29 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:08:29 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:08:29 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:08:29 [DEBUG] [root]select distinct users_id  from heecms_users where ( EXISTS (select * from heecms_users  where (users_id in (1)) and (delete_time IS NULL or delete_time <=0 or delete_time='')  )) and delete_time>0   
+2020-05-10 19:08:31 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:08:31 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:08:31 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:08:31 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:08:31 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:08:31 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:08:31 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:08:31 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:08:31 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:08:31 [DEBUG] [root]select distinct users_id  from heecms_users where ( EXISTS (select * from heecms_users  where (users_id in (1)) and (delete_time IS NULL or delete_time <=0 or delete_time='')  )) and delete_time>0   
+2020-05-10 19:08:32 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:08:32 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:08:32 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:08:32 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:08:32 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:08:32 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:08:32 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:08:32 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:08:32 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:08:32 [DEBUG] [root]select distinct users_id  from heecms_users where ( EXISTS (select * from heecms_users  where (users_id in (1)) and (delete_time IS NULL or delete_time <=0 or delete_time='')  )) and delete_time>0   
+2020-05-10 19:08:32 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:08:32 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:08:32 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:08:32 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:08:32 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:08:32 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:08:32 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:08:32 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:08:33 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:08:33 [DEBUG] [root]select distinct users_id  from heecms_users where ( EXISTS (select * from heecms_users  where (users_id in (1)) and (delete_time IS NULL or delete_time <=0 or delete_time='')  )) and delete_time>0   
+2020-05-10 19:24:15 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:24:15 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:24:15 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:24:15 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:24:15 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:24:15 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:24:15 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:24:15 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:24:15 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:24:35 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:24:35 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:24:35 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:24:35 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:24:35 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:24:35 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:24:35 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:24:35 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:24:36 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:24:36 [DEBUG] [root]select max(users_id) distinct users_id  from heecms_users where ( EXISTS (select * from heecms_users  where (users_id in (1)) and (delete_time IS NULL or delete_time <=0 or delete_time='')  )) and delete_time>0   
+2020-05-10 19:25:08 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:25:08 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:25:08 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:25:08 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:25:08 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:25:08 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:25:08 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:25:08 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:25:08 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:25:08 [DEBUG] [root]select max(users_id) distinct users_id  from heecms_users where (1=1) and delete_time>0   
+2020-05-10 19:25:24 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:25:24 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:25:24 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:25:24 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:25:24 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:25:24 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:25:24 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:25:24 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:25:24 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:25:24 [DEBUG] [root]select max(users_id)  from heecms_users where (1=1) and delete_time>0   
+2020-05-10 19:26:01 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:26:01 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:26:01 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:26:01 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:26:01 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:26:01 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:26:01 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:26:01 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:26:01 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:26:01 [DEBUG] [root]select max(users_id) a from heecms_users where (1=1) and delete_time>0   
+2020-05-10 19:26:13 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:26:13 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:26:13 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:26:13 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:26:13 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:26:13 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:26:13 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:26:13 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:26:13 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:26:13 [DEBUG] [root]select max(users_id) a from heecms_users where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:37:57 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:37:57 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:37:57 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:37:57 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:37:57 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:37:57 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:37:57 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:37:57 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:37:57 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:37:57 [DEBUG] [root]select max(users_id) a from heecms_users  where  (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:37:58 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:37:58 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:37:58 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:37:58 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:37:58 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:37:58 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:37:58 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:37:59 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:37:59 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:37:59 [DEBUG] [root]select max(users_id) a from heecms_users  where  (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:37:59 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:37:59 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:37:59 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:37:59 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:37:59 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:37:59 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:37:59 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:37:59 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:37:59 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:37:59 [DEBUG] [root]select max(users_id) a from heecms_users  where  (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:38:00 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:38:00 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:38:00 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:38:00 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:38:00 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:38:00 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:38:00 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:38:00 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:38:00 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:38:00 [DEBUG] [root]select max(users_id) a from heecms_users  where  (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:49:44 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:49:44 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:49:44 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:49:44 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:49:44 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:49:44 [DEBUG] [root]select `name`,`value` from heecms_config where 1=1  order by id asc 
+2020-05-10 19:49:45 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:49:45 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:49:45 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:49:45 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:49:45 [DEBUG] [root]select max(users_id) a from heecms_users  where  (delete_time IS NULL or delete_time <=0 or delete_time='')    
+2020-05-10 19:51:03 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:51:03 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:51:03 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:51:03 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:51:03 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:51:03 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:51:03 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:51:03 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:51:03 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:51:03 [DEBUG] [root]select max(users_id) a from heecms_users  where  (delete_time IS NULL or delete_time <=0 or delete_time='')    
+2020-05-10 19:53:56 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:53:56 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:53:56 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:53:56 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:53:56 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:53:56 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:53:56 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:53:56 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:53:56 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:53:56 [DEBUG] [root]select max(users_id) a from heecms_users  where  (delete_time IS NULL or delete_time <=0 or delete_time='')    
+2020-05-10 19:54:26 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:54:26 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:54:26 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:54:26 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:54:26 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:54:26 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:54:26 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:54:26 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:54:26 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:54:26 [DEBUG] [root]select max(users_id) a from heecms_users  where  (delete_time IS NULL or delete_time <=0 or delete_time='')  group by users_id  
+2020-05-10 19:54:27 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:54:27 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:54:27 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:54:27 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:54:27 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:54:27 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:54:27 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:54:27 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:54:27 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:54:27 [DEBUG] [root]select max(users_id) a from heecms_users  where  (delete_time IS NULL or delete_time <=0 or delete_time='')  group by users_id  
+2020-05-10 19:54:27 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:54:27 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:54:27 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:54:27 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:54:27 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:54:27 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:54:28 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:54:28 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:54:28 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:54:28 [DEBUG] [root]select max(users_id) a from heecms_users  where  (delete_time IS NULL or delete_time <=0 or delete_time='')  group by users_id  
+2020-05-10 19:54:28 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-10 19:54:28 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-10 19:54:28 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-10 19:54:28 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-10 19:54:28 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-10 19:54:28 [DEBUG] [root]select * from heecms_link_group where (1=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  
+2020-05-10 19:54:28 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=1) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:54:28 [DEBUG] [root]select * from heecms_link where (parent_id<1 and link_group_id=2) and (delete_time IS NULL or delete_time <=0 or delete_time='')  order by ord asc 
+2020-05-10 19:54:28 [DEBUG] [root]自动加载类：heephp\orm
+2020-05-10 19:54:28 [DEBUG] [root]select max(users_id) a from heecms_users  where  (delete_time IS NULL or delete_time <=0 or delete_time='')  group by users_id  

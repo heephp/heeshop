@@ -6,7 +6,7 @@ class menus extends adminBase {
 
     function manager(){
         $mun = model('menus');
-        $mun->page('parent_id<1 or parent_id IS NULL or parent_id=\'\'');
+        $mun->whereEmpty('parent_id')->page();
         $mun->child();
         $mun->create_user();
         $this->assign('list',$mun->data);
@@ -16,7 +16,7 @@ class menus extends adminBase {
 
     function add(){
         $mun = model('menus');
-        $mun->select('parent_id<1 or parent_id IS NULL or parent_id=\'\'');
+        $mun->whereEmpty('parent_id')->select();
         $this->assign('plist',$mun->data);
 
         return $this->fetch('edit');
@@ -26,7 +26,7 @@ class menus extends adminBase {
 
         $mun = model('menus');
 
-        $mun->select('parent_id<1 or parent_id IS NULL or parent_id=\'\'');
+        $mun->whereEmpty('parent_id')->select();
         $this->assign('plist',$mun->data);
 
         $mun->get($id);

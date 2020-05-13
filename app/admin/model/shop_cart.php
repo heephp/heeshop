@@ -28,7 +28,7 @@ class shop_cart extends model
     }
 
     public function create_user(){
-        $re = new relation($this,'users','create_users_id','users_id');
+        $re = new relation($this,'users','create_users_id','users_id','create_user');
         return $re->belong();
     }
 

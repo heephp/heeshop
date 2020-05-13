@@ -132,10 +132,9 @@ class mysqli implements databaseInterface
     public function getOne($sql)
     {
 
-        $query = $this->query($sql);
-        $result = mysqli_free_result($query);
+        $result = $this->getRow($sql);
 
-        return $result;
+        return $result[0];
     }
 
     //获取一行记录,return array 一维数组
@@ -168,7 +167,7 @@ class mysqli implements databaseInterface
     {
 
         $query = $this->query($sql);
-        $list = array();
+        $list = [];
         while ($r = $this->getFormSource($query)) {
             $list[] = $r;
         }

@@ -42,7 +42,7 @@ class heephp
         $app = '';
         $controller = '';
         $method = '';
-        $parms = array();
+        $parms = [];
         urlpaser($app, $controller, $method, $parms);
 
         define('APP', $app);
