@@ -57,19 +57,36 @@
                                         <?=$m['remark']?>
                                     </textarea>
                                 </div>
+
+
                                 <div class="form-group">
-                                    <label for="link">关键词</label>
-                                    <input type="text" class="form-control" name="keyword" placeholder="关键词" value="<?=$m['keyword']?>">
+                                    <label class="form-label">封面图</label>
+                                    <div class="d-flex flex-wrap justify-content-start" id="first_pics">
+
+
+
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="link">作者</label>
-                                    <input type="text" class="form-control" name="author" placeholder="作者" value="<?=$m['author']?>">
-                                </div>
+
+
                                 <div class="form-group">
                                     <label for="container">内容</label>
                                     <script id="container" name="context" type="text/plain">
                                         <?= html_entity_decode($m['context'])?>
                                     </script>
+                                </div>
+                                <div class="form-group">
+                                    <label for="link">关键词</label>
+                                    <select class="form-control select2input" name="keyword[]" multiple="multiple">
+                                        <?$ks = explode(',',$m['keyword']);
+                                        foreach ($ks as $k){?>
+                                        <option value="<?=$k?>" selected><?=$k?></option>
+                                        <?}?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="link">作者</label>
+                                    <input type="text" class="form-control" name="author" placeholder="作者" value="<?=$m['author']?>">
                                 </div>
                             </div>
                         </div>
@@ -85,13 +102,13 @@
             </div>
         </div>
     </div>
-
+    <script>
+        var first_pic="<?=$m['first_pic']?>";
+    </script>
     <?
     import('/layout/bottom.php');
 
-    ?>
-
-    <?function js(){?>
+    function js(){?>
         <!-- 配置文件 -->
         <script type="text/javascript" src="/assets/plugin/ueditor/ueditor.config.js"></script>
         <!-- 编辑器源码文件 -->
@@ -99,6 +116,44 @@
         <!-- 实例化编辑器 -->
         <script type="text/javascript">
             var ue = UE.getEditor('container',{autoHeightEnabled:false,initialFrameHeight:500});
+            ue.addListener('contentChange',function(editor){
+                $('#first_pics').html('');
+                //相关操作
+                var content = ue.getContent();
+                var imgs = $(content).find('img');
+                var html = '';
+                imgs.each(function () {
+                    var src=$(this).attr('src');
+                    var title=$(this).attr('title');
+                    var pichtml = $('#first_pic').html();
+                    pichtml=pichtml.replace(/{img}/g,src);
+                    pichtml=pichtml.replace(/{title}/g,title);
+                    html+=pichtml;
+                });
+                $('#first_pics').html(html);
+                set_first_pic(first_pic);
+            });
+            function set_first_pic(set_src) {
+                $('#first_pics').find('input:checkbox').each(function () {
+                    var src=$(this).val();
+                    if(src==set_src){
+                        $(this).prop("checked",true);
+                        first_pic=set_src;
+                    }else{
+                        $(this).prop("checked",false);
+                    }
+                })
+            }
+        </script>
+        <script type="text/html" id="first_pic">
+            <div class="col-2 col-sm-2">
+                <label class="imagecheck mb-2">
+                    <input name="first_pic" type="checkbox" value="{img}" class="imagecheck-input" onclick="if($(this).prop('checked')){set_first_pic('{img}')}">
+                    <figure class="imagecheck-figure">
+                        <img src="{img}" alt="{title}" class="imagecheck-image" height="100">
+                    </figure>
+                </label>
+            </div>
         </script>
 
     <?}?>

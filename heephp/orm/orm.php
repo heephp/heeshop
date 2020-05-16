@@ -29,6 +29,7 @@ class orm
     public function from($table)
     {
         $this->table = $table;
+        $this->key = $this->db->getKeyFiled($table);
         return $this;
     }
 
@@ -38,9 +39,13 @@ class orm
         return $this;
     }
 
-    public function field($fs)
+    public function field($fields)
     {
-        $this->fields = empty($fs) ? '*' : $fs;
+        if (is_array($fields))
+            $this->fields = '`' . implode('`,`', $fields) . '`';
+         else
+            $this->fields = empty($fields) ? '*' : $fields;
+
         return $this;
     }
 
@@ -385,6 +390,7 @@ class orm
 
     public function table($tbname){
         $this->table=$tbname;
+        $this->key = $this->db->getKeyFiled($tbname);
         return $this;
     }
 

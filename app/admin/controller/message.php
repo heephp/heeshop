@@ -7,7 +7,7 @@ class message extends adminBase{
     public function manager($users_id=0,$receiver_users_id=0){
         $mes = model('message');
 
-        $wsql='';
+        $wsql='1=1';
         if($users_id>0&&$receiver_users_id>0){
             $wsql = "`users_id`=$users_id and `receiver_users_id`=$receiver_users_id";
         }else if ($users_id>0&&$receiver_users_id==0){
@@ -16,7 +16,7 @@ class message extends adminBase{
             $wsql = "`receiver_users_id`=$receiver_users_id";
         }
 
-        $mes->where($wsql)->page;
+        $mes->where($wsql)->page();
         $mes->sender();
         $mes->receiver();//var_dump($mes->data);
         $this->assign('list',$mes->data);

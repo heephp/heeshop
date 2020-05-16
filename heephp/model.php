@@ -206,7 +206,23 @@ class model extends orm {
         return $data;
     }
 
-    /*
+    /**
+     * 恢复软删除的数据
+     * @param int $id
+     */
+    public function restore($id=0){
+        if(empty($this->where)&&empty($id)){
+            throw new sysExcption('缺少恢复数据的条件');
+            exit;
+        }
+
+        if(!empty($id)){
+            $this->where="`$this->key`='$id'";
+        }
+        return parent::update([$this->field_deletetime=>0]);
+    }
+
+    /**
      * 根据某字段获取数据
      */
     private function getby($field)

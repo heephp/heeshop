@@ -4,17 +4,10 @@ use heephp\sysExcption;
 
 class controller{
 
-    //protected $_app='';
-    //protected $_controller='';
-    //protected $_method='';//当前url调用的方法名
     protected $_pagevar = array();
 
-    public function  __construct(/*$app,$controller,$method*/)
+    public function  __construct()
     {
-        /*$this->_app=$app;
-        $this->_controller=$controller;
-        $this->_method=$method;
-*/
         aop('controller_init');
 
     }
@@ -61,7 +54,6 @@ class controller{
             throw new sysExcption( '模板文件'.$viewPagePath.'不存在！');
             exit;
         }
-        //print_r($this->_pagevar);
         //取出变量
         foreach ($this->_pagevar as $k=>$v){
             foreach ($v as $a=>$b){
@@ -77,6 +69,15 @@ class controller{
 
         $content = ob_get_contents();
         ob_end_clean();
+
+        //html字符替换
+        $html_replace = config('html_replace');
+        if(is_array($html_replace)&&count($html_replace)>0) {
+            foreach ($html_replace as $k => $v) {
+                $content = str_replace($k, $v, $content);
+            }
+        }
+
         return $content;
     }
 

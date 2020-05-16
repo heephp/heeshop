@@ -16,7 +16,7 @@ class trash extends adminBase
 
     public function users_del($id){
         $users=model('users');
-        $isdel = $users->delete($id,false);
+        $isdel = $users->softdel()->delete($id);
         if($isdel)
             return $this->success('用户删除成功！',url('users'));
         else
@@ -25,8 +25,8 @@ class trash extends adminBase
 
     public function users_re($id){
 
-        $db= db();
-        $isre = $db->update('users',['delete_time'=>'0'],'users_id='.$id);
+        $users=model('users');
+        $isre = $users->restore($id);
 
         if($isre){
             return $this->success('用户恢复成功',url('users'));
@@ -48,7 +48,7 @@ class trash extends adminBase
 
     public function users_group_del($id){
         $ug=model('users_group');
-        $isdel = $ug->delete($id,false);
+        $isdel = $ug->softdel()->delete($id);
         if($isdel)
             return $this->success('用户组删除成功！',url('users_group'));
         else
@@ -57,8 +57,8 @@ class trash extends adminBase
 
     public function users_group_re($id){
 
-        $db= db();
-        $isre = $db->update('users_group',['delete_time'=>'0'],'users_group_id='.$id);
+        $ug=model('users_group');
+        $isre = $ug->restore($id);
 
         if($isre){
             return $this->success('用户组恢复成功',url('users_group'));
@@ -81,7 +81,7 @@ class trash extends adminBase
 
     public function menus_del($id){
         $menus=model('menus');
-        $isdel = $menus->delete($id,false);
+        $isdel = $menus->softdel()->delete($id);
         if($isdel)
             return $this->success('菜单删除成功！',url('menus'));
         else
@@ -90,8 +90,8 @@ class trash extends adminBase
 
     public function menus_re($id){
 
-        $db= db();
-        $isre = $db->update('menus',['delete_time'=>'0'],'menus_id='.$id);
+        $menus=model('menus');
+        $isre = $menus->restore($id);
 
         if($isre){
             return $this->success('菜单恢复成功',url('menus'));
@@ -104,7 +104,7 @@ class trash extends adminBase
     public function message(){
         $mes = model('message');
 
-        $mes->page('delete_time desc')->softdel()->page();
+        $mes->softdel()->page();
         $mes->sender();
         $mes->receiver();
         $this->assign('list',$mes->data);
@@ -114,7 +114,7 @@ class trash extends adminBase
 
     public function message_del($id){
         $message=model('message');
-        $isdel = $message->delete($id,false);
+        $isdel = $message->softdel()->delete($id);
         if($isdel)
             return $this->success('用户删除成功！',url('message'));
         else
@@ -123,13 +123,75 @@ class trash extends adminBase
 
     public function message_re($id){
 
-        $db= db();
-        $isre = $db->update('message',['delete_time'=>'0'],'message_id='.$id);
+        $mes = model('message');
+        $isre = $mes->restore($id);
 
         if($isre){
             return $this->success('消息恢复成功',url('message'));
         }else{
             return $this->error('消息恢复失败',url('message'));
+        }
+
+    }
+
+
+    public function comment(){
+        $cmt = model('comment');
+        $cmt->order('delete_time desc')->softdel()->page();
+        $cmt->create_user();
+        $this->assign('list',$cmt->data);
+        $this->assign('pager',$cmt->pager['show']);
+        return $this->fetch();
+    }
+
+    public function comment_del($id){
+        $cmt=model('comment');
+        $isdel = $cmt->softdel()->delete($id);
+        if($isdel)
+            return $this->success('评论删除成功！',url('menus'));
+        else
+            return $this->error('评论删除失败！');
+    }
+
+    public function comment_re($id){
+
+        $isre = model('comment')->restore($id);
+
+        if($isre){
+            return $this->success('评论恢复成功',url('menus'));
+        }else{
+            return $this->error('评论恢复失败',url('menus'));
+        }
+
+    }
+
+
+    public function ad(){
+        $cmt = model('ad');
+        $cmt->order('delete_time desc')->softdel()->page();
+        $cmt->create_user();
+        $this->assign('list',$cmt->data);
+        $this->assign('pager',$cmt->pager['show']);
+        return $this->fetch();
+    }
+
+    public function ad_del($id){
+        $cmt=model('ad');
+        $isdel = $cmt->softdel()->delete($id);
+        if($isdel)
+            return $this->success('广告删除成功！',url('menus'));
+        else
+            return $this->error('广告删除失败！');
+    }
+
+    public function ad_re($id){
+
+        $isre = model('ad')->restore($id);
+
+        if($isre){
+            return $this->success('广告恢复成功',url('menus'));
+        }else{
+            return $this->error('广告恢复失败',url('menus'));
         }
 
     }

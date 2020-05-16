@@ -5,14 +5,17 @@ use heephp\validata;
 
 class article extends adminBase
 {
-    function manager()
+    function manager($field='create_time',$order='desc')
     {
         $article= model('article');
-        $article->page();
+        $article->order("$field $order")->page();
         $article->category();
         $article->create_user();
         $this->assign('list', $article->data);
         $this->assign('pager', $article->pager['show']);
+
+        $this->assign('field',$field);
+        $this->assign('order',$order);
         return $this->fetch();
     }
 
@@ -36,10 +39,18 @@ class article extends adminBase
         $category->child();
         $this->assign('plist',$category->data);
 
-        $article->get($id);
+        $article->get($id);//var_dump($article->data);
         $this->assign('m', $article->data);
         return $this->fetch();
 
+    }
+
+    function recommend($id){
+        $article = table('article');
+        $m=$article->get($id);
+        $recommend=$m['recommend']==0?1:0;
+        $article->update(['recommend'=>$recommend,'article_id'=>$id]);
+        return $this->rediect('manager');
     }
 
     function delete($id)
@@ -56,6 +67,7 @@ class article extends adminBase
     {
         $data = request('post.');//var_dump($data);exit;
         $article = model('article');
+        $data['keyword']=implode(',',$data['keyword']);
         if (!empty($data['article_id'])) {
             $result = $article->update($data);
         } else {

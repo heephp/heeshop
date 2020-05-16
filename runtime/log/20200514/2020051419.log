@@ -1,0 +1,16 @@
+2020-05-14 19:40:53 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 19:40:53 [DEBUG] [root]自动加载类：app\home\model\config
+2020-05-14 19:40:53 [DEBUG] [root]自动加载类：heephp\model
+2020-05-14 19:40:53 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 19:40:53 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 19:40:53 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 19:40:53 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-14 19:40:53 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-14 19:40:53 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-14 19:40:53 [DEBUG] [root]select `name`,`value` from heecms_config       
+2020-05-14 19:40:53 [DEBUG] [root]自动加载类：app\home\model\link_group
+2020-05-14 19:40:53 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-05-14 19:40:53 [DEBUG] [root]自动加载类：app\home\model\link
+2020-05-14 19:40:53 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-05-14 19:40:53 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-05-14 19:40:53 [DEBUG] [root]自动加载类：heephp\orm\wherebuilder

@@ -31,29 +31,26 @@
                     <table class="table">
                         <thead>
                         <tr>
-                            <th scope="col">#</th>
                             <th scope="col">栏目名称</th>
-                            <th scope="col">标题</th>
-                            <th scope="col">作者</th>
-                            <th scope="col">创建人</th>
+                            <th scope="col"><?=mtitle('recommend',$field,$order,'标题')?> </th>
+                            <th scope="col"><?=mtitle('create_users_id',$field,$order,'创建人')?></th>
                             <th scope="col">关键词</th>
-                            <th scope="col">发布时间</th>
-                            <th scope="col">修改时间</th>
+                            <th scope="col"><?=mtitle('create_time',$field,$order,'发布时间')?></th>
+                            <th scope="col"><?=mtitle('update_time',$field,$order,'修改时间')?></th>
                             <th scope="col">操作</th>
                         </tr>
                         </thead>
                         <tbody>
                         <?foreach($list as $m){?>
                             <tr>
-                                <td><?=$m['article_id']?></td>
                                 <td><?=$m['category']['name']?></td>
-                                <td> <?=sstr($m['title'],10)?></td>
-                                <td> <?=$m['author']?></td>
+                                <td>  <small><font color="#ff0000"> <?=empty($m['recommend'])?'':'[推荐]'?></font></small> <a href="<?=url('edit/'.$m['article_id'])?>"><?=sstr($m['title'],20)?></a></td>
                                 <td><?=$m['create_user']['username']?></td>
                                 <td><?=sstr($m['keyword'],10)?></td>
                                 <td><?=$m['create_time']?></td>
                                 <td><?=$m['update_time']?></td>
                                 <td>
+                                    <a href="<?=url('recommend/'.$m['article_id'])?>" class="btn btn-primary btn-sm"><?=empty($m['recommend'])?'推荐':'取消推荐'?></a>
                                     <a href="<?=url('edit/'.$m['article_id'])?>" class="btn btn-primary btn-sm">编辑</a>
                                     <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete/'.$m['article_id'])?>">删除</a>
 

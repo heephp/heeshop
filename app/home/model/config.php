@@ -11,13 +11,13 @@ class config extends model
         parent::__construct(__CLASS__);
     }
 
-    public function all(){
+    public function getall(){
 
         $webconfig= cache('webconfig');
 
         if(!$webconfig) {
-            $webconfig = $this->select('1=1', 'id asc', '`name`,`value`');
-            cache('webconfig',$webconfig);
+            $webconfig = $this->field(['name', 'value'])->select();
+            cache('webconfig', $webconfig);
         }
 
         $list = [];

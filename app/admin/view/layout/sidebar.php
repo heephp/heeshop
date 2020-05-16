@@ -183,6 +183,16 @@ $mtrash = CONTROLLER=='trash'?'show':'';
                                     <span class="sub-item">菜单</span>
                                 </a>
                             </li>
+                            <li>
+                                <a href="<?=url('/'.APP.'/trash/comment')?>">
+                                    <span class="sub-item">评论</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?=url('/'.APP.'/trash/ad')?>">
+                                    <span class="sub-item">广告</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>

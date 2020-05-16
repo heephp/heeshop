@@ -43,9 +43,9 @@
                         <?foreach($list as $m){?>
                             <tr>
                                 <td><?=$m['message_id']?></td>
-                                <td><a href="<?=url('manager/'.$m['users_id'])?>"> <?=$m['sender']['username']?></a></td>
-                                <td><a href="<?=url('manager/0/'.$m['receiver_users_id'])?>"?><?=$m['receiver']['username']?></a></td>
-                                <td><a href="<?=url('detail/'.$m['message_id'])?>"?> <?=sstr($m['title'],10)?></a></td>
+                                <td><?=$m['sender']['username']?></td>
+                                <td><?=$m['receiver']['username']?></td>
+                                <td><?=sstr($m['title'],10)?></td>
                                 <td><?=sstr($m['context'],10)?></td>
                                 <td><?=$m['create_time']?></td>
                                 <td>

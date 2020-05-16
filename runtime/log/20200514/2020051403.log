@@ -1,0 +1,172 @@
+2020-05-14 03:01:19 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 03:01:19 [DEBUG] [root]自动加载类：app\home\model\config
+2020-05-14 03:01:19 [DEBUG] [root]自动加载类：heephp\model
+2020-05-14 03:01:19 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 03:01:19 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 03:01:19 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 03:01:19 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-14 03:01:19 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-14 03:01:19 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-14 03:02:59 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 03:02:59 [DEBUG] [root]自动加载类：app\home\model\config
+2020-05-14 03:02:59 [DEBUG] [root]自动加载类：heephp\model
+2020-05-14 03:02:59 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 03:02:59 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 03:02:59 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 03:02:59 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-14 03:02:59 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-14 03:02:59 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-14 03:03:17 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 03:03:17 [DEBUG] [root]自动加载类：app\home\model\config
+2020-05-14 03:03:17 [DEBUG] [root]自动加载类：heephp\model
+2020-05-14 03:03:17 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 03:03:17 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 03:03:17 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 03:03:17 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-14 03:03:17 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-14 03:03:17 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-14 03:03:59 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 03:03:59 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 03:03:59 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 03:03:59 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 03:03:59 [DEBUG] [root]自动加载类：heephp\orm\wherebuilder
+2020-05-14 03:03:59 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 03:03:59 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 03:03:59 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 03:03:59 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 03:03:59 [DEBUG] [root]自动加载类：heephp\orm\wherebuilder
+2020-05-14 03:03:59 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 03:03:59 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 03:03:59 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 03:03:59 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 03:03:59 [DEBUG] [root]自动加载类：heephp\orm\wherebuilder
+2020-05-14 03:04:17 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 03:04:17 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 03:04:17 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 03:04:17 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 03:04:17 [DEBUG] [root]自动加载类：heephp\orm\wherebuilder
+2020-05-14 03:04:18 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 03:04:18 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 03:04:18 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 03:04:18 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 03:04:18 [DEBUG] [root]自动加载类：heephp\orm\wherebuilder
+2020-05-14 03:04:39 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 03:04:39 [DEBUG] [root]自动加载类：app\home\model\config
+2020-05-14 03:04:39 [DEBUG] [root]自动加载类：heephp\model
+2020-05-14 03:04:39 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 03:04:39 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 03:04:39 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 03:04:39 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-14 03:04:39 [DEBUG] [root]自动加载类：heephp\orm\wherebuilder
+2020-05-14 03:04:41 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 03:04:41 [DEBUG] [root]自动加载类：app\home\model\config
+2020-05-14 03:04:41 [DEBUG] [root]自动加载类：heephp\model
+2020-05-14 03:04:41 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 03:04:41 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 03:04:41 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 03:04:41 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-14 03:04:41 [DEBUG] [root]自动加载类：heephp\orm\wherebuilder
+2020-05-14 03:04:52 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 03:04:52 [DEBUG] [root]自动加载类：app\home\model\config
+2020-05-14 03:04:52 [DEBUG] [root]自动加载类：heephp\model
+2020-05-14 03:04:52 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 03:04:52 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 03:04:52 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 03:04:52 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-14 03:04:52 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-14 03:04:52 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-14 03:06:32 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 03:06:32 [DEBUG] [root]自动加载类：app\home\model\config
+2020-05-14 03:06:32 [DEBUG] [root]自动加载类：heephp\model
+2020-05-14 03:06:32 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 03:06:32 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 03:06:32 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 03:06:32 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-14 03:06:32 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-14 03:06:32 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-14 03:10:48 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 03:10:48 [DEBUG] [root]自动加载类：app\home\model\config
+2020-05-14 03:10:48 [DEBUG] [root]自动加载类：heephp\model
+2020-05-14 03:10:48 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 03:10:48 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 03:10:48 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 03:10:48 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-14 03:10:48 [DEBUG] [root]自动加载类：heephp\orm\wherebuilder
+2020-05-14 03:10:50 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 03:10:50 [DEBUG] [root]自动加载类：app\home\model\config
+2020-05-14 03:10:50 [DEBUG] [root]自动加载类：heephp\model
+2020-05-14 03:10:50 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 03:10:50 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 03:10:50 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 03:10:50 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-14 03:10:50 [DEBUG] [root]自动加载类：heephp\orm\wherebuilder
+2020-05-14 03:13:12 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 03:13:12 [DEBUG] [root]自动加载类：app\home\model\config
+2020-05-14 03:13:12 [DEBUG] [root]自动加载类：heephp\model
+2020-05-14 03:13:12 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 03:13:12 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 03:13:12 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 03:13:12 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-14 03:13:12 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-14 03:13:12 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-14 03:15:07 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 03:15:07 [DEBUG] [root]自动加载类：app\home\model\config
+2020-05-14 03:15:07 [DEBUG] [root]自动加载类：heephp\model
+2020-05-14 03:15:07 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 03:15:07 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 03:15:07 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 03:15:07 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-14 03:15:07 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-14 03:15:07 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-14 03:15:07 [DEBUG] [root]select `name`,`value` from heecms_config       
+2020-05-14 03:15:07 [DEBUG] [root]自动加载类：app\home\model\link_group
+2020-05-14 03:15:07 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-05-14 03:15:07 [DEBUG] [root]自动加载类：app\home\model\link
+2020-05-14 03:15:07 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-05-14 03:15:07 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-05-14 03:15:07 [DEBUG] [root]自动加载类：heephp\orm\wherebuilder
+2020-05-14 03:15:28 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 03:15:28 [DEBUG] [root]自动加载类：app\home\model\config
+2020-05-14 03:15:28 [DEBUG] [root]自动加载类：heephp\model
+2020-05-14 03:15:28 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 03:15:28 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 03:15:28 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 03:15:28 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-14 03:15:28 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-14 03:15:28 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-14 03:15:28 [DEBUG] [root]自动加载类：app\home\model\link_group
+2020-05-14 03:15:28 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-05-14 03:15:28 [DEBUG] [root]自动加载类：app\home\model\link
+2020-05-14 03:15:28 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-05-14 03:15:29 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-05-14 03:15:29 [DEBUG] [root]自动加载类：heephp\orm\wherebuilder
+2020-05-14 03:15:32 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 03:15:32 [DEBUG] [root]自动加载类：app\home\model\config
+2020-05-14 03:15:32 [DEBUG] [root]自动加载类：heephp\model
+2020-05-14 03:15:32 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 03:15:32 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 03:15:32 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 03:15:32 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-14 03:15:32 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-14 03:15:32 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-14 03:15:32 [DEBUG] [root]自动加载类：app\home\model\link_group
+2020-05-14 03:15:32 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-05-14 03:15:32 [DEBUG] [root]自动加载类：app\home\model\link
+2020-05-14 03:15:32 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-05-14 03:15:32 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-05-14 03:15:32 [DEBUG] [root]自动加载类：heephp\orm\wherebuilder
+2020-05-14 03:16:20 [DEBUG] [root]自动加载类：app\home\controller\base
+2020-05-14 03:16:20 [DEBUG] [root]自动加载类：app\home\model\config
+2020-05-14 03:16:20 [DEBUG] [root]自动加载类：heephp\model
+2020-05-14 03:16:20 [DEBUG] [root]自动加载类：heephp\orm\orm
+2020-05-14 03:16:20 [DEBUG] [root]自动加载类：heephp\database\mysqli
+2020-05-14 03:16:20 [DEBUG] [root]自动加载类：heephp\database\databaseInterface
+2020-05-14 03:16:20 [DEBUG] [root]show full columns from `heecms_config`
+2020-05-14 03:16:20 [DEBUG] [root]自动加载类：heephp\cache\file
+2020-05-14 03:16:20 [DEBUG] [root]自动加载类：heephp\cache\cacheInterface
+2020-05-14 03:16:20 [DEBUG] [root]自动加载类：app\home\model\link_group
+2020-05-14 03:16:20 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-05-14 03:16:20 [DEBUG] [root]自动加载类：app\home\model\link
+2020-05-14 03:16:20 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-05-14 03:16:20 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-05-14 03:16:20 [DEBUG] [root]自动加载类：heephp\orm\wherebuilder

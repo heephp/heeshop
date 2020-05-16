@@ -12,17 +12,16 @@ class index extends base{
 
         //读取配置
         $config=model('config');
-        $webconfig = $config->all();
+        $webconfig = $config->getall();
         $this->assign('c',$webconfig);
 
         //读取菜单
         $lg = model("link_group");
         $lg->select();
+        $lg->links();
 
-        $link = model('link');
         foreach ($lg->data as $l){
-            $ls = $link->where('parent_id<1 and link_group_id='.$l['link_group_id'])->order('ord asc')->select();
-            $this->assign($l['tag'],$ls);
+            $this->assign($l['tag'],$l['links']);
         }
 
     }
@@ -40,16 +39,17 @@ class index extends base{
 
     public function test()
     {
-        $result = select('*')
-            ->from('users')
-            ->where(function (wherebuild $wsql) {
+        $result =
+            table('users')
+            ->where(function (\heephp\orm\wherebuilder $wsql) {
                 return $wsql->whereBetween('users_id',0,3)->sql();
             })
-            ->whereOr(function (wherebuild $wsql){
-                return $wsql->where('1=1')->where('2=2')->sql();
+            ->whereOr(function (\heephp\orm\wherebuilder $wsql){
+                return $wsql->where('1=1')->whereAnd('2=2')->sql();
             })
-            ->all();
+            ->sql();
         return var_dump($result);
+
     }
 
 }

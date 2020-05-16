@@ -6,7 +6,7 @@ function conf($name, $value=''){
     $db = db();
     //设置配置
     if(!empty($value)){
-        return $db->update('config',"`value`='$value'","`name`='$name'")>0;
+        return table('config')->where("`name`='$name'")->update(['value'=>$value])>0;
     }
     //获取配置
     $all = cache(config('customer_config_name'));

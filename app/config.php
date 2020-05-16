@@ -13,6 +13,10 @@ return [
     'validata_code_session'=>'_validata_code_session_',//验证码的Session字段
     'customer_config_name'=>'heeframework_config',//用户自定义配置的名称
     'user_model_prefix'=>'user_model_',
+    'html_replace'=>[
+        '__res__'=>'/static/skins/default/',
+        '__root__'=>'/'
+    ],
     'db'=>[
         'diver'=>'mysqli',
         'db_host' => 'localhost',
@@ -38,7 +42,7 @@ return [
         'default'=>'zh-cn'
     ],
     'cache'=>[
-        'diver'=>'memcache',
+        'diver'=>'file',
         'exp_time'=>3600,
         'redis'=>[
             'host'=>'127.0.0.1',
