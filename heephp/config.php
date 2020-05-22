@@ -11,6 +11,8 @@ class config{
         if(is_file('./../app/config.php'))
             $sys_config = require './../app/config.php';
 
+        $sys_config=array_merge(self::$config,$sys_config);
+
         //读取应用中的单独配置
         if(defined('APP')) {
             if (is_file('./../app/' . APP . '/config.php')) {
@@ -26,19 +28,15 @@ class config{
             }
         }
 
-        config::$config = $sys_config;
+        self::$config = $sys_config;
 
-        aop('config_init',config::$config);
-    }
-
-    private function _get(){
-        return config::$config;
+        aop('config_init',self::$config);
     }
 
     public static function get($name=''){
 
-        $instance = new self();
-        $configs= config::$config;
+        new self();
+        $configs= self::$config;
 
         if(empty($name)) {
             return $configs;
@@ -54,4 +52,11 @@ class config{
         return $configs[$name];
     }
 
+    public static function set($name,$value){
+
+        new self();
+        self::$config[$name]=$value;
+        return self::$config[$name];
+
+    }
 }

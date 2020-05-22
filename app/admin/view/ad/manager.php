@@ -34,6 +34,7 @@
                             <th scope="col">#</th>
                             <th scope="col"><?=mtitle('title',$field,$order,'标题')?></th>
                             <th scope="col"><?=mtitle('link',$field,$order,'链接')?></th>
+                            <th scope="col">图片</th>
                             <th scope="col"><?=mtitle('hit',$field,$order,'点击')?></th>
                             <th scope="col"><?=mtitle('create_users_id',$field,$order,'创建人')?></th>
                             <th scope="col"><?=mtitle('create_time',$field,$order,'创建时间')?></th>
@@ -46,6 +47,7 @@
                                 <td><?=$m['ad_id']?></td>
                                 <td><?=$m['title']?></td>
                                 <td><?=$m['link']?></td>
+                                <td><a href="<?=$m['img']?>" target="_blank"> <img src="<?=$m['img']?>" width="50" height="50"></a></td>
                                 <td><?=$m['hit']?></td>
                                 <td><?=$m['create_user']['username']?></td>
                                 <td><?=$m['create_time']?></td>

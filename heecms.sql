@@ -11,11 +11,34 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 08/05/2020 18:21:30
+ Date: 17/05/2020 00:58:05
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for heecms_ad
+-- ----------------------------
+DROP TABLE IF EXISTS `heecms_ad`;
+CREATE TABLE `heecms_ad`  (
+  `ad_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `img` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `link` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `hit` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `code` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+  `create_users_id` int(11) DEFAULT NULL,
+  `create_time` int(11) DEFAULT NULL,
+  `update_time` int(11) DEFAULT NULL,
+  `delete_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ad_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of heecms_ad
+-- ----------------------------
+INSERT INTO `heecms_ad` VALUES (1, '广告1', '/啊', '/。', NULL, 'www', NULL, 1589587438, NULL, 1589589557);
 
 -- ----------------------------
 -- Table structure for heecms_article
@@ -32,6 +55,7 @@ CREATE TABLE `heecms_article`  (
   `author` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `keyword` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `first_pic` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '首图',
+  `recommend` int(1) DEFAULT NULL COMMENT '推荐',
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
@@ -41,9 +65,9 @@ CREATE TABLE `heecms_article`  (
 -- ----------------------------
 -- Records of heecms_article
 -- ----------------------------
-INSERT INTO `heecms_article` VALUES (1, 2, NULL, '测试内容', '描述', '&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot; title=&quot;1587782677251926.jpg&quot; alt=&quot;qiyeguanwang.jpg&quot;/&gt;&lt;/p&gt;', NULL, '作者', '关键词', NULL, 1587782763, NULL, 1587782949);
-INSERT INTO `heecms_article` VALUES (2, 2, NULL, '测试内容标题', '描述', '&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;&lt;/p&gt;', NULL, '作者', '关键词', NULL, 1587782944, NULL, NULL);
-INSERT INTO `heecms_article` VALUES (3, 2, NULL, '标题2', '描述2', '&lt;p&gt;内容2&lt;/p&gt;', NULL, '作者2', '关键词2', NULL, 1587784244, NULL, NULL);
+INSERT INTO `heecms_article` VALUES (1, 2, NULL, '测试内容', '描述', '&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot; title=&quot;1587782677251926.jpg&quot; alt=&quot;qiyeguanwang.jpg&quot;/&gt;&lt;/p&gt;', NULL, '作者', '关键词', NULL, NULL, 1587782763, NULL, 1587782949);
+INSERT INTO `heecms_article` VALUES (2, 2, NULL, '测试内容标题', '描述', '&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588768789115185.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', NULL, '作者', '关键词,产品,网站,信息,软件', '/upload/20200425/1587782677251926_small.jpg', NULL, 1587782944, 1589593416, NULL);
+INSERT INTO `heecms_article` VALUES (3, 2, NULL, '标题2', '描述2', '&lt;p&gt;内容2&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;ujnnbbhjjvjjvvjhjjvjhvjvjvjvjvjvjhvjvj&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588768789115185.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', NULL, '作者2', '关键词2,信息', '/upload/20200425/1587782677251926.jpg', 1, 1587784244, 1589539497, NULL);
 
 -- ----------------------------
 -- Table structure for heecms_category
@@ -71,10 +95,36 @@ CREATE TABLE `heecms_category`  (
 -- Records of heecms_category
 -- ----------------------------
 INSERT INTO `heecms_category` VALUES (1, 0, 'fas fa-align-justify', '测试栏目', '', '测试 栏目', '1', 1, 1587778965, 1588493740, NULL, 1, 'list.php', 'detail.php');
-INSERT INTO `heecms_category` VALUES (2, 1, '', '测试子栏目', '', '子栏目', '2', 1, 1587779599, 1588475406, NULL, 5, 'list.php', 'detail.php');
+INSERT INTO `heecms_category` VALUES (2, 1, '', '测试子栏目2', '', '子栏目', '2', 1, 1587779599, 1589530745, NULL, 1, '/index/index.php', '/index/index.php');
 INSERT INTO `heecms_category` VALUES (3, 1, '', 'ceshi1', '', 'key', '3', 1, 1588303244, NULL, 1588470128, 2, 'list.php', 'detail.php');
 INSERT INTO `heecms_category` VALUES (4, 1, '', '测试栏目22', '', '22', '2', 1, 1588472248, NULL, 1588473611, 3, 'list.php', 'detail.php');
-INSERT INTO `heecms_category` VALUES (5, 1, '', '测试栏目2', '', '11', '2', 1, 1588473774, NULL, 1588474366, 4, 'list.php', 'detail.php');
+INSERT INTO `heecms_category` VALUES (5, 1, '', '测试栏目3', '', '11', '2', 1, 1588473774, NULL, 1588474366, 4, 'list.php', 'detail.php');
+
+-- ----------------------------
+-- Table structure for heecms_comment
+-- ----------------------------
+DROP TABLE IF EXISTS `heecms_comment`;
+CREATE TABLE `heecms_comment`  (
+  `comment_id` int(11) NOT NULL AUTO_INCREMENT,
+  `category_id` int(11) DEFAULT NULL COMMENT '栏目的ID',
+  `info_id` int(11) DEFAULT NULL COMMENT '对应信息的Id',
+  `create_users_id` int(11) DEFAULT NULL,
+  `title` varchar(300) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `contact` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `mobile` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `context` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+  `create_time` int(11) DEFAULT NULL,
+  `update_time` int(11) DEFAULT NULL,
+  `delete_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`comment_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of heecms_comment
+-- ----------------------------
+INSERT INTO `heecms_comment` VALUES (1, 1, 2, 1, 'alksjd;flas', 'l;akjsd;lfkajs;dfkj', 'asdf@asddf.com', '1878787878', 'lasdjdflajsdlf', 111, 11111, 1588990563);
+INSERT INTO `heecms_comment` VALUES (2, 1, 2, 1, '12312', '123123', 'as@a.com', '2938742987', '98798797', 222222222, 333333333, 1588990714);
 
 -- ----------------------------
 -- Table structure for heecms_config
@@ -84,10 +134,10 @@ CREATE TABLE `heecms_config`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `value` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `value` varchar(9999) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 44 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 72 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of heecms_config
@@ -95,7 +145,7 @@ CREATE TABLE `heecms_config`  (
 INSERT INTO `heecms_config` VALUES (1, '网站名称', 'website_name', 'HeeCMS官网', NULL);
 INSERT INTO `heecms_config` VALUES (2, '网站关键词', 'website_keyword', 'HeeCMS HeePHP框架', NULL);
 INSERT INTO `heecms_config` VALUES (3, '网站描述', 'website_description', '', NULL);
-INSERT INTO `heecms_config` VALUES (4, '网站网址', 'website_url', '', NULL);
+INSERT INTO `heecms_config` VALUES (4, '网站网址', 'website_url', 'http://c.com', NULL);
 INSERT INTO `heecms_config` VALUES (5, '网站统计', 'website_tongji', NULL, NULL);
 INSERT INTO `heecms_config` VALUES (6, '网站Logo', 'website_logo', '', NULL);
 INSERT INTO `heecms_config` VALUES (7, '公司名称', 'company_name', '', NULL);
@@ -134,6 +184,33 @@ INSERT INTO `heecms_config` VALUES (39, '验证码字符', 'vcode_char', 'lower'
 INSERT INTO `heecms_config` VALUES (40, '验证码字体大小', 'vcode_fontsize', '20', NULL);
 INSERT INTO `heecms_config` VALUES (41, '短信AccessKeySecret', 'sms_accessKeySecret', '', NULL);
 INSERT INTO `heecms_config` VALUES (42, '网站ICP', 'website_icp', '沪ICP备14038410号-13', NULL);
+INSERT INTO `heecms_config` VALUES (45, 'login_qq_appid', 'login_qq_appid', '', NULL);
+INSERT INTO `heecms_config` VALUES (44, '网站模板目录', 'website_skin', 'default', NULL);
+INSERT INTO `heecms_config` VALUES (46, 'login_qq_appkey', 'login_qq_appkey', '', NULL);
+INSERT INTO `heecms_config` VALUES (47, 'login_qq_callback', 'login_qq_callback', '', NULL);
+INSERT INTO `heecms_config` VALUES (48, 'login_wx_appsecrt', 'login_wx_appsecrt', '', NULL);
+INSERT INTO `heecms_config` VALUES (49, 'login_wx_appid', 'login_wx_appid', '', NULL);
+INSERT INTO `heecms_config` VALUES (50, 'login_wb_appid', 'login_wb_appid', NULL, NULL);
+INSERT INTO `heecms_config` VALUES (51, 'login_wb_appsecrt', 'login_wb_appsecrt', '', NULL);
+INSERT INTO `heecms_config` VALUES (52, 'login_wb_appkey', 'login_wb_appkey', '', NULL);
+INSERT INTO `heecms_config` VALUES (53, 'login_bd_appkey', 'login_bd_appkey', NULL, NULL);
+INSERT INTO `heecms_config` VALUES (54, 'login_bd_appsecrt', 'login_bd_appsecrt', '', NULL);
+INSERT INTO `heecms_config` VALUES (55, 'login_bd_domain', 'login_bd_domain', '', NULL);
+INSERT INTO `heecms_config` VALUES (56, 'login_ali_appid', 'login_ali_appid', '', NULL);
+INSERT INTO `heecms_config` VALUES (57, 'login_ali_private_key', 'login_ali_private_key', '', NULL);
+INSERT INTO `heecms_config` VALUES (58, 'login_ali_public_key', 'login_ali_public_key', '', NULL);
+INSERT INTO `heecms_config` VALUES (59, '微信支付APPID', 'pay_wx_appid', 'wx9d24e93197f03db3', NULL);
+INSERT INTO `heecms_config` VALUES (60, '微信支付商户Id', 'pay_wx_mchid', '1338307101', NULL);
+INSERT INTO `heecms_config` VALUES (61, '微信支付商户密钥', 'pay_wx_key', 'wangyingzhe1986091288wangyingzhe', NULL);
+INSERT INTO `heecms_config` VALUES (62, '微信支付Appsecrt', 'pay_wx_appsecrt', '0371ce107606715cf4bfb9c5c8a53741', NULL);
+INSERT INTO `heecms_config` VALUES (63, '微信支付证书', 'pay_wx_apiclient_cert', '', NULL);
+INSERT INTO `heecms_config` VALUES (64, '微信支付证书', 'pay_wx_apiclient_key', '', NULL);
+INSERT INTO `heecms_config` VALUES (65, '支付宝支付APPId', 'pay_ali_appid', '2018011901968294', NULL);
+INSERT INTO `heecms_config` VALUES (66, '支付宝账号', 'pay_ali_account', 'lvstech@foxmail.com', NULL);
+INSERT INTO `heecms_config` VALUES (67, '支付宝商户私钥', 'pay_ali_private_key', 'MIIEowIBAAKCAQEAjIE8pEP9KNTvakTLGia3YmawOcvtQ+MYR4zNzLMaANf0YInIQJWiL2HY+ocPaEJlLo24uIMxVWkB48Xonz/OAdHkQ1+XM9daU8FVcrXyu4JLuhomnxelJNDdrmNMa+iXK9T+lA3xPi9C5pcgvt5Wtfz8EMZWZaPpOc7wC0YDLFCOpS3SpOTtpGfWk7S4tdxIelW2XtjiaDS+AVxROlArShgk/TEdbxP18me4FAQ3eYv/F1uD/f+1fvAeiR2cEU78aVpG3H0uBa7bSSbhmLGTFvnP0hc+i4TUeIXrmnkmIKC9hZictGcvcXZ/LnLFCAaQI8yb1bpbaOsN/23YtIAmGQIDAQABAoIBAQCB4tbUY6WcIXxRmNbIjhHo/VTbmRD1OPIw8pEtMkRPk1NuCvD8A1eyxZl3v3MWxooSxyCEMYNhmXkNvt6UmL8wH4AMaEm2utXdp1P+fwStIn4uxA3/9DPOHOdRVqpG9vUIqBXPeDQTcE1ALWUwDQnLotrCBxfHTgdEUXDGeypjw5Su6h+FIhtR3ULqxQD87+NV+AXyqThH0LXNq6ERStLi/qgYl1hrHJKn1YlFMlAufnV++Es2GkOUkt7+0xu+CRPZuNGlOdFc7QXrGh2DMwBYeh5TNXl5IbcVehwjGQA0w6EU/TvQl+anlgJk5u/ylaVztxEuLq4FqaYhTH1JVIqBAoGBAM5/Eu7em1Z8sBzfw0HQsESMQ/YTF8AjQ7SMP1kxlGqUTMPEJfKa8wT11cA4CRPMN1c092PR1izATI0xf5AAXOYQn+LFUYVmjegMBFULMGEmSDQuzOhf5Q6RqH66QthMW1Vbeo0CHvSqgoNKFWI1MkXtlrq+ynCq8mEAG+z3DSuFAoGBAK4wLwsxiqltLt2JC7+Q9jKfbSQ1yP9yTYB0mZxWBwRt64O9fcJ24BSQXJ7OpaAkH/Aij59ih71ZXicFQt23NWrhG9WlvhIyn6ukCP2JwA5dBrLOGrhpXwDK1gyURBUMIih5fz7LhKzEdzQynbqbXdbmRyqXftuLrAZ/qfQIA4KFAoGAeC3g2QDZq0Y6QTPBsgZA8EQqMYb/JaXge628GK8QT88rtivsYfvoQBTLaGm0br9F3g1HheLUIYtxgiMyuJ5dctBuHU71mQwMvuZvhwdSCth64VPzkbJt30LKq6a/zJ7z8QOimXqIhaDPAJYXR+bp8WTLergbneL/2ZB0sD9AfPkCgYBNHtg1RIH38XdGbl7dOflHAH76ATY0ow7dSMKaDRyeQWx8r3D2oFslv6TCSwvZkyTw1Nxx3NXsZ5zf+dxY/byQzYndVbyJohA/lijE2DBIK7fDgq0h6MU/PI74ksxx5SVadjB4RPNA6ts8KQzcid1KQDpSCTEJUxWe6vb8LHAhYQKBgAu2m0E0afgXoYDDVrl+ltQB8z/4swJBoaZkuVBRKMoMqXTrNgPj72PNr1vMaEEV3sehuGXiXjKJQPavlexhdOdc9eQVG3Zghqly0SKdJiDsITr6QvlLASjvOE2Y/Q9Jj2Kvuus3493OEldxIlDR8zN1+WG0oZiHA0NBg17CZAQJ', NULL);
+INSERT INTO `heecms_config` VALUES (68, '支付宝公钥', 'pay_ali_public_key', 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjIE8pEP9KNTvakTLGia3YmawOcvtQ+MYR4zNzLMaANf0YInIQJWiL2HY+ocPaEJlLo24uIMxVWkB48Xonz/OAdHkQ1+XM9daU8FVcrXyu4JLuhomnxelJNDdrmNMa+iXK9T+lA3xPi9C5pcgvt5Wtfz8EMZWZaPpOc7wC0YDLFCOpS3SpOTtpGfWk7S4tdxIelW2XtjiaDS+AVxROlArShgk/TEdbxP18me4FAQ3eYv/F1uD/f+1fvAeiR2cEU78aVpG3H0uBa7bSSbhmLGTFvnP0hc+i4TUeIXrmnkmIKC9hZictGcvcXZ/LnLFCAaQI8yb1bpbaOsN/23YtIAmGQIDAQAB', NULL);
+INSERT INTO `heecms_config` VALUES (70, '微信公众号encoding', 'pay_wx_encodingaeskey', 'oYXBEIiGiURMXBUNQVZAkhSaqHDysKxZsRyvemNVTNh', NULL);
+INSERT INTO `heecms_config` VALUES (71, '微信公众号Token', 'pay_wx_token', 'dsfasfdasf352345235ERTWERSgYTU56', NULL);
 
 -- ----------------------------
 -- Table structure for heecms_country
@@ -391,6 +468,29 @@ INSERT INTO `heecms_country` VALUES (239, '智利', 'CHL');
 INSERT INTO `heecms_country` VALUES (240, '中非共和国', 'CAF');
 
 -- ----------------------------
+-- Table structure for heecms_guestbook
+-- ----------------------------
+DROP TABLE IF EXISTS `heecms_guestbook`;
+CREATE TABLE `heecms_guestbook`  (
+  `guestbook_id` int(11) NOT NULL AUTO_INCREMENT,
+  `contact` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `nickname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `mobile` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `qq` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `wx` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `context` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+  `create_time` int(11) DEFAULT NULL,
+  `create_users_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`guestbook_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of heecms_guestbook
+-- ----------------------------
+INSERT INTO `heecms_guestbook` VALUES (1, 'a', 'b', 'c@q.com', '133333', '888888', 'wx111', 'c1122', 1111111111, NULL);
+
+-- ----------------------------
 -- Table structure for heecms_link
 -- ----------------------------
 DROP TABLE IF EXISTS `heecms_link`;
@@ -453,8 +553,8 @@ CREATE TABLE `heecms_link_group`  (
 -- ----------------------------
 -- Records of heecms_link_group
 -- ----------------------------
-INSERT INTO `heecms_link_group` VALUES (1, 'navlinks', '导航菜单', 1, 1, 1587762883, NULL, NULL);
-INSERT INTO `heecms_link_group` VALUES (2, 'friendlink', '友情链接', 1, 1, 1587913051, NULL, NULL);
+INSERT INTO `heecms_link_group` VALUES (1, 'navlinks', '导航菜单', 1, 0, 1587762883, 1589239277, NULL);
+INSERT INTO `heecms_link_group` VALUES (2, 'friendlink', '友情链接', 1, 0, 1587913051, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for heecms_menus
@@ -473,20 +573,26 @@ CREATE TABLE `heecms_menus`  (
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`menus_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 15 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 21 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of heecms_menus
 -- ----------------------------
 INSERT INTO `heecms_menus` VALUES (5, 0, 'fas fa-link', '链接', '/', '', 3, 1, 1587761486, NULL, NULL);
 INSERT INTO `heecms_menus` VALUES (6, 5, '', '链接管理', '/link_group/manager', '', 1, 1, 1587761543, NULL, NULL);
-INSERT INTO `heecms_menus` VALUES (12, 0, 'fab fa-modx', '模型与表', '/', '', 4, 1, 1588244382, NULL, NULL);
+INSERT INTO `heecms_menus` VALUES (12, 0, 'fab fa-modx', '模型与表', '/', '', 7, 1, 1588244382, 1589584750, NULL);
 INSERT INTO `heecms_menus` VALUES (8, 0, 'fas fa-columns', '栏目', '/', '', 1, 1, 1587761621, NULL, NULL);
 INSERT INTO `heecms_menus` VALUES (9, 8, '', '栏目管理', '/category/manager', '', 2, 1, 1587761691, NULL, NULL);
 INSERT INTO `heecms_menus` VALUES (10, 0, 'fas fa-file-alt', '信息', '/', '', 2, 1, 1587761733, NULL, NULL);
 INSERT INTO `heecms_menus` VALUES (11, 10, '', '信息管理', '/category/managerinfo', '', 1, 1, 1587761857, 1588294134, NULL);
 INSERT INTO `heecms_menus` VALUES (13, 12, '', '模型管理', '/model/manager', '', 1, 1, 1588244418, NULL, NULL);
 INSERT INTO `heecms_menus` VALUES (14, 12, '', '数据表管理', '/model_table/manager', '', 2, 1, 1588244441, NULL, NULL);
+INSERT INTO `heecms_menus` VALUES (15, 0, 'fab fa-facebook-messenger', '反馈', '/', '', 3, 1, 1588942737, 1588943102, NULL);
+INSERT INTO `heecms_menus` VALUES (16, 15, '', '评论管理', '/comment/manager', '', 1, 1, 1588943137, NULL, NULL);
+INSERT INTO `heecms_menus` VALUES (17, 15, '', '留言管理', '/guestbook/manager', '', 2, 1, 1588943168, 1588943196, NULL);
+INSERT INTO `heecms_menus` VALUES (18, 0, 'fas fa-adjust', '营销', '/', '', 5, 1, 1589584735, NULL, NULL);
+INSERT INTO `heecms_menus` VALUES (19, 18, '', '广告管理', '/ad/manager', '', 1, 1, 1589584779, NULL, NULL);
+INSERT INTO `heecms_menus` VALUES (20, 18, '', '网站优化', '/seo/edit', '', 2, 1, 1589586359, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for heecms_message
@@ -509,8 +615,8 @@ CREATE TABLE `heecms_message`  (
 -- ----------------------------
 -- Records of heecms_message
 -- ----------------------------
-INSERT INTO `heecms_message` VALUES (3, 1, 3, 0, 'title', 'contet', 0, 1586695173, NULL, NULL);
-INSERT INTO `heecms_message` VALUES (4, 1, 2, 0, '欢迎使用', '欢迎使用！！', 1, 1587103078, 1587103078, 1587103078);
+INSERT INTO `heecms_message` VALUES (3, 1, 3, 0, 'title', 'contet', 0, 1586695173, NULL, 0);
+INSERT INTO `heecms_message` VALUES (4, 1, 2, 0, '欢迎使用', '欢迎使用！！', 0, 1587103078, 1587103078, 0);
 
 -- ----------------------------
 -- Table structure for heecms_model
@@ -528,7 +634,7 @@ CREATE TABLE `heecms_model`  (
   `upate_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`model_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of heecms_model
@@ -538,6 +644,7 @@ INSERT INTO `heecms_model` VALUES (2, 6, '图片', '1', 1, NULL, NULL, 158828998
 INSERT INTO `heecms_model` VALUES (3, 10, '测试模型', '', 1, NULL, NULL, 1588472218, NULL, 1588473621);
 INSERT INTO `heecms_model` VALUES (4, 11, '测试模型', '', 1, NULL, NULL, 1588473746, NULL, 1588474375);
 INSERT INTO `heecms_model` VALUES (5, 18, '测试模型', '', 1, NULL, NULL, 1588475395, NULL, NULL);
+INSERT INTO `heecms_model` VALUES (6, 19, '测试模型22', '', 1, NULL, NULL, 1589243825, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for heecms_model_table
@@ -558,12 +665,13 @@ CREATE TABLE `heecms_model_table`  (
   `validate_rule` varchar(3000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '验证规则',
   `validate_msg` varchar(3000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '验证规则对应的错误消息',
   PRIMARY KEY (`model_table_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of heecms_model_table
 -- ----------------------------
-INSERT INTO `heecms_model_table` VALUES (18, 'news', 1588475124, 1588555547, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `heecms_model_table` VALUES (18, 'news', 1588475124, 1589241759, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `heecms_model_table` VALUES (19, 'tbtest', 1589241856, 1589243867, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for heecms_model_table_field
@@ -580,7 +688,7 @@ CREATE TABLE `heecms_model_table_field`  (
   `update_time` int(11) DEFAULT NULL,
   `create_users_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`model_table_field_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 39 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 42 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of heecms_model_table_field
@@ -590,6 +698,9 @@ INSERT INTO `heecms_model_table_field` VALUES (35, 18, '内容', 'context', 'edi
 INSERT INTO `heecms_model_table_field` VALUES (36, 18, 'ceshi', 'ceshi', 'text', '', NULL, NULL, 1);
 INSERT INTO `heecms_model_table_field` VALUES (37, 18, 'ceshi2', 'ceshi2', 'text', '', NULL, NULL, 1);
 INSERT INTO `heecms_model_table_field` VALUES (38, 18, '列表', 'list', 'select', '1,2,3,4,5', NULL, NULL, 1);
+INSERT INTO `heecms_model_table_field` VALUES (39, 18, '标题', 'title2', 'text', '', NULL, NULL, 1);
+INSERT INTO `heecms_model_table_field` VALUES (40, 19, '标题', 'title', 'text', '', NULL, NULL, 1);
+INSERT INTO `heecms_model_table_field` VALUES (41, 19, '内容', 'contxt', 'editor', '', NULL, NULL, 1);
 
 -- ----------------------------
 -- Table structure for heecms_pages
@@ -645,7 +756,7 @@ CREATE TABLE `heecms_shop_cart`  (
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`shop_cart_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for heecms_shop_category
@@ -667,8 +778,8 @@ CREATE TABLE `heecms_shop_category`  (
 -- ----------------------------
 -- Records of heecms_shop_category
 -- ----------------------------
-INSERT INTO `heecms_shop_category` VALUES (1, 0, 'nname1', '', 1, 1, 1588557112, 1588730719, NULL);
-INSERT INTO `heecms_shop_category` VALUES (2, 1, 'f167', '', 2, 1, 1588558731, 1588753145, NULL);
+INSERT INTO `heecms_shop_category` VALUES (1, 0, 'nname1', '', 1, 1, 1588557112, 1589360737, NULL);
+INSERT INTO `heecms_shop_category` VALUES (2, 1, 'f167', '', 2, 1, 1588558731, 1589593467, NULL);
 
 -- ----------------------------
 -- Table structure for heecms_shop_category_attr
@@ -679,13 +790,21 @@ CREATE TABLE `heecms_shop_category_attr`  (
   `shop_category_id` int(11) DEFAULT NULL,
   `shop_attr_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`shop_category_attr_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 41 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 53 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of heecms_shop_category_attr
 -- ----------------------------
-INSERT INTO `heecms_shop_category_attr` VALUES (39, 2, 1);
 INSERT INTO `heecms_shop_category_attr` VALUES (40, 2, 2);
+INSERT INTO `heecms_shop_category_attr` VALUES (42, 2, 2);
+INSERT INTO `heecms_shop_category_attr` VALUES (44, 2, 2);
+INSERT INTO `heecms_shop_category_attr` VALUES (46, 2, 2);
+INSERT INTO `heecms_shop_category_attr` VALUES (47, 2, 2);
+INSERT INTO `heecms_shop_category_attr` VALUES (48, 2, 2);
+INSERT INTO `heecms_shop_category_attr` VALUES (49, 1, 1);
+INSERT INTO `heecms_shop_category_attr` VALUES (50, 2, 2);
+INSERT INTO `heecms_shop_category_attr` VALUES (51, 2, 1);
+INSERT INTO `heecms_shop_category_attr` VALUES (52, 2, 2);
 
 -- ----------------------------
 -- Table structure for heecms_shop_category_sku
@@ -696,7 +815,7 @@ CREATE TABLE `heecms_shop_category_sku`  (
   `shop_category_id` int(11) DEFAULT NULL,
   `shop_sku_cls` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   PRIMARY KEY (`shop_category_sku_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 25 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of heecms_shop_category_sku
@@ -704,20 +823,20 @@ CREATE TABLE `heecms_shop_category_sku`  (
 INSERT INTO `heecms_shop_category_sku` VALUES (1, 1, '尺寸');
 INSERT INTO `heecms_shop_category_sku` VALUES (18, 2, '尺寸');
 INSERT INTO `heecms_shop_category_sku` VALUES (21, 1, '规格');
-INSERT INTO `heecms_shop_category_sku` VALUES (22, 2, '规格');
+INSERT INTO `heecms_shop_category_sku` VALUES (24, 2, '颜色');
 
 -- ----------------------------
 -- Table structure for heecms_shop_order
 -- ----------------------------
 DROP TABLE IF EXISTS `heecms_shop_order`;
 CREATE TABLE `heecms_shop_order`  (
-  `shop_order_id` int(30) NOT NULL,
+  `shop_order_id` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `sumprice` decimal(10, 2) DEFAULT NULL COMMENT '总价',
   `sourceprice` decimal(10, 2) DEFAULT NULL COMMENT '原价',
   `discount` decimal(10, 2) DEFAULT NULL COMMENT '折扣',
   `create_users_id` int(11) DEFAULT NULL,
   `pcount` int(255) DEFAULT NULL COMMENT '商品总数',
-  `state` int(2) DEFAULT NULL COMMENT '订单状态 -3已完成退款 -2已确认退款 -1申请退款 0未支付 1已支付未发货 2已发货未确认 3已确认未评论 4已评论完成',
+  `state` int(2) DEFAULT 0 COMMENT '订单状态 -3已完成退款 -2已确认退款 -1申请退款 0未支付 1已支付未发货 2已发货未确认 3已确认未评论 4已评论完成',
   `address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '收件人地址',
   `mobile` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '收件人手机',
   `contact` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '收件人',
@@ -731,15 +850,26 @@ CREATE TABLE `heecms_shop_order`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
+-- Records of heecms_shop_order
+-- ----------------------------
+INSERT INTO `heecms_shop_order` VALUES ('200511220617659533279431', 12.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1589205977, NULL, 1589362984, NULL, NULL);
+INSERT INTO `heecms_shop_order` VALUES ('200512061645483897243571', 23.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1589235405, NULL, 1589362990, NULL, NULL);
+INSERT INTO `heecms_shop_order` VALUES ('200512061650242004001193', 123.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1589235410, NULL, NULL, NULL, NULL);
+INSERT INTO `heecms_shop_order` VALUES ('200512062138032811971442', 123.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1589235698, NULL, NULL, NULL, NULL);
+INSERT INTO `heecms_shop_order` VALUES ('200512062221070932610004', 123.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1589235741, NULL, NULL, NULL, NULL);
+INSERT INTO `heecms_shop_order` VALUES ('200512063224171210783816', 235.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1589236344, NULL, NULL, NULL, NULL);
+
+-- ----------------------------
 -- Table structure for heecms_shop_order_detail
 -- ----------------------------
 DROP TABLE IF EXISTS `heecms_shop_order_detail`;
 CREATE TABLE `heecms_shop_order_detail`  (
   `shop_order_detail_id` int(11) NOT NULL AUTO_INCREMENT,
-  `shop_order_id` int(20) DEFAULT NULL,
+  `shop_order_id` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `shop_product_id` int(255) DEFAULT NULL,
   `num` int(11) DEFAULT NULL COMMENT '商品数量',
   `price` decimal(10, 2) DEFAULT NULL COMMENT '商品单价',
+  `sumprice` decimal(10, 2) DEFAULT NULL COMMENT '总价',
   `create_users_id` int(11) DEFAULT NULL,
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
@@ -753,14 +883,22 @@ CREATE TABLE `heecms_shop_order_detail`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `heecms_shop_pay`;
 CREATE TABLE `heecms_shop_pay`  (
-  `shop_pay_id` int(11) NOT NULL AUTO_INCREMENT,
-  `shop_order_id` int(20) DEFAULT NULL,
+  `shop_pay_id` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `shop_order_id` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `state` int(255) DEFAULT NULL,
+  `money` decimal(10, 2) DEFAULT NULL,
   `restr` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `create_users_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`shop_pay_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of heecms_shop_pay
+-- ----------------------------
+INSERT INTO `heecms_shop_pay` VALUES ('200513174321925619775611', '200512063224171210783816', 0, 235.00, NULL, NULL, NULL, NULL);
+INSERT INTO `heecms_shop_pay` VALUES ('200516090945440196335234', '200512062221070932610004', 0, 123.00, NULL, NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for heecms_shop_product
@@ -781,19 +919,21 @@ CREATE TABLE `heecms_shop_product`  (
   `price` decimal(10, 2) DEFAULT NULL COMMENT '一口价',
   `stock` int(255) DEFAULT NULL COMMENT '库存',
   `pic` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '首图',
+  `sellcount` int(255) DEFAULT NULL COMMENT '销量',
   PRIMARY KEY (`shop_product_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of heecms_shop_product
 -- ----------------------------
-INSERT INTO `heecms_shop_product` VALUES (1, '商品名1', 2, 1588860434, NULL, NULL, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png');
-INSERT INTO `heecms_shop_product` VALUES (2, '商品名1', 2, 1588860571, NULL, NULL, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png');
-INSERT INTO `heecms_shop_product` VALUES (3, '商品名1', 2, 1588860615, NULL, NULL, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png');
-INSERT INTO `heecms_shop_product` VALUES (4, '商品名1', 2, 1588860644, NULL, NULL, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png');
-INSERT INTO `heecms_shop_product` VALUES (5, '商品名1', 2, 1588860880, NULL, NULL, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png');
-INSERT INTO `heecms_shop_product` VALUES (6, '商品名1', 2, 1588861004, NULL, NULL, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png');
-INSERT INTO `heecms_shop_product` VALUES (7, '商品名1', 2, 1588861029, NULL, NULL, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png');
+INSERT INTO `heecms_shop_product` VALUES (1, '商品名1', 2, 1588860434, NULL, 0, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png', NULL);
+INSERT INTO `heecms_shop_product` VALUES (2, '商品名1', 2, 1588860571, NULL, 0, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png', NULL);
+INSERT INTO `heecms_shop_product` VALUES (3, '商品名1', 2, 1588860615, NULL, 0, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png', NULL);
+INSERT INTO `heecms_shop_product` VALUES (4, '商品名1', 2, 1588860644, NULL, 0, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png', NULL);
+INSERT INTO `heecms_shop_product` VALUES (5, '商品名1', 2, 1588860880, NULL, 0, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png', NULL);
+INSERT INTO `heecms_shop_product` VALUES (6, '商品名1', 2, 1588861004, NULL, 0, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png', NULL);
+INSERT INTO `heecms_shop_product` VALUES (7, '商品名1', 2, 1588861029, NULL, NULL, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png', NULL);
+INSERT INTO `heecms_shop_product` VALUES (8, '商品名1', 2, 1589591369, NULL, NULL, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200425/1587782677251926.jpg', NULL);
 
 -- ----------------------------
 -- Table structure for heecms_shop_product_attr
@@ -805,7 +945,7 @@ CREATE TABLE `heecms_shop_product_attr`  (
   `shop_attr_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `value` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   PRIMARY KEY (`shop_product_attr_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of heecms_shop_product_attr
@@ -822,6 +962,7 @@ INSERT INTO `heecms_shop_product_attr` VALUES (9, 6, '产地', '中国');
 INSERT INTO `heecms_shop_product_attr` VALUES (10, 6, '品牌', 'Nick');
 INSERT INTO `heecms_shop_product_attr` VALUES (11, 7, '产地', '中国');
 INSERT INTO `heecms_shop_product_attr` VALUES (12, 7, '品牌', 'Nick');
+INSERT INTO `heecms_shop_product_attr` VALUES (13, 8, '品牌', '');
 
 -- ----------------------------
 -- Table structure for heecms_shop_product_pic
@@ -834,7 +975,7 @@ CREATE TABLE `heecms_shop_product_pic`  (
   `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `ord` int(11) DEFAULT NULL,
   PRIMARY KEY (`shop_product_pic_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of heecms_shop_product_pic
@@ -851,6 +992,7 @@ INSERT INTO `heecms_shop_product_pic` VALUES (9, 6, '/upload/20200506/1588768789
 INSERT INTO `heecms_shop_product_pic` VALUES (10, 6, '/upload/20200506/1588760663359953.png', '商品名1', 1);
 INSERT INTO `heecms_shop_product_pic` VALUES (11, 7, '/upload/20200506/1588768789115185.png', '商品名1', 0);
 INSERT INTO `heecms_shop_product_pic` VALUES (12, 7, '/upload/20200506/1588760663359953.png', '商品名1', 1);
+INSERT INTO `heecms_shop_product_pic` VALUES (13, 8, '/upload/20200425/1587782677251926.jpg', '商品名1', 0);
 
 -- ----------------------------
 -- Table structure for heecms_shop_product_sku
@@ -971,13 +1113,29 @@ CREATE TABLE `heecms_user_model_news`  (
   `ceshi` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `ceshi2` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `list` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `title2` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of heecms_user_model_news
 -- ----------------------------
-INSERT INTO `heecms_user_model_news` VALUES (1, 2, 1588475928, NULL, 1588476523, '测试标题', '&lt;p&gt;测试&lt;span style=&quot;text-decoration: underline; border: 1px solid rgb(0, 0, 0);&quot;&gt;&lt;em&gt;&lt;strong&gt;内容&lt;/strong&gt;&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;', 'ceshi1', 'ceshi2', NULL);
+INSERT INTO `heecms_user_model_news` VALUES (1, 2, 1588475928, NULL, 1588476523, '测试标题', '&lt;p&gt;测试&lt;span style=&quot;text-decoration: underline; border: 1px solid rgb(0, 0, 0);&quot;&gt;&lt;em&gt;&lt;strong&gt;内容&lt;/strong&gt;&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;', 'ceshi1', 'ceshi2', NULL, NULL);
+
+-- ----------------------------
+-- Table structure for heecms_user_model_tbtest
+-- ----------------------------
+DROP TABLE IF EXISTS `heecms_user_model_tbtest`;
+CREATE TABLE `heecms_user_model_tbtest`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `category_id` int(11) NOT NULL,
+  `create_time` int(11) NOT NULL,
+  `update_time` int(11) NOT NULL,
+  `delete_time` int(11) NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `contxt` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for heecms_users

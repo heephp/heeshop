@@ -116,7 +116,7 @@ class users_group extends adminBase{
         $ug->get($data['users_group_id']);
         $ug->sys_resources()->save($data['sys_resources_id']);
 
-        return $this->rediect('sys_resource/'.$data['users_group_id']);
+        return $this->redirect('sys_resource/'.$data['users_group_id']);
 
     }
 

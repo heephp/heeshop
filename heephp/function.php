@@ -3,104 +3,8 @@
 use heephp\logger;
 use heephp\orm;
 use heephp\route;
+use heephp\sysExcption;
 
-function urlget()
-{
-    $url = $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . $_SERVER['REQUEST_URI'];//print_r($_SERVER['REQUEST_URI']);
-    $urlstrs = parse_url($url);
-    return $urlstrs;
-}
-
-
-/**解析url
- * @param $app
- * @param $controller
- * @param $method
- */
-function urlpaser(&$app, &$controller, &$method, &$parms)
-{
-
-    $urlinfo = urlget();
-
-    //将querystring 的值拼接入path
-    $querys = explode('&', $urlinfo['query']);
-    foreach ($querys as $qstr) {
-        $sq = explode('=', $qstr);
-        if (!empty($sq[1])) {
-            $urlinfo['path'] .= '/' . $sq[1];
-        }
-    }
-
-    //清除多余字符
-    while (strpos($urlinfo['path'], "//") > -1) {
-        $urlinfo['path'] = str_replace("//", "/", $urlinfo['path']);
-    }
-    //删除文件后缀
-    $format_suffix = config('format_suffix');
-    $splitpoint = substr($urlinfo['path'],strlen($urlinfo['path']) - strlen($format_suffix) - 1,1);
-    if (!empty($format_suffix)&&$splitpoint=='.') {
-        $urlinfo['path'] = substr($urlinfo['path'], 0, strlen($urlinfo['path']) - strlen($format_suffix) - 1);
-    }
-
-    //检测路由是否存在 如果存在则替换为实际控制器方法
-    $route = \heephp\route::get($urlinfo['path']);
-    if ($route) {
-        $urlinfo['path'] = $route;
-    }
-
-    $urlinfos = explode('/', $urlinfo['path']);
-
-    //过滤page等参数
-    //-----------------------
-    $pagetags = \heephp\route::get_pagetag();
-    if (is_array($pagetags)) {
-        foreach ($pagetags as $p) {
-            for ($i = 3; $i > 0; $i--) {
-                if (strstr($urlinfos[$i], $p . '_') == $urlinfos[$i]) {
-                    unset($urlinfos[$i]);
-                }
-            }
-        }
-    }
-    //-------------------------
-
-    if (APPS) {
-        $app = $urlinfos[1];
-        $controller = $urlinfos[2];
-        $method = $urlinfos[3];
-        for ($i = 4; $i < count($urlinfos); $i++) {
-            array_push($parms, $urlinfos[$i]);
-        }
-    } else {
-        $controller = $urlinfos[1];
-        $method = $urlinfos[2];
-        for ($i = 3; $i < count($urlinfos); $i++) {
-            array_push($parms, $urlinfos[$i]);
-        }
-    }
-
-    //如果为空则选择默认的控制器方法
-    $app = APPS ? (empty($app) ? config('default_app') : $app) : '';
-    $controller = empty($controller) ? config('default_controller') : $controller;
-    $method = empty($method) ? config('default_method') : $method;
-
-
-    /*echo $app.'|';
-    echo $controller.'|';
-    echo $method;*/
-    /*if (!PATHINFO) {
-        //获取参数为数组
-        if (isset($urlinfo['query']) && !empty($urlinfo['query'])) {
-            $query = $urlinfo['query'];
-            $arr = explode('&', $query);
-            foreach ($arr as $k => $v) {
-                $arr = explode('=', $v);
-                $parms[$arr[0]] = $arr[1];
-            }
-        }
-    }*/
-
-}
 
 /***
  * 从get或Post中获取数据
@@ -155,9 +59,9 @@ function cache($name = '', $value = '', $exp_time = 1)
 
         $cache = new \heephp\cache\redis($exp_time);
 
-    } else if ($diver == 'memcache') {
+    } else if ($diver == 'memcached') {
 
-        $cache = new \heephp\cache\memcache($exp_time);
+        $cache = new \heephp\cache\memcached($exp_time);
     } else {
 
         $cache = new \heephp\cache\file($exp_time);
@@ -428,160 +332,7 @@ function checkvcode($vcodename = 'vcode')
 }
 
 /**
- *@$originalImage => 原始图片
- *@$waterPos => 水印位置
- *@$waterImage => 水印图片
- *@$waterText => 水印文字
- *@$textFont => 文字大小
- *@$textColor => 文字顔色
- */
-/*function imageWaterMark($originalImage, $waterPos = 5, $waterImage = '', $waterText = '', $textFont = 5, $textColor = '#FFFFFF', $fontFile = 'arial.ttf')
-{
-    $isWaterImage = FALSE;
-
-//从水印图片文件新建一幅图像
-    if (!empty($waterImage) && file_exists($waterImage)) {
-        $isWaterImage = TRUE;
-        $waterImageInfo = getimagesize($waterImage);
-        $waterImageWidth = $waterImageInfo[0];
-        $waterImageHeight = $waterImageInfo[1];
-        switch ($waterImageInfo[2]) {
-            case 1:
-                $waterIm = @imagecreatefromgif($waterImage);
-                break;
-            case 2:
-                $waterIm = @imagecreatefromjpeg($waterImage);
-                break;
-            case 3:
-                $waterIm = @imagecreatefrompng($waterImage);
-                break;
-            default:
-                ;
-        }
-    }
-
-//从源图片文件新建一幅图像
-    if (!empty($originalImage) && file_exists($originalImage)) {
-        $originalImageInfo = getimagesize($originalImage);
-        $originalImageWidth = $originalImageInfo[0];
-        $originalImageHeight = $originalImageInfo[1];
-        switch ($originalImageInfo[2]) {
-            case 1:
-                $originalIm = @imagecreatefromgif($originalImage);
-                break;
-            case 2:
-                $originalIm = @imagecreatefromjpeg($originalImage);
-                break;
-            case 3:
-                $originalIm = @imagecreatefrompng($originalImage);
-                break;
-            default:
-                ;
-        }
-    }
-//$w、$h是水印图片或水印文字的宽高度
-    if ($isWaterImage) {
-        $w = $waterImageWidth;
-        $h = $waterImageHeight;
-        $label = "图片的";
-    } else {
-        $fontFile = ROOT . '/public/assets/fonts/' . $fontFile;
-        $temp = imagettfbbox(ceil($textFont * 2.5), 0, $fontFile, $waterText);
-        $w = $temp[2] - $temp[6];
-        $h = $temp[3] - $temp[7];
-        $label = "文字区域";
-        unset($temp);
-    }
-    if (($originalImageWidth < $w) || ($originalImageHeight < $h)) {
-        return;
-    }
-    switch ($waterPos) {
-        case 0://随机
-            $posX = rand(0, ($originalImageWidth - $w));
-            $posY = rand(0, ($originalImageHeight - $h));
-            break;
-        case 1://1为顶端居左
-            $posX = 0;
-            $posY = 0;
-            break;
-        case 2://2为顶端居中
-            $posX = ($originalImageWidth - $w) / 2;
-            $posY = 0;
-            break;
-        case 3://3为顶端居右
-            $posX = $originalImageWidth - $w;
-            $posY = 0;
-            break;
-        case 4://4为中部居左
-            $posX = 0;
-            $posY = ($originalImageHeight - $h) / 2;
-            break;
-        case 5://5为中部居中
-            $posX = ($originalImageWidth - $w) / 2;
-            $posY = ($originalImageHeight - $h) / 2;
-            break;
-        case 6://6为中部居右
-            $posX = $originalImageWidth - $w;
-            $posY = ($originalImageHeight - $h) / 2;
-            break;
-        case 7://7为底端居左
-            $posX = 0;
-            $posY = $originalImageHeight - $h;
-            break;
-        case 8://8为底端居中
-            $posX = ($originalImageWidth - $w) / 2;
-            $posY = $originalImageHeight - $h;
-            break;
-        case 9://9为底端居右
-            $posX = $originalImageWidth - $w;
-            $posY = $originalImageHeight - $h;
-            break;
-        default://随机
-            $posX = rand(0, ($originalImageWidth - $w));
-            $posY = rand(0, ($originalImageHeight - $h));
-            break;
-    }
-
-//将水印图片或文字画到源图上
-    if ($isWaterImage) {
-        imagecopy($originalIm, $waterIm, $posX, $posY, 0, 0, $waterImageWidth, $waterImageHeight);
-    } else {
-        if (!empty($textColor) && (strlen($textColor) == 7)) {
-            $r = hexdec(substr($textColor, 1, 2));
-            $g = hexdec(substr($textColor, 3, 2));
-            $b = hexdec(substr($textColor, 5));
-        } else {
-            $r = 255;
-            $g = 255;
-            $b = 255;
-        }
-        imagestring($originalIm, $textFont, $posX, $posY, $waterText, imagecolorallocate($originalIm, $r, $g, $b));
-    }
-//生成水印后的图片
-    //@unlink($originalImage);
-    switch ($originalImageInfo[2]) {
-        case 1:
-            imagegif($originalIm, $originalImage);
-            break;
-        case 2:
-            imagejpeg($originalIm, $originalImage);
-            break;
-        case 3:
-            imagepng($originalIm, $originalImage);
-            break;
-        default:
-            ;
-    }
-//销毁图像
-
-    $waterIm == null ? '' : imagedestroy($waterIm);
-    $originalIm == null ? '' : imagedestroy($originalIm);
-}*/
-
-
-/**
  * 发送邮件
- *
  * */
 function sendmail($to, $subject, $body, $attachment = '', $conf = [])
 {
@@ -633,7 +384,7 @@ function url($path, $parm = '',$havesuffix=true)
     }
 
     //反向匹配路由
-    $result_url = route::set($result_url);
+    $result_url = route::create()->rematch($result_url);
     $result_url = rtrim ($result_url,'/');
     //增加后缀
     $format_suffix = $havesuffix ? config('format_suffix') : '';
@@ -642,9 +393,13 @@ function url($path, $parm = '',$havesuffix=true)
     return $result_url . $format_suffix;
 }
 
-function config($name = '')
+function config($name='',$value='')
 {
-    $config = \heephp\config::get($name);
+    if(empty($value)) {
+        $config = \heephp\config::get($name);
+    }else{
+        $config = \heephp\config::set($name,$value);
+    }
     return $config;
 }
 
@@ -969,27 +724,28 @@ function widget($path,$parm)
     }
 }
 
+ function json($data){
+    return json_encode($data);
+}
+
 spl_autoload_register(function ($class_name) {
 
-    //$backtrace = debug_backtrace();
-    \heephp\logger::warn('自动加载类：' . $class_name);
+    //\heephp\logger::warn('自动加载类：' . $class_name);
 
+    $class_name = str_replace('\\', '/', $class_name);
     $file = './../' . $class_name . '.php';
+
     if (is_file($file)) {
-
-        $class_name = str_replace('\\', '/', $class_name);
-        require_once $file;
-
+        include_once($file) ;
+        return;
     } else {
-
         foreach_dir('./../plugin/', function ($val, $path) use ($class_name) {
             $file = './../plugin/' . $val . '/' . $class_name . '.php';
             if (is_file($file)) {
-                require_once $file;
+                include_once($file) ;
                 return;
             }
         });
-
 
     }
 

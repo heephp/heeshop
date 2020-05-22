@@ -74,84 +74,32 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="section-title">
-                            <h2 class="title">Recent posts</h2>
+                            <h2 class="title">最新资讯</h2>
                         </div>
                     </div>
+                    <?
+                    $rlist = get_article(2,4);
+                    foreach($rlist as $item){?>
                     <!-- post -->
                     <div class="col-md-6">
                         <div class="post">
-                            <a class="post-img" href="blog-post.html"><img src="__res__img/post-1.jpg" alt=""></a>
+                            <a class="post-img" href="blog-post.html"><img src="<?=$item['first_pic']?>" alt=""></a>
                             <div class="post-body">
                                 <div class="post-category">
-                                    <a href="category.html">Travel</a>
+                                    <a href="category.html"><?=$item['category']['name']?></a>
                                 </div>
-                                <h3 class="post-title"><a href="blog-post.html">Sed ut perspiciatis, unde omnis iste natus error sit</a></h3>
+                                <h3 class="post-title"><a href="blog-post.html"><?=$item['title']?></a></h3>
                                 <ul class="post-meta">
-                                    <li><a href="author.html">John Doe</a></li>
-                                    <li>20 April 2018</li>
+                                    <li><a href="author.html"><?=$item['create_user']['name']?></a></li>
+                                    <li><?=$item['create_time']?></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <!-- /post -->
-
-                    <!-- post -->
-                    <div class="col-md-6">
-                        <div class="post">
-                            <a class="post-img" href="blog-post.html"><img src="__res__img/post-2.jpg" alt=""></a>
-                            <div class="post-body">
-                                <div class="post-category">
-                                    <a href="category.html">Technology</a>
-                                    <a href="category.html">Lifestyle</a>
-                                </div>
-                                <h3 class="post-title"><a href="blog-post.html">Ne bonorum praesent cum, labitur persequeris definitionem quo cu?</a></h3>
-                                <ul class="post-meta">
-                                    <li><a href="author.html">John Doe</a></li>
-                                    <li>20 April 2018</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /post -->
-
+                    <?}?>
                     <div class="clearfix visible-md visible-lg"></div>
 
-                    <!-- post -->
-                    <div class="col-md-6">
-                        <div class="post">
-                            <a class="post-img" href="blog-post.html"><img src="__res__img/post-4.jpg" alt=""></a>
-                            <div class="post-body">
-                                <div class="post-category">
-                                    <a href="category.html">Health</a>
-                                </div>
-                                <h3 class="post-title"><a href="blog-post.html">Postea senserit id eos, vivendo periculis ei qui</a></h3>
-                                <ul class="post-meta">
-                                    <li><a href="author.html">John Doe</a></li>
-                                    <li>20 April 2018</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /post -->
-
-                    <!-- post -->
-                    <div class="col-md-6">
-                        <div class="post">
-                            <a class="post-img" href="blog-post.html"><img src="__res__img/post-7.jpg" alt=""></a>
-                            <div class="post-body">
-                                <div class="post-category">
-                                    <a href="category.html">Health</a>
-                                    <a href="category.html">Lifestyle</a>
-                                </div>
-                                <h3 class="post-title"><a href="blog-post.html">Sed ut perspiciatis, unde omnis iste natus error sit</a></h3>
-                                <ul class="post-meta">
-                                    <li><a href="author.html">John Doe</a></li>
-                                    <li>20 April 2018</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /post -->
                 </div>
                 <!-- /row -->
 

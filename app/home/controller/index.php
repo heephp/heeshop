@@ -1,5 +1,7 @@
 <?php
 namespace app\home\controller;
+use app\admin\controller\model;
+use app\home\model\category;
 use  heephp\controller;
 use heephp\formbulider;
 use heephp\wherebuild;
@@ -29,13 +31,9 @@ class index extends base{
 
     public function  index(){
 
-        return $this->fetch();
+        return $this->fetch(conf('skin_index'));
     }
 
-    public function contact(){
-
-        return $this->fetch();
-    }
 
     public function test()
     {
@@ -50,6 +48,83 @@ class index extends base{
             ->sql();
         return var_dump($result);
 
+    }
+
+    public function page($id){
+
+        $mp = model('pages');
+        $p = $mp->get($id);
+
+        if(!$p){
+            return $this->error('页面不存在！');
+        }else{
+            $this->assign('m',$p);
+            return $this->fetch($p['template']);
+        }
+
+    }
+
+    public function list($category_id){
+        $cate = new category();
+        $mc = $cate->get($category_id);
+        if(!$mc){
+            return $this->error('栏目不存在~');
+        }
+
+        $cate->model();
+        //是否是系统模型
+        $issys = $cate['model']['is_sys'];
+        if($issys){
+            //如果是系统模型
+            $table = $cate['model']['table_name'];
+            $model = model($table);
+
+        }else{
+            //如果不是系统模型
+            $mt = model('model_table');
+            $mt->get($cate['model']['model_table_id']);
+            $table = $mt->data['name'];
+
+            $model = modeluser($table);
+        }
+
+
+        $model->where('category_id='.$category_id)->page();
+        $this->assign('list',$model->data);
+        $this->assign('pager',$model->pager['show']);
+
+        return $this->fetch($mc['template_list']);
+    }
+
+    public function detail($category_id,$id){
+        $cate = new category();
+        $mc = $cate->get($category_id);
+        if(!$mc){
+            return $this->error('栏目不存在~');
+        }
+
+        $cate->model();
+        //是否是系统模型
+        $issys = $cate['model']['is_sys'];
+        if($issys){
+            //如果是系统模型
+            $table = $cate['model']['table_name'];
+            $model = model($table);
+
+        }else{
+            //如果不是系统模型
+            $mt = model('model_table');
+            $mt->get($cate['model']['model_table_id']);
+            $table = $mt->data['name'];
+
+            $model = modeluser($table);
+        }
+
+
+        $model->get($id);
+        $this->assign('m',$model->data);
+
+        return $this->fetch($mc['template_detail']);
     }
 
 }

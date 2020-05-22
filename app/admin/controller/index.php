@@ -46,7 +46,7 @@ class index extends adminBase {
             request($this->session_users_group_name_str, $users->data['users_group']['name']);
             request($this->session_users_email_str, $m['email']);
             request($this->session_users_header_str, $m['header']);
-            return $this->rediect('index');
+            return $this->redirect('index');
         } else {
             return $this->error('用户名或密码错误！');
         }
@@ -55,7 +55,7 @@ class index extends adminBase {
 
     function logout(){
         session_destroy();
-        return $this->rediect('login');
+        return $this->redirect('login');
 
     }
 
@@ -107,7 +107,7 @@ class index extends adminBase {
 
         cache()->remove(config('customer_config_name'));
 
-        return $this->rediect('setting');
+        return $this->redirect('setting');
 
     }
 

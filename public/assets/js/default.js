@@ -49,7 +49,7 @@ $('.vcode').on('click',function(e){
 })
 
 $(document).ready(function() {
-	$('.select2').select2({theme: "classic"});
+	$('.select2').select2();
 	$('.select2input').select2({theme: "classic",
 		tags: true,//允许手动输入，生成标签
 		tokenSeparators: [',', ';', '，', '；', ' '],

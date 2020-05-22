@@ -21,7 +21,7 @@ class seo extends adminBase
         foreach ($data as $k=>$v) {
             conf($k, $v);
         }
-        return $this->rediect('edit');
+        return $this->redirect('edit');
 
 
     }

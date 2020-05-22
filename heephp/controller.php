@@ -96,7 +96,7 @@ class controller{
         fclose($fileinfo);
     }
 
-    public function rediect($path){
+    public function redirect($path){
         ob_start();
         header('Location:'.url($path));
         $content = ob_get_contents();
@@ -135,6 +135,17 @@ class controller{
         if($name=='pagevar'){
             return $this->_pagevar;
         }
+    }
+
+    public function __call($name, $arguments)
+    {
+        if(!method_exists($this,'Empty'))
+            if(config('debug'))
+                return '控制器：'.CONTROLLER.'方法：'.$name.' 不存在';
+            else
+                return '您访问的页面不存在！';
+        else
+            return $this->empty();
     }
 
 

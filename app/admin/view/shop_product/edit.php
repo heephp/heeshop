@@ -143,7 +143,6 @@
 
     <? function js()
     { ?>
-        <script type="text/javascript" src="/assets/js/vue.js"></script>
 
         <!-- 配置文件 -->
         <script type="text/javascript" src="/assets/plugin/ueditor/ueditor.config.js"></script>

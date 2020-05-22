@@ -24,6 +24,7 @@ class link_group extends model
     public function links()
     {
         $re = new relation($this, 'link', 'link_group_id', 'link_group_id', 'links');
+        $re->set_rmodel_methods('child');
         return $re->hasmore(false);
     }
 

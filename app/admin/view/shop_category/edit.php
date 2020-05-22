@@ -86,12 +86,11 @@
 
                             <div class="tab-pane fade" id="pills-attr" role="tabpanel" aria-labelledby="pills-attr-tab">
                                 <div class="row">
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-12">
 
                                         <div class="form-group">
                                             <label for="skus">属性</label>
-                                            <select class="form-control select2" multiple="true" name="attrs[]">
-                                                <option value="0">无</option>
+                                            <select class="form-control select2" multiple="true" name="attrs[]" placeholder="属性">
                                                 <?
                                                 $attrsnames = array_column($m['attrs'],'name');
                                                 foreach ($attrs as $s){
@@ -110,12 +109,11 @@
 
                             <div class="tab-pane fade" id="pills-sku" role="tabpanel" aria-labelledby="pills-sku-tab">
                                 <div class="row">
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-12">
 
                                         <div class="form-group">
                                             <label for="skus">SKU</label>
                                             <select class="form-control select2" multiple="true" name="skus[]">
-                                                <option value="0">无</option>
                                                 <?$m['skus']=array_column($m['skus'],'shop_sku_cls');
                                                 foreach ($skus as $s){?>
                                                     <option value="<?=$s['cls']?>" <?=(isset($m)&&!empty($m['skus'])&&in_array($s['cls'],$m['skus']))?'selected':''?>><?=$s['cls']?></option>

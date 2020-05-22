@@ -9,10 +9,12 @@
     opacity:0.9;
     filter:alpha(opacity=90); /* 针对 IE8 以及更早的版本 */
 }
-
+.table td, .table th{
+    padding:0px !important;
+}
 .table>thead>tr>th{
-    padding: 0px !important;
-    text-align: center;
+    /*padding: 0px 0px 0px 10px !important;*/
+    /*text-align: center;*/
     margin: auto;
 }
 .table>thead>tr>th>a{

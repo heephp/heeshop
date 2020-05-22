@@ -27,63 +27,94 @@ trace::set_run_start_time();
 class heephp
 {
 
-    protected $app, $controller, $method;
-    protected $parms = array();
-
     public function __construct()
     {
+        aop('app_init');
+
         $l = new lang();
     }
 
 
     public function run()
     {
+        aop('app_start');
+        $route = route::create();
+
+
+        //匹配到跳转
+        $mredirect = $route->match_redirect();
+        if($mredirect){
+            if(is_callable($mredirect)){
+                $mredirect = $mredirect();
+            }
+            $url=(($mredirect&'http://')=='http://')?$mredirect:(($mredirect&'https://')=='https://'?$mredirect:url($mredirect));
+            header('Location:'.$url);
+            return;
+        }
+
+        //匹配到文件
+        $mfile = $route->match_file();
+        if($mfile){
+            if(is_callable($mfile)){
+                $mfile = $mfile();
+            }
+            $fileinfo=fopen($mfile,'r');
+            header("Content-Type:application/octet-stream");
+            header("Accept-Ranges:bytes");
+            header("Accept-Length:".filesize($mfile));
+            header("Content-Disposition:attachment;filename=".$mfile);
+            echo fread($fileinfo,filesize($mfile));
+            fclose($fileinfo);
+            return;
+        }
+
+        //匹配到域名
+        $mdomain = $route->match_domain();
+        if($mdomain) {
+            if (is_callable($mdomain)) {
+                echo $mdomain();
+                return;
+            }else{
+                $uinfo = explode('/',$mdomain);
+                $domain_uinfo = $route->get_detail_form_urlinfos($uinfo);
+                $this->mvc($domain_uinfo);
+                return;
+            }
+        }
+
+        //匹配到普通路由
+        $murl = $route->match_url();
+        $murl = $route->get_detail_form_urlinfos($murl);
+        $this->mvc($murl);
+
+        aop('app_end');
+    }
+
+    private function mvc($uinfo){
         //获取应用-控制器-方法名，参数信息
-        $app = '';
-        $controller = '';
-        $method = '';
-        $parms = [];
-        urlpaser($app, $controller, $method, $parms);
+        $app = $uinfo['app'];
+        $controller = $uinfo['controller'];
+        $method = $uinfo['method'];
+        $parms = $uinfo['parms'];
+        //urlpaser($app, $controller, $method, $parms);
 
         define('APP', $app);
         define('CONTROLLER', $controller);
         define('METHOD', $method);
         define('PARMS', $parms);
 
-        aop('app_init');
+        aop('app_loaded');
 
         //调用控制器
         $controllerINSTANCE = null;
         $controllerNAME = 'app\\';
-        if (APPS) {
-            $cfile = './../app/' . $app . '/controller/' . $controller . '.php';
-            if (is_file($cfile)) {
-                include_once $cfile;
-                $controllerNAME .= $app . '\controller\\' . $controller;
-            } else {
-                throw new sysExcption('找不到控制器文件' . $cfile);
-            }
-        } else {
-            $cfile = './../app/controller/' . $controller . '.php';
-            if (is_file($cfile)) {
-                include_once $cfile;
-                $controllerNAME .= 'controller\\' . $controller;
-            } else {
-                throw new sysExcption('找不到控制器文件' . $cfile);
-            }
-        }
 
-        if (!class_exists($controllerNAME)) {
-            throw new sysExcption($controllerNAME . '类不存在');
-        }
+        if (APPS)
+            $controllerNAME .= $app . '\controller\\' . $controller;
+        else
+            $controllerNAME .= 'controller\\' . $controller;
 
-        $controllerINSTANCE = new $controllerNAME($app, $controller, $method);
-
-        if (!method_exists($controllerINSTANCE, $method)) {
-            throw new sysExcption($controllerNAME . '类中' . $method . '方法不存在');
-        }
-
-        aop('app_start');
+        $controllerINSTANCE = new $controllerNAME();
 
         try {
             $reinfo = call_user_func_array(array($controllerINSTANCE, $method), $parms);
@@ -92,8 +123,6 @@ class heephp
         } catch (\Error $e) {
             throw new sysExcption($e->getMessage(), $e->getCode());
         }
-
-        aop('app_end');
 
         echo $reinfo;
     }

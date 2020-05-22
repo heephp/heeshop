@@ -56,8 +56,8 @@
                                 <td><?=$m['state']?></td>
                                 <td><?=$m['create_time']?></td>
                                 <td>
-                                    <?$paylink = '支付宝:\\r\\n'.conf('website_url').url('/home/alipay/pay',$m['shop_order_id']).'\\r\\n';
-                                        $paylink .= '微信支付:\\r\\n'.conf('website_url').url('/home/wxpay/pay',$m['shop_order_id'])?>
+                                    <?$paylink = '支付宝:\\r\\n'.url('/home/alipay/pay',$m['shop_order_id']).'\\r\\n';
+                                        $paylink .= '微信支付:\\r\\n'.url('/home/wxpay/pay',$m['shop_order_id'])?>
                                     <a href="javascript:void(0);" onclick="alert('<?=$paylink?>')">支付链接</a>
                                     <a href="<?=url('edit/',[$m['shop_order_id']])?>" class="btn btn-primary btn-sm">详细</a>
                                     <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete/'.$m['shop_order_id'])?>">清空</a>

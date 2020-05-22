@@ -146,7 +146,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">请选择文件：</h5>
+                    <h5 class="modal-title">请选择文件：（当前模板目录）</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -193,7 +193,7 @@
                         root: '/',
                         script: '<?=url('ajax_template_dir')?>'
                     }, function (file) {
-                        $('#template_list').val(file);
+                        $('#template_list').val(file.substr(0,file.length-4));
                         $('#modal_selectfile').modal('hide');
                     });
 
@@ -207,7 +207,7 @@
                         root: '/',
                         script: '<?=url('ajax_template_dir')?>'
                     }, function (file) {
-                        $('#template_detail').val(file);
+                        $('#template_detail').val(file.substr(0,file.length-4));
                         $('#modal_selectfile').modal('hide');
                     });
 

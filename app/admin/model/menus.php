@@ -9,6 +9,7 @@ class menus extends model
     protected $update_message_validata = "标题|必填+已经存在;链接|必填;排序|必填";
     protected $update_validata = "title|must+unique;link|must;ord|must";
     protected $softdel = true;
+    protected $key='menus_id';
 
     public function __construct()
     {

@@ -51,29 +51,5 @@ class users extends model{
         return empty(trim($val))?'/assets/img/profile.jpg':trim($val);
     }
 
-    public function get($id,$softdel=false)
-    {
-        $cachename = md5($id . '_' . $softdel);
-        $this->data = cache($cachename);
-        if (empty($this->data)) {
-            $this->data = parent::get($id, $softdel);
-            cache($cachename, $this->data);
-            return $this->data;
-        }
-        return $this->data;
-    }
-
-        public function find($sql,$softdel=false)
-        {
-            $cachename = md5($sql . '_' . $softdel);
-            $this->data = cache($cachename);
-            if (empty($this->data)) {
-                $this->data = parent::find($sql, $softdel);
-                cache($cachename, $this->data);
-                return $this->data;
-            }
-            return $this->data;
-        }
-
 
 }

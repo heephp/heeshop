@@ -49,7 +49,7 @@ class adminBase extends controller {
         $user_group_id=request($this->session_users_group_id_str);
 //echo request($this->session_users_group_name_str);exit;
         if(empty($user_id)||empty($user_name)||empty($user_group_id)){
-            return $this->rediect('/'.APP.'/index/login');
+            return $this->redirect('/'.APP.'/index/login');
         }
 
         $this->assign('user_id',$user_id);

@@ -33,4 +33,9 @@ class category extends model
         $re = new relation($this,'users','create_users_id','users_id','create_user');
         return $re->belong();
     }
+
+    public function model(){
+        $re = new relation($this,'model','model_id','model_id','model');
+        return $re->belong();
+    }
 }

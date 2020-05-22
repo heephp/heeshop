@@ -31,7 +31,7 @@
 
                     <div class="form-group">
                         <label for="parent_id">选择要设置权限的用户组</label>
-                        <select class="form-control" name="users_group_id" onchange="location.href='<?=url('sys_resource')?>/'+this.value">
+                        <select class="form-control" name="users_group_id" onchange="location.href='<?=url('sys_resource','',false)?>/'+this.value">
                             <option value="0">无</option>
                             <?foreach ($uglist as $g){?>
                                 <option value="<?=$g['users_group_id']?>" <?=$ugid==$g['users_group_id']?'selected':''?>><?=$g['name']?></option>

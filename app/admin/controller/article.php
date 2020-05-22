@@ -50,7 +50,7 @@ class article extends adminBase
         $m=$article->get($id);
         $recommend=$m['recommend']==0?1:0;
         $article->update(['recommend'=>$recommend,'article_id'=>$id]);
-        return $this->rediect('manager');
+        return $this->redirect('manager');
     }
 
     function delete($id)
@@ -71,7 +71,7 @@ class article extends adminBase
         if (!empty($data['article_id'])) {
             $result = $article->update($data);
         } else {
-            $data['create_user_id']=request($this->session_id_str);
+            $data['create_users_id']=request($this->session_id_str);
             $result = $article->insert($data);
         }
         if ($result) {

@@ -209,7 +209,7 @@ class model_table extends adminBase
             }
         }
         //exit;
-        return $this->rediect('manager');
+        return $this->redirect('manager');
 
     }
 

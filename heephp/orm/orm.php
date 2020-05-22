@@ -1,5 +1,6 @@
 <?php
 namespace heephp\orm;
+use heephp\config;
 use heephp\sysExcption;
 
 class orm
@@ -43,7 +44,7 @@ class orm
     {
         if (is_array($fields))
             $this->fields = '`' . implode('`,`', $fields) . '`';
-         else
+        else
             $this->fields = empty($fields) ? '*' : $fields;
 
         return $this;
@@ -326,6 +327,7 @@ class orm
 
     public function cache($iscache=true){
         $this->cache=$iscache;
+        return $this;
     }
 
     public function join($type, $join, $relation = '')
@@ -341,8 +343,8 @@ class orm
 
     public function all()
     {
-        $sql=$this->sql();
-        $data = $this->db->getAll($sql);
+
+        $data = $this->get_data_from_cache('getAll');
         return $data;
     }
 
@@ -356,15 +358,45 @@ class orm
             $this->where =" `$this->key` = '$id'";
         }
 
-        $data = $this->db->getRow($this->sql());
-        return $data;
+        return $this->get_data_from_cache('getRow');
+
+    }
+
+    /**
+     * 从缓存中获取数据
+     * @param $sql
+     * @param $datafun 回调函数
+     * @return bool|array
+     */
+    private function get_data_from_cache($method)
+    {
+        $sql = $this->sql();
+        //是否开启缓存
+        if ($this->cache) {
+
+            $cachename = md5($sql);
+            $cvalue = cache($cachename);
+            if (empty($cvalue)) {
+                $data = $this->db->$method($sql);
+                cache($cachename, $data);
+                return $data;
+            } else {
+                return $cvalue;
+            }
+
+        } else {
+            $data = $this->db->$method($sql);
+            return $data;
+        }
     }
 
     public function value($field='')
     {
-        if(empty($field))
-            return $this->db->getOne($this->sql());
-        else{
+        if(empty($field)) {
+
+            return $this->get_data_from_cache('getOne');
+
+        }else{
             $list = $this->all();
             if(count($list)==1){
                 return $list[0][$field];
@@ -376,15 +408,13 @@ class orm
 
     public function find()
     {
-        $sql=$this->sql();
-        $data = $this->db->getRow($sql);
-        return $data;
+        return $this->get_data_from_cache('getRow');
     }
 
     public function pageparm($val){
         $this->pageparm=empty($val)?'page':$val;
         //路由中注册pagetag
-        \heephp\route::reg_pagetag($this->pageparm);
+        \heephp\route::create()->reg_pagetag($this->pageparm);
         return $this;
     }
 
@@ -429,6 +459,14 @@ class orm
         }
     }
 
+    public function delete($id=''){
+        if(empty($id)){
+            return $this->db->delete($this->table,$this->where);
+        }else{
+            return $this->db->delete($this->table,"`$this->key`='$id''");
+        }
+    }
+
 
     public function sql(){
         if(empty($this->table)){
@@ -452,6 +490,50 @@ class orm
         return $this->sql;
     }
 
+    /** 分页获取数据
+     * @return array 仅返回获取到的数据   分页使用$this->pager获取
+     */
+    public function page(){
+
+        $where=$this->where;
+        $order=$this->order;
+        $fields=empty($this->fields)?' * ':$this->fields;
+        $pname=$this->pageparm;
+
+        if(empty($where))
+            $where='1=1';
+
+        $pagesize=config('pagesize')??20;
+        $page=1;
+        $parms=[];
+        foreach (PARMS as $item) {
+            if(($item&($pname.'_'))==($pname.'_')){
+                $item = explode('_',$item);
+                $page = $item[1];
+            }else
+                $parms[]=$item;
+        }
+
+        $re=[];
+        $count=$this->count('*','c')->value('c');
+        $re['count'] = $count;
+        $re['pagesize']=$pagesize;
+        $re['page']=$page;
+        $re['pagecount']=ceil($count / $pagesize);
+
+        $this->where($where);
+        $this->order($order);
+        $this->field($fields);
+        $this->limit($page==1?0:(($page-1)*$pagesize).','.$pagesize);
+        $data=$this->select();
+
+        $re['show']=(new \heephp\bulider\pager())->bulider($page,$re['pagecount'],$parms,$pname);
+
+        $redata['pager'] = $re;
+        $redata['data'] = $data;
+        return $redata;
+
+    }
 
 }
 

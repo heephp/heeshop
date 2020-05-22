@@ -11,10 +11,9 @@ return [
     'success_page'=>'message/sysSuccess.php',
     'error_page'=>'message/sysError.php',
     'validata_code_session'=>'_validata_code_session_',//验证码的Session字段
-    'customer_config_name'=>'heeframework_config',//用户自定义配置的名称
     'user_model_prefix'=>'user_model_',
     'html_replace'=>[
-        '__res__'=>'/static/skins/default/',
+        '__res__'=>'/static/skins/merged/',
         '__root__'=>'/'
     ],
     'db'=>[
@@ -26,7 +25,7 @@ return [
         'db_name' => 'heecms',
         'table_prefix'=>'heecms_',
         'charset'=>'utf8',
-        'timeformat'=>'Y-m-d H:i:s',
+        'timeformat'=>'y-m-d H:i',
         'dateformat'=>'Y-m-d',
 
     ],
@@ -48,7 +47,7 @@ return [
             'host'=>'127.0.0.1',
             'port'=>'6379'
         ],
-        'memcache'=>[
+        'memcached'=>[
             'host'=>'127.0.0.1',
             'port'=>'11211'
         ]

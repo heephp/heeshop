@@ -21,7 +21,7 @@ class info extends adminBase
         $cate->model();
         $d=$cate->data;
         if($d['model']['is_sys']=='1'){
-            return $this->rediect('/'.APP.'/'.$d['model']['table_name'].'/manager');
+            return $this->redirect('/'.APP.'/'.$d['model']['table_name'].'/manager');
         }else{
             $this->bulider_table($d['model']['model_table_id'],$category_id);
         }
@@ -35,7 +35,7 @@ class info extends adminBase
         $cate->model();
         $d=$cate->data;
         if($d['model']['is_sys']=='1'){
-            return $this->rediect('/'.APP.'/'.$d['model']['table_name'].'/add/');
+            return $this->redirect('/'.APP.'/'.$d['model']['table_name'].'/add/');
         }else{
             $this->bulider_form($d['model']['model_table_id'],0,$category_id);
         }
@@ -50,7 +50,7 @@ class info extends adminBase
         $cate->model();
         $d=$cate->data;
         if($d['model']['is_sys']=='1'){
-            return $this->rediect('/'.APP.'/'.$d['model']['table_name'].'/edit/'.$id);
+            return $this->redirect('/'.APP.'/'.$d['model']['table_name'].'/edit/'.$id);
         }else{
             $this->bulider_form($d['model']['model_table_id'],$id,$category_id);
         }
@@ -66,7 +66,7 @@ class info extends adminBase
         $cate->model();
         $d=$cate->data;
         if($d['model']['is_sys']=='1'){
-            return $this->rediect('/'.APP.'/'.$d['model']['table_name'].'/delete/'.$id);
+            return $this->redirect('/'.APP.'/'.$d['model']['table_name'].'/delete/'.$id);
         }else {
 
             $mt = model('model_table');
@@ -95,7 +95,7 @@ class info extends adminBase
         $d=$cate->data;
         $model_table_id=$d['model']['model_table_id'];
         if($d['model']['is_sys']=='1'){
-            return $this->rediect('/'.APP.'/'.$d['model']['table_name'].'/manager');
+            return $this->redirect('/'.APP.'/'.$d['model']['table_name'].'/manager');
         }
 
         //取出表 ，并从表中读取数据
