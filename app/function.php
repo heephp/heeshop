@@ -88,3 +88,21 @@ function get_article($category_id,$top,$where='1=1',$recommend=1,$order='create_
     $mo->create_user();
     return $mo->data;
 }
+
+function get_shop_category(){
+    $cate = model('shop_category');
+    $cate_list = $cate->all();
+    return $cate_list;
+}
+
+function get_shop_attr(){
+    $attr = model('shop_attr');
+    $attr_list = $attr->all();
+    return $attr_list;
+}
+
+function get_shop_sku(){
+    $sku = model('shop_sku');
+    $sku_list = $sku->all();
+    return $sku_list;
+}

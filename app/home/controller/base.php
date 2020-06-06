@@ -5,6 +5,26 @@ use heephp\logger;
 
 class base extends controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+
+        //读取配置
+        $config=model('config');
+        $webconfig = $config->getall();
+        $this->assign('c',$webconfig);
+
+        //读取菜单
+        $lg = model("link_group");
+        $lg->select();
+        $lg->links();
+
+        foreach ($lg->data as $l){
+            $this->assign($l['tag'],$l['links']);
+        }
+
+    }
+
     /**
      * 获取订单信息 并 生成支付信息
      * @param $orderid

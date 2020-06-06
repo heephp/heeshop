@@ -27,4 +27,4 @@
     </div>
 
 </div>
-<?import('/layout/footer.php')?>
+<?import('/layout/footer.php');?>

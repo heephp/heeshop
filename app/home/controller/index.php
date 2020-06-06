@@ -8,27 +8,6 @@ use heephp\wherebuild;
 
 class index extends base{
 
-    public function __construct()
-    {
-        parent::__construct();
-
-        //读取配置
-        $config=model('config');
-        $webconfig = $config->getall();
-        $this->assign('c',$webconfig);
-
-        //读取菜单
-        $lg = model("link_group");
-        $lg->select();
-        $lg->links();
-
-        foreach ($lg->data as $l){
-            $this->assign($l['tag'],$l['links']);
-        }
-
-    }
-
-
     public function  index(){
 
         return $this->fetch(conf('skin_index'));
@@ -125,6 +104,16 @@ class index extends base{
         $this->assign('m',$model->data);
 
         return $this->fetch($mc['template_detail']);
+    }
+
+    public function product($category_id=0){
+
+        $prod = model('shop_product');
+        $prod->where(empty($category_id)?'1=1':'category_id='.$category_id)->page();
+        $this->assign('list',$prod->data);
+        $this->assign('pager',$prod->pager['show']);
+
+        return $this->fetch('/product');
     }
 
 }
