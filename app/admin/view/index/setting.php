@@ -60,30 +60,7 @@
                                 邮件
                             </a>
                         </li>
-                        <li class="nav-item submenu">
-                            <a class="nav-link" id="pills-contact-tab-icon" role="tab" aria-selected="true" aria-controls="pills-sms-icon" href="#pills-sms-icon" data-toggle="pill">
-                                <i class="icon-speech"></i>
-                                短信
-                            </a>
-                        </li>
-                        <li class="nav-item submenu">
-                            <a class="nav-link" id="pills-contact-tab-icon" role="tab" aria-selected="true" aria-controls="pills-skins-icon" href="#pills-skins-icon" data-toggle="pill">
-                                <i class="icon-screen-desktop"></i>
-                                模板
-                            </a>
-                        </li>
-                        <li class="nav-item submenu">
-                            <a class="nav-link" id="pills-contact-tab-icon" role="tab" aria-selected="true" aria-controls="pills-login-icon" href="#pills-login-icon" data-toggle="pill">
-                                <i class="icon-user-following"></i>
-                                登录
-                            </a>
-                        </li>
-                        <li class="nav-item submenu">
-                            <a class="nav-link" id="pills-contact-tab-icon" role="tab" aria-selected="true" aria-controls="pills-pay-icon" href="#pills-pay-icon" data-toggle="pill">
-                                <i class="icon-paypal"></i>
-                                支付
-                            </a>
-                        </li>
+
                     </ul>
                     </div>
                 </div>
@@ -97,11 +74,6 @@
                         import('setting/setting-watermark.php');
                         import('setting/setting-vcode.php');
                         import('setting/setting-mail.php');
-                        import('setting/setting-sms.php');
-                        import('setting/setting-skins.php');
-                        import('setting/setting-login.php');
-                        import('setting/setting-pay.php');
-
 
                         ?>
                     </div>

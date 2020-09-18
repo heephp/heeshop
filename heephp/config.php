@@ -18,7 +18,7 @@ class config{
             if (is_file('./../app/' . APP . '/config.php')) {
                 $app_config = require './../app/' . APP . '/config.php';
                 foreach ($app_config as $k=>$v){
-                    if(is_array($v)){
+                    if(is_array($k)){
                         $sys_config[$k] = array_merge($sys_config[$k], $app_config[$k]);
                     }else{
                         $sys_config[$k] = $v;

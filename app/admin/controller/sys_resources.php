@@ -28,7 +28,7 @@ class sys_resources extends adminBase{
 
         $res = model('sys_resources');
 
-        $plist = $res->whereEmpty("parent_id")-all();
+        $plist = $res->whereEmpty("parent_id")->all();
         $this->assign('plist',$plist);
 
         $m=$res->get($id);

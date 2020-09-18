@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$" />
+    </include_path>
+  </component>
+  <component name="PhpProjectServersManager">
+    <servers>
+      <server host="localhost" id="50ea4def-9f4d-4dea-ad57-2f92c070e5a2" name="localhost" />
+    </servers>
+  </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />
 </project>

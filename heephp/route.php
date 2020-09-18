@@ -366,6 +366,13 @@ class route
             }
         }
 
+        //识别扩展名
+        if(strpos($method,'.')>-1) {
+            $ms = explode('.', $method);
+            if($ms[count($ms)-1]==config('format_suffix')){
+                $method = substr($method,0,strlen($method)-strlen($ms[count($ms)-1])-1);
+            }
+        }
 
         //如果为空则选择默认的控制器方法
         $re['app'] = APPS ? (empty($app) ? config('default_app') : $app) : '';

@@ -70,11 +70,7 @@
                             <i class="fa fa-search"></i>
                         </a>
                     </li>
-                    <li class="nav-item hidden-caret">
-                        <a href="<?=url('/admin/shop')?>" class="nav-link">
-                            <i class="fa fa-shopping-cart"></i> 商城管理
-                        </a>
-                    </li>
+
                     <li class="nav-item dropdown hidden-caret">
                         <a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-envelope"></i>

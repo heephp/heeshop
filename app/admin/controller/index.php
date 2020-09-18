@@ -132,6 +132,8 @@ class index extends adminBase {
         $this->passauth=false;
         parent::__construct();
 
+        $val = urldecode($val);
+
         $searcher = config('searcher');
         foreach ($searcher as $tb=>$fields){
 
@@ -150,9 +152,9 @@ class index extends adminBase {
                 $sql = substr($sql,0,strlen($sql)-4);
 
             $model = model($tb);
+            $model->where($sql)->order($model->key.' desc')->pageparm('p'.$tb)->page();
 
-            $model->page($sql,$model->key.' desc','*',false,'p'.$tb);
-            $this->assign($tb.'_list',$model->data);//var_dump($model->pager);
+            $this->assign($tb.'_list',$model->data);
             $this->assign($tb.'_pager',$model->pager['show']);
 
         }

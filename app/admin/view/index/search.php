@@ -219,9 +219,9 @@
                                     <td><?=$m['create_user']['username']?></td>
                                     <td><?=$m['create_time']?></td>
                                     <td>
-                                        <a href="<?=url('edit/'.$m['sys_resources_id'])?>" class="btn btn-primary btn-sm">编辑</a>
+                                        <a href="<?=url('/'.APP.'/sys_resources/edit/'.$m['sys_resources_id'])?>" class="btn btn-primary btn-sm">编辑</a>
 
-                                        <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete/'.$m['sys_resources_id'])?>">删除</a>
+                                        <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('/'.APP.'/sys_resources/delete/'.$m['sys_resources_id'])?>">删除</a>
 
                                     </td>
                                 </tr>
@@ -236,9 +236,9 @@
                                             <td><?=$c['create_user']['username']?></td>
                                             <td><?=$c['create_time']?></td>
                                             <td>
-                                                <a href="<?=url('edit/'.$c['sys_resources_id'])?>" class="btn btn-primary btn-sm">编辑</a>
+                                                <a href="<?=url('/'.APP.'/sys_resources/edit/'.$c['sys_resources_id'])?>" class="btn btn-primary btn-sm">编辑</a>
 
-                                                <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete/'.$c['sys_resources_id'])?>">删除</a>
+                                                <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('/'.APP.'/sys_resources/delete/'.$c['sys_resources_id'])?>">删除</a>
 
                                             </td>
                                         </tr>

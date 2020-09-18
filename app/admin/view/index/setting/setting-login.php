@@ -20,14 +20,7 @@
                     <a class="nav-link" id="pills-wb-tab" data-toggle="pill" href="#pills-wb" role="tab"
                        aria-controls="pills-wb" aria-selected="true">微博</a>
                 </li>
-                <li class="nav-item submenu">
-                    <a class="nav-link" id="pills-bd-tab" data-toggle="pill" href="#pills-bd" role="tab"
-                       aria-controls="pills-bd" aria-selected="true">百度</a>
-                </li>
-                <li class="nav-item submenu">
-                    <a class="nav-link" id="pills-ali-tab" data-toggle="pill" href="#pills-ali" role="tab"
-                       aria-controls="pills-ali" aria-selected="true">支付宝</a>
-                </li>
+
 
             </ul>
 
@@ -101,61 +94,6 @@
 
                 </div>
 
-                <div class="tab-pane fade col-md-12" id="pills-bd" role="tablist2"
-                     aria-labelledby="pills-bd-tab">
-
-                    <div class="form-group form-inline">
-                        <label class="col-md-3 col-form-label" for="inlineinput">API Key</label>
-                        <div class="col-md-9 p-0">
-                            <input class="form-control input-full" name="login_bd_appid" type="text" placeholder="" value="<?=$m['login_bd_appid']?>">
-                        </div>
-                    </div>
-
-                    <div class="form-group form-inline">
-                        <label class="col-md-3 col-form-label" for="inlineinput">Secret Key</label>
-                        <div class="col-md-9 p-0">
-                            <input class="form-control input-full" name="login_bd_appsecrt" type="text" placeholder="" value="<?=$m['login_bd_appsecrt']?>">
-                        </div>
-                    </div>
-
-                    <div class="form-group form-inline">
-                        <label class="col-md-3 col-form-label" for="inlineinput">回调地址</label>
-                        <div class="col-md-9 p-0">
-                            <input class="form-control input-full" name="login_bd_callback" type="text" placeholder="" value="<?=$m['login_bd_callback']?>">
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="tab-pane fade col-md-12" id="pills-ali" role="tablist2"
-                     aria-labelledby="pills-ali-tab">
-
-                    <div class="form-group form-inline">
-                        <label class="col-md-3 col-form-label" for="inlineinput">APPID</label>
-                        <div class="col-md-9 p-0">
-                            <input class="form-control input-full" name="login_ali_appid" type="text" placeholder="" value="<?=$m['login_ali_appid']?>">
-                        </div>
-                    </div>
-
-                    <div class="form-group form-inline">
-                        <label class="col-md-3 col-form-label" for="inlineinput">开发者私钥</label>
-                        <div class="col-md-9 p-0">
-                            <textarea class="form-control input-full" name="login_ali_private_key">
-                                <?=$m['login_ali_private_key']?>
-                            </textarea>
-                        </div>
-                    </div>
-
-                    <div class="form-group form-inline">
-                        <label class="col-md-3 col-form-label" for="inlineinput">支付宝公钥</label>
-                        <div class="col-md-9 p-0">
-                            <textarea class="form-control input-full" name="login_ali_public_key">
-                                <?=$m['login_ali_public_key']?>
-                            </textarea>
-                        </div>
-                    </div>
-
-                </div>
             </div>
 
 

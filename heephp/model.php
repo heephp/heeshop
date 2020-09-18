@@ -128,13 +128,14 @@ class model extends orm {
         foreach (PARMS as $item) {
             if(($item&($pname.'_'))==($pname.'_')){
                 $item = explode('_',$item);
-                $page = $item[1];
+                $page = $item[count($item)-1];
             }else
                 $parms[]=$item;
         }
 
         $re=[];
         $count=$this->count('*','c')->value('c');
+        $count = empty($count)?0:$count;
         $re['count'] = $count;
         $re['pagesize']=$pagesize;
         $re['page']=$page;
@@ -143,7 +144,7 @@ class model extends orm {
         $this->where($where);
         $this->order($order);
         $this->field($fields);
-        $this->limit($page==1?0:(($page-1)*$pagesize).','.$pagesize);
+        $this->limit(($page<=1)?"0,$pagesize":((($page-1)*$pagesize).','.$pagesize));
         $data=parent::select();
         $this->get_autofield($data);
 
