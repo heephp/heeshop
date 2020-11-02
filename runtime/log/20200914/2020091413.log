@@ -1,0 +1,20 @@
+2020-09-14 13:57:46 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-14 13:57:46 [DEBUG] [root]select * from heecms_pages       
+2020-09-14 13:57:46 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-14 13:57:46 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-14 13:57:46 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-14 13:57:46 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-14 13:57:46 [DEBUG] [root]select * from heecms_link_group   where  `link_group_id` = '1'    
+2020-09-14 13:57:46 [DEBUG] [root]select count(*) c from heecms_link   where (link_group_id=1 and (parent_id<1 or parent_id is NULL or parent_id=''))    
+2020-09-14 13:57:46 [DEBUG] [root]select  *  from heecms_link   where ((link_group_id=1 and (parent_id<1 or parent_id is NULL or parent_id='')))    
+2020-09-14 13:57:46 [DEBUG] [root]select * from heecms_link   where (`parent_id`='1')  order by parent_id asc  
+2020-09-14 13:57:46 [DEBUG] [root]select * from heecms_link   where (`parent_id`='3')  order by parent_id asc  
+2020-09-14 13:57:46 [DEBUG] [root]select * from heecms_link   where (`parent_id`='4')  order by parent_id asc  
+2020-09-14 13:57:46 [DEBUG] [root]select * from heecms_link   where (`parent_id`='5')  order by parent_id asc  
+2020-09-14 13:57:46 [DEBUG] [root]select * from heecms_link   where (`parent_id`='6')  order by parent_id asc  
+2020-09-14 13:57:46 [DEBUG] [root]select * from heecms_link   where (`parent_id`='7')  order by parent_id asc  
+2020-09-14 13:57:46 [DEBUG] [root]select * from heecms_link   where (`parent_id`='19')  order by parent_id asc  
+2020-09-14 13:57:46 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-14 13:57:46 [DEBUG] [root]select * from heecms_pages       
+2020-09-14 13:57:47 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-14 13:57:47 [DEBUG] [root]select * from heecms_pages       

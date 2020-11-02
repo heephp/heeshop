@@ -1,0 +1,9 @@
+2020-10-22 18:07:41 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-22 18:07:41 [DEBUG] [root]select * from heecms_pages       
+2020-10-22 18:07:41 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-10-22 18:07:50 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-22 18:07:50 [DEBUG] [root]select * from heecms_pages       
+2020-10-22 18:07:54 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-22 18:07:54 [DEBUG] [root]select * from heecms_pages       
+2020-10-22 18:08:03 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-22 18:08:03 [DEBUG] [root]select * from heecms_pages       

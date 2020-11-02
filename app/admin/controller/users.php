@@ -66,6 +66,7 @@ class users extends adminBase
                 validata::showerror();
                 exit;
             }
+            cache()->clear();
         }
         $users = model('users');
         if(!empty($data['users_id'])){

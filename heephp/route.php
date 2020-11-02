@@ -49,6 +49,38 @@ class route
     }
 
     /**
+     * 将目录的所有文件路由到指定控制器
+     * @param $dir  目录名
+     * @param $path  控制器
+     */
+    public static function dir($dir,$path){
+
+        if (is_array($dir)) {
+            throw new sysExcption('路由目录只能为字符串');
+            return;
+        }
+
+        self::_dir(ROOT.$dir,$path);
+
+        //var_dump(self::$routes);
+    }
+
+    private static function _dir($dir,$path,$pre=''){
+
+        foreach_dir($dir,function ($dname,$dpath) use ($dir,$path,$pre){
+
+            if(is_file($dpath.'/'.$dname)) {
+                $dname = pathinfo($dname, PATHINFO_FILENAME);
+                self::$routes[$pre.$dname] = $path . (empty($pre)?'/':'_') . $dname;
+            }else if(strtolower($dname)!='layout'){
+
+                self::_dir($dpath.'/'.$dname,$path.'/'.$dname,$dname.'_');
+            }
+
+        });
+    }
+
+    /**
      * 将域名规则匹配到 控制器 或 控制器方法 或 回调函数
      * @param $rule
      * @param $path

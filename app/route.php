@@ -7,3 +7,4 @@ use heephp\route;
 route::get(['/alipay_pc_' => '/home/alipay/pay/',
         '/wxpay_pc_' => '/home/wxpay/pay/']);
 
+route::dir('/skins/'.conf('website_skin'),'/home/index');

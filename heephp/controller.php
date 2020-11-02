@@ -145,7 +145,7 @@ class controller{
             else
                 return '您访问的页面不存在！';
         else
-            return $this->empty();
+            return $this->empty($name,$arguments);
     }
 
 

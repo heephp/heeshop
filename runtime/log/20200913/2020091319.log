@@ -1,0 +1,506 @@
+2020-09-13 19:10:42 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:10:42 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:10:42 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:10:42 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:10:42 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:10:42 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:10:42 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:10:42 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:11:39 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:11:39 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:11:39 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:11:39 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:11:39 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:11:39 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:11:40 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:11:40 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:02 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:02 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:02 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:15:02 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:15:02 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:15:02 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:15:02 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:15:02 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:02 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:10 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:10 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:10 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:15:10 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:15:10 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:15:10 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:15:11 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:15:11 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:11 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:20 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:20 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:20 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:15:20 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:15:20 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:20 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:20 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-09-13 19:15:20 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:20 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:21 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:21 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:29 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:29 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:29 [DEBUG] [root]select * from heecms_users   where ((`username`='admin' and `password`='e10adc3949ba59abbe56e057f20f883e')) and (`heecms_users`.delete_time IS NULL or `heecms_users`.delete_time <=0 or `heecms_users`.delete_time='')    
+2020-09-13 19:15:29 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:15:29 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`='1')) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:15:30 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:30 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:30 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:15:30 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:15:30 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:15:30 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:15:30 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:30 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:30 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:30 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:30 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:30 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:37 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:37 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:37 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:15:37 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:15:37 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:15:37 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:15:37 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:15:37 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:37 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:39 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:39 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:39 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:15:39 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:15:39 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:15:39 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:15:39 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:15:39 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:39 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:49 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:49 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:49 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:15:49 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:15:49 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:15:49 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:15:49 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:15:49 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:49 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:50 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:50 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:50 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:15:50 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:15:50 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:15:50 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:15:50 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:15:50 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:50 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:51 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:51 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:51 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:15:51 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:15:51 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:15:51 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:15:51 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:15:51 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:51 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:52 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:52 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:15:52 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:15:52 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:15:52 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:15:52 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:15:52 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:15:52 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:15:52 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:16:02 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:16:02 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:16:02 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:16:02 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:16:02 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:16:02 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:16:02 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:16:02 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:16:02 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:16:03 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:16:03 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:16:03 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:16:03 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:16:03 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:16:03 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:16:03 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:16:03 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:16:03 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:16:04 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:16:04 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:16:04 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:16:04 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:16:04 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:16:04 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:16:05 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:16:05 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:16:05 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:16:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:16:35 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:16:35 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:16:35 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:16:35 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:16:35 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:16:35 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:16:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:16:35 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:21 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:21 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:21 [DEBUG] [root]show full columns from `heecms_config`
+2020-09-13 19:17:21 [DEBUG] [root]select `name`,`value` from heecms_config       
+2020-09-13 19:17:21 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-09-13 19:17:21 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-09-13 19:17:21 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:21 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:21 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:21 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:21 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:21 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:21 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:21 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-09-13 19:17:22 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:22 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:22 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:22 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:22 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:22 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:22 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:22 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:22 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:22 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:22 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:22 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-09-13 19:17:22 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:22 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:22 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:22 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:22 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:17:22 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:22 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:27 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:27 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:27 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:17:27 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:17:27 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:17:27 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:17:27 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:17:27 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:27 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:31 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:31 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:31 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:17:31 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:17:31 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:17:31 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:17:31 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:17:31 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:31 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:31 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:31 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:31 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:17:31 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:17:31 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:17:31 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:17:32 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:17:32 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:32 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:33 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:33 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:33 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:17:33 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:17:33 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:17:33 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:17:33 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:17:33 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:33 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:33 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:33 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:33 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:17:33 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:17:33 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:17:33 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:17:33 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:17:33 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:33 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:33 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:17:33 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:17:33 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:17:33 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:17:33 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:17:33 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:33 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:33 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:33 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:33 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:17:33 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:17:33 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:17:33 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:17:33 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:17:33 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:33 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:33 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:33 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:34 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:17:34 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:17:34 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:17:34 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:17:34 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:17:34 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:34 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:34 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:34 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:34 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:17:34 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:17:34 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:17:34 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:17:34 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:17:34 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:34 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:35 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:35 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:17:35 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:17:35 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:17:35 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:17:35 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:17:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:35 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:35 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:35 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:17:35 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:17:35 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:17:35 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:17:35 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:17:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:35 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:35 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:35 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:17:35 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:17:35 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:17:35 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:17:35 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:17:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:35 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:35 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:35 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:17:35 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:17:35 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:17:35 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:17:35 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:17:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:35 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:36 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:36 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:17:36 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:17:36 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:17:36 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:17:36 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:17:36 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:36 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:36 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:36 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:36 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:17:36 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:17:36 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:17:36 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:17:36 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:17:36 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:36 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:36 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:36 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:36 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:17:36 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:17:36 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:17:36 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:17:36 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:17:36 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:36 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:36 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:36 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:36 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:17:36 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:17:36 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:17:36 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:17:37 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:17:37 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:37 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:37 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:37 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:37 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:17:37 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:17:37 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:17:37 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:17:37 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:17:37 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:37 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:37 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:37 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:17:37 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:17:37 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:17:37 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:17:37 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:17:37 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:17:37 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:17:37 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:20:01 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:20:01 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:20:01 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:20:01 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:20:01 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:20:01 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:20:01 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:20:01 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:20:01 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:20:02 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:20:02 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:20:02 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:20:02 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:20:02 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:20:02 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:20:02 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:20:02 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:20:02 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:20:02 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:20:02 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:20:02 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:20:02 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:20:02 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:20:02 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:20:02 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:20:03 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:20:03 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:20:03 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:20:03 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:20:03 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:20:03 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:20:03 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:20:03 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:20:03 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:20:03 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:20:03 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:20:04 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:20:04 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:20:04 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:20:04 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:20:04 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:20:04 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:20:04 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:20:04 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:20:04 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:20:05 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:20:05 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:20:05 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:20:05 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:20:05 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:20:05 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:20:05 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:20:05 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:20:05 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:23:50 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:23:50 [DEBUG] [root]show full columns from `heecms_config`
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-09-13 19:23:50 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:23:50 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:24:03 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:24:03 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:24:08 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:24:08 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:24:08 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:24:08 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:24:08 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:24:08 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:24:08 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:24:08 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:24:09 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:24:09 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:24:15 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:24:15 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:24:15 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:24:15 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:24:15 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:24:15 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:24:15 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:24:15 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:24:15 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:24:15 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:24:15 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:24:15 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:24:15 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:24:15 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:24:15 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:24:29 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:24:29 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:24:29 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:24:29 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:24:29 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:24:29 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:24:30 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:24:30 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:24:30 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:24:30 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:24:30 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:24:30 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:24:32 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:24:32 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:24:32 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:24:32 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:24:32 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:24:32 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:24:32 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:24:32 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:24:32 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:26:04 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:26:04 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:26:04 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:26:04 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:26:04 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:26:04 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:26:04 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:26:04 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:26:04 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:26:09 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:26:09 [DEBUG] [root]select * from heecms_pages       
+2020-09-13 19:26:09 [DEBUG] [root]show full columns from `heecms_users_group`
+2020-09-13 19:26:09 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
+2020-09-13 19:26:09 [DEBUG] [root]show full columns from `heecms_message`
+2020-09-13 19:26:09 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
+2020-09-13 19:26:09 [DEBUG] [root]select *,sum(num) pcount,sum(price) pricecount,count(*) c from heecms_shop_cart    group by create_users_id order by create_time desc  
+2020-09-13 19:26:09 [DEBUG] [root]show full columns from `heecms_pages`
+2020-09-13 19:26:09 [DEBUG] [root]select * from heecms_pages       

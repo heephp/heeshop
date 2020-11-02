@@ -1,0 +1,1030 @@
+2020-10-21 20:30:09 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_config where 1=1  
+2020-10-21 20:30:09 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:30:09 [DEBUG] [root]select `name`,`value` from heecms_config       
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:30:09 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:30:09 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:30:10 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:30:10 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:30:10 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:30:10 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:30:10 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:30:10 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:30:47 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:30:47 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:30:50 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:30:50 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:30:55 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:30:55 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:30:59 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:30:59 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:07 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:07 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:07 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:32:07 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:32:07 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:08 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:08 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:08 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:09 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:09 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:09 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:09 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:28 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:28 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:28 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:32:28 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:32:28 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:32:28 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:28 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:28 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:28 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:28 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:28 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:28 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:28 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:29 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:29 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:29 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:29 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:29 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:29 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:29 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:29 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:29 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:29 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:29 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:29 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:29 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:29 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:29 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:29 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:30 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:30 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:30 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:30 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:30 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:30 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:30 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:30 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:30 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:30 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:30 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:30 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:30 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:30 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:30 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:30 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:30 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:30 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:30 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:30 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:30 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:30 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:30 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:30 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:34 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:34 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:34 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:34 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:34 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:34 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:34 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:34 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:34 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:34 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:34 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:34 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:34 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:34 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:34 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:34 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:34 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:35 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:35 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:35 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:35 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:35 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:35 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:35 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:35 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:35 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:35 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:35 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:35 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:35 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:40 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:32:40 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:32:40 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:32:40 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:34:42 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:34:42 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:34:42 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:34:42 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:35:09 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:35:09 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:09 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:35:09 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:35:10 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:35:10 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:35:10 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:35:10 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:35:10 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:35:10 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:10 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:10 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:10 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:10 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:10 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:10 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:10 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:35:11 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:11 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:11 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:11 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:11 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:11 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:11 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:11 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:11 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:11 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:11 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:11 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:35:11 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:11 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:11 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:11 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:11 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:35:11 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:35:11 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:36:06 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:36:06 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:36:07 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:07 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:36:07 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:36:08 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:36:08 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:36:08 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:36:08 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:08 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:09 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:09 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:09 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:36:09 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:36:55 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:36:55 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:55 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:56 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:36:56 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:36:57 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:36:57 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:36:57 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:36:57 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:36:58 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:36:58 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:36:58 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:36:58 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:37:35 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:37:35 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:37:35 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:37:35 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:37:35 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:37:35 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:35 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:35 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:35 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:35 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:35 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:35 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:35 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:37:36 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:36 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:36 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:36 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:36 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:36 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:36 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:36 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:36 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:36 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:36 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:36 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:37:36 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:36 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:36 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:36 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:36 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:36 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:37:36 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:37:37 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:37:37 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:37 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:37:37 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:37:38 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:37:38 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:37:38 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:37:38 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:38:01 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:38:01 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:01 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:38:01 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:38:17 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:38:17 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:38:17 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:38:17 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:38:17 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:38:17 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:17 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:17 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:17 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:17 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:17 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:17 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:17 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:38:18 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:38:18 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:38:18 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:38:18 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:38:18 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:40:38 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:40:38 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:40:39 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:40:39 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:40:47 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:40:47 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:40:53 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:40:53 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:53 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:40:53 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:40:53 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:40:53 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:40:54 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:40:54 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:40:57 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:40:57 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:40:57 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:40:57 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:40:57 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:57 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:40:58 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:40:58 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:40:58 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:40:58 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:41:06 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_pages       
+2020-10-21 20:41:06 [DEBUG] [root]show full columns from `heecms_config`
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link_group   where  (`heecms_link_group`.delete_time IS NULL or `heecms_link_group`.delete_time <=0 or `heecms_link_group`.delete_time='')    
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='1')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='4')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='5')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='6')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='7')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='19')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='2')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='8')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='9')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='10')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='11')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='12')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='13')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='14')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='15')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='16')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='17')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='18')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`link_group_id`='3')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by link_group_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='20')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='21')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='22')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='23')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:06 [DEBUG] [root]select * from heecms_link   where ((`parent_id`='24')) and (`heecms_link`.delete_time IS NULL or `heecms_link`.delete_time <=0 or `heecms_link`.delete_time='')  order by parent_id asc  
+2020-10-21 20:41:08 [DEBUG] [root]show full columns from `heecms_pages`
+2020-10-21 20:41:08 [DEBUG] [root]select * from heecms_pages       

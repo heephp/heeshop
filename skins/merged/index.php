@@ -1,4 +1,8 @@
-<?import('/layout/header.php',['title'=>'title'])?>
+<?php
+heephp\view::create();
+heephp\view::layout('/layout/layout',['title'=>'123']);
+function view_content(){
+?>
 <div class="banner">
     <div class="agile_dot_info one">
         <div class="container">
@@ -248,4 +252,4 @@
     </div>
 </section>
 <!-- /testimonals section -->
-<?import('/layout/footer.php')?>
+<?php }?>
