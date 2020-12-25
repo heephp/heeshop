@@ -32,25 +32,13 @@
 
                 <div class="card-body">
 
-                    <ul class="nav nav-tabs nav-secondary" id="pills-tab" role="tablist">
-                        <li class="nav-item submenu">
-                            <a class="nav-link active show" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="false">基本</a>
-                        </li>
-                        <li class="nav-item submenu">
-                            <a class="nav-link" id="pills-template-tab" data-toggle="pill" href="#pills-template" role="tab" aria-controls="pills-template" aria-selected="true">模型与模板</a>
-                        </li>
-                    </ul>
-
-
-
-                    <div class="tab-content mt-2 mb-3" id="pills-tabContent">
 
                         <div class="tab-pane fade  show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                                 <input type="hidden" name="category_id" value="<?=$m['category_id']?>">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label for="parent_id">父级</label>
+                                            <label for="parent_id">父级栏目</label>
                                             <select class="form-control select2" name="parent_id">
                                                 <option value="0">无</option>
                                                 <?foreach ($plist as $p){?>
@@ -89,46 +77,9 @@
                                     </div>
                                 </div>
 
-
-
-
                         </div>
 
-                        <div class="tab-pane fade" id="pills-template" role="tabpanel" aria-labelledby="pills-template-tab">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label for="parent_id">模型</label>
-                                        <select class="form-control" name="model_id">
-                                            <option value="0">无</option>
-                                            <?foreach ($mlist as $t){?>
-                                                <option value="<?=$t['model_id']?>" <?=$t['model_id']==$m['model_id']?'selected':''?>><?=$t['name']?></option>
-                                            <?}?>
-                                        </select>
-                                    </div>
 
-                                    <div class="form-group">
-                                        <label for="title">列表模板</label>
-                                        <div class="row">
-                                            <input type="text" class="form-control col-md-9" name="template_list" id="template_list" placeholder="列表模板" value="<?=$m['template_list']??'list.php'?>">
-                                            <input type="button" class="btn btn-primary col-md-3" value="选择模板" onclick="$('#template_list').click()">
-                                        </div>
-                                        <small class="text-small">列表页使用的模板,相对view根目录的路径以'/'开头，相对view/栏目名/目录的无需'/'开头</small>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="title">详细页模板</label>
-                                        <div class="row">
-                                            <input type="text" class="form-control col-md-9" name="template_detail" id="template_detail" placeholder="详细页模板" value="<?=$m['template_detail']??'detail.php'?>">
-                                            <input type="button" class="btn btn-primary col-md-3" value="选择模板" onclick="$('#template_detail').click()">
-                                        </div>
-                                        <small class="text-small">详细页使用的模板,相对view根目录的路径以'/'开头，相对view/栏目名/目录的无需'/'开头</small>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
 
             </div>
                 <div class="card-footer">

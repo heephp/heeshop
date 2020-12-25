@@ -1,1632 +1,837 @@
-/*
- Navicat Premium Data Transfer
+﻿# Host: localhost  (Version: 5.7.26)
+# Date: 2020-11-10 10:25:05
+# Generator: MySQL-Front 5.3  (Build 4.234)
 
- Source Server         : localhost
- Source Server Type    : MySQL
- Source Server Version : 50726
- Source Host           : localhost:3306
- Source Schema         : heecms
+/*!40101 SET NAMES utf8 */;
 
- Target Server Type    : MySQL
- Target Server Version : 50726
- File Encoding         : 65001
+#
+# Structure for table "heecms_ad"
+#
 
- Date: 06/06/2020 10:11:45
-*/
-
-SET NAMES utf8mb4;
-SET FOREIGN_KEY_CHECKS = 0;
-
--- ----------------------------
--- Table structure for heecms_ad
--- ----------------------------
 DROP TABLE IF EXISTS `heecms_ad`;
-CREATE TABLE `heecms_ad`  (
+CREATE TABLE `heecms_ad` (
   `ad_id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `img` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `link` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `hit` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `code` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+  `title` varchar(255) DEFAULT NULL,
+  `img` varchar(255) DEFAULT NULL,
+  `link` varchar(255) DEFAULT NULL,
+  `hit` varchar(255) DEFAULT NULL,
+  `code` text,
   `create_users_id` int(11) DEFAULT NULL,
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`ad_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_ad
--- ----------------------------
-INSERT INTO `heecms_ad` VALUES (1, '广告1', '/啊', '/。', NULL, 'www', NULL, 1589587438, NULL, 1589589557);
+#
+# Data for table "heecms_ad"
+#
 
--- ----------------------------
--- Table structure for heecms_article
--- ----------------------------
+INSERT INTO `heecms_ad` VALUES (1,'广告1','/啊','/。',NULL,'www',NULL,1589587438,NULL,1589589557);
+
+#
+# Structure for table "heecms_article"
+#
+
 DROP TABLE IF EXISTS `heecms_article`;
-CREATE TABLE `heecms_article`  (
+CREATE TABLE `heecms_article` (
   `article_id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) DEFAULT NULL COMMENT '分类Id',
   `create_users_id` int(11) DEFAULT NULL,
-  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `context` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+  `title` varchar(255) DEFAULT NULL,
+  `remark` varchar(255) DEFAULT NULL,
+  `context` text,
   `hit` int(255) DEFAULT NULL COMMENT '点击',
-  `author` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `keyword` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `first_pic` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '首图',
+  `author` varchar(255) DEFAULT NULL,
+  `keyword` varchar(255) DEFAULT NULL,
+  `first_pic` varchar(1000) DEFAULT NULL COMMENT '首图',
   `recommend` int(1) DEFAULT NULL COMMENT '推荐',
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`article_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_article
--- ----------------------------
-INSERT INTO `heecms_article` VALUES (1, 2, NULL, '测试内容', '描述', '&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot; title=&quot;1587782677251926.jpg&quot; alt=&quot;qiyeguanwang.jpg&quot;/&gt;&lt;/p&gt;', NULL, '作者', '关键词', NULL, 1, 1587782763, NULL, NULL);
-INSERT INTO `heecms_article` VALUES (2, 2, NULL, '测试内容标题', '描述', '&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588768789115185.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', NULL, '作者', '关键词,产品,网站,信息,软件', '/upload/20200425/1587782677251926.jpg', 1, 1587782944, 1589683402, NULL);
-INSERT INTO `heecms_article` VALUES (3, 2, NULL, '标题2', '描述2', '&lt;p&gt;内容2&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;ujnnbbhjjvjjvvjhjjvjhvjvjvjvjvjvjhvjvj&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588768789115185.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;', NULL, '作者2', '关键词2,信息', '/upload/20200425/1587782677251926.jpg', 1, 1587784244, 1589539497, NULL);
-INSERT INTO `heecms_article` VALUES (4, 2, 1, '价格', '31', '&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot; alt=&quot;1588760663359953.png&quot;/&gt;&lt;/p&gt;', NULL, '', '', '/upload/20200506/1588760663359953.png', 1, 1589681234, NULL, NULL);
+#
+# Data for table "heecms_article"
+#
 
--- ----------------------------
--- Table structure for heecms_category
--- ----------------------------
+INSERT INTO `heecms_article` VALUES (1,2,NULL,'测试内容','描述','&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot; title=&quot;1587782677251926.jpg&quot; alt=&quot;qiyeguanwang.jpg&quot;/&gt;&lt;/p&gt;',NULL,'作者','关键词',NULL,0,1587782763,NULL,NULL),(2,2,NULL,'测试内容标题','描述','&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588768789115185.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;',NULL,'作者','关键词,产品,网站,信息,软件','/upload/20200425/1587782677251926.jpg',1,1587782944,1589683402,NULL),(3,2,NULL,'标题2','描述2','&lt;p&gt;内容2&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;ujnnbbhjjvjjvvjhjjvjhvjvjvjvjvjvjhvjvj&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588768789115185.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;',NULL,'作者2','关键词2,信息','/upload/20200425/1587782677251926.jpg',1,1587784244,1589539497,NULL),(4,2,1,'价格','31','&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot; alt=&quot;1588760663359953.png&quot;/&gt;&lt;/p&gt;',NULL,'','','/upload/20200506/1588760663359953.png',0,1589681234,NULL,NULL);
+
+#
+# Structure for table "heecms_category"
+#
+
 DROP TABLE IF EXISTS `heecms_category`;
-CREATE TABLE `heecms_category`  (
+CREATE TABLE `heecms_category` (
   `category_id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_id` int(255) DEFAULT NULL,
-  `icon` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `keyword` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `ord` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `icon` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `remark` varchar(255) DEFAULT NULL,
+  `keyword` varchar(255) DEFAULT NULL,
+  `ord` varchar(255) DEFAULT NULL,
   `create_users_id` int(11) DEFAULT NULL,
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   `model_id` int(255) DEFAULT NULL COMMENT '对应的模型Id',
-  `template_list` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '列表页的模板',
-  `template_detail` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '详细页模板',
+  `template_list` varchar(255) DEFAULT NULL COMMENT '列表页的模板',
+  `template_detail` varchar(255) DEFAULT NULL COMMENT '详细页模板',
   PRIMARY KEY (`category_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_category
--- ----------------------------
-INSERT INTO `heecms_category` VALUES (1, 0, 'fas fa-align-justify', '测试栏目', '', '测试 栏目', '1', 1, 1587778965, 1588493740, NULL, 1, 'list.php', 'detail.php');
-INSERT INTO `heecms_category` VALUES (2, 1, '', '测试子栏目2', '', '子栏目', '2', 1, 1587779599, 1590112307, NULL, 1, '/list', '/detail');
-INSERT INTO `heecms_category` VALUES (3, 1, '', 'ceshi1', '', 'key', '3', 1, 1588303244, NULL, 1588470128, 2, 'list.php', 'detail.php');
-INSERT INTO `heecms_category` VALUES (4, 1, '', '测试栏目22', '', '22', '2', 1, 1588472248, NULL, 1588473611, 3, 'list.php', 'detail.php');
-INSERT INTO `heecms_category` VALUES (5, 1, '', '测试栏目3', '', '11', '2', 1, 1588473774, NULL, 1588474366, 4, 'list.php', 'detail.php');
+#
+# Data for table "heecms_category"
+#
 
--- ----------------------------
--- Table structure for heecms_comment
--- ----------------------------
+INSERT INTO `heecms_category` VALUES (1,0,'fas fa-align-justify','测试栏目','','测试 栏目','1',1,1587778965,1588493740,NULL,1,'list.php','detail.php'),(2,1,'','测试子栏目2','','子栏目','2',1,1587779599,1590112307,NULL,1,'/list','/detail'),(3,1,'','ceshi1','','key','3',1,1588303244,NULL,1588470128,2,'list.php','detail.php'),(4,1,'','测试栏目22','','22','2',1,1588472248,NULL,1588473611,3,'list.php','detail.php'),(5,1,'','测试栏目3','','11','2',1,1588473774,NULL,1588474366,4,'list.php','detail.php');
+
+#
+# Structure for table "heecms_comment"
+#
+
 DROP TABLE IF EXISTS `heecms_comment`;
-CREATE TABLE `heecms_comment`  (
+CREATE TABLE `heecms_comment` (
   `comment_id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) DEFAULT NULL COMMENT '栏目的ID',
   `info_id` int(11) DEFAULT NULL COMMENT '对应信息的Id',
   `create_users_id` int(11) DEFAULT NULL,
-  `title` varchar(300) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `contact` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `mobile` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `context` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+  `title` varchar(300) DEFAULT NULL,
+  `contact` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `mobile` varchar(255) DEFAULT NULL,
+  `context` text,
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`comment_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_comment
--- ----------------------------
-INSERT INTO `heecms_comment` VALUES (1, 1, 2, 1, 'alksjd;flas', 'l;akjsd;lfkajs;dfkj', 'asdf@asddf.com', '1878787878', 'lasdjdflajsdlf', 111, 11111, 1588990563);
-INSERT INTO `heecms_comment` VALUES (2, 1, 2, 1, '12312', '123123', 'as@a.com', '2938742987', '98798797', 222222222, 333333333, 1588990714);
+#
+# Data for table "heecms_comment"
+#
 
--- ----------------------------
--- Table structure for heecms_config
--- ----------------------------
+INSERT INTO `heecms_comment` VALUES (1,1,2,1,'alksjd;flas','l;akjsd;lfkajs;dfkj','asdf@asddf.com','1878787878','lasdjdflajsdlf',111,11111,1588990563),(2,1,2,1,'12312','123123','as@a.com','2938742987','98798797',222222222,333333333,1588990714);
+
+#
+# Structure for table "heecms_config"
+#
+
 DROP TABLE IF EXISTS `heecms_config`;
-CREATE TABLE `heecms_config`  (
+CREATE TABLE `heecms_config` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `value` varchar(9999) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `value` varchar(9999) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `remark` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 73 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE=MyISAM AUTO_INCREMENT=73 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_config
--- ----------------------------
-INSERT INTO `heecms_config` VALUES (1, '网站名称', 'website_name', 'HeeCMS官网', NULL);
-INSERT INTO `heecms_config` VALUES (2, '网站关键词', 'website_keyword', 'HeeCMS HeePHP框架', NULL);
-INSERT INTO `heecms_config` VALUES (3, '网站描述', 'website_description', '', NULL);
-INSERT INTO `heecms_config` VALUES (4, '网站网址', 'website_url', 'http://c.com', NULL);
-INSERT INTO `heecms_config` VALUES (5, '网站统计', 'website_tongji', NULL, NULL);
-INSERT INTO `heecms_config` VALUES (6, '网站Logo', 'website_logo', '/static/skins/default/img/logo.png', NULL);
-INSERT INTO `heecms_config` VALUES (7, '公司名称', 'company_name', '', NULL);
-INSERT INTO `heecms_config` VALUES (8, '公司地址', 'company_addr', NULL, NULL);
-INSERT INTO `heecms_config` VALUES (9, '公司电话', 'company_tel', NULL, NULL);
-INSERT INTO `heecms_config` VALUES (10, '公司联系人', 'company_contact', '', NULL);
-INSERT INTO `heecms_config` VALUES (11, '公司联系人电话', 'company_contact_mobile', '', NULL);
-INSERT INTO `heecms_config` VALUES (12, '公司邮箱', 'company_email', '', NULL);
-INSERT INTO `heecms_config` VALUES (13, '开启验证码', 'is_vcode', '1', NULL);
-INSERT INTO `heecms_config` VALUES (14, '上传文件目录', 'upload_dir', '/upload/', NULL);
-INSERT INTO `heecms_config` VALUES (15, '上传文件大小', 'upload_size', '500', '单位K');
-INSERT INTO `heecms_config` VALUES (16, '上传文件格式', 'upload_ext', 'jpg,png,gif,jpge', '*.jpg,*.gif');
-INSERT INTO `heecms_config` VALUES (17, '验证码宽度', 'vcode_width', '100', NULL);
-INSERT INTO `heecms_config` VALUES (18, '验证码高度', 'vcode_heigh', '36', NULL);
-INSERT INTO `heecms_config` VALUES (19, '验证码干扰数量', 'vcode_line_count', '20', '5-20');
-INSERT INTO `heecms_config` VALUES (20, '上传文件命名', 'upload_file_name', 'md5', 'md5,timespan,guid');
-INSERT INTO `heecms_config` VALUES (21, '分页数量', 'pagesize', '0', '如果该值为0，则采用系统配置的值');
-INSERT INTO `heecms_config` VALUES (22, '新用户组', 'newusergroup', NULL, '新用户注册后的用户组');
-INSERT INTO `heecms_config` VALUES (23, '是否开启水印', 'watermark', '1', NULL);
-INSERT INTO `heecms_config` VALUES (24, '水印位置', 'watermark_postion', '8', NULL);
-INSERT INTO `heecms_config` VALUES (25, '水印图片', 'watermark_img', '', NULL);
-INSERT INTO `heecms_config` VALUES (26, '水印字体', 'watermark_font', '', NULL);
-INSERT INTO `heecms_config` VALUES (27, '水印字体大小', 'watermark_fontsize', '16', NULL);
-INSERT INTO `heecms_config` VALUES (28, '发邮件主机', 'mail_smtp_server', '', NULL);
-INSERT INTO `heecms_config` VALUES (29, '发邮件用户名', 'mail_smtp_username', '', NULL);
-INSERT INTO `heecms_config` VALUES (30, '发邮件密码', 'mail_smtp_password', '', NULL);
-INSERT INTO `heecms_config` VALUES (31, '发邮件端口', 'mail_smtp_port', '25', NULL);
-INSERT INTO `heecms_config` VALUES (32, '发件人邮箱', 'mail_sender', '', NULL);
-INSERT INTO `heecms_config` VALUES (33, '短信AccessKeyId', 'sms_accessKeyId', '', NULL);
-INSERT INTO `heecms_config` VALUES (34, '短信签名', 'sms_SingName', '', '短信签名多个用半角逗号分隔');
-INSERT INTO `heecms_config` VALUES (35, '短信模板', 'sms_TemplateCode', '', '短信模板多个用半个逗号分隔');
-INSERT INTO `heecms_config` VALUES (36, '公司介绍', 'company_desc', '', NULL);
-INSERT INTO `heecms_config` VALUES (37, '水印文字', 'watermark_txt', '水印文字', NULL);
-INSERT INTO `heecms_config` VALUES (38, '验证码位数', 'vcode_num', '4', '验证码生成的位数');
-INSERT INTO `heecms_config` VALUES (39, '验证码字符', 'vcode_char', 'lower', 'all所有 char字母 upper大写 lower小写 number数字');
-INSERT INTO `heecms_config` VALUES (40, '验证码字体大小', 'vcode_fontsize', '20', NULL);
-INSERT INTO `heecms_config` VALUES (41, '短信AccessKeySecret', 'sms_accessKeySecret', '', NULL);
-INSERT INTO `heecms_config` VALUES (42, '网站ICP', 'website_icp', '沪ICP备14038410号-13', NULL);
-INSERT INTO `heecms_config` VALUES (45, 'login_qq_appid', 'login_qq_appid', '', NULL);
-INSERT INTO `heecms_config` VALUES (44, '网站模板目录', 'website_skin', 'merged', NULL);
-INSERT INTO `heecms_config` VALUES (46, 'login_qq_appkey', 'login_qq_appkey', '', NULL);
-INSERT INTO `heecms_config` VALUES (47, 'login_qq_callback', 'login_qq_callback', '', NULL);
-INSERT INTO `heecms_config` VALUES (48, 'login_wx_appsecrt', 'login_wx_appsecrt', '', NULL);
-INSERT INTO `heecms_config` VALUES (49, 'login_wx_appid', 'login_wx_appid', '', NULL);
-INSERT INTO `heecms_config` VALUES (50, 'login_wb_appid', 'login_wb_appid', NULL, NULL);
-INSERT INTO `heecms_config` VALUES (51, 'login_wb_appsecrt', 'login_wb_appsecrt', '', NULL);
-INSERT INTO `heecms_config` VALUES (52, 'login_wb_appkey', 'login_wb_appkey', '', NULL);
-INSERT INTO `heecms_config` VALUES (53, 'login_bd_appkey', 'login_bd_appkey', NULL, NULL);
-INSERT INTO `heecms_config` VALUES (54, 'login_bd_appsecrt', 'login_bd_appsecrt', '', NULL);
-INSERT INTO `heecms_config` VALUES (55, 'login_bd_domain', 'login_bd_domain', '', NULL);
-INSERT INTO `heecms_config` VALUES (56, 'login_ali_appid', 'login_ali_appid', '', NULL);
-INSERT INTO `heecms_config` VALUES (57, 'login_ali_private_key', 'login_ali_private_key', '', NULL);
-INSERT INTO `heecms_config` VALUES (58, 'login_ali_public_key', 'login_ali_public_key', '', NULL);
-INSERT INTO `heecms_config` VALUES (59, '微信支付APPID', 'pay_wx_appid', 'wx9d24e93197f03db3', NULL);
-INSERT INTO `heecms_config` VALUES (60, '微信支付商户Id', 'pay_wx_mchid', '1338307101', NULL);
-INSERT INTO `heecms_config` VALUES (61, '微信支付商户密钥', 'pay_wx_key', 'wangyingzhe1986091288wangyingzhe', NULL);
-INSERT INTO `heecms_config` VALUES (62, '微信支付Appsecrt', 'pay_wx_appsecrt', '0371ce107606715cf4bfb9c5c8a53741', NULL);
-INSERT INTO `heecms_config` VALUES (63, '微信支付证书', 'pay_wx_apiclient_cert', '', NULL);
-INSERT INTO `heecms_config` VALUES (64, '微信支付证书', 'pay_wx_apiclient_key', '', NULL);
-INSERT INTO `heecms_config` VALUES (65, '支付宝支付APPId', 'pay_ali_appid', '2018011901968294', NULL);
-INSERT INTO `heecms_config` VALUES (66, '支付宝账号', 'pay_ali_account', 'lvstech@foxmail.com', NULL);
-INSERT INTO `heecms_config` VALUES (67, '支付宝商户私钥', 'pay_ali_private_key', 'MIIEowIBAAKCAQEAjIE8pEP9KNTvakTLGia3YmawOcvtQ+MYR4zNzLMaANf0YInIQJWiL2HY+ocPaEJlLo24uIMxVWkB48Xonz/OAdHkQ1+XM9daU8FVcrXyu4JLuhomnxelJNDdrmNMa+iXK9T+lA3xPi9C5pcgvt5Wtfz8EMZWZaPpOc7wC0YDLFCOpS3SpOTtpGfWk7S4tdxIelW2XtjiaDS+AVxROlArShgk/TEdbxP18me4FAQ3eYv/F1uD/f+1fvAeiR2cEU78aVpG3H0uBa7bSSbhmLGTFvnP0hc+i4TUeIXrmnkmIKC9hZictGcvcXZ/LnLFCAaQI8yb1bpbaOsN/23YtIAmGQIDAQABAoIBAQCB4tbUY6WcIXxRmNbIjhHo/VTbmRD1OPIw8pEtMkRPk1NuCvD8A1eyxZl3v3MWxooSxyCEMYNhmXkNvt6UmL8wH4AMaEm2utXdp1P+fwStIn4uxA3/9DPOHOdRVqpG9vUIqBXPeDQTcE1ALWUwDQnLotrCBxfHTgdEUXDGeypjw5Su6h+FIhtR3ULqxQD87+NV+AXyqThH0LXNq6ERStLi/qgYl1hrHJKn1YlFMlAufnV++Es2GkOUkt7+0xu+CRPZuNGlOdFc7QXrGh2DMwBYeh5TNXl5IbcVehwjGQA0w6EU/TvQl+anlgJk5u/ylaVztxEuLq4FqaYhTH1JVIqBAoGBAM5/Eu7em1Z8sBzfw0HQsESMQ/YTF8AjQ7SMP1kxlGqUTMPEJfKa8wT11cA4CRPMN1c092PR1izATI0xf5AAXOYQn+LFUYVmjegMBFULMGEmSDQuzOhf5Q6RqH66QthMW1Vbeo0CHvSqgoNKFWI1MkXtlrq+ynCq8mEAG+z3DSuFAoGBAK4wLwsxiqltLt2JC7+Q9jKfbSQ1yP9yTYB0mZxWBwRt64O9fcJ24BSQXJ7OpaAkH/Aij59ih71ZXicFQt23NWrhG9WlvhIyn6ukCP2JwA5dBrLOGrhpXwDK1gyURBUMIih5fz7LhKzEdzQynbqbXdbmRyqXftuLrAZ/qfQIA4KFAoGAeC3g2QDZq0Y6QTPBsgZA8EQqMYb/JaXge628GK8QT88rtivsYfvoQBTLaGm0br9F3g1HheLUIYtxgiMyuJ5dctBuHU71mQwMvuZvhwdSCth64VPzkbJt30LKq6a/zJ7z8QOimXqIhaDPAJYXR+bp8WTLergbneL/2ZB0sD9AfPkCgYBNHtg1RIH38XdGbl7dOflHAH76ATY0ow7dSMKaDRyeQWx8r3D2oFslv6TCSwvZkyTw1Nxx3NXsZ5zf+dxY/byQzYndVbyJohA/lijE2DBIK7fDgq0h6MU/PI74ksxx5SVadjB4RPNA6ts8KQzcid1KQDpSCTEJUxWe6vb8LHAhYQKBgAu2m0E0afgXoYDDVrl+ltQB8z/4swJBoaZkuVBRKMoMqXTrNgPj72PNr1vMaEEV3sehuGXiXjKJQPavlexhdOdc9eQVG3Zghqly0SKdJiDsITr6QvlLASjvOE2Y/Q9Jj2Kvuus3493OEldxIlDR8zN1+WG0oZiHA0NBg17CZAQJ', NULL);
-INSERT INTO `heecms_config` VALUES (68, '支付宝公钥', 'pay_ali_public_key', 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjIE8pEP9KNTvakTLGia3YmawOcvtQ+MYR4zNzLMaANf0YInIQJWiL2HY+ocPaEJlLo24uIMxVWkB48Xonz/OAdHkQ1+XM9daU8FVcrXyu4JLuhomnxelJNDdrmNMa+iXK9T+lA3xPi9C5pcgvt5Wtfz8EMZWZaPpOc7wC0YDLFCOpS3SpOTtpGfWk7S4tdxIelW2XtjiaDS+AVxROlArShgk/TEdbxP18me4FAQ3eYv/F1uD/f+1fvAeiR2cEU78aVpG3H0uBa7bSSbhmLGTFvnP0hc+i4TUeIXrmnkmIKC9hZictGcvcXZ/LnLFCAaQI8yb1bpbaOsN/23YtIAmGQIDAQAB', NULL);
-INSERT INTO `heecms_config` VALUES (70, '微信公众号encoding', 'pay_wx_encodingaeskey', 'oYXBEIiGiURMXBUNQVZAkhSaqHDysKxZsRyvemNVTNh', NULL);
-INSERT INTO `heecms_config` VALUES (71, '微信公众号Token', 'pay_wx_token', 'dsfasfdasf352345235ERTWERSgYTU56', NULL);
-INSERT INTO `heecms_config` VALUES (72, '网站首页模板', 'skin_index', '/list', NULL);
+#
+# Data for table "heecms_config"
+#
 
--- ----------------------------
--- Table structure for heecms_country
--- ----------------------------
+/*!40000 ALTER TABLE `heecms_config` DISABLE KEYS */;
+INSERT INTO `heecms_config` VALUES (1,'网站名称','website_name','HeeCMS官网',NULL),(2,'网站关键词','website_keyword','HeeCMS HeePHP框架',NULL),(3,'网站描述','website_description','',NULL),(4,'网站网址','website_url','http://c.com',NULL),(5,'网站统计','website_tongji',NULL,NULL),(6,'网站Logo','website_logo','/static/skins/default/img/logo.png',NULL),(7,'公司名称','company_name','',NULL),(8,'公司地址','company_addr',NULL,NULL),(9,'公司电话','company_tel',NULL,NULL),(10,'公司联系人','company_contact','',NULL),(11,'公司联系人电话','company_contact_mobile','',NULL),(12,'公司邮箱','company_email','',NULL),(13,'开启验证码','is_vcode','1',NULL),(14,'上传文件目录','upload_dir','/upload/',NULL),(15,'上传文件大小','upload_size','500','单位K'),(16,'上传文件格式','upload_ext','jpg,png,gif,jpge','*.jpg,*.gif'),(17,'验证码宽度','vcode_width','100',NULL),(18,'验证码高度','vcode_heigh','36',NULL),(19,'验证码干扰数量','vcode_line_count','20','5-20'),(20,'上传文件命名','upload_file_name','md5','md5,timespan,guid'),(21,'分页数量','pagesize','0','如果该值为0，则采用系统配置的值'),(22,'新用户组','newusergroup',NULL,'新用户注册后的用户组'),(23,'是否开启水印','watermark','1',NULL),(24,'水印位置','watermark_postion','8',NULL),(25,'水印图片','watermark_img','',NULL),(26,'水印字体','watermark_font','',NULL),(27,'水印字体大小','watermark_fontsize','16',NULL),(28,'发邮件主机','mail_smtp_server','',NULL),(29,'发邮件用户名','mail_smtp_username','',NULL),(30,'发邮件密码','mail_smtp_password','',NULL),(31,'发邮件端口','mail_smtp_port','25',NULL),(32,'发件人邮箱','mail_sender','',NULL),(33,'短信AccessKeyId','sms_accessKeyId','',NULL),(34,'短信签名','sms_SingName','','短信签名多个用半角逗号分隔'),(35,'短信模板','sms_TemplateCode','','短信模板多个用半个逗号分隔'),(36,'公司介绍','company_desc','',NULL),(37,'水印文字','watermark_txt','水印文字',NULL),(38,'验证码位数','vcode_num','4','验证码生成的位数'),(39,'验证码字符','vcode_char','lower','all所有 char字母 upper大写 lower小写 number数字'),(40,'验证码字体大小','vcode_fontsize','20',NULL),(41,'短信AccessKeySecret','sms_accessKeySecret','',NULL),(42,'网站ICP','website_icp','沪ICP备14038410号-13',NULL),(44,'网站模板目录','website_skin','blueoffice',NULL),(45,'login_qq_appid','login_qq_appid','',NULL),(46,'login_qq_appkey','login_qq_appkey','',NULL),(47,'login_qq_callback','login_qq_callback','',NULL),(48,'login_wx_appsecrt','login_wx_appsecrt','',NULL),(49,'login_wx_appid','login_wx_appid','',NULL),(50,'login_wb_appid','login_wb_appid',NULL,NULL),(51,'login_wb_appsecrt','login_wb_appsecrt','',NULL),(52,'login_wb_appkey','login_wb_appkey','',NULL),(53,'login_bd_appkey','login_bd_appkey',NULL,NULL),(54,'login_bd_appsecrt','login_bd_appsecrt','',NULL),(55,'login_bd_domain','login_bd_domain','',NULL),(56,'login_ali_appid','login_ali_appid','',NULL),(57,'login_ali_private_key','login_ali_private_key','',NULL),(58,'login_ali_public_key','login_ali_public_key','',NULL),(59,'微信支付APPID','pay_wx_appid','wx9d24e93197f03db3',NULL),(60,'微信支付商户Id','pay_wx_mchid','1338307101',NULL),(61,'微信支付商户密钥','pay_wx_key','wangyingzhe1986091288wangyingzhe',NULL),(62,'微信支付Appsecrt','pay_wx_appsecrt','0371ce107606715cf4bfb9c5c8a53741',NULL),(63,'微信支付证书','pay_wx_apiclient_cert','',NULL),(64,'微信支付证书','pay_wx_apiclient_key','',NULL),(65,'支付宝支付APPId','pay_ali_appid','2018011901968294',NULL),(66,'支付宝账号','pay_ali_account','lvstech@foxmail.com',NULL),(67,'支付宝商户私钥','pay_ali_private_key','MIIEowIBAAKCAQEAjIE8pEP9KNTvakTLGia3YmawOcvtQ+MYR4zNzLMaANf0YInIQJWiL2HY+ocPaEJlLo24uIMxVWkB48Xonz/OAdHkQ1+XM9daU8FVcrXyu4JLuhomnxelJNDdrmNMa+iXK9T+lA3xPi9C5pcgvt5Wtfz8EMZWZaPpOc7wC0YDLFCOpS3SpOTtpGfWk7S4tdxIelW2XtjiaDS+AVxROlArShgk/TEdbxP18me4FAQ3eYv/F1uD/f+1fvAeiR2cEU78aVpG3H0uBa7bSSbhmLGTFvnP0hc+i4TUeIXrmnkmIKC9hZictGcvcXZ/LnLFCAaQI8yb1bpbaOsN/23YtIAmGQIDAQABAoIBAQCB4tbUY6WcIXxRmNbIjhHo/VTbmRD1OPIw8pEtMkRPk1NuCvD8A1eyxZl3v3MWxooSxyCEMYNhmXkNvt6UmL8wH4AMaEm2utXdp1P+fwStIn4uxA3/9DPOHOdRVqpG9vUIqBXPeDQTcE1ALWUwDQnLotrCBxfHTgdEUXDGeypjw5Su6h+FIhtR3ULqxQD87+NV+AXyqThH0LXNq6ERStLi/qgYl1hrHJKn1YlFMlAufnV++Es2GkOUkt7+0xu+CRPZuNGlOdFc7QXrGh2DMwBYeh5TNXl5IbcVehwjGQA0w6EU/TvQl+anlgJk5u/ylaVztxEuLq4FqaYhTH1JVIqBAoGBAM5/Eu7em1Z8sBzfw0HQsESMQ/YTF8AjQ7SMP1kxlGqUTMPEJfKa8wT11cA4CRPMN1c092PR1izATI0xf5AAXOYQn+LFUYVmjegMBFULMGEmSDQuzOhf5Q6RqH66QthMW1Vbeo0CHvSqgoNKFWI1MkXtlrq+ynCq8mEAG+z3DSuFAoGBAK4wLwsxiqltLt2JC7+Q9jKfbSQ1yP9yTYB0mZxWBwRt64O9fcJ24BSQXJ7OpaAkH/Aij59ih71ZXicFQt23NWrhG9WlvhIyn6ukCP2JwA5dBrLOGrhpXwDK1gyURBUMIih5fz7LhKzEdzQynbqbXdbmRyqXftuLrAZ/qfQIA4KFAoGAeC3g2QDZq0Y6QTPBsgZA8EQqMYb/JaXge628GK8QT88rtivsYfvoQBTLaGm0br9F3g1HheLUIYtxgiMyuJ5dctBuHU71mQwMvuZvhwdSCth64VPzkbJt30LKq6a/zJ7z8QOimXqIhaDPAJYXR+bp8WTLergbneL/2ZB0sD9AfPkCgYBNHtg1RIH38XdGbl7dOflHAH76ATY0ow7dSMKaDRyeQWx8r3D2oFslv6TCSwvZkyTw1Nxx3NXsZ5zf+dxY/byQzYndVbyJohA/lijE2DBIK7fDgq0h6MU/PI74ksxx5SVadjB4RPNA6ts8KQzcid1KQDpSCTEJUxWe6vb8LHAhYQKBgAu2m0E0afgXoYDDVrl+ltQB8z/4swJBoaZkuVBRKMoMqXTrNgPj72PNr1vMaEEV3sehuGXiXjKJQPavlexhdOdc9eQVG3Zghqly0SKdJiDsITr6QvlLASjvOE2Y/Q9Jj2Kvuus3493OEldxIlDR8zN1+WG0oZiHA0NBg17CZAQJ',NULL),(68,'支付宝公钥','pay_ali_public_key','MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjIE8pEP9KNTvakTLGia3YmawOcvtQ+MYR4zNzLMaANf0YInIQJWiL2HY+ocPaEJlLo24uIMxVWkB48Xonz/OAdHkQ1+XM9daU8FVcrXyu4JLuhomnxelJNDdrmNMa+iXK9T+lA3xPi9C5pcgvt5Wtfz8EMZWZaPpOc7wC0YDLFCOpS3SpOTtpGfWk7S4tdxIelW2XtjiaDS+AVxROlArShgk/TEdbxP18me4FAQ3eYv/F1uD/f+1fvAeiR2cEU78aVpG3H0uBa7bSSbhmLGTFvnP0hc+i4TUeIXrmnkmIKC9hZictGcvcXZ/LnLFCAaQI8yb1bpbaOsN/23YtIAmGQIDAQAB',NULL),(70,'微信公众号encoding','pay_wx_encodingaeskey','oYXBEIiGiURMXBUNQVZAkhSaqHDysKxZsRyvemNVTNh',NULL),(71,'微信公众号Token','pay_wx_token','dsfasfdasf352345235ERTWERSgYTU56',NULL),(72,'网站首页模板','skin_index','/index',NULL);
+/*!40000 ALTER TABLE `heecms_config` ENABLE KEYS */;
+
+#
+# Structure for table "heecms_country"
+#
+
 DROP TABLE IF EXISTS `heecms_country`;
-CREATE TABLE `heecms_country`  (
+CREATE TABLE `heecms_country` (
   `country_id` int(11) NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `code` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `code` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`country_id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_country
--- ----------------------------
-INSERT INTO `heecms_country` VALUES (1, '中国', 'CHINA');
-INSERT INTO `heecms_country` VALUES (2, '阿尔巴尼亚', 'ALB');
-INSERT INTO `heecms_country` VALUES (3, '阿尔及利亚', 'DZA');
-INSERT INTO `heecms_country` VALUES (4, '阿富汗', 'AFG');
-INSERT INTO `heecms_country` VALUES (5, '阿根廷', 'ARG');
-INSERT INTO `heecms_country` VALUES (6, '阿拉伯联合酋长国', 'ARE');
-INSERT INTO `heecms_country` VALUES (7, '阿鲁巴', 'ABW');
-INSERT INTO `heecms_country` VALUES (8, '阿曼', 'OMN');
-INSERT INTO `heecms_country` VALUES (9, '阿塞拜疆', 'AZE');
-INSERT INTO `heecms_country` VALUES (10, '阿森松岛', 'ASC');
-INSERT INTO `heecms_country` VALUES (11, '埃及', 'EGY');
-INSERT INTO `heecms_country` VALUES (12, '埃塞俄比亚', 'ETH');
-INSERT INTO `heecms_country` VALUES (13, '爱尔兰', 'IRL');
-INSERT INTO `heecms_country` VALUES (14, '爱沙尼亚', 'EST');
-INSERT INTO `heecms_country` VALUES (15, '安道尔', 'AND');
-INSERT INTO `heecms_country` VALUES (16, '安哥拉', 'AGO');
-INSERT INTO `heecms_country` VALUES (17, '安圭拉', 'AIA');
-INSERT INTO `heecms_country` VALUES (18, '安提瓜岛和巴布达', 'ATG');
-INSERT INTO `heecms_country` VALUES (19, '奥地利', 'AUT');
-INSERT INTO `heecms_country` VALUES (20, '奥兰群岛', 'ALA');
-INSERT INTO `heecms_country` VALUES (21, '澳大利亚', 'AUS');
-INSERT INTO `heecms_country` VALUES (22, '巴巴多斯岛', 'BRB');
-INSERT INTO `heecms_country` VALUES (23, '巴布亚新几内亚', 'PNG');
-INSERT INTO `heecms_country` VALUES (24, '巴哈马', 'BHS');
-INSERT INTO `heecms_country` VALUES (25, '巴基斯坦', 'PAK');
-INSERT INTO `heecms_country` VALUES (26, '巴拉圭', 'PRY');
-INSERT INTO `heecms_country` VALUES (27, '巴勒斯坦', 'PSE');
-INSERT INTO `heecms_country` VALUES (28, '巴林', 'BHR');
-INSERT INTO `heecms_country` VALUES (29, '巴拿马', 'PAN');
-INSERT INTO `heecms_country` VALUES (30, '巴西', 'BRA');
-INSERT INTO `heecms_country` VALUES (31, '白俄罗斯', 'BLR');
-INSERT INTO `heecms_country` VALUES (32, '百慕大', 'BMU');
-INSERT INTO `heecms_country` VALUES (33, '保加利亚', 'BGR');
-INSERT INTO `heecms_country` VALUES (34, '北马里亚纳群岛', 'MNP');
-INSERT INTO `heecms_country` VALUES (35, '贝宁', 'BEN');
-INSERT INTO `heecms_country` VALUES (36, '比利时', 'BEL');
-INSERT INTO `heecms_country` VALUES (37, '冰岛', 'ISL');
-INSERT INTO `heecms_country` VALUES (38, '波多黎各', 'PRI');
-INSERT INTO `heecms_country` VALUES (39, '波兰', 'POL');
-INSERT INTO `heecms_country` VALUES (40, '波斯尼亚和黑塞哥维那', 'BIH');
-INSERT INTO `heecms_country` VALUES (41, '玻利维亚', 'BOL');
-INSERT INTO `heecms_country` VALUES (42, '伯利兹', 'BLZ');
-INSERT INTO `heecms_country` VALUES (43, '博茨瓦纳', 'BWA');
-INSERT INTO `heecms_country` VALUES (44, '不丹', 'BTN');
-INSERT INTO `heecms_country` VALUES (45, '布基纳法索', 'BFA');
-INSERT INTO `heecms_country` VALUES (46, '布隆迪', 'BDI');
-INSERT INTO `heecms_country` VALUES (47, '布韦岛', 'BVT');
-INSERT INTO `heecms_country` VALUES (48, '朝鲜', 'PRK');
-INSERT INTO `heecms_country` VALUES (49, '丹麦', 'DNK');
-INSERT INTO `heecms_country` VALUES (50, '德国', 'DEU');
-INSERT INTO `heecms_country` VALUES (51, '东帝汶', 'TLS');
-INSERT INTO `heecms_country` VALUES (52, '多哥', 'TGO');
-INSERT INTO `heecms_country` VALUES (53, '多米尼加', 'DMA');
-INSERT INTO `heecms_country` VALUES (54, '多米尼加共和国', 'DOM');
-INSERT INTO `heecms_country` VALUES (55, '俄罗斯', 'RUS');
-INSERT INTO `heecms_country` VALUES (56, '厄瓜多尔', 'ECU');
-INSERT INTO `heecms_country` VALUES (57, '厄立特里亚', 'ERI');
-INSERT INTO `heecms_country` VALUES (58, '法国', 'FRA');
-INSERT INTO `heecms_country` VALUES (59, '法罗群岛', 'FRO');
-INSERT INTO `heecms_country` VALUES (60, '法属波利尼西亚', 'PYF');
-INSERT INTO `heecms_country` VALUES (61, '法属圭亚那', 'GUF');
-INSERT INTO `heecms_country` VALUES (62, '法属南部领地', 'ATF');
-INSERT INTO `heecms_country` VALUES (63, '梵蒂冈', 'VAT');
-INSERT INTO `heecms_country` VALUES (64, '菲律宾', 'PHL');
-INSERT INTO `heecms_country` VALUES (65, '斐济', 'FJI');
-INSERT INTO `heecms_country` VALUES (66, '芬兰', 'FIN');
-INSERT INTO `heecms_country` VALUES (67, '佛得角', 'CPV');
-INSERT INTO `heecms_country` VALUES (68, '弗兰克群岛', 'FLK');
-INSERT INTO `heecms_country` VALUES (69, '冈比亚', 'GMB');
-INSERT INTO `heecms_country` VALUES (70, '刚果', 'COG');
-INSERT INTO `heecms_country` VALUES (71, '刚果民主共和国', 'COD');
-INSERT INTO `heecms_country` VALUES (72, '哥伦比亚', 'COL');
-INSERT INTO `heecms_country` VALUES (73, '哥斯达黎加', 'CRI');
-INSERT INTO `heecms_country` VALUES (74, '格恩西岛', 'GGY');
-INSERT INTO `heecms_country` VALUES (75, '格林纳达', 'GRD');
-INSERT INTO `heecms_country` VALUES (76, '格陵兰', 'GRL');
-INSERT INTO `heecms_country` VALUES (77, '古巴', 'CUB');
-INSERT INTO `heecms_country` VALUES (78, '瓜德罗普', 'GLP');
-INSERT INTO `heecms_country` VALUES (79, '关岛', 'GUM');
-INSERT INTO `heecms_country` VALUES (80, '圭亚那', 'GUY');
-INSERT INTO `heecms_country` VALUES (81, '哈萨克斯坦', 'KAZ');
-INSERT INTO `heecms_country` VALUES (82, '海地', 'HTI');
-INSERT INTO `heecms_country` VALUES (83, '韩国', 'KOR');
-INSERT INTO `heecms_country` VALUES (84, '荷兰', 'NLD');
-INSERT INTO `heecms_country` VALUES (85, '荷属安地列斯', 'ANT');
-INSERT INTO `heecms_country` VALUES (86, '赫德和麦克唐纳群岛', 'HMD');
-INSERT INTO `heecms_country` VALUES (87, '洪都拉斯', 'HND');
-INSERT INTO `heecms_country` VALUES (88, '基里巴斯', 'KIR');
-INSERT INTO `heecms_country` VALUES (89, '吉布提', 'DJI');
-INSERT INTO `heecms_country` VALUES (90, '吉尔吉斯斯坦', 'KGZ');
-INSERT INTO `heecms_country` VALUES (91, '几内亚', 'GIN');
-INSERT INTO `heecms_country` VALUES (92, '几内亚比绍', 'GNB');
-INSERT INTO `heecms_country` VALUES (93, '加拿大', 'CAN');
-INSERT INTO `heecms_country` VALUES (94, '加纳', 'GHA');
-INSERT INTO `heecms_country` VALUES (95, '加蓬', 'GAB');
-INSERT INTO `heecms_country` VALUES (96, '柬埔寨', 'KHM');
-INSERT INTO `heecms_country` VALUES (97, '捷克共和国', 'CZE');
-INSERT INTO `heecms_country` VALUES (98, '津巴布韦', 'ZWE');
-INSERT INTO `heecms_country` VALUES (99, '喀麦隆', 'CMR');
-INSERT INTO `heecms_country` VALUES (100, '卡塔尔', 'QAT');
-INSERT INTO `heecms_country` VALUES (101, '开曼群岛', 'CYM');
-INSERT INTO `heecms_country` VALUES (102, '科科斯群岛', 'CCK');
-INSERT INTO `heecms_country` VALUES (103, '科摩罗', 'COM');
-INSERT INTO `heecms_country` VALUES (104, '科特迪瓦', 'CIV');
-INSERT INTO `heecms_country` VALUES (105, '科威特', 'KWT');
-INSERT INTO `heecms_country` VALUES (106, '克罗地亚', 'HRV');
-INSERT INTO `heecms_country` VALUES (107, '肯尼亚', 'KEN');
-INSERT INTO `heecms_country` VALUES (108, '库克群岛', 'COK');
-INSERT INTO `heecms_country` VALUES (109, '拉脱维亚', 'LVA');
-INSERT INTO `heecms_country` VALUES (110, '莱索托', 'LSO');
-INSERT INTO `heecms_country` VALUES (111, '老挝', 'LAO');
-INSERT INTO `heecms_country` VALUES (112, '黎巴嫩', 'LBN');
-INSERT INTO `heecms_country` VALUES (113, '立陶宛', 'LTU');
-INSERT INTO `heecms_country` VALUES (114, '利比里亚', 'LBR');
-INSERT INTO `heecms_country` VALUES (115, '利比亚', 'LBY');
-INSERT INTO `heecms_country` VALUES (116, '列支敦士登', 'LIE');
-INSERT INTO `heecms_country` VALUES (117, '留尼旺岛', 'REU');
-INSERT INTO `heecms_country` VALUES (118, '卢森堡', 'LUX');
-INSERT INTO `heecms_country` VALUES (119, '卢旺达', 'RWA');
-INSERT INTO `heecms_country` VALUES (120, '罗马尼亚', 'ROU');
-INSERT INTO `heecms_country` VALUES (121, '马达加斯加', 'MDG');
-INSERT INTO `heecms_country` VALUES (122, '马尔代夫', 'MDV');
-INSERT INTO `heecms_country` VALUES (123, '马耳他', 'MLT');
-INSERT INTO `heecms_country` VALUES (124, '马拉维', 'MWI');
-INSERT INTO `heecms_country` VALUES (125, '马来西亚', 'MYS');
-INSERT INTO `heecms_country` VALUES (126, '马里', 'MLI');
-INSERT INTO `heecms_country` VALUES (127, '马其顿', 'MKD');
-INSERT INTO `heecms_country` VALUES (128, '马绍尔群岛', 'MHL');
-INSERT INTO `heecms_country` VALUES (129, '马提尼克', 'MTQ');
-INSERT INTO `heecms_country` VALUES (130, '马约特岛', 'MYT');
-INSERT INTO `heecms_country` VALUES (131, '曼岛', 'IMN');
-INSERT INTO `heecms_country` VALUES (132, '毛里求斯', 'MUS');
-INSERT INTO `heecms_country` VALUES (133, '毛里塔尼亚', 'MRT');
-INSERT INTO `heecms_country` VALUES (134, '美国', 'USA');
-INSERT INTO `heecms_country` VALUES (135, '美属萨摩亚', 'ASM');
-INSERT INTO `heecms_country` VALUES (136, '美属外岛', 'UMI');
-INSERT INTO `heecms_country` VALUES (137, '蒙古', 'MNG');
-INSERT INTO `heecms_country` VALUES (138, '蒙特塞拉特', 'MSR');
-INSERT INTO `heecms_country` VALUES (139, '孟加拉', 'BGD');
-INSERT INTO `heecms_country` VALUES (140, '秘鲁', 'PER');
-INSERT INTO `heecms_country` VALUES (141, '密克罗尼西亚', 'FSM');
-INSERT INTO `heecms_country` VALUES (142, '缅甸', 'MMR');
-INSERT INTO `heecms_country` VALUES (143, '摩尔多瓦', 'MDA');
-INSERT INTO `heecms_country` VALUES (144, '摩洛哥', 'MAR');
-INSERT INTO `heecms_country` VALUES (145, '摩纳哥', 'MCO');
-INSERT INTO `heecms_country` VALUES (146, '莫桑比克', 'MOZ');
-INSERT INTO `heecms_country` VALUES (147, '墨西哥', 'MEX');
-INSERT INTO `heecms_country` VALUES (148, '纳米比亚', 'NAM');
-INSERT INTO `heecms_country` VALUES (149, '南非', 'ZAF');
-INSERT INTO `heecms_country` VALUES (150, '南极洲', 'ATA');
-INSERT INTO `heecms_country` VALUES (151, '南乔治亚和南桑德威奇群岛', 'SGS');
-INSERT INTO `heecms_country` VALUES (152, '瑙鲁', 'NRU');
-INSERT INTO `heecms_country` VALUES (153, '尼泊尔', 'NPL');
-INSERT INTO `heecms_country` VALUES (154, '尼加拉瓜', 'NIC');
-INSERT INTO `heecms_country` VALUES (155, '尼日尔', 'NER');
-INSERT INTO `heecms_country` VALUES (156, '尼日利亚', 'NGA');
-INSERT INTO `heecms_country` VALUES (157, '纽埃', 'NIU');
-INSERT INTO `heecms_country` VALUES (158, '挪威', 'idR');
-INSERT INTO `heecms_country` VALUES (159, '诺福克', 'NFK');
-INSERT INTO `heecms_country` VALUES (160, '帕劳群岛', 'PLW');
-INSERT INTO `heecms_country` VALUES (161, '皮特凯恩', 'PCN');
-INSERT INTO `heecms_country` VALUES (162, '葡萄牙', 'PRT');
-INSERT INTO `heecms_country` VALUES (163, '乔治亚', 'GEO');
-INSERT INTO `heecms_country` VALUES (164, '日本', 'JPN');
-INSERT INTO `heecms_country` VALUES (165, '瑞典', 'SWE');
-INSERT INTO `heecms_country` VALUES (166, '瑞士', 'CHE');
-INSERT INTO `heecms_country` VALUES (167, '萨尔瓦多', 'SLV');
-INSERT INTO `heecms_country` VALUES (168, '萨摩亚', 'WSM');
-INSERT INTO `heecms_country` VALUES (169, '塞尔维亚,黑山', 'SCG');
-INSERT INTO `heecms_country` VALUES (170, '塞拉利昂', 'SLE');
-INSERT INTO `heecms_country` VALUES (171, '塞内加尔', 'SEN');
-INSERT INTO `heecms_country` VALUES (172, '塞浦路斯', 'CYP');
-INSERT INTO `heecms_country` VALUES (173, '塞舌尔', 'SYC');
-INSERT INTO `heecms_country` VALUES (174, '沙特阿拉伯', 'SAU');
-INSERT INTO `heecms_country` VALUES (175, '圣诞岛', 'CXR');
-INSERT INTO `heecms_country` VALUES (176, '圣多美和普林西比', 'STP');
-INSERT INTO `heecms_country` VALUES (177, '圣赫勒拿', 'SHN');
-INSERT INTO `heecms_country` VALUES (178, '圣基茨和尼维斯', 'KNA');
-INSERT INTO `heecms_country` VALUES (179, '圣卢西亚', 'LCA');
-INSERT INTO `heecms_country` VALUES (180, '圣马力诺', 'SMR');
-INSERT INTO `heecms_country` VALUES (181, '圣皮埃尔和米克隆群岛', 'SPM');
-INSERT INTO `heecms_country` VALUES (182, '圣文森特和格林纳丁斯', 'VCT');
-INSERT INTO `heecms_country` VALUES (183, '斯里兰卡', 'LKA');
-INSERT INTO `heecms_country` VALUES (184, '斯洛伐克', 'SVK');
-INSERT INTO `heecms_country` VALUES (185, '斯洛文尼亚', 'SVN');
-INSERT INTO `heecms_country` VALUES (186, '斯瓦尔巴和扬马廷', 'SJM');
-INSERT INTO `heecms_country` VALUES (187, '斯威士兰', 'SWZ');
-INSERT INTO `heecms_country` VALUES (188, '苏丹', 'SDN');
-INSERT INTO `heecms_country` VALUES (189, '苏里南', 'SUR');
-INSERT INTO `heecms_country` VALUES (190, '所罗门群岛', 'SLB');
-INSERT INTO `heecms_country` VALUES (191, '索马里', 'SOM');
-INSERT INTO `heecms_country` VALUES (192, '塔吉克斯坦', 'TJK');
-INSERT INTO `heecms_country` VALUES (193, '泰国', 'THA');
-INSERT INTO `heecms_country` VALUES (194, '坦桑尼亚', 'TZA');
-INSERT INTO `heecms_country` VALUES (195, '汤加', 'TON');
-INSERT INTO `heecms_country` VALUES (196, '特克斯和凯克特斯群岛', 'TCA');
-INSERT INTO `heecms_country` VALUES (197, '特里斯坦达昆哈', 'TAA');
-INSERT INTO `heecms_country` VALUES (198, '特立尼达和多巴哥', 'TTO');
-INSERT INTO `heecms_country` VALUES (199, '突尼斯', 'TUN');
-INSERT INTO `heecms_country` VALUES (200, '图瓦卢', 'TUV');
-INSERT INTO `heecms_country` VALUES (201, '土耳其', 'TUR');
-INSERT INTO `heecms_country` VALUES (202, '土库曼斯坦', 'TKM');
-INSERT INTO `heecms_country` VALUES (203, '托克劳', 'TKL');
-INSERT INTO `heecms_country` VALUES (204, '瓦利斯和福图纳', 'WLF');
-INSERT INTO `heecms_country` VALUES (205, '瓦努阿图', 'VUT');
-INSERT INTO `heecms_country` VALUES (206, '危地马拉', 'GTM');
-INSERT INTO `heecms_country` VALUES (207, '维尔京群岛，美属', 'VIR');
-INSERT INTO `heecms_country` VALUES (208, '维尔京群岛，英属', 'VGB');
-INSERT INTO `heecms_country` VALUES (209, '委内瑞拉', 'VEN');
-INSERT INTO `heecms_country` VALUES (210, '文莱', 'BRN');
-INSERT INTO `heecms_country` VALUES (211, '乌干达', 'UGA');
-INSERT INTO `heecms_country` VALUES (212, '乌克兰', 'UKR');
-INSERT INTO `heecms_country` VALUES (213, '乌拉圭', 'URY');
-INSERT INTO `heecms_country` VALUES (214, '乌兹别克斯坦', 'UZB');
-INSERT INTO `heecms_country` VALUES (215, '西班牙', 'ESP');
-INSERT INTO `heecms_country` VALUES (216, '希腊', 'GRC');
-INSERT INTO `heecms_country` VALUES (217, '新加坡', 'SGP');
-INSERT INTO `heecms_country` VALUES (218, '新喀里多尼亚', 'NCL');
-INSERT INTO `heecms_country` VALUES (219, '新西兰', 'NZL');
-INSERT INTO `heecms_country` VALUES (220, '匈牙利', 'HUN');
-INSERT INTO `heecms_country` VALUES (221, '叙利亚', 'SYR');
-INSERT INTO `heecms_country` VALUES (222, '牙买加', 'JAM');
-INSERT INTO `heecms_country` VALUES (223, '亚美尼亚', 'ARM');
-INSERT INTO `heecms_country` VALUES (224, '也门', 'YEM');
-INSERT INTO `heecms_country` VALUES (225, '伊拉克', 'IRQ');
-INSERT INTO `heecms_country` VALUES (226, '伊朗', 'IRN');
-INSERT INTO `heecms_country` VALUES (227, '以色列', 'ISR');
-INSERT INTO `heecms_country` VALUES (228, '意大利', 'ITA');
-INSERT INTO `heecms_country` VALUES (229, '印度', 'IND');
-INSERT INTO `heecms_country` VALUES (230, '印度尼西亚', 'IDN');
-INSERT INTO `heecms_country` VALUES (231, '英国', 'GBR');
-INSERT INTO `heecms_country` VALUES (232, '英属印度洋领地', 'IOT');
-INSERT INTO `heecms_country` VALUES (233, '约旦', 'JOR');
-INSERT INTO `heecms_country` VALUES (234, '越南', 'VNM');
-INSERT INTO `heecms_country` VALUES (235, '赞比亚', 'ZMB');
-INSERT INTO `heecms_country` VALUES (236, '泽西岛', 'JEY');
-INSERT INTO `heecms_country` VALUES (237, '乍得', 'TCD');
-INSERT INTO `heecms_country` VALUES (238, '直布罗陀', 'GIB');
-INSERT INTO `heecms_country` VALUES (239, '智利', 'CHL');
-INSERT INTO `heecms_country` VALUES (240, '中非共和国', 'CAF');
+#
+# Data for table "heecms_country"
+#
 
--- ----------------------------
--- Table structure for heecms_guestbook
--- ----------------------------
+/*!40000 ALTER TABLE `heecms_country` DISABLE KEYS */;
+INSERT INTO `heecms_country` VALUES (1,'中国','CHINA'),(2,'阿尔巴尼亚','ALB'),(3,'阿尔及利亚','DZA'),(4,'阿富汗','AFG'),(5,'阿根廷','ARG'),(6,'阿拉伯联合酋长国','ARE'),(7,'阿鲁巴','ABW'),(8,'阿曼','OMN'),(9,'阿塞拜疆','AZE'),(10,'阿森松岛','ASC'),(11,'埃及','EGY'),(12,'埃塞俄比亚','ETH'),(13,'爱尔兰','IRL'),(14,'爱沙尼亚','EST'),(15,'安道尔','AND'),(16,'安哥拉','AGO'),(17,'安圭拉','AIA'),(18,'安提瓜岛和巴布达','ATG'),(19,'奥地利','AUT'),(20,'奥兰群岛','ALA'),(21,'澳大利亚','AUS'),(22,'巴巴多斯岛','BRB'),(23,'巴布亚新几内亚','PNG'),(24,'巴哈马','BHS'),(25,'巴基斯坦','PAK'),(26,'巴拉圭','PRY'),(27,'巴勒斯坦','PSE'),(28,'巴林','BHR'),(29,'巴拿马','PAN'),(30,'巴西','BRA'),(31,'白俄罗斯','BLR'),(32,'百慕大','BMU'),(33,'保加利亚','BGR'),(34,'北马里亚纳群岛','MNP'),(35,'贝宁','BEN'),(36,'比利时','BEL'),(37,'冰岛','ISL'),(38,'波多黎各','PRI'),(39,'波兰','POL'),(40,'波斯尼亚和黑塞哥维那','BIH'),(41,'玻利维亚','BOL'),(42,'伯利兹','BLZ'),(43,'博茨瓦纳','BWA'),(44,'不丹','BTN'),(45,'布基纳法索','BFA'),(46,'布隆迪','BDI'),(47,'布韦岛','BVT'),(48,'朝鲜','PRK'),(49,'丹麦','DNK'),(50,'德国','DEU'),(51,'东帝汶','TLS'),(52,'多哥','TGO'),(53,'多米尼加','DMA'),(54,'多米尼加共和国','DOM'),(55,'俄罗斯','RUS'),(56,'厄瓜多尔','ECU'),(57,'厄立特里亚','ERI'),(58,'法国','FRA'),(59,'法罗群岛','FRO'),(60,'法属波利尼西亚','PYF'),(61,'法属圭亚那','GUF'),(62,'法属南部领地','ATF'),(63,'梵蒂冈','VAT'),(64,'菲律宾','PHL'),(65,'斐济','FJI'),(66,'芬兰','FIN'),(67,'佛得角','CPV'),(68,'弗兰克群岛','FLK'),(69,'冈比亚','GMB'),(70,'刚果','COG'),(71,'刚果民主共和国','COD'),(72,'哥伦比亚','COL'),(73,'哥斯达黎加','CRI'),(74,'格恩西岛','GGY'),(75,'格林纳达','GRD'),(76,'格陵兰','GRL'),(77,'古巴','CUB'),(78,'瓜德罗普','GLP'),(79,'关岛','GUM'),(80,'圭亚那','GUY'),(81,'哈萨克斯坦','KAZ'),(82,'海地','HTI'),(83,'韩国','KOR'),(84,'荷兰','NLD'),(85,'荷属安地列斯','ANT'),(86,'赫德和麦克唐纳群岛','HMD'),(87,'洪都拉斯','HND'),(88,'基里巴斯','KIR'),(89,'吉布提','DJI'),(90,'吉尔吉斯斯坦','KGZ'),(91,'几内亚','GIN'),(92,'几内亚比绍','GNB'),(93,'加拿大','CAN'),(94,'加纳','GHA'),(95,'加蓬','GAB'),(96,'柬埔寨','KHM'),(97,'捷克共和国','CZE'),(98,'津巴布韦','ZWE'),(99,'喀麦隆','CMR'),(100,'卡塔尔','QAT'),(101,'开曼群岛','CYM'),(102,'科科斯群岛','CCK'),(103,'科摩罗','COM'),(104,'科特迪瓦','CIV'),(105,'科威特','KWT'),(106,'克罗地亚','HRV'),(107,'肯尼亚','KEN'),(108,'库克群岛','COK'),(109,'拉脱维亚','LVA'),(110,'莱索托','LSO'),(111,'老挝','LAO'),(112,'黎巴嫩','LBN'),(113,'立陶宛','LTU'),(114,'利比里亚','LBR'),(115,'利比亚','LBY'),(116,'列支敦士登','LIE'),(117,'留尼旺岛','REU'),(118,'卢森堡','LUX'),(119,'卢旺达','RWA'),(120,'罗马尼亚','ROU'),(121,'马达加斯加','MDG'),(122,'马尔代夫','MDV'),(123,'马耳他','MLT'),(124,'马拉维','MWI'),(125,'马来西亚','MYS'),(126,'马里','MLI'),(127,'马其顿','MKD'),(128,'马绍尔群岛','MHL'),(129,'马提尼克','MTQ'),(130,'马约特岛','MYT'),(131,'曼岛','IMN'),(132,'毛里求斯','MUS'),(133,'毛里塔尼亚','MRT'),(134,'美国','USA'),(135,'美属萨摩亚','ASM'),(136,'美属外岛','UMI'),(137,'蒙古','MNG'),(138,'蒙特塞拉特','MSR'),(139,'孟加拉','BGD'),(140,'秘鲁','PER'),(141,'密克罗尼西亚','FSM'),(142,'缅甸','MMR'),(143,'摩尔多瓦','MDA'),(144,'摩洛哥','MAR'),(145,'摩纳哥','MCO'),(146,'莫桑比克','MOZ'),(147,'墨西哥','MEX'),(148,'纳米比亚','NAM'),(149,'南非','ZAF'),(150,'南极洲','ATA'),(151,'南乔治亚和南桑德威奇群岛','SGS'),(152,'瑙鲁','NRU'),(153,'尼泊尔','NPL'),(154,'尼加拉瓜','NIC'),(155,'尼日尔','NER'),(156,'尼日利亚','NGA'),(157,'纽埃','NIU'),(158,'挪威','idR'),(159,'诺福克','NFK'),(160,'帕劳群岛','PLW'),(161,'皮特凯恩','PCN'),(162,'葡萄牙','PRT'),(163,'乔治亚','GEO'),(164,'日本','JPN'),(165,'瑞典','SWE'),(166,'瑞士','CHE'),(167,'萨尔瓦多','SLV'),(168,'萨摩亚','WSM'),(169,'塞尔维亚,黑山','SCG'),(170,'塞拉利昂','SLE'),(171,'塞内加尔','SEN'),(172,'塞浦路斯','CYP'),(173,'塞舌尔','SYC'),(174,'沙特阿拉伯','SAU'),(175,'圣诞岛','CXR'),(176,'圣多美和普林西比','STP'),(177,'圣赫勒拿','SHN'),(178,'圣基茨和尼维斯','KNA'),(179,'圣卢西亚','LCA'),(180,'圣马力诺','SMR'),(181,'圣皮埃尔和米克隆群岛','SPM'),(182,'圣文森特和格林纳丁斯','VCT'),(183,'斯里兰卡','LKA'),(184,'斯洛伐克','SVK'),(185,'斯洛文尼亚','SVN'),(186,'斯瓦尔巴和扬马廷','SJM'),(187,'斯威士兰','SWZ'),(188,'苏丹','SDN'),(189,'苏里南','SUR'),(190,'所罗门群岛','SLB'),(191,'索马里','SOM'),(192,'塔吉克斯坦','TJK'),(193,'泰国','THA'),(194,'坦桑尼亚','TZA'),(195,'汤加','TON'),(196,'特克斯和凯克特斯群岛','TCA'),(197,'特里斯坦达昆哈','TAA'),(198,'特立尼达和多巴哥','TTO'),(199,'突尼斯','TUN'),(200,'图瓦卢','TUV'),(201,'土耳其','TUR'),(202,'土库曼斯坦','TKM'),(203,'托克劳','TKL'),(204,'瓦利斯和福图纳','WLF'),(205,'瓦努阿图','VUT'),(206,'危地马拉','GTM'),(207,'维尔京群岛，美属','VIR'),(208,'维尔京群岛，英属','VGB'),(209,'委内瑞拉','VEN'),(210,'文莱','BRN'),(211,'乌干达','UGA'),(212,'乌克兰','UKR'),(213,'乌拉圭','URY'),(214,'乌兹别克斯坦','UZB'),(215,'西班牙','ESP'),(216,'希腊','GRC'),(217,'新加坡','SGP'),(218,'新喀里多尼亚','NCL'),(219,'新西兰','NZL'),(220,'匈牙利','HUN'),(221,'叙利亚','SYR'),(222,'牙买加','JAM'),(223,'亚美尼亚','ARM'),(224,'也门','YEM'),(225,'伊拉克','IRQ'),(226,'伊朗','IRN'),(227,'以色列','ISR'),(228,'意大利','ITA'),(229,'印度','IND'),(230,'印度尼西亚','IDN'),(231,'英国','GBR'),(232,'英属印度洋领地','IOT'),(233,'约旦','JOR'),(234,'越南','VNM'),(235,'赞比亚','ZMB'),(236,'泽西岛','JEY'),(237,'乍得','TCD'),(238,'直布罗陀','GIB'),(239,'智利','CHL'),(240,'中非共和国','CAF');
+/*!40000 ALTER TABLE `heecms_country` ENABLE KEYS */;
+
+#
+# Structure for table "heecms_guestbook"
+#
+
 DROP TABLE IF EXISTS `heecms_guestbook`;
-CREATE TABLE `heecms_guestbook`  (
+CREATE TABLE `heecms_guestbook` (
   `guestbook_id` int(11) NOT NULL AUTO_INCREMENT,
-  `contact` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `nickname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `mobile` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `qq` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `wx` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `context` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+  `contact` varchar(255) DEFAULT NULL,
+  `nickname` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `mobile` varchar(255) DEFAULT NULL,
+  `qq` varchar(255) DEFAULT NULL,
+  `wx` varchar(255) DEFAULT NULL,
+  `context` text,
   `create_time` int(11) DEFAULT NULL,
   `create_users_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`guestbook_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_guestbook
--- ----------------------------
-INSERT INTO `heecms_guestbook` VALUES (1, 'a', 'b', 'c@q.com', '133333', '888888', 'wx111', 'c1122', 1111111111, NULL);
+#
+# Data for table "heecms_guestbook"
+#
 
--- ----------------------------
--- Table structure for heecms_link
--- ----------------------------
+INSERT INTO `heecms_guestbook` VALUES (1,'a','b','c@q.com','133333','888888','wx111','c1122',1111111111,NULL);
+
+#
+# Structure for table "heecms_link"
+#
+
 DROP TABLE IF EXISTS `heecms_link`;
-CREATE TABLE `heecms_link`  (
+CREATE TABLE `heecms_link` (
   `link_id` int(11) NOT NULL AUTO_INCREMENT,
-  `parent_id` int(11) DEFAULT 0 COMMENT '上级菜单',
+  `parent_id` int(11) DEFAULT '0' COMMENT '上级菜单',
   `link_group_id` int(11) DEFAULT NULL,
-  `icon` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `url` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `hit` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `ord` int(255) DEFAULT 0,
-  `target` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `icon` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `url` varchar(255) DEFAULT NULL,
+  `hit` varchar(255) DEFAULT NULL,
+  `remark` varchar(255) DEFAULT NULL,
+  `ord` int(255) DEFAULT '0',
+  `target` varchar(255) DEFAULT NULL,
   `create_users_id` int(11) DEFAULT NULL,
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`link_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 25 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_link
--- ----------------------------
-INSERT INTO `heecms_link` VALUES (1, 0, 1, '', '首页', '/', NULL, '', 1, '_self', NULL, 1587775067, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (3, 0, 1, '', '价格', '/index#price', NULL, '', 2, '_self', NULL, 1587909065, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (4, 0, 1, '', '问答', '/index#faq', NULL, '', 3, '_self', NULL, 1587909125, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (5, 0, 1, '', '资讯', '/iindex#news', NULL, '', 4, '_self', NULL, 1587909155, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (6, 0, 1, '', '下载', 'http://www.github.com/heephp/heecms', NULL, '', 5, '_blank', NULL, 1587909200, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (7, 0, 1, '', '社区', 'http://bbs.heephp.com', NULL, '', 6, NULL, NULL, 1587909232, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (8, 0, 2, '', 'CSDN', 'http://www.csdn.net', NULL, '', 1, NULL, NULL, 1587913259, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (9, 0, 2, '', '新浪网', 'http://www.sina.com.cn', NULL, '', 2, NULL, NULL, 1587913279, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (10, 0, 2, '', 'QQ', 'http://www.qq.com', NULL, '', 3, NULL, NULL, 1587914384, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (11, 0, 2, '', '腾讯云', 'http://cloud.tencent.com', NULL, '', 4, NULL, NULL, 1587914438, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (12, 0, 2, '', 'GitHub', 'http://www.github.com', NULL, '', 5, NULL, NULL, 1587914471, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (13, 0, 2, '', '阿里云', 'http://www.aliyun.com', NULL, '', 6, NULL, NULL, 1587914507, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (14, 0, 2, '', '腾讯开发平台', 'http://open.qq.com/', NULL, '', 8, NULL, NULL, 1587914606, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (15, 0, 2, '', '码云', 'http://www.gitee.com', NULL, '', 9, NULL, NULL, 1587914640, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (16, 0, 2, '', '西部数码', 'http://www.west.cn', NULL, '', 10, NULL, NULL, 1587914778, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (17, 0, 2, '', '绿松科技', 'http://www.lvstech.cn', NULL, '', 11, NULL, NULL, 1587914829, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (18, 0, 2, '', 'HeePHP', 'http://www.heephp.com', NULL, '', 12, NULL, NULL, 1587914856, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (19, 0, 1, '', '联系', '/contact', NULL, '', 9, '_self', NULL, 1587916351, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (20, 0, 3, '', '关于我们', '#', NULL, '', 1, '_blank', NULL, 1589982765, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (21, 0, 3, '', '联系我们', '#', NULL, '', 2, '_blank', NULL, 1589982788, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (22, 0, 3, '', '产品中心', '#', NULL, '', 3, '_blank', NULL, 1589982818, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (23, 0, 3, '', '服务项目', '#', NULL, '', 4, '_blank', NULL, 1589983279, NULL, NULL);
-INSERT INTO `heecms_link` VALUES (24, 0, 3, '', '招贤纳士', '#', NULL, '', 5, '_blank', NULL, 1589983298, NULL, NULL);
+#
+# Data for table "heecms_link"
+#
 
--- ----------------------------
--- Table structure for heecms_link_group
--- ----------------------------
+INSERT INTO `heecms_link` VALUES (1,0,1,'','首页','/',NULL,'',1,'_self',NULL,1587775067,NULL,NULL),(3,0,1,'','价格','/price',NULL,'',2,'_blank',NULL,1587909065,1600062420,NULL),(4,0,1,'','问答','/faq',NULL,'',3,'_blank',NULL,1587909125,1600062431,NULL),(5,0,1,'','资讯','/iindex#news',NULL,'',4,'_self',NULL,1587909155,NULL,NULL),(6,0,1,'','下载','http://www.github.com/heephp/heecms',NULL,'',5,'_blank',NULL,1587909200,NULL,NULL),(7,0,1,'','社区','http://bbs.heephp.com',NULL,'',6,NULL,NULL,1587909232,NULL,NULL),(8,0,2,'','CSDN','http://www.csdn.net',NULL,'',1,NULL,NULL,1587913259,NULL,NULL),(9,0,2,'','新浪网','http://www.sina.com.cn',NULL,'',2,NULL,NULL,1587913279,NULL,NULL),(10,0,2,'','QQ','http://www.qq.com',NULL,'',3,NULL,NULL,1587914384,NULL,NULL),(11,0,2,'','腾讯云','http://cloud.tencent.com',NULL,'',4,NULL,NULL,1587914438,NULL,NULL),(12,0,2,'','GitHub','http://www.github.com',NULL,'',5,NULL,NULL,1587914471,NULL,NULL),(13,0,2,'','阿里云','http://www.aliyun.com',NULL,'',6,NULL,NULL,1587914507,NULL,NULL),(14,0,2,'','腾讯开发平台','http://open.qq.com/',NULL,'',8,NULL,NULL,1587914606,NULL,NULL),(15,0,2,'','码云','http://www.gitee.com',NULL,'',9,NULL,NULL,1587914640,NULL,NULL),(16,0,2,'','西部数码','http://www.west.cn',NULL,'',10,NULL,NULL,1587914778,NULL,NULL),(17,0,2,'','绿松科技','http://www.lvstech.cn',NULL,'',11,NULL,NULL,1587914829,NULL,NULL),(18,0,2,'','HeePHP','http://www.heephp.com',NULL,'',12,NULL,NULL,1587914856,NULL,NULL),(19,0,1,'','联系','/contact',NULL,'',9,'_self',NULL,1587916351,NULL,NULL),(20,0,3,'','关于我们','#',NULL,'',1,'_blank',NULL,1589982765,NULL,NULL),(21,0,3,'','联系我们','#',NULL,'',2,'_blank',NULL,1589982788,NULL,NULL),(22,0,3,'','产品中心','#',NULL,'',3,'_blank',NULL,1589982818,NULL,NULL),(23,0,3,'','服务项目','#',NULL,'',4,'_blank',NULL,1589983279,NULL,NULL),(24,0,3,'','招贤纳士','#',NULL,'',5,'_blank',NULL,1589983298,NULL,NULL);
+
+#
+# Structure for table "heecms_link_group"
+#
+
 DROP TABLE IF EXISTS `heecms_link_group`;
-CREATE TABLE `heecms_link_group`  (
+CREATE TABLE `heecms_link_group` (
   `link_group_id` int(11) NOT NULL AUTO_INCREMENT,
-  `tag` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `tag` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
   `create_users_id` int(11) DEFAULT NULL,
-  `disable` int(255) DEFAULT 0,
+  `disable` int(255) DEFAULT '0',
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`link_group_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_link_group
--- ----------------------------
-INSERT INTO `heecms_link_group` VALUES (1, 'navlinks', '导航菜单', 1, 0, 1587762883, 1589239277, NULL);
-INSERT INTO `heecms_link_group` VALUES (2, 'friendlink', '友情链接', 1, 0, 1587913051, NULL, NULL);
-INSERT INTO `heecms_link_group` VALUES (3, 'footnav', '底部链接', 1, 0, 1589982719, NULL, NULL);
+#
+# Data for table "heecms_link_group"
+#
 
--- ----------------------------
--- Table structure for heecms_menus
--- ----------------------------
+INSERT INTO `heecms_link_group` VALUES (1,'navlinks','导航菜单',1,0,1587762883,1589239277,NULL),(2,'friendlink','友情链接',1,0,1587913051,NULL,NULL),(3,'footnav','底部链接',1,0,1589982719,NULL,NULL);
+
+#
+# Structure for table "heecms_menus"
+#
+
 DROP TABLE IF EXISTS `heecms_menus`;
-CREATE TABLE `heecms_menus`  (
+CREATE TABLE `heecms_menus` (
   `menus_id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) DEFAULT NULL,
-  `icon` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '图标',
-  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `link` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `ord` int(255) DEFAULT 0 COMMENT '排序',
+  `icon` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '图标',
+  `title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `link` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `remark` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ord` int(255) DEFAULT '0' COMMENT '排序',
   `create_users_id` int(11) DEFAULT NULL,
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`menus_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 28 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_menus
--- ----------------------------
-INSERT INTO `heecms_menus` VALUES (16, 15, '', '评论管理', '/comment/manager', '', 1, 1, 1588943137, NULL, NULL);
-INSERT INTO `heecms_menus` VALUES (15, 0, 'fab fa-facebook-messenger', '反馈', '/', '', 3, 1, 1588942737, 1588943102, NULL);
-INSERT INTO `heecms_menus` VALUES (14, 12, '', '数据表管理', '/model_table/manager', '', 2, 1, 1588244441, NULL, NULL);
-INSERT INTO `heecms_menus` VALUES (13, 12, '', '模型管理', '/model/manager', '', 1, 1, 1588244418, NULL, NULL);
-INSERT INTO `heecms_menus` VALUES (11, 10, '', '信息管理', '/category/managerinfo', '', 1, 1, 1587761857, 1588294134, NULL);
-INSERT INTO `heecms_menus` VALUES (10, 0, 'fas fa-file-alt', '信息', '/', '', 2, 1, 1587761733, NULL, NULL);
-INSERT INTO `heecms_menus` VALUES (9, 8, '', '栏目管理', '/category/manager', '', 2, 1, 1587761691, NULL, NULL);
-INSERT INTO `heecms_menus` VALUES (8, 0, 'fas fa-columns', '栏目', '/', '', 1, 1, 1587761621, NULL, NULL);
-INSERT INTO `heecms_menus` VALUES (12, 0, 'fab fa-modx', '模型与表', '/', '', 99, 1, 1588244382, 1589939058, NULL);
-INSERT INTO `heecms_menus` VALUES (6, 5, '', '链接管理', '/link_group/manager', '', 1, 1, 1587761543, NULL, NULL);
-INSERT INTO `heecms_menus` VALUES (5, 0, 'fas fa-link', '链接', '/', '', 3, 1, 1587761486, NULL, NULL);
-INSERT INTO `heecms_menus` VALUES (17, 15, '', '留言管理', '/guestbook/manager', '', 2, 1, 1588943168, 1588943196, NULL);
-INSERT INTO `heecms_menus` VALUES (18, 0, 'fas fa-adjust', '营销与优化', '/', '', 5, 1, 1589584735, 1589938296, NULL);
-INSERT INTO `heecms_menus` VALUES (19, 18, '', '广告管理', '/ad/manager', '', 1, 1, 1589584779, NULL, NULL);
-INSERT INTO `heecms_menus` VALUES (20, 18, '', '网站优化', '/seo/edit', '', 2, 1, 1589586359, NULL, NULL);
-INSERT INTO `heecms_menus` VALUES (21, 0, 'fab fa-pagelines', '模板', '/', '', 6, 1, 1589938348, 1589938373, NULL);
-INSERT INTO `heecms_menus` VALUES (22, 21, '', '本地模板', '/moban/local', '', 1, 1, 1589938412, NULL, NULL);
-INSERT INTO `heecms_menus` VALUES (23, 21, '', '在线模板', '/moban/online', '', 2, 1, 1589938437, NULL, NULL);
-INSERT INTO `heecms_menus` VALUES (24, 0, 'fab fa-html5', '页面', '/', '', 7, 1, 1589939046, NULL, NULL);
-INSERT INTO `heecms_menus` VALUES (25, 24, '', '页面管理', '/page/manager', '', 1, 1, 1589939125, NULL, NULL);
-INSERT INTO `heecms_menus` VALUES (26, 24, '', '新增页面', '/page/add', '', 2, 1, 1589939157, NULL, NULL);
-INSERT INTO `heecms_menus` VALUES (27, 21, '', '模板设置', '/moban/setting', '', 2, 1, 1589949367, NULL, NULL);
+#
+# Data for table "heecms_menus"
+#
 
--- ----------------------------
--- Table structure for heecms_message
--- ----------------------------
+/*!40000 ALTER TABLE `heecms_menus` DISABLE KEYS */;
+INSERT INTO `heecms_menus` VALUES (5,0,'fas fa-link','链接','/','',3,1,1587761486,NULL,NULL),(6,5,'','链接管理','/link_group/manager','',1,1,1587761543,NULL,NULL),(8,0,'fas fa-columns','栏目','/','',1,1,1587761621,NULL,NULL),(9,8,'','栏目管理','/category/manager','',2,1,1587761691,NULL,NULL),(10,0,'fas fa-file-alt','信息','/','',2,1,1587761733,NULL,NULL),(11,10,'','信息管理','/category/managerinfo','',1,1,1587761857,1588294134,NULL),(12,0,'fab fa-modx','模型与表','/','',99,1,1588244382,1589939058,NULL),(13,12,'','模型管理','/model/manager','',1,1,1588244418,NULL,NULL),(14,12,'','数据表管理','/model_table/manager','',2,1,1588244441,NULL,NULL),(15,0,'fab fa-facebook-messenger','反馈','/','',3,1,1588942737,1588943102,NULL),(16,15,'','评论管理','/comment/manager','',1,1,1588943137,NULL,NULL),(17,15,'','留言管理','/guestbook/manager','',2,1,1588943168,1588943196,NULL),(18,0,'fas fa-adjust','营销与优化','/','',5,1,1589584735,1589938296,NULL),(19,18,'','广告管理','/ad/manager','',1,1,1589584779,NULL,NULL),(20,18,'','网站优化','/seo/edit','',2,1,1589586359,NULL,NULL),(21,0,'fab fa-pagelines','模板','/','',6,1,1589938348,1589938373,NULL),(22,21,'','本地模板','/moban/manager','',1,1,1589938412,1600179784,NULL),(23,21,'','在线模板','http://moban.heecms.cn','',2,1,1589938437,1600179771,1600179819),(24,0,'fab fa-html5','页面','/','',7,1,1589939046,NULL,NULL),(25,24,'','页面管理','/page/manager','',1,1,1589939125,NULL,NULL),(26,24,'','新增页面','/page/add','',2,1,1589939157,NULL,NULL),(27,21,'','模板设置','/moban/setting','',2,1,1589949367,NULL,1600179737);
+/*!40000 ALTER TABLE `heecms_menus` ENABLE KEYS */;
+
+#
+# Structure for table "heecms_message"
+#
+
 DROP TABLE IF EXISTS `heecms_message`;
-CREATE TABLE `heecms_message`  (
+CREATE TABLE `heecms_message` (
   `message_id` int(11) NOT NULL AUTO_INCREMENT,
   `users_id` int(11) DEFAULT NULL,
   `receiver_users_id` int(11) DEFAULT NULL,
   `all` int(255) DEFAULT NULL COMMENT '是否是所有人都接收',
-  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `context` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `isread` int(1) DEFAULT 0 COMMENT '是否已读  1已读 0未读',
+  `title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `context` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `isread` int(1) DEFAULT '0' COMMENT '是否已读  1已读 0未读',
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`message_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_message
--- ----------------------------
-INSERT INTO `heecms_message` VALUES (3, 1, 3, 0, 'title', 'contet', 0, 1586695173, NULL, 0);
-INSERT INTO `heecms_message` VALUES (4, 1, 2, 0, '欢迎使用', '欢迎使用！！', 0, 1587103078, 1587103078, 0);
+#
+# Data for table "heecms_message"
+#
 
--- ----------------------------
--- Table structure for heecms_model
--- ----------------------------
+/*!40000 ALTER TABLE `heecms_message` DISABLE KEYS */;
+INSERT INTO `heecms_message` VALUES (3,1,3,0,'title','contet',0,1586695173,NULL,0),(4,1,2,0,'欢迎使用','欢迎使用！！',0,1587103078,1587103078,0);
+/*!40000 ALTER TABLE `heecms_message` ENABLE KEYS */;
+
+#
+# Structure for table "heecms_model"
+#
+
 DROP TABLE IF EXISTS `heecms_model`;
-CREATE TABLE `heecms_model`  (
+CREATE TABLE `heecms_model` (
   `model_id` int(11) NOT NULL AUTO_INCREMENT,
   `model_table_id` int(11) DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `remark` varchar(255) DEFAULT NULL,
   `create_users_id` int(11) DEFAULT NULL,
   `is_sys` int(1) DEFAULT NULL COMMENT '是否是系统模型',
-  `table_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '对应表名，系统模型需要在此取表',
+  `table_name` varchar(255) DEFAULT NULL COMMENT '对应表名，系统模型需要在此取表',
   `create_time` int(11) DEFAULT NULL,
   `upate_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`model_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_model
--- ----------------------------
-INSERT INTO `heecms_model` VALUES (1, NULL, '文章', '文章模型', 1, 1, 'article', NULL, NULL, NULL);
-INSERT INTO `heecms_model` VALUES (2, 6, '图片', '1', 1, NULL, NULL, 1588289984, NULL, 1588470138);
-INSERT INTO `heecms_model` VALUES (3, 10, '测试模型', '', 1, NULL, NULL, 1588472218, NULL, 1588473621);
-INSERT INTO `heecms_model` VALUES (4, 11, '测试模型', '', 1, NULL, NULL, 1588473746, NULL, 1588474375);
-INSERT INTO `heecms_model` VALUES (5, 18, '测试模型', '', 1, NULL, NULL, 1588475395, NULL, NULL);
-INSERT INTO `heecms_model` VALUES (6, 19, '测试模型22', '', 1, NULL, NULL, 1589243825, NULL, NULL);
+#
+# Data for table "heecms_model"
+#
 
--- ----------------------------
--- Table structure for heecms_model_table
--- ----------------------------
+INSERT INTO `heecms_model` VALUES (1,NULL,'文章','文章模型',1,1,'article',NULL,NULL,NULL),(2,6,'图片','1',1,NULL,NULL,1588289984,NULL,1588470138),(3,10,'测试模型','',1,NULL,NULL,1588472218,NULL,1588473621),(4,11,'测试模型','',1,NULL,NULL,1588473746,NULL,1588474375),(5,18,'测试模型','',1,NULL,NULL,1588475395,NULL,NULL),(6,19,'测试模型22','',1,NULL,NULL,1589243825,NULL,NULL);
+
+#
+# Structure for table "heecms_model_table"
+#
+
 DROP TABLE IF EXISTS `heecms_model_table`;
-CREATE TABLE `heecms_model_table`  (
+CREATE TABLE `heecms_model_table` (
   `model_table_id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `create_users_id` int(11) DEFAULT NULL,
-  `allow_manger` varchar(3000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '显示在管理表格中的字段',
-  `allow_edit` varchar(3000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '显示在编辑表单中的字段',
+  `allow_manger` varchar(3000) DEFAULT NULL COMMENT '显示在管理表格中的字段',
+  `allow_edit` varchar(3000) DEFAULT NULL COMMENT '显示在编辑表单中的字段',
   `allow_delete` int(1) DEFAULT NULL COMMENT '是否允许后台删除记录',
-  `allow_user_edit` varchar(3000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '允许用户前台编辑的字段',
-  `allow_user_manager` varchar(3000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '允许用户前台管理表单显示的字段',
+  `allow_user_edit` varchar(3000) DEFAULT NULL COMMENT '允许用户前台编辑的字段',
+  `allow_user_manager` varchar(3000) DEFAULT NULL COMMENT '允许用户前台管理表单显示的字段',
   `allow_user_delete` int(1) DEFAULT NULL COMMENT '是否允许前台用户删除记录',
-  `validate_rule` varchar(3000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '验证规则',
-  `validate_msg` varchar(3000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '验证规则对应的错误消息',
+  `validate_rule` varchar(3000) DEFAULT NULL COMMENT '验证规则',
+  `validate_msg` varchar(3000) DEFAULT NULL COMMENT '验证规则对应的错误消息',
   PRIMARY KEY (`model_table_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_model_table
--- ----------------------------
-INSERT INTO `heecms_model_table` VALUES (18, 'news', 1588475124, 1589241759, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_model_table` VALUES (19, 'tbtest', 1589241856, 1589243867, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+#
+# Data for table "heecms_model_table"
+#
 
--- ----------------------------
--- Table structure for heecms_model_table_field
--- ----------------------------
+INSERT INTO `heecms_model_table` VALUES (18,'news',1588475124,1589241759,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(19,'tbtest',1589241856,1589243867,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+
+#
+# Structure for table "heecms_model_table_field"
+#
+
 DROP TABLE IF EXISTS `heecms_model_table_field`;
-CREATE TABLE `heecms_model_table_field`  (
+CREATE TABLE `heecms_model_table_field` (
   `model_table_field_id` int(11) NOT NULL AUTO_INCREMENT,
   `model_table_id` int(11) DEFAULT NULL,
-  `field_title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '字段标题',
-  `field_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `input_type` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '输入框类型text number email date time datetime datetime-local editor',
-  `input_type_values` text CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT '输入框为select radios checkbox时的选项列表',
+  `field_title` varchar(255) DEFAULT NULL COMMENT '字段标题',
+  `field_name` varchar(255) DEFAULT NULL,
+  `input_type` varchar(255) DEFAULT NULL COMMENT '输入框类型text number email date time datetime datetime-local editor',
+  `input_type_values` text COMMENT '输入框为select radios checkbox时的选项列表',
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `create_users_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`model_table_field_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 42 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_model_table_field
--- ----------------------------
-INSERT INTO `heecms_model_table_field` VALUES (34, 18, '标题', 'title', 'text', '', NULL, NULL, 1);
-INSERT INTO `heecms_model_table_field` VALUES (35, 18, '内容', 'context', 'editor', '', NULL, NULL, 1);
-INSERT INTO `heecms_model_table_field` VALUES (36, 18, 'ceshi', 'ceshi', 'text', '', NULL, NULL, 1);
-INSERT INTO `heecms_model_table_field` VALUES (37, 18, 'ceshi2', 'ceshi2', 'text', '', NULL, NULL, 1);
-INSERT INTO `heecms_model_table_field` VALUES (38, 18, '列表', 'list', 'select', '1,2,3,4,5', NULL, NULL, 1);
-INSERT INTO `heecms_model_table_field` VALUES (39, 18, '标题', 'title2', 'text', '', NULL, NULL, 1);
-INSERT INTO `heecms_model_table_field` VALUES (40, 19, '标题', 'title', 'text', '', NULL, NULL, 1);
-INSERT INTO `heecms_model_table_field` VALUES (41, 19, '内容', 'contxt', 'editor', '', NULL, NULL, 1);
+#
+# Data for table "heecms_model_table_field"
+#
 
--- ----------------------------
--- Table structure for heecms_pages
--- ----------------------------
+INSERT INTO `heecms_model_table_field` VALUES (34,18,'标题','title','text','',NULL,NULL,1),(35,18,'内容','context','editor','',NULL,NULL,1),(36,18,'ceshi','ceshi','text','',NULL,NULL,1),(37,18,'ceshi2','ceshi2','text','',NULL,NULL,1),(38,18,'列表','list','select','1,2,3,4,5',NULL,NULL,1),(39,18,'标题','title2','text','',NULL,NULL,1),(40,19,'标题','title','text','',NULL,NULL,1),(41,19,'内容','contxt','editor','',NULL,NULL,1);
+
+#
+# Structure for table "heecms_pages"
+#
+
 DROP TABLE IF EXISTS `heecms_pages`;
-CREATE TABLE `heecms_pages`  (
+CREATE TABLE `heecms_pages` (
   `pages_id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `body` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+  `title` varchar(255) DEFAULT NULL,
+  `body` text,
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   `create_users_id` int(11) DEFAULT NULL,
-  `keyword` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `template` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `route` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '路由',
+  `keyword` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `template` varchar(255) DEFAULT NULL,
+  `route` varchar(255) DEFAULT NULL COMMENT '路由',
   PRIMARY KEY (`pages_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_pages
--- ----------------------------
-INSERT INTO `heecms_pages` VALUES (1, '111', '&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;111 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p&gt;', NULL, 1590026334, 1590111699, 1, '', '', '/page.php', NULL);
-INSERT INTO `heecms_pages` VALUES (2, '111', '&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;111 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p&gt;', 1590026170, NULL, 1590026216, NULL, '', '', '/page.php', NULL);
-INSERT INTO `heecms_pages` VALUES (3, '111', '&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;111 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p&gt;', 1590026176, NULL, 1590026212, NULL, '', '', '/page.php', NULL);
-INSERT INTO `heecms_pages` VALUES (4, 'title', '&lt;p&gt;neirong neirong&amp;nbsp;&lt;/p&gt;', 1590026277, 1590111714, NULL, 1, 'keyword', 'miaoshu', '/page', 'tpage');
+#
+# Data for table "heecms_pages"
+#
 
--- ----------------------------
--- Table structure for heecms_shop_attr
--- ----------------------------
+INSERT INTO `heecms_pages` VALUES (1,'111','&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;111 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p&gt;',NULL,1590026334,1590111699,1,'','','/page.php',NULL),(2,'111','&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;111 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p&gt;',1590026170,NULL,1590026216,NULL,'','','/page.php',NULL),(3,'111','&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;111 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p&gt;',1590026176,NULL,1590026212,NULL,'','','/page.php',NULL),(4,'title','&lt;p&gt;neirong neirong&amp;nbsp;&lt;/p&gt;',1590026277,1590111714,NULL,1,'keyword','miaoshu','/page','tpage');
+
+#
+# Structure for table "heecms_shop_attr"
+#
+
 DROP TABLE IF EXISTS `heecms_shop_attr`;
-CREATE TABLE `heecms_shop_attr`  (
+CREATE TABLE `heecms_shop_attr` (
   `shop_attr_id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `values` varchar(3000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `values` varchar(3000) DEFAULT NULL,
   PRIMARY KEY (`shop_attr_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_shop_attr
--- ----------------------------
-INSERT INTO `heecms_shop_attr` VALUES (1, '产地', ',中国,香港,美国,');
-INSERT INTO `heecms_shop_attr` VALUES (2, '品牌', ',Nick,PAPA,360,尼康,索尼,联想,戴尔,');
+#
+# Data for table "heecms_shop_attr"
+#
 
--- ----------------------------
--- Table structure for heecms_shop_cart
--- ----------------------------
+INSERT INTO `heecms_shop_attr` VALUES (1,'产地',',中国,香港,美国,'),(2,'品牌',',Nick,PAPA,360,尼康,索尼,联想,戴尔,');
+
+#
+# Structure for table "heecms_shop_cart"
+#
+
 DROP TABLE IF EXISTS `heecms_shop_cart`;
-CREATE TABLE `heecms_shop_cart`  (
+CREATE TABLE `heecms_shop_cart` (
   `shop_cart_id` int(11) NOT NULL AUTO_INCREMENT,
   `shop_product_id` int(11) DEFAULT NULL,
   `num` int(11) DEFAULT NULL,
-  `price` decimal(11, 2) DEFAULT NULL,
-  `discount` decimal(11, 2) DEFAULT NULL,
+  `price` decimal(11,2) DEFAULT NULL,
+  `discount` decimal(11,2) DEFAULT NULL,
   `create_users_id` int(11) DEFAULT NULL,
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`shop_cart_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Table structure for heecms_shop_category
--- ----------------------------
+#
+# Data for table "heecms_shop_cart"
+#
+
+
+#
+# Structure for table "heecms_shop_category"
+#
+
 DROP TABLE IF EXISTS `heecms_shop_category`;
-CREATE TABLE `heecms_shop_category`  (
+CREATE TABLE `heecms_shop_category` (
   `shop_category_id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `remark` varchar(255) DEFAULT NULL,
   `ord` int(255) DEFAULT NULL,
   `create_users_id` int(11) DEFAULT NULL,
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`shop_category_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_shop_category
--- ----------------------------
-INSERT INTO `heecms_shop_category` VALUES (1, 0, 'nname1', '', 1, 1, 1588557112, 1589360737, NULL);
-INSERT INTO `heecms_shop_category` VALUES (2, 1, 'f167', '', 2, 1, 1588558731, 1589593467, NULL);
+#
+# Data for table "heecms_shop_category"
+#
 
--- ----------------------------
--- Table structure for heecms_shop_category_attr
--- ----------------------------
+INSERT INTO `heecms_shop_category` VALUES (1,0,'nname1','',1,1,1588557112,1589360737,NULL),(2,1,'f167','',2,1,1588558731,1589593467,NULL);
+
+#
+# Structure for table "heecms_shop_category_attr"
+#
+
 DROP TABLE IF EXISTS `heecms_shop_category_attr`;
-CREATE TABLE `heecms_shop_category_attr`  (
+CREATE TABLE `heecms_shop_category_attr` (
   `shop_category_attr_id` int(11) NOT NULL AUTO_INCREMENT,
   `shop_category_id` int(11) DEFAULT NULL,
   `shop_attr_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`shop_category_attr_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 53 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_shop_category_attr
--- ----------------------------
-INSERT INTO `heecms_shop_category_attr` VALUES (40, 2, 2);
-INSERT INTO `heecms_shop_category_attr` VALUES (42, 2, 2);
-INSERT INTO `heecms_shop_category_attr` VALUES (44, 2, 2);
-INSERT INTO `heecms_shop_category_attr` VALUES (46, 2, 2);
-INSERT INTO `heecms_shop_category_attr` VALUES (47, 2, 2);
-INSERT INTO `heecms_shop_category_attr` VALUES (48, 2, 2);
-INSERT INTO `heecms_shop_category_attr` VALUES (49, 1, 1);
-INSERT INTO `heecms_shop_category_attr` VALUES (50, 2, 2);
-INSERT INTO `heecms_shop_category_attr` VALUES (51, 2, 1);
-INSERT INTO `heecms_shop_category_attr` VALUES (52, 2, 2);
+#
+# Data for table "heecms_shop_category_attr"
+#
 
--- ----------------------------
--- Table structure for heecms_shop_category_sku
--- ----------------------------
+INSERT INTO `heecms_shop_category_attr` VALUES (40,2,2),(42,2,2),(44,2,2),(46,2,2),(47,2,2),(48,2,2),(49,1,1),(50,2,2),(51,2,1),(52,2,2);
+
+#
+# Structure for table "heecms_shop_category_sku"
+#
+
 DROP TABLE IF EXISTS `heecms_shop_category_sku`;
-CREATE TABLE `heecms_shop_category_sku`  (
+CREATE TABLE `heecms_shop_category_sku` (
   `shop_category_sku_id` int(11) NOT NULL AUTO_INCREMENT,
   `shop_category_id` int(11) DEFAULT NULL,
-  `shop_sku_cls` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `shop_sku_cls` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`shop_category_sku_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 25 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_shop_category_sku
--- ----------------------------
-INSERT INTO `heecms_shop_category_sku` VALUES (1, 1, '尺寸');
-INSERT INTO `heecms_shop_category_sku` VALUES (18, 2, '尺寸');
-INSERT INTO `heecms_shop_category_sku` VALUES (21, 1, '规格');
-INSERT INTO `heecms_shop_category_sku` VALUES (24, 2, '颜色');
+#
+# Data for table "heecms_shop_category_sku"
+#
 
--- ----------------------------
--- Table structure for heecms_shop_order
--- ----------------------------
+INSERT INTO `heecms_shop_category_sku` VALUES (1,1,'尺寸'),(18,2,'尺寸'),(21,1,'规格'),(24,2,'颜色');
+
+#
+# Structure for table "heecms_shop_order"
+#
+
 DROP TABLE IF EXISTS `heecms_shop_order`;
-CREATE TABLE `heecms_shop_order`  (
-  `shop_order_id` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `sumprice` decimal(10, 2) DEFAULT NULL COMMENT '总价',
-  `sourceprice` decimal(10, 2) DEFAULT NULL COMMENT '原价',
-  `discount` decimal(10, 2) DEFAULT NULL COMMENT '折扣',
+CREATE TABLE `heecms_shop_order` (
+  `shop_order_id` varchar(30) NOT NULL,
+  `sumprice` decimal(10,2) DEFAULT NULL COMMENT '总价',
+  `sourceprice` decimal(10,2) DEFAULT NULL COMMENT '原价',
+  `discount` decimal(10,2) DEFAULT NULL COMMENT '折扣',
   `create_users_id` int(11) DEFAULT NULL,
   `pcount` int(255) DEFAULT NULL COMMENT '商品总数',
-  `state` int(2) DEFAULT 0 COMMENT '订单状态 -3已完成退款 -2已确认退款 -1申请退款 0未支付 1已支付未发货 2已发货未确认 3已确认未评论 4已评论完成',
-  `address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '收件人地址',
-  `mobile` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '收件人手机',
-  `contact` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '收件人',
-  `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '备注',
+  `state` int(2) DEFAULT '0' COMMENT '订单状态 -3已完成退款 -2已确认退款 -1申请退款 0未支付 1已支付未发货 2已发货未确认 3已确认未评论 4已评论完成',
+  `address` varchar(255) DEFAULT NULL COMMENT '收件人地址',
+  `mobile` varchar(255) DEFAULT NULL COMMENT '收件人手机',
+  `contact` varchar(255) DEFAULT NULL COMMENT '收件人',
+  `remark` varchar(255) DEFAULT NULL COMMENT '备注',
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
-  `paytype` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '支付方式',
-  `paysum` decimal(10, 2) DEFAULT NULL COMMENT '支付金额',
+  `paytype` varchar(255) DEFAULT NULL COMMENT '支付方式',
+  `paysum` decimal(10,2) DEFAULT NULL COMMENT '支付金额',
   PRIMARY KEY (`shop_order_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_shop_order
--- ----------------------------
-INSERT INTO `heecms_shop_order` VALUES ('200511220617659533279431', 12.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1589205977, NULL, 1589362984, NULL, NULL);
-INSERT INTO `heecms_shop_order` VALUES ('200512061645483897243571', 23.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1589235405, NULL, 1589362990, NULL, NULL);
-INSERT INTO `heecms_shop_order` VALUES ('200512061650242004001193', 123.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1589235410, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_order` VALUES ('200512062138032811971442', 123.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1589235698, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_order` VALUES ('200512062221070932610004', 123.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1589235741, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_order` VALUES ('200512063224171210783816', 235.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1589236344, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_order` VALUES ('200529125316475526418204', 3999.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1590727996, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_order` VALUES ('200529125835899894242755', 6500.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1590728315, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_order` VALUES ('200529130601349105992103', 4500.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1590728761, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_order` VALUES ('200531162938795112963979', 1150.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1590913778, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_order` VALUES ('200601084947912695870190', 3970.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1590972587, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_order` VALUES ('200601132236912646689616', 3635.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1590988956, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_order` VALUES ('200601133015566109481501', 3698.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1590989415, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_order` VALUES ('200601133427000012529850', 3690.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1590989667, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_order` VALUES ('200604172957676855351413', 1525.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1591262997, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_order` VALUES ('200604184918182018287028', 1582.00, NULL, NULL, NULL, NULL, 0, '1', '1', '1', NULL, 1591267758, NULL, NULL, NULL, NULL);
+#
+# Data for table "heecms_shop_order"
+#
 
--- ----------------------------
--- Table structure for heecms_shop_order_detail
--- ----------------------------
+INSERT INTO `heecms_shop_order` VALUES ('200511220617659533279431',12.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1589205977,NULL,1589362984,NULL,NULL),('200512061645483897243571',23.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1589235405,NULL,1589362990,NULL,NULL),('200512061650242004001193',123.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1589235410,NULL,NULL,NULL,NULL),('200512062138032811971442',123.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1589235698,NULL,NULL,NULL,NULL),('200512062221070932610004',123.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1589235741,NULL,NULL,NULL,NULL),('200512063224171210783816',235.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1589236344,NULL,NULL,NULL,NULL),('200529125316475526418204',3999.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1590727996,NULL,NULL,NULL,NULL),('200529125835899894242755',6500.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1590728315,NULL,NULL,NULL,NULL),('200529130601349105992103',4500.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1590728761,NULL,NULL,NULL,NULL),('200531162938795112963979',1150.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1590913778,NULL,NULL,NULL,NULL),('200601084947912695870190',3970.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1590972587,NULL,NULL,NULL,NULL),('200601132236912646689616',3635.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1590988956,NULL,NULL,NULL,NULL),('200601133015566109481501',3698.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1590989415,NULL,NULL,NULL,NULL),('200601133427000012529850',3690.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1590989667,NULL,NULL,NULL,NULL),('200604172957676855351413',1525.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1591262997,NULL,NULL,NULL,NULL),('200604184918182018287028',1582.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1591267758,NULL,NULL,NULL,NULL);
+
+#
+# Structure for table "heecms_shop_order_detail"
+#
+
 DROP TABLE IF EXISTS `heecms_shop_order_detail`;
-CREATE TABLE `heecms_shop_order_detail`  (
+CREATE TABLE `heecms_shop_order_detail` (
   `shop_order_detail_id` int(11) NOT NULL AUTO_INCREMENT,
-  `shop_order_id` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `shop_order_id` varchar(30) DEFAULT NULL,
   `shop_product_id` int(255) DEFAULT NULL,
   `num` int(11) DEFAULT NULL COMMENT '商品数量',
-  `price` decimal(10, 2) DEFAULT NULL COMMENT '商品单价',
-  `sumprice` decimal(10, 2) DEFAULT NULL COMMENT '总价',
+  `price` decimal(10,2) DEFAULT NULL COMMENT '商品单价',
+  `sumprice` decimal(10,2) DEFAULT NULL COMMENT '总价',
   `create_users_id` int(11) DEFAULT NULL,
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   `state` int(2) DEFAULT NULL COMMENT '和订单的状态一样',
   PRIMARY KEY (`shop_order_detail_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Table structure for heecms_shop_pay
--- ----------------------------
+#
+# Data for table "heecms_shop_order_detail"
+#
+
+
+#
+# Structure for table "heecms_shop_pay"
+#
+
 DROP TABLE IF EXISTS `heecms_shop_pay`;
-CREATE TABLE `heecms_shop_pay`  (
-  `shop_pay_id` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `shop_order_id` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+CREATE TABLE `heecms_shop_pay` (
+  `shop_pay_id` varchar(30) NOT NULL,
+  `shop_order_id` varchar(30) DEFAULT NULL,
   `state` int(255) DEFAULT NULL,
-  `money` decimal(10, 2) DEFAULT NULL,
-  `restr` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `money` decimal(10,2) DEFAULT NULL,
+  `restr` varchar(1000) DEFAULT NULL,
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `create_users_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`shop_pay_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_shop_pay
--- ----------------------------
-INSERT INTO `heecms_shop_pay` VALUES ('200531163001104080160332', '200531162938795112963979', 0, 1150.00, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_pay` VALUES ('200601084958098389151266', '200601084947912695870190', 0, 3970.00, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_pay` VALUES ('200601132245736358531751', '200601132236912646689616', 0, 3635.00, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_pay` VALUES ('200601133023298006050671', '200601133015566109481501', 0, 3698.00, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_pay` VALUES ('200601133436757010392717', '200601133427000012529850', 0, 3690.00, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_pay` VALUES ('200601133556126361943302', '200601133015566109481501', 0, 3698.00, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_pay` VALUES ('200604101316959305089511', '200529125316475526418204', 0, 3999.00, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_pay` VALUES ('200604173008777579172496', '200604172957676855351413', 0, 1525.00, NULL, NULL, NULL, NULL);
-INSERT INTO `heecms_shop_pay` VALUES ('200604184929572503700629', '200604184918182018287028', 0, 1582.00, NULL, NULL, NULL, NULL);
+#
+# Data for table "heecms_shop_pay"
+#
 
--- ----------------------------
--- Table structure for heecms_shop_product
--- ----------------------------
+INSERT INTO `heecms_shop_pay` VALUES ('200531163001104080160332','200531162938795112963979',0,1150.00,NULL,NULL,NULL,NULL),('200601084958098389151266','200601084947912695870190',0,3970.00,NULL,NULL,NULL,NULL),('200601132245736358531751','200601132236912646689616',0,3635.00,NULL,NULL,NULL,NULL),('200601133023298006050671','200601133015566109481501',0,3698.00,NULL,NULL,NULL,NULL),('200601133436757010392717','200601133427000012529850',0,3690.00,NULL,NULL,NULL,NULL),('200601133556126361943302','200601133015566109481501',0,3698.00,NULL,NULL,NULL,NULL),('200604101316959305089511','200529125316475526418204',0,3999.00,NULL,NULL,NULL,NULL),('200604173008777579172496','200604172957676855351413',0,1525.00,NULL,NULL,NULL,NULL),('200604184929572503700629','200604184918182018287028',0,1582.00,NULL,NULL,NULL,NULL);
+
+#
+# Structure for table "heecms_shop_product"
+#
+
 DROP TABLE IF EXISTS `heecms_shop_product`;
-CREATE TABLE `heecms_shop_product`  (
+CREATE TABLE `heecms_shop_product` (
   `shop_product_id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
   `shop_category_id` int(11) DEFAULT NULL,
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   `create_users_id` int(11) DEFAULT NULL,
-  `detail` text CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT '详细介绍',
+  `detail` text COMMENT '详细介绍',
   `rate` int(11) DEFAULT NULL COMMENT '评分',
   `hit` int(11) DEFAULT NULL COMMENT '点击',
-  `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `price` decimal(10, 2) DEFAULT NULL COMMENT '一口价',
+  `remark` varchar(255) DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL COMMENT '一口价',
   `stock` int(255) DEFAULT NULL COMMENT '库存',
-  `pic` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '首图',
+  `pic` varchar(1000) DEFAULT NULL COMMENT '首图',
   `sellcount` int(255) DEFAULT NULL COMMENT '销量',
   PRIMARY KEY (`shop_product_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_shop_product
--- ----------------------------
-INSERT INTO `heecms_shop_product` VALUES (1, '商品名1', 2, 1588860434, NULL, 0, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png', NULL);
-INSERT INTO `heecms_shop_product` VALUES (2, '商品名1', 2, 1588860571, NULL, 0, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png', NULL);
-INSERT INTO `heecms_shop_product` VALUES (3, '商品名1', 2, 1588860615, NULL, 0, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png', NULL);
-INSERT INTO `heecms_shop_product` VALUES (4, '商品名1', 2, 1588860644, NULL, 0, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png', NULL);
-INSERT INTO `heecms_shop_product` VALUES (5, '商品名1', 2, 1588860880, NULL, 0, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png', NULL);
-INSERT INTO `heecms_shop_product` VALUES (6, '商品名1', 2, 1588861004, NULL, 0, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png', NULL);
-INSERT INTO `heecms_shop_product` VALUES (7, '商品名1', 2, 1588861029, NULL, NULL, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200506/1588768789115185.png', NULL);
-INSERT INTO `heecms_shop_product` VALUES (8, '商品名1', 2, 1589591369, NULL, NULL, NULL, '&lt;p&gt;介绍&lt;/p&gt;', NULL, NULL, 'jianjie', 22.00, 23, '/upload/20200425/1587782677251926.jpg', NULL);
+#
+# Data for table "heecms_shop_product"
+#
 
--- ----------------------------
--- Table structure for heecms_shop_product_attr
--- ----------------------------
+INSERT INTO `heecms_shop_product` VALUES (1,'商品名1',2,1588860434,NULL,0,NULL,'&lt;p&gt;介绍&lt;/p&gt;',NULL,NULL,'jianjie',22.00,23,'/upload/20200506/1588768789115185.png',NULL),(2,'商品名1',2,1588860571,NULL,0,NULL,'&lt;p&gt;介绍&lt;/p&gt;',NULL,NULL,'jianjie',22.00,23,'/upload/20200506/1588768789115185.png',NULL),(3,'商品名1',2,1588860615,NULL,0,NULL,'&lt;p&gt;介绍&lt;/p&gt;',NULL,NULL,'jianjie',22.00,23,'/upload/20200506/1588768789115185.png',NULL),(4,'商品名1',2,1588860644,NULL,0,NULL,'&lt;p&gt;介绍&lt;/p&gt;',NULL,NULL,'jianjie',22.00,23,'/upload/20200506/1588768789115185.png',NULL),(5,'商品名1',2,1588860880,NULL,0,NULL,'&lt;p&gt;介绍&lt;/p&gt;',NULL,NULL,'jianjie',22.00,23,'/upload/20200506/1588768789115185.png',NULL),(6,'商品名1',2,1588861004,NULL,0,NULL,'&lt;p&gt;介绍&lt;/p&gt;',NULL,NULL,'jianjie',22.00,23,'/upload/20200506/1588768789115185.png',NULL),(7,'商品名1',2,1588861029,NULL,NULL,NULL,'&lt;p&gt;介绍&lt;/p&gt;',NULL,NULL,'jianjie',22.00,23,'/upload/20200506/1588768789115185.png',NULL),(8,'商品名1',2,1589591369,NULL,NULL,NULL,'&lt;p&gt;介绍&lt;/p&gt;',NULL,NULL,'jianjie',22.00,23,'/upload/20200425/1587782677251926.jpg',NULL);
+
+#
+# Structure for table "heecms_shop_product_attr"
+#
+
 DROP TABLE IF EXISTS `heecms_shop_product_attr`;
-CREATE TABLE `heecms_shop_product_attr`  (
+CREATE TABLE `heecms_shop_product_attr` (
   `shop_product_attr_id` int(11) NOT NULL AUTO_INCREMENT,
   `shop_product_id` int(11) DEFAULT NULL,
-  `shop_attr_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `value` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `shop_attr_name` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`shop_product_attr_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_shop_product_attr
--- ----------------------------
-INSERT INTO `heecms_shop_product_attr` VALUES (1, 2, '产地', '中国');
-INSERT INTO `heecms_shop_product_attr` VALUES (2, 2, '品牌', 'Nick');
-INSERT INTO `heecms_shop_product_attr` VALUES (3, 3, '产地', '中国');
-INSERT INTO `heecms_shop_product_attr` VALUES (4, 3, '品牌', 'Nick');
-INSERT INTO `heecms_shop_product_attr` VALUES (5, 4, '产地', '中国');
-INSERT INTO `heecms_shop_product_attr` VALUES (6, 4, '品牌', 'Nick');
-INSERT INTO `heecms_shop_product_attr` VALUES (7, 5, '产地', '中国');
-INSERT INTO `heecms_shop_product_attr` VALUES (8, 5, '品牌', 'Nick');
-INSERT INTO `heecms_shop_product_attr` VALUES (9, 6, '产地', '中国');
-INSERT INTO `heecms_shop_product_attr` VALUES (10, 6, '品牌', 'Nick');
-INSERT INTO `heecms_shop_product_attr` VALUES (11, 7, '产地', '中国');
-INSERT INTO `heecms_shop_product_attr` VALUES (12, 7, '品牌', 'Nick');
-INSERT INTO `heecms_shop_product_attr` VALUES (13, 8, '品牌', '');
+#
+# Data for table "heecms_shop_product_attr"
+#
 
--- ----------------------------
--- Table structure for heecms_shop_product_pic
--- ----------------------------
+INSERT INTO `heecms_shop_product_attr` VALUES (1,2,'产地','中国'),(2,2,'品牌','Nick'),(3,3,'产地','中国'),(4,3,'品牌','Nick'),(5,4,'产地','中国'),(6,4,'品牌','Nick'),(7,5,'产地','中国'),(8,5,'品牌','Nick'),(9,6,'产地','中国'),(10,6,'品牌','Nick'),(11,7,'产地','中国'),(12,7,'品牌','Nick'),(13,8,'品牌','');
+
+#
+# Structure for table "heecms_shop_product_pic"
+#
+
 DROP TABLE IF EXISTS `heecms_shop_product_pic`;
-CREATE TABLE `heecms_shop_product_pic`  (
+CREATE TABLE `heecms_shop_product_pic` (
   `shop_product_pic_id` int(11) NOT NULL AUTO_INCREMENT,
   `shop_product_id` int(11) DEFAULT NULL,
-  `url` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `url` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
   `ord` int(11) DEFAULT NULL,
   PRIMARY KEY (`shop_product_pic_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_shop_product_pic
--- ----------------------------
-INSERT INTO `heecms_shop_product_pic` VALUES (1, 2, '/upload/20200506/1588768789115185.png', '商品名1', 0);
-INSERT INTO `heecms_shop_product_pic` VALUES (2, 2, '/upload/20200506/1588760663359953.png', '商品名1', 1);
-INSERT INTO `heecms_shop_product_pic` VALUES (3, 3, '/upload/20200506/1588768789115185.png', '商品名1', 0);
-INSERT INTO `heecms_shop_product_pic` VALUES (4, 3, '/upload/20200506/1588760663359953.png', '商品名1', 1);
-INSERT INTO `heecms_shop_product_pic` VALUES (5, 4, '/upload/20200506/1588768789115185.png', '商品名1', 0);
-INSERT INTO `heecms_shop_product_pic` VALUES (6, 4, '/upload/20200506/1588760663359953.png', '商品名1', 1);
-INSERT INTO `heecms_shop_product_pic` VALUES (7, 5, '/upload/20200506/1588768789115185.png', '商品名1', 0);
-INSERT INTO `heecms_shop_product_pic` VALUES (8, 5, '/upload/20200506/1588760663359953.png', '商品名1', 1);
-INSERT INTO `heecms_shop_product_pic` VALUES (9, 6, '/upload/20200506/1588768789115185.png', '商品名1', 0);
-INSERT INTO `heecms_shop_product_pic` VALUES (10, 6, '/upload/20200506/1588760663359953.png', '商品名1', 1);
-INSERT INTO `heecms_shop_product_pic` VALUES (11, 7, '/upload/20200506/1588768789115185.png', '商品名1', 0);
-INSERT INTO `heecms_shop_product_pic` VALUES (12, 7, '/upload/20200506/1588760663359953.png', '商品名1', 1);
-INSERT INTO `heecms_shop_product_pic` VALUES (13, 8, '/upload/20200425/1587782677251926.jpg', '商品名1', 0);
+#
+# Data for table "heecms_shop_product_pic"
+#
 
--- ----------------------------
--- Table structure for heecms_shop_product_sku
--- ----------------------------
+INSERT INTO `heecms_shop_product_pic` VALUES (1,2,'/upload/20200506/1588768789115185.png','商品名1',0),(2,2,'/upload/20200506/1588760663359953.png','商品名1',1),(3,3,'/upload/20200506/1588768789115185.png','商品名1',0),(4,3,'/upload/20200506/1588760663359953.png','商品名1',1),(5,4,'/upload/20200506/1588768789115185.png','商品名1',0),(6,4,'/upload/20200506/1588760663359953.png','商品名1',1),(7,5,'/upload/20200506/1588768789115185.png','商品名1',0),(8,5,'/upload/20200506/1588760663359953.png','商品名1',1),(9,6,'/upload/20200506/1588768789115185.png','商品名1',0),(10,6,'/upload/20200506/1588760663359953.png','商品名1',1),(11,7,'/upload/20200506/1588768789115185.png','商品名1',0),(12,7,'/upload/20200506/1588760663359953.png','商品名1',1),(13,8,'/upload/20200425/1587782677251926.jpg','商品名1',0);
+
+#
+# Structure for table "heecms_shop_product_sku"
+#
+
 DROP TABLE IF EXISTS `heecms_shop_product_sku`;
-CREATE TABLE `heecms_shop_product_sku`  (
+CREATE TABLE `heecms_shop_product_sku` (
   `shop_product_sku_id` int(11) NOT NULL AUTO_INCREMENT,
   `shop_product_id` int(11) DEFAULT NULL,
-  `shop_sku_cls` varchar(350) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT 'sku ,号分隔',
-  `markprice` decimal(10, 2) DEFAULT NULL,
-  `price` decimal(10, 2) DEFAULT NULL,
+  `shop_sku_cls` varchar(350) DEFAULT NULL COMMENT 'sku ,号分隔',
+  `markprice` decimal(10,2) DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL,
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `create_users_id` int(11) DEFAULT NULL,
   `stock` int(11) DEFAULT NULL COMMENT '库存',
   `sellcount` int(11) DEFAULT NULL COMMENT '销量',
   PRIMARY KEY (`shop_product_sku_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Table structure for heecms_shop_sku
--- ----------------------------
+#
+# Data for table "heecms_shop_product_sku"
+#
+
+
+#
+# Structure for table "heecms_shop_sku"
+#
+
 DROP TABLE IF EXISTS `heecms_shop_sku`;
-CREATE TABLE `heecms_shop_sku`  (
+CREATE TABLE `heecms_shop_sku` (
   `shop_sku_id` int(11) NOT NULL AUTO_INCREMENT,
-  `cls` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '分类',
-  `val` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '值',
-  `txt` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '显示的文字',
+  `cls` varchar(255) DEFAULT NULL COMMENT '分类',
+  `val` varchar(255) DEFAULT NULL COMMENT '值',
+  `txt` varchar(255) DEFAULT NULL COMMENT '显示的文字',
   PRIMARY KEY (`shop_sku_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_shop_sku
--- ----------------------------
-INSERT INTO `heecms_shop_sku` VALUES (1, '颜色', '红色', '红色');
-INSERT INTO `heecms_shop_sku` VALUES (2, '颜色', '绿色', '绿色');
-INSERT INTO `heecms_shop_sku` VALUES (3, '颜色', '蓝色', '蓝色');
-INSERT INTO `heecms_shop_sku` VALUES (4, '颜色', '白色', '白色');
-INSERT INTO `heecms_shop_sku` VALUES (5, '颜色', '黑色', '黑色');
-INSERT INTO `heecms_shop_sku` VALUES (6, '颜色', '青色', '青色');
-INSERT INTO `heecms_shop_sku` VALUES (7, '尺寸', 'SM', 'SM');
-INSERT INTO `heecms_shop_sku` VALUES (8, '尺寸', 'M', 'M');
-INSERT INTO `heecms_shop_sku` VALUES (9, '尺寸', 'L', 'L');
-INSERT INTO `heecms_shop_sku` VALUES (10, '尺寸', 'XL', 'XL');
-INSERT INTO `heecms_shop_sku` VALUES (11, '尺寸', 'XXL', 'XXL');
-INSERT INTO `heecms_shop_sku` VALUES (12, '规格', '20*20', '20*20');
+#
+# Data for table "heecms_shop_sku"
+#
 
--- ----------------------------
--- Table structure for heecms_sys_resources
--- ----------------------------
+INSERT INTO `heecms_shop_sku` VALUES (1,'颜色','红色','红色'),(2,'颜色','绿色','绿色'),(3,'颜色','蓝色','蓝色'),(4,'颜色','白色','白色'),(5,'颜色','黑色','黑色'),(6,'颜色','青色','青色'),(7,'尺寸','SM','SM'),(8,'尺寸','M','M'),(9,'尺寸','L','L'),(10,'尺寸','XL','XL'),(11,'尺寸','XXL','XXL'),(12,'规格','20*20','20*20');
+
+#
+# Structure for table "heecms_sys_resources"
+#
+
 DROP TABLE IF EXISTS `heecms_sys_resources`;
-CREATE TABLE `heecms_sys_resources`  (
+CREATE TABLE `heecms_sys_resources` (
   `sys_resources_id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '标题',
-  `path` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '路径 \\控制器\\方法',
-  `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '标题',
+  `path` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '路径 \\控制器\\方法',
+  `remark` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `parent_id` int(11) DEFAULT NULL COMMENT '上级资源Id',
   `users_id` int(11) DEFAULT NULL COMMENT '创建人',
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`sys_resources_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 39 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_sys_resources
--- ----------------------------
-INSERT INTO `heecms_sys_resources` VALUES (1, '用户管理', 'users', '', 0, 1, 1586476453, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (2, '用户添加', '/users/add', '', 1, 1, 1586476580, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (3, '用户修改', '/users/edit', '', 1, 1, 1586476617, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (4, '用户保存', '/users/save', '', 1, 1, 1586476661, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (5, '用户删除', '/users/delete', '', 1, 1, 1586476699, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (6, '用户组管理', '/users_group', '', 0, 2, 1586480307, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (7, '用户组添加', '/users_group/add', '', 6, 2, 1586480361, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (8, '用户组修改', '/users_group/edit', '', 6, 3, 1586480381, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (9, '用户组删除', '/users_group/delete', '', 6, 1, 1586480444, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (10, '用户组保存', '/users_group/save', '', 6, 1, 1586480471, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (11, '用户管理', '/users/manager', '', 1, 1, 1586481179, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (12, '用户组管理', '/users_group/manager', '', 6, 1, 1586481202, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (13, '消息管理', 'message', '', 0, 1, 1586492696, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (14, '消息管理', '/message/manager', '', 13, 1, 1586492718, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (15, '消息添加', '/message/add', '', 13, 1, 1586492750, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (16, '消息删除', '/message/delete', '', 13, 1, 1586492777, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (17, '资源管理', 'sys_resources', '', 0, 1, 1586492824, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (18, '资源添加', '/sys_resources/add', '', 17, 1, 1586492845, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (19, '资源编辑', '/sys_resources/edit', '', 17, 1, 1586492868, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (20, '资源删除', '/sys_resources/delete', '', 17, 1, 1586492912, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (21, '资源保存', '/sys_resources/save', '', 17, 1, 1586492933, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (22, '资源管理', '/sys_resources/manager', '', 17, 1, 1586492955, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (23, '权限管理', 'users_group_sys_resources', '', 0, 1, 1586492989, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (33, '消息编辑', '/message/edit', '', 13, 1, 1586678131, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (25, '权限保存', '/users_group/save_sys_resource', '', 23, 1, 1586493060, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (26, '菜单管理', 'menus', '', 0, 1, 1586493093, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (27, '菜单管理', '/menus/manager', '', 26, 1, 1586493120, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (28, '菜单添加', '/menus/add', '', 26, 1, 1586493150, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (29, '菜单编辑', '/menus/edit', '', 26, 1, 1586493169, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (30, '菜单删除', '/menus/delete', '', 26, 1, 1586493186, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (31, '菜单保存', '/menus/save', '', 26, 1, 1586493221, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (32, '权限编辑', '/users_group/sys_resource', '', 23, 1, 1586653522, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (34, '消息保存', '/message/save', '', 13, 1, 1586678174, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (35, '系统设置功能', 'setting', '', 0, 1, 1586775690, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (36, '系统设置', '/index/setting', '', 35, 1, 1586775876, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (37, '系统设置保存', '/index/save_setting', '', 35, 1, 1586775902, NULL, NULL);
-INSERT INTO `heecms_sys_resources` VALUES (38, '消息详细', '/message/detail', '', 13, 1, 1586776255, NULL, NULL);
+#
+# Data for table "heecms_sys_resources"
+#
 
--- ----------------------------
--- Table structure for heecms_user_model_news
--- ----------------------------
+/*!40000 ALTER TABLE `heecms_sys_resources` DISABLE KEYS */;
+INSERT INTO `heecms_sys_resources` VALUES (1,'用户管理','users','',0,1,1586476453,NULL,NULL),(2,'用户添加','/users/add','',1,1,1586476580,NULL,NULL),(3,'用户修改','/users/edit','',1,1,1586476617,NULL,NULL),(4,'用户保存','/users/save','',1,1,1586476661,NULL,NULL),(5,'用户删除','/users/delete','',1,1,1586476699,NULL,NULL),(6,'用户组管理','/users_group','',0,2,1586480307,NULL,NULL),(7,'用户组添加','/users_group/add','',6,2,1586480361,NULL,NULL),(8,'用户组修改','/users_group/edit','',6,3,1586480381,NULL,NULL),(9,'用户组删除','/users_group/delete','',6,1,1586480444,NULL,NULL),(10,'用户组保存','/users_group/save','',6,1,1586480471,NULL,NULL),(11,'用户管理','/users/manager','',1,1,1586481179,NULL,NULL),(12,'用户组管理','/users_group/manager','',6,1,1586481202,NULL,NULL),(13,'消息管理','message','',0,1,1586492696,NULL,NULL),(14,'消息管理','/message/manager','',13,1,1586492718,NULL,NULL),(15,'消息添加','/message/add','',13,1,1586492750,NULL,NULL),(16,'消息删除','/message/delete','',13,1,1586492777,NULL,NULL),(17,'资源管理','sys_resources','',0,1,1586492824,NULL,NULL),(18,'资源添加','/sys_resources/add','',17,1,1586492845,NULL,NULL),(19,'资源编辑','/sys_resources/edit','',17,1,1586492868,NULL,NULL),(20,'资源删除','/sys_resources/delete','',17,1,1586492912,NULL,NULL),(21,'资源保存','/sys_resources/save','',17,1,1586492933,NULL,NULL),(22,'资源管理','/sys_resources/manager','',17,1,1586492955,NULL,NULL),(23,'权限管理','users_group_sys_resources','',0,1,1586492989,NULL,NULL),(25,'权限保存','/users_group/save_sys_resource','',23,1,1586493060,NULL,NULL),(26,'菜单管理','menus','',0,1,1586493093,NULL,NULL),(27,'菜单管理','/menus/manager','',26,1,1586493120,NULL,NULL),(28,'菜单添加','/menus/add','',26,1,1586493150,NULL,NULL),(29,'菜单编辑','/menus/edit','',26,1,1586493169,NULL,NULL),(30,'菜单删除','/menus/delete','',26,1,1586493186,NULL,NULL),(31,'菜单保存','/menus/save','',26,1,1586493221,NULL,NULL),(32,'权限编辑','/users_group/sys_resource','',23,1,1586653522,NULL,NULL),(33,'消息编辑','/message/edit','',13,1,1586678131,NULL,NULL),(34,'消息保存','/message/save','',13,1,1586678174,NULL,NULL),(35,'系统设置功能','setting','',0,1,1586775690,NULL,NULL),(36,'系统设置','/index/setting','',35,1,1586775876,NULL,NULL),(37,'系统设置保存','/index/save_setting','',35,1,1586775902,NULL,NULL),(38,'消息详细','/message/detail','',13,1,1586776255,NULL,NULL);
+/*!40000 ALTER TABLE `heecms_sys_resources` ENABLE KEYS */;
+
+#
+# Structure for table "heecms_user_model_news"
+#
+
 DROP TABLE IF EXISTS `heecms_user_model_news`;
-CREATE TABLE `heecms_user_model_news`  (
+CREATE TABLE `heecms_user_model_news` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) NOT NULL,
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
-  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `context` text CHARACTER SET utf8 COLLATE utf8_general_ci,
-  `ceshi` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `ceshi2` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `list` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `title2` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `context` text,
+  `ceshi` varchar(255) DEFAULT NULL,
+  `ceshi2` varchar(255) DEFAULT NULL,
+  `list` varchar(255) DEFAULT NULL,
+  `title2` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_user_model_news
--- ----------------------------
-INSERT INTO `heecms_user_model_news` VALUES (1, 2, 1588475928, NULL, 1588476523, '测试标题', '&lt;p&gt;测试&lt;span style=&quot;text-decoration: underline; border: 1px solid rgb(0, 0, 0);&quot;&gt;&lt;em&gt;&lt;strong&gt;内容&lt;/strong&gt;&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;', 'ceshi1', 'ceshi2', NULL, NULL);
+#
+# Data for table "heecms_user_model_news"
+#
 
--- ----------------------------
--- Table structure for heecms_user_model_tbtest
--- ----------------------------
+INSERT INTO `heecms_user_model_news` VALUES (1,2,1588475928,NULL,1588476523,'测试标题','&lt;p&gt;测试&lt;span style=&quot;text-decoration: underline; border: 1px solid rgb(0, 0, 0);&quot;&gt;&lt;em&gt;&lt;strong&gt;内容&lt;/strong&gt;&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;','ceshi1','ceshi2',NULL,NULL);
+
+#
+# Structure for table "heecms_user_model_tbtest"
+#
+
 DROP TABLE IF EXISTS `heecms_user_model_tbtest`;
-CREATE TABLE `heecms_user_model_tbtest`  (
+CREATE TABLE `heecms_user_model_tbtest` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) NOT NULL,
   `create_time` int(11) NOT NULL,
   `update_time` int(11) NOT NULL,
   `delete_time` int(11) NOT NULL,
-  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `contxt` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+  `title` varchar(255) DEFAULT NULL,
+  `contxt` text,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Table structure for heecms_users
--- ----------------------------
+#
+# Data for table "heecms_user_model_tbtest"
+#
+
+
+#
+# Structure for table "heecms_users"
+#
+
 DROP TABLE IF EXISTS `heecms_users`;
-CREATE TABLE `heecms_users`  (
+CREATE TABLE `heecms_users` (
   `users_id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `nickname` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `header` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `username` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `nickname` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `header` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `users_group_id` int(11) DEFAULT NULL,
   `sex` int(11) DEFAULT NULL,
   `birthday` int(255) DEFAULT NULL,
-  `address` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `address` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `country_id` int(255) DEFAULT NULL,
-  `city` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `postcode` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `mobile` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `qq` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `wechat` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `city` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `postcode` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `mobile` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `qq` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `wechat` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`users_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 16 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_users
--- ----------------------------
-INSERT INTO `heecms_users` VALUES (1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'admin_', '/upload/20200413/82b64f473a8acaa3948bab0548090020.jpg', 1, 1, 1586361600, '', 1, '', '', '', '123123', 'abc@qq.com', '', 999999999, NULL, NULL);
+#
+# Data for table "heecms_users"
+#
 
--- ----------------------------
--- Table structure for heecms_users_group
--- ----------------------------
+/*!40000 ALTER TABLE `heecms_users` DISABLE KEYS */;
+INSERT INTO `heecms_users` VALUES (1,'admin','e10adc3949ba59abbe56e057f20f883e','admin_','/upload/20200413/82b64f473a8acaa3948bab0548090020.jpg',1,1,1586361600,'',1,'','','','123123','abc@qq.com','',999999999,NULL,NULL);
+/*!40000 ALTER TABLE `heecms_users` ENABLE KEYS */;
+
+#
+# Structure for table "heecms_users_group"
+#
+
 DROP TABLE IF EXISTS `heecms_users_group`;
-CREATE TABLE `heecms_users_group`  (
+CREATE TABLE `heecms_users_group` (
   `users_group_id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `isadmin` int(255) DEFAULT 0 COMMENT '是否是管理员  仅管理员可以登录后台',
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `remark` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `isadmin` int(255) DEFAULT '0' COMMENT '是否是管理员  仅管理员可以登录后台',
   `create_users_id` int(11) DEFAULT NULL,
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`users_group_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Records of heecms_users_group
--- ----------------------------
-INSERT INTO `heecms_users_group` VALUES (1, '超级管理员', '', 1, 1, NULL, NULL, NULL);
-INSERT INTO `heecms_users_group` VALUES (2, '管理员', '', 1, 1, NULL, NULL, NULL);
-INSERT INTO `heecms_users_group` VALUES (8, '管理员Test', '', 1, 2, 1587087745, NULL, 0);
+#
+# Data for table "heecms_users_group"
+#
 
--- ----------------------------
--- Table structure for heecms_users_group_sys_resources
--- ----------------------------
+/*!40000 ALTER TABLE `heecms_users_group` DISABLE KEYS */;
+INSERT INTO `heecms_users_group` VALUES (1,'超级管理员','',1,1,NULL,NULL,NULL),(2,'管理员','',1,1,NULL,NULL,NULL),(8,'管理员Test','',1,2,1587087745,NULL,0);
+/*!40000 ALTER TABLE `heecms_users_group` ENABLE KEYS */;
+
+#
+# Structure for table "heecms_users_group_sys_resources"
+#
+
 DROP TABLE IF EXISTS `heecms_users_group_sys_resources`;
-CREATE TABLE `heecms_users_group_sys_resources`  (
+CREATE TABLE `heecms_users_group_sys_resources` (
   `users_group_sys_resources_id` int(11) NOT NULL AUTO_INCREMENT,
   `users_group_id` int(11) DEFAULT NULL,
   `sys_resources_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`users_group_sys_resources_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 421 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Fixed;
+) ENGINE=MyISAM AUTO_INCREMENT=421 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=FIXED;
 
--- ----------------------------
--- Records of heecms_users_group_sys_resources
--- ----------------------------
-INSERT INTO `heecms_users_group_sys_resources` VALUES (1, 2, 2);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (2, 2, 3);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (5, 2, 11);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (4, 2, 5);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (6, 2, 7);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (7, 2, 8);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (8, 2, 9);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (9, 2, 12);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (10, 2, 14);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (11, 2, 27);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (12, 2, 2);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (13, 2, 3);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (14, 2, 5);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (15, 2, 11);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (16, 2, 7);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (17, 2, 8);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (18, 2, 9);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (19, 2, 12);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (20, 2, 14);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (21, 2, 27);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (22, 2, 2);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (23, 2, 3);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (24, 2, 5);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (25, 2, 11);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (26, 2, 7);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (27, 2, 8);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (28, 2, 9);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (29, 2, 12);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (30, 2, 14);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (31, 2, 18);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (32, 2, 27);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (33, 2, 2);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (34, 2, 3);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (35, 2, 5);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (36, 2, 11);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (37, 2, 7);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (38, 2, 8);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (39, 2, 9);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (40, 2, 12);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (41, 2, 14);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (42, 2, 18);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (43, 2, 21);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (44, 2, 27);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (45, 2, 2);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (46, 2, 3);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (47, 2, 5);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (48, 2, 11);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (49, 2, 7);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (50, 2, 8);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (51, 2, 9);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (52, 2, 12);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (53, 2, 14);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (54, 2, 18);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (55, 2, 19);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (56, 2, 21);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (57, 2, 22);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (58, 2, 27);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (226, 2, 12);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (210, 2, 21);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (209, 2, 20);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (208, 2, 19);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (63, 2, 2);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (64, 2, 3);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (65, 2, 4);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (66, 2, 5);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (67, 2, 11);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (68, 2, 7);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (69, 2, 8);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (70, 2, 9);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (71, 2, 10);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (72, 2, 12);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (73, 2, 14);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (74, 2, 15);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (75, 2, 18);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (76, 2, 19);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (77, 2, 20);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (78, 2, 21);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (79, 2, 22);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (80, 2, 27);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (225, 2, 10);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (207, 2, 18);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (206, 2, 38);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (205, 2, 34);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (85, 2, 2);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (86, 2, 3);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (87, 2, 4);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (88, 2, 5);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (89, 2, 11);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (90, 2, 7);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (91, 2, 8);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (92, 2, 9);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (93, 2, 10);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (94, 2, 12);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (95, 2, 14);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (96, 2, 15);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (97, 2, 18);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (98, 2, 19);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (99, 2, 20);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (100, 2, 21);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (101, 2, 22);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (108, 2, 2);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (103, 2, 27);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (224, 2, 9);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (204, 2, 33);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (203, 2, 16);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (202, 2, 15);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (109, 2, 3);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (110, 2, 4);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (111, 2, 5);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (112, 2, 11);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (113, 2, 7);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (114, 2, 8);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (115, 2, 9);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (116, 2, 10);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (117, 2, 12);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (118, 2, 14);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (119, 2, 15);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (120, 2, 18);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (121, 2, 19);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (122, 2, 20);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (123, 2, 21);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (124, 2, 22);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (125, 2, 27);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (223, 2, 8);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (201, 2, 14);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (200, 2, 12);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (199, 2, 10);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (130, 2, 36);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (131, 2, 2);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (132, 2, 3);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (133, 2, 4);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (134, 2, 5);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (135, 2, 11);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (136, 2, 7);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (137, 2, 8);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (138, 2, 9);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (139, 2, 10);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (140, 2, 12);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (141, 2, 14);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (142, 2, 15);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (143, 2, 16);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (144, 2, 33);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (145, 2, 34);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (146, 2, 38);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (147, 2, 18);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (148, 2, 19);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (149, 2, 20);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (150, 2, 21);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (151, 2, 22);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (152, 2, 25);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (222, 2, 7);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (154, 2, 27);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (221, 2, 11);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (198, 2, 9);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (197, 2, 8);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (196, 2, 7);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (159, 2, 36);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (195, 2, 11);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (161, 2, 2);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (162, 2, 3);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (163, 2, 4);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (164, 2, 5);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (165, 2, 11);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (166, 2, 7);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (167, 2, 8);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (168, 2, 9);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (169, 2, 10);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (170, 2, 12);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (171, 2, 14);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (172, 2, 15);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (173, 2, 16);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (174, 2, 33);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (175, 2, 34);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (176, 2, 38);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (177, 2, 18);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (178, 2, 19);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (179, 2, 20);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (180, 2, 21);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (181, 2, 22);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (182, 2, 25);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (220, 2, 5);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (184, 2, 27);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (219, 2, 4);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (194, 2, 5);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (193, 2, 4);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (192, 2, 3);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (189, 2, 36);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (191, 2, 2);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (211, 2, 22);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (212, 2, 25);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (218, 2, 3);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (214, 2, 27);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (217, 2, 2);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (216, 2, 36);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (227, 2, 14);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (228, 2, 15);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (229, 2, 16);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (230, 2, 33);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (231, 2, 34);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (232, 2, 38);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (233, 2, 18);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (234, 2, 19);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (235, 2, 20);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (236, 2, 21);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (237, 2, 22);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (238, 2, 25);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (239, 2, 27);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (240, 2, 36);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (241, 2, 2);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (242, 2, 3);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (243, 2, 4);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (244, 2, 5);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (245, 2, 11);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (246, 2, 7);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (247, 2, 8);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (248, 2, 9);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (249, 2, 10);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (250, 2, 12);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (251, 2, 14);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (252, 2, 15);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (253, 2, 16);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (254, 2, 33);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (255, 2, 34);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (256, 2, 38);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (257, 2, 18);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (258, 2, 19);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (259, 2, 20);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (260, 2, 21);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (261, 2, 22);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (262, 2, 25);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (263, 2, 27);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (264, 2, 36);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (265, 2, 2);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (266, 2, 3);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (267, 2, 4);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (268, 2, 5);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (269, 2, 11);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (270, 2, 7);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (271, 2, 8);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (272, 2, 9);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (273, 2, 10);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (274, 2, 12);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (275, 2, 14);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (276, 2, 15);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (277, 2, 16);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (278, 2, 33);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (279, 2, 34);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (280, 2, 38);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (281, 2, 18);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (282, 2, 19);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (283, 2, 20);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (284, 2, 21);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (285, 2, 22);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (286, 2, 25);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (287, 2, 27);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (292, 2, 3);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (291, 2, 2);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (290, 2, 36);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (293, 2, 4);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (294, 2, 5);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (295, 2, 11);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (296, 2, 7);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (297, 2, 8);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (298, 2, 9);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (299, 2, 10);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (300, 2, 12);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (301, 2, 14);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (302, 2, 15);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (303, 2, 16);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (304, 2, 33);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (305, 2, 34);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (306, 2, 38);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (307, 2, 18);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (308, 2, 19);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (309, 2, 20);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (310, 2, 21);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (311, 2, 22);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (312, 2, 25);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (313, 2, 27);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (314, 2, 36);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (315, 2, 2);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (316, 2, 3);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (317, 2, 4);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (318, 2, 5);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (319, 2, 11);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (320, 2, 7);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (321, 2, 8);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (322, 2, 9);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (323, 2, 10);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (324, 2, 12);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (325, 2, 14);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (326, 2, 15);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (327, 2, 16);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (328, 2, 33);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (329, 2, 34);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (330, 2, 38);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (331, 2, 18);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (332, 2, 19);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (333, 2, 20);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (334, 2, 21);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (335, 2, 22);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (336, 2, 25);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (337, 2, 27);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (338, 2, 36);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (339, 2, 2);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (340, 2, 3);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (341, 2, 4);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (342, 2, 5);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (343, 2, 11);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (344, 2, 7);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (345, 2, 8);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (346, 2, 9);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (347, 2, 10);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (348, 2, 12);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (349, 2, 14);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (350, 2, 15);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (351, 2, 16);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (352, 2, 33);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (353, 2, 34);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (354, 2, 38);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (355, 2, 18);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (356, 2, 19);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (357, 2, 20);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (358, 2, 21);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (359, 2, 22);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (360, 2, 25);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (361, 2, 27);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (362, 2, 30);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (363, 2, 36);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (364, 2, 2);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (365, 2, 3);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (366, 2, 4);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (367, 2, 5);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (368, 2, 11);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (369, 2, 7);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (370, 2, 8);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (371, 2, 9);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (372, 2, 10);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (373, 2, 12);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (374, 2, 14);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (375, 2, 15);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (376, 2, 16);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (377, 2, 33);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (378, 2, 34);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (379, 2, 38);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (380, 2, 18);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (381, 2, 19);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (382, 2, 20);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (383, 2, 21);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (384, 2, 22);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (385, 2, 25);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (386, 2, 27);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (387, 2, 30);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (388, 2, 36);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (389, 2, 37);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (390, 8, 19);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (391, 8, 19);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (392, 8, 18);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (393, 8, 19);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (394, 2, 2);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (395, 2, 3);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (396, 2, 4);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (397, 2, 5);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (398, 2, 11);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (399, 2, 7);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (400, 2, 8);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (401, 2, 9);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (402, 2, 10);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (403, 2, 12);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (404, 2, 14);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (405, 2, 15);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (406, 2, 16);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (407, 2, 33);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (408, 2, 34);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (409, 2, 38);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (410, 2, 18);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (411, 2, 19);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (412, 2, 20);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (413, 2, 21);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (414, 2, 22);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (415, 2, 25);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (416, 2, 27);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (417, 2, 28);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (418, 2, 30);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (419, 2, 36);
-INSERT INTO `heecms_users_group_sys_resources` VALUES (420, 2, 37);
+#
+# Data for table "heecms_users_group_sys_resources"
+#
 
-SET FOREIGN_KEY_CHECKS = 1;
+/*!40000 ALTER TABLE `heecms_users_group_sys_resources` DISABLE KEYS */;
+INSERT INTO `heecms_users_group_sys_resources` VALUES (1,2,2),(2,2,3),(4,2,5),(5,2,11),(6,2,7),(7,2,8),(8,2,9),(9,2,12),(10,2,14),(11,2,27),(12,2,2),(13,2,3),(14,2,5),(15,2,11),(16,2,7),(17,2,8),(18,2,9),(19,2,12),(20,2,14),(21,2,27),(22,2,2),(23,2,3),(24,2,5),(25,2,11),(26,2,7),(27,2,8),(28,2,9),(29,2,12),(30,2,14),(31,2,18),(32,2,27),(33,2,2),(34,2,3),(35,2,5),(36,2,11),(37,2,7),(38,2,8),(39,2,9),(40,2,12),(41,2,14),(42,2,18),(43,2,21),(44,2,27),(45,2,2),(46,2,3),(47,2,5),(48,2,11),(49,2,7),(50,2,8),(51,2,9),(52,2,12),(53,2,14),(54,2,18),(55,2,19),(56,2,21),(57,2,22),(58,2,27),(63,2,2),(64,2,3),(65,2,4),(66,2,5),(67,2,11),(68,2,7),(69,2,8),(70,2,9),(71,2,10),(72,2,12),(73,2,14),(74,2,15),(75,2,18),(76,2,19),(77,2,20),(78,2,21),(79,2,22),(80,2,27),(85,2,2),(86,2,3),(87,2,4),(88,2,5),(89,2,11),(90,2,7),(91,2,8),(92,2,9),(93,2,10),(94,2,12),(95,2,14),(96,2,15),(97,2,18),(98,2,19),(99,2,20),(100,2,21),(101,2,22),(103,2,27),(108,2,2),(109,2,3),(110,2,4),(111,2,5),(112,2,11),(113,2,7),(114,2,8),(115,2,9),(116,2,10),(117,2,12),(118,2,14),(119,2,15),(120,2,18),(121,2,19),(122,2,20),(123,2,21),(124,2,22),(125,2,27),(130,2,36),(131,2,2),(132,2,3),(133,2,4),(134,2,5),(135,2,11),(136,2,7),(137,2,8),(138,2,9),(139,2,10),(140,2,12),(141,2,14),(142,2,15),(143,2,16),(144,2,33),(145,2,34),(146,2,38),(147,2,18),(148,2,19),(149,2,20),(150,2,21),(151,2,22),(152,2,25),(154,2,27),(159,2,36),(161,2,2),(162,2,3),(163,2,4),(164,2,5),(165,2,11),(166,2,7),(167,2,8),(168,2,9),(169,2,10),(170,2,12),(171,2,14),(172,2,15),(173,2,16),(174,2,33),(175,2,34),(176,2,38),(177,2,18),(178,2,19),(179,2,20),(180,2,21),(181,2,22),(182,2,25),(184,2,27),(189,2,36),(191,2,2),(192,2,3),(193,2,4),(194,2,5),(195,2,11),(196,2,7),(197,2,8),(198,2,9),(199,2,10),(200,2,12),(201,2,14),(202,2,15),(203,2,16),(204,2,33),(205,2,34),(206,2,38),(207,2,18),(208,2,19),(209,2,20),(210,2,21),(211,2,22),(212,2,25),(214,2,27),(216,2,36),(217,2,2),(218,2,3),(219,2,4),(220,2,5),(221,2,11),(222,2,7),(223,2,8),(224,2,9),(225,2,10),(226,2,12),(227,2,14),(228,2,15),(229,2,16),(230,2,33),(231,2,34),(232,2,38),(233,2,18),(234,2,19),(235,2,20),(236,2,21),(237,2,22),(238,2,25),(239,2,27),(240,2,36),(241,2,2),(242,2,3),(243,2,4),(244,2,5),(245,2,11),(246,2,7),(247,2,8),(248,2,9),(249,2,10),(250,2,12),(251,2,14),(252,2,15),(253,2,16),(254,2,33),(255,2,34),(256,2,38),(257,2,18),(258,2,19),(259,2,20),(260,2,21),(261,2,22),(262,2,25),(263,2,27),(264,2,36),(265,2,2),(266,2,3),(267,2,4),(268,2,5),(269,2,11),(270,2,7),(271,2,8),(272,2,9),(273,2,10),(274,2,12),(275,2,14),(276,2,15),(277,2,16),(278,2,33),(279,2,34),(280,2,38),(281,2,18),(282,2,19),(283,2,20),(284,2,21),(285,2,22),(286,2,25),(287,2,27),(290,2,36),(291,2,2),(292,2,3),(293,2,4),(294,2,5),(295,2,11),(296,2,7),(297,2,8),(298,2,9),(299,2,10),(300,2,12),(301,2,14),(302,2,15),(303,2,16),(304,2,33),(305,2,34),(306,2,38),(307,2,18),(308,2,19),(309,2,20),(310,2,21),(311,2,22),(312,2,25),(313,2,27),(314,2,36),(315,2,2),(316,2,3),(317,2,4),(318,2,5),(319,2,11),(320,2,7),(321,2,8),(322,2,9),(323,2,10),(324,2,12),(325,2,14),(326,2,15),(327,2,16),(328,2,33),(329,2,34),(330,2,38),(331,2,18),(332,2,19),(333,2,20),(334,2,21),(335,2,22),(336,2,25),(337,2,27),(338,2,36),(339,2,2),(340,2,3),(341,2,4),(342,2,5),(343,2,11),(344,2,7),(345,2,8),(346,2,9),(347,2,10),(348,2,12),(349,2,14),(350,2,15),(351,2,16),(352,2,33),(353,2,34),(354,2,38),(355,2,18),(356,2,19),(357,2,20),(358,2,21),(359,2,22),(360,2,25),(361,2,27),(362,2,30),(363,2,36),(364,2,2),(365,2,3),(366,2,4),(367,2,5),(368,2,11),(369,2,7),(370,2,8),(371,2,9),(372,2,10),(373,2,12),(374,2,14),(375,2,15),(376,2,16),(377,2,33),(378,2,34),(379,2,38),(380,2,18),(381,2,19),(382,2,20),(383,2,21),(384,2,22),(385,2,25),(386,2,27),(387,2,30),(388,2,36),(389,2,37),(390,8,19),(391,8,19),(392,8,18),(393,8,19),(394,2,2),(395,2,3),(396,2,4),(397,2,5),(398,2,11),(399,2,7),(400,2,8),(401,2,9),(402,2,10),(403,2,12),(404,2,14),(405,2,15),(406,2,16),(407,2,33),(408,2,34),(409,2,38),(410,2,18),(411,2,19),(412,2,20),(413,2,21),(414,2,22),(415,2,25),(416,2,27),(417,2,28),(418,2,30),(419,2,36),(420,2,37);
+/*!40000 ALTER TABLE `heecms_users_group_sys_resources` ENABLE KEYS */;

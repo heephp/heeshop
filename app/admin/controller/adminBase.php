@@ -32,7 +32,11 @@ class adminBase extends controller {
 
             $this->logincheck();
 
-            if (!$this->auth()) return false;
+            if (!$this->auth()){
+
+                echo $this->error('您没有'.'/'.CONTROLLER.'/'.METHOD.'的操作权限');
+                exit();
+            }
 
             $this->get_message_list();
 
@@ -49,7 +53,7 @@ class adminBase extends controller {
         $user_group_id=request($this->session_users_group_id_str);
 //echo request($this->session_users_group_name_str);exit;
         if(empty($user_id)||empty($user_name)||empty($user_group_id)){
-            return $this->redirect('/'.APP.'/index/login');
+            return $this->redirect('index/login?r='.urlencode($_SERVER['REQUEST_URI']));
         }
 
         $this->assign('user_id',$user_id);
@@ -88,13 +92,16 @@ class adminBase extends controller {
         }
 
         //判断当前请求是否存在
-        foreach ($ugrlist as $item){
-            if($item['path']==$action){
-                return true;
+        if(empty($ugrlist)) {
+            return false;
+        }else{
+            //判断当前请求是否存在
+            foreach ($ugrlist as $item) {
+                if ($item['path'] == $action) {
+                    return true;
+                }
             }
         }
-
-        return $this->error('您没有'.$action.'的操作权限');
 
 
     }

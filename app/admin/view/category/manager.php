@@ -47,16 +47,16 @@
                             <tr>
                                 <td><?=$m['category_id']?></td>
                                 <td><i class="<?=$m['icon']?>"></i></td>
-                                <td> <?=$m['name']?></td>
+                                <td> + <?=$m['name']?></td>
                                 <td><?=sstr($m['keyword'],10)?></td>
                                 <td> <?=$m['ord']?></td>
                                 <td><?=sstr($m['remark'],10)?></td>
                                 <td><?=$m['create_user']['username']?></td>
                                 <td><?=$m['create_time']?></td>
                                 <td>
-                                    <a href="<?=url('edit/'.$m['category_id'])?>" class="btn btn-primary btn-sm">编辑</a>
+                                    <a href="<?=url('edit',$m['category_id'])?>" class="btn btn-primary btn-sm">编辑</a>
 
-                                    <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete/'.$m['category_id'])?>">删除</a>
+                                    <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete',$m['category_id'])?>">删除</a>
 
                                 </td>
                             </tr>
@@ -66,16 +66,16 @@
                                     <tr>
                                         <td><?=$c['category_id']?></td>
                                         <td><i class="<?=$c['icon']?>"></i></td>
-                                        <td> + <?=$c['name']?></td>
+                                        <td style="padding-left:30px !important;"> ▷ <i class="<?=$c['icon']?>"></i><?=$c['name']?></td>
                                         <td><?=sstr($c['keyword'],10)?></td>
                                         <td> <?=$c['ord']?></td>
                                         <td><?=sstr($c['remark'],10)?></td>
                                         <td><?=$c['create_user']['username']?></td>
                                         <td><?=$c['create_time']?></td>
                                         <td>
-                                            <a href="<?=url('edit/'.$c['category_id'])?>" class="btn btn-primary btn-sm">编辑</a>
+                                            <a href="<?=url('edit',$c['category_id'])?>" class="btn btn-primary btn-sm">编辑</a>
 
-                                            <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete/'.$c['category_id'])?>">删除</a>
+                                            <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete',$c['category_id'])?>">删除</a>
 
                                         </td>
                                     </tr>

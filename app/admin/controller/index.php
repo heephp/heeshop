@@ -19,7 +19,7 @@ class index extends adminBase {
     }
 
     function login(){
-
+        $this->assign('r',request('get.r'));
         return $this->fetch();
     }
 
@@ -32,6 +32,7 @@ class index extends adminBase {
         $data = request('post.');
         $username = $data['username'];
         $password = $data['password'];
+        $r = $data['r'];
 
         $users = model('users');
         $m = $users->where("`username`='$username' and `password`='" . md5($password) . "'")->find();
@@ -46,7 +47,7 @@ class index extends adminBase {
             request($this->session_users_group_name_str, $users->data['users_group']['name']);
             request($this->session_users_email_str, $m['email']);
             request($this->session_users_header_str, $m['header']);
-            return $this->redirect('index');
+            return $this->redirect(empty($r)?'index':$r);
         } else {
             return $this->error('用户名或密码错误！');
         }

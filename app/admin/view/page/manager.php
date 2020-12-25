@@ -42,14 +42,14 @@
                         <tbody>
                         <?foreach($list as $m){?>
                             <tr>
-                                <td><a href="<?=url('edit/'.$m['pages_id'])?>"><?=sstr($m['title'],20)?></a></td>
+                                <td><a href="<?=url('edit',$m['pages_id'])?>"><?=sstr($m['title'],20)?></a></td>
                                 <td><?=$m['create_user']['username']?></td>
                                 <td><?=sstr($m['keyword'],10)?></td>
                                 <td><?=$m['create_time']?></td>
                                 <td><?=$m['update_time']?></td>
                                 <td>
-                                    <a href="<?=url('edit/'.$m['pages_id'])?>" class="btn btn-primary btn-sm">编辑</a>
-                                    <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete/'.$m['pages_id'])?>">删除</a>
+                                    <a href="<?=url('edit',$m['pages_id'])?>" class="btn btn-primary btn-sm">编辑</a>
+                                    <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete',$m['pages_id'])?>">删除</a>
 
                                 </td>
                             </tr>

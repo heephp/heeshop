@@ -29,6 +29,7 @@ $('.delete').click(function(e) {
 			},
 			cancel: {
 				visible: true,
+				text : '取消',
 				className: 'btn btn-danger'
 			}
 		}

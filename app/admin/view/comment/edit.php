@@ -27,7 +27,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <?import('/layout/toolsbar.php')?>
+                <?import('/layout/toolsbar.php',['hasnew'=>false])?>
                 <div class="card-body">
 
                     <blockquote>

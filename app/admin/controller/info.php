@@ -18,13 +18,13 @@ class info extends adminBase
     {
         $cate = model('category');
         $cate->get($category_id);
-        $cate->model();
+        //$cate->model();
         $d=$cate->data;
-        if($d['model']['is_sys']=='1'){
-            return $this->redirect('/'.APP.'/'.$d['model']['table_name'].'/manager');
-        }else{
-            $this->bulider_table($d['model']['model_table_id'],$category_id);
-        }
+        //if($d['model']['is_sys']=='1'){
+        //    return $this->redirect('/'.APP.'/'.$d['model']['table_name'].'/manager');
+        //}else{
+        //    $this->bulider_table($d['model']['model_table_id'],$category_id);
+        //}
         $this->assign('category_id',$category_id);
         return $this->fetch();
     }

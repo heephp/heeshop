@@ -5,6 +5,7 @@ use heephp\sysExcption;
 class controller{
 
     protected $_pagevar = array();
+    protected $_trace = true;
 
     public function  __construct()
     {
@@ -65,7 +66,8 @@ class controller{
 
         include $viewPagePath;
         //调用调试
-        trace::page_trace();
+        if($this->_trace)
+            trace::page_trace();
 
         $content = ob_get_contents();
         ob_end_clean();
@@ -96,9 +98,9 @@ class controller{
         fclose($fileinfo);
     }
 
-    public function redirect($path){
+    public function redirect($path,$parms=[]){
         ob_start();
-        header('Location:'.url($path));
+        header('Location:'.url($path,$parms,false));
         $content = ob_get_contents();
         ob_end_clean();
 
@@ -135,6 +137,31 @@ class controller{
         if($name=='pagevar'){
             return $this->_pagevar;
         }
+    }
+
+    /**
+     * 是否是AJAx提交的
+     * @return bool
+     */
+    protected function _isAjax(){
+        if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest'){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    /**
+     * 是否是GET提交的
+     */
+    protected function _isGet(){
+        return $_SERVER['REQUEST_METHOD'] == 'GET';
+    }
+    /**
+     * 是否是POST提交
+     * @return int
+     */
+    protected function _isPost() {
+        return ($_SERVER['REQUEST_METHOD'] == 'POST');
     }
 
     public function __call($name, $arguments)

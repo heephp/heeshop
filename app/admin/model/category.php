@@ -6,8 +6,8 @@ use heephp\relation;
 class category extends model
 {
     protected $autotimespan = true;
-    protected $update_message_validata = "分类名|必填+已经存在;关键词|必填;模型|必须选择;列表模板|必填;详细页模板|必填";
-    protected $update_validata = "name|must+unique;keyword|must;model_id|must;template_list|must;template_detail|must;";
+    protected $update_message_validata = "分类名|必填+已经存在;关键词|必填;";
+    protected $update_validata = "name|must+unique;keyword|must;";
     protected $softdel = true;
     protected $key = 'category_id';
 
@@ -35,8 +35,8 @@ class category extends model
         return $re->belong();
     }
 
-    public function model(){
+    /*public function model(){
         $re = new relation($this,'model','model_id','model_id','model');
         return $re->belong();
-    }
+    }*/
 }

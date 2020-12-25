@@ -110,7 +110,7 @@ class mysqli implements databaseInterface
 
         //调试记录sql
         trace::record_sql($sql);
-        logger::debug($sql);
+        logger::sql($sql);
 
         if (!$res) {
             throw new sysExcption("sql语句执行失败$sql" . mysqli_error(self::$link) . "错误编码" . mysqli_errno(self::$link));
@@ -134,7 +134,7 @@ class mysqli implements databaseInterface
 
         $result = $this->getRow($sql);
 
-        return $result[0];
+        return  $result[array_key_first($result)];
     }
 
     //获取一行记录,return array 一维数组

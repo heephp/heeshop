@@ -16,6 +16,7 @@ class form{
     private $hasfile =false;
     private $is_row=false;//是否是水平表单
     private $row_width=[2,10];//水平表单的左右两列宽度
+    private $attr='';
 
     public function __construct($action,$method='get',$name="",$hasfile=false)
     {
@@ -43,7 +44,7 @@ class form{
 
 
         $label = " <label for=\"$name-$value\" $label_cls>$lable</label>";
-        $input = "<input type=\"$type\" class=\"$input_cls\" id=\"$name-$value\" name=\"$name\" value=\"$value\"  placeholder=\"$placehoder\" $range $checkedstr>";
+        $input = "<input type=\"$type\" class=\"$input_cls\" id=\"$name-$value\" name=\"$name\" value=\"$value\"  placeholder=\"$placehoder\" $range $checkedstr $this->attr >";
         $desc = empty($desc)?'':"<small class=\"form-text text-muted\">$desc</small>";
 
         $ht = ($type=='radio'||$type=='checkbox')?$input.$label.$desc:$label.$input.$desc;
@@ -65,7 +66,7 @@ class form{
         $checkedstr = ($type=='checkbox'||$type=='radio')&&$checked?'checked':'';
 
         $label = " <label for=\"$name-$value\" $label_cls>$lable</label>";
-        $input = "<input type=\"$type\" class=\"$input_cls\" id=\"$name-$value\" name=\"$name\" value=\"$value\"  placeholder=\"$placehoder\" $range $checkedstr>";
+        $input = "<input type=\"$type\" class=\"$input_cls\" id=\"$name-$value\" name=\"$name\" value=\"$value\"  placeholder=\"$placehoder\" $range $checkedstr $this->attr >";
         $desc = empty($desc)?'':"<small class=\"form-text text-muted\">$desc</small>";
 
         $input = ($type=='checkbox'||$type=='radio')?$input:"<div class=\"col-sm-".$this->row_width[1]."\">".$input."</div>";
@@ -95,7 +96,7 @@ class form{
         }
 
         $multiplestr = $multiple?'multiple':'';
-        $select = "<select class=\"form-control\" id=\"$lable\" name=\"$name\" $multiplestr>
+        $select = "<select class=\"form-control\" id=\"$name\" name=\"$name\" $multiplestr $this->attr>
                         $vs                    
                     </select>
                     <small class=\"form-text text-muted\">$desc</small>";
@@ -232,7 +233,7 @@ class form{
             $ht = "<div class=\"form-group row\">
                     <label for=\"$name\" class=\"col-sm-".$this->row_width[0]." col-form-label\">$lable</label>
                     <div class=\"col-sm-".$this->row_width[1]."\">
-                        <textarea class=\"form-control\" id=\"$name\" name=\"$name\" rows=\"$line\" placeholder='$palcehoder'></textarea>
+                        <textarea class=\"form-control\" id=\"$name\" name=\"$name\" rows=\"$line\" placeholder='$palcehoder' $this->attr></textarea>
                     </div>
                   </div>";
         } else {
@@ -344,6 +345,14 @@ class form{
     public function set_row($val,$width=[2,10]){
         $this->is_row = $val;
         $this->row_width = $width;
+    }
+
+    /**
+     * 设置输入框属性
+     * @param $attr
+     */
+    public function set_attr($attr){
+        $this->attr = $attr;
     }
     public function __destruct()
     {

@@ -34,7 +34,7 @@ class view
 
     }
 
-    private static function include($file,$vars = [])
+    private static function _include($file,$vars = [])
     {
         if (empty(view::$basedir)) {
             throw new sysExcption('模板目录未指定');
@@ -49,17 +49,18 @@ class view
 
     public static function import($file,$vars = [])
     {
-        view::include($file,$vars);
+        view::_include($file,$vars);
     }
 
-    public static function layout($file,$vars){
+ /*   public static function layout($file,$vars=[]){
         view::$layout = view::$basedir.$file.'.php';
         view::$vars = array_merge(view::$vars, $vars);
         foreach (view::$vars as $k => $v) {
             $$k = $v;
         }
         include view::$layout;
-    }
+
+    }*/
 
     private static function _getvar(){
         $backtrace = debug_backtrace();

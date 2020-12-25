@@ -1,8 +1,0 @@
-2020-11-01 01:29:50 [DEBUG] [root]show full columns from `heecms_pages`
-2020-11-01 01:29:50 [DEBUG] [root]select * from heecms_pages       
-2020-11-01 01:29:50 [DEBUG] [root]show full columns from `heecms_users_group`
-2020-11-01 01:29:50 [DEBUG] [root]select * from heecms_users_group   where ((`users_group_id`=1)) and (`heecms_users_group`.delete_time IS NULL or `heecms_users_group`.delete_time <=0 or `heecms_users_group`.delete_time='')    
-2020-11-01 01:29:50 [DEBUG] [root]show full columns from `heecms_message`
-2020-11-01 01:29:50 [DEBUG] [root]select * from heecms_message   where ((`isread`=0 and `receiver_users_id`='1')) and (`heecms_message`.delete_time IS NULL or `heecms_message`.delete_time <=0 or `heecms_message`.delete_time='')  order by create_time desc  limit 5
-2020-11-01 01:29:52 [DEBUG] [root]show full columns from `heecms_pages`
-2020-11-01 01:29:52 [DEBUG] [root]select * from heecms_pages       

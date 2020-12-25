@@ -52,9 +52,9 @@
                                 <td><?=$m['create_user']['username']?></td>
                                 <td><?=$m['create_time']?></td>
                                 <td>
-                                    <a href="<?=url('edit/'.$m['ad_id'])?>" class="btn btn-primary btn-sm">编辑</a>
+                                    <a href="<?=url('edit',$m['ad_id'])?>" class="btn btn-primary btn-sm">编辑</a>
 
-                                    <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete/'.$m['ad_id'])?>">删除</a>
+                                    <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete',$m['ad_id'])?>">删除</a>
 
                                 </td>
                             </tr>

@@ -88,6 +88,7 @@
                     </div>
                     <?}?>
                     <div class="login-action">
+                        <input type="hidden" name="r" value="<?=urldecode($r)?>">
                         <input type="submit" value="登录" class="btn btn-success"/>
                         <a class="forgotpwd" href="#">找回密码？</a>
                     </div>

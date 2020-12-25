@@ -457,7 +457,6 @@ class model extends orm {
             }
 
         }else {
-
             if (empty($data[$this->key])) {
                 return $this->insert($data);
             } else {

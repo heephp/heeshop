@@ -18,6 +18,12 @@
                 <i class="flaticon-right-arrow"></i>
             </li>
             <li class="nav-item">
+                <a href="#"><?=$category_name?></a>
+            </li>
+            <li class="separator">
+                <i class="flaticon-right-arrow"></i>
+            </li>
+            <li class="nav-item">
                 <a href="#">信息编辑</a>
             </li>
         </ul>
@@ -27,7 +33,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <?import('/layout/toolsbar.php')?>
+                <?import('toolsbar.php',['category_id'=>$categoryid])?>
                 <div class="card-body">
                     <form action="<?=url('save')?>" method="post">
                         <input type="hidden" name="article_id" value="<?=$m['article_id']?>">
@@ -40,7 +46,7 @@
                                         <?foreach ($plist as $p){?>
                                             <optgroup label="<?=$p['name']?>">
                                                 <?foreach ($p['child'] as $c){?>
-                                                <option value="<?=$c['category_id']?>" <?=($c['category_id']==$m['category_id'])?'selected':''?>><?=$c['name']?></option>
+                                                <option value="<?=$c['category_id']?>" <?=($c['category_id']==$m['category_id']||$c['category_id']==$categoryid)?'selected':''?>><?=$c['name']?></option>
                                                 <?}?>
                                             </optgroup>
                                         <?}?>

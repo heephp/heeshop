@@ -50,11 +50,11 @@
                                 <td><?=$m['create_user']['username']?></td>
                                 <td><?=$m['create_time']?></td>
                                 <td>
-                                    <a href="<?=url('/'.APP.'/link/manager/'.$m['link_group_id'])?>" class="btn btn-primary btn-sm">管理</a>
+                                    <a href="<?=url('link/manager',$m['link_group_id'])?>" class="btn btn-primary btn-sm">管理</a>
 
-                                    <a href="<?=url('edit/'.$m['link_group_id'])?>" class="btn btn-primary btn-sm">编辑</a>
+                                    <a href="<?=url('edit',$m['link_group_id'])?>" class="btn btn-primary btn-sm">编辑</a>
 
-                                    <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete/'.$m['link_group_id'])?>">删除</a>
+                                    <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete',$m['link_group_id'])?>">删除</a>
 
                                 </td>
                             </tr>

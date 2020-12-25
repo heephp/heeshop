@@ -62,11 +62,11 @@ function modeluser($name)
  * @param $title 标题
  * @return string 链接
  */
-function mtitle($field,$curfield,$order,$title){
+function mtitle($field,$curfield,$order,$title,$categoryid=''){
     $cls =$field==$curfield?" class='$order' ":'';
 
     $order=($order=='asc')?'desc':'asc';
-    $url = url('manager',[$field,$order]);
+    $url = url('manager',[$categoryid,$field,$order]);
     return "<a href='$url' $cls>$title</a>";
 }
 

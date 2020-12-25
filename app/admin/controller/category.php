@@ -24,9 +24,9 @@ class category extends adminBase
         $cate->whereEmpty('parent_id')->page;
         $this->assign('plist',$cate->data);
 
-        $sysm =new sysmodel();
-        $sysm->select();
-        $this->assign('mlist',$sysm->data);
+        //$sysm =new sysmodel();
+        //$sysm->select();
+        //$this->assign('mlist',$sysm->data);
 
         return $this->fetch('edit');
     }
@@ -38,9 +38,9 @@ class category extends adminBase
         $cate->whereEmpty('parent_id')->select();
         $this->assign('plist',$cate->data);
 
-        $sysm =new sysmodel();
-        $sysm->select();
-        $this->assign('mlist',$sysm->data);
+        //$sysm =new sysmodel();
+        //$sysm->select();
+        //$this->assign('mlist',$sysm->data);
 
         $cate->get($id);
 
@@ -48,42 +48,27 @@ class category extends adminBase
         return $this->fetch();
     }
 
-    function delete($id){
+    function delete($id)
+    {
         $cate = model('category');
-        $m = $cate->get($id);
-        $model_id=$m['model_id'];
+        //判断是否有子栏目
+        $ccount = $cate->where('parent_id='.$id)->count()->value();
+        if ($ccount > 0) {
+            return $this->error('栏目存在子栏目，删除子栏目后再删除该栏目！');
+        }
 
         //判断是否是栏目模型表是否存在数据
-        $model = new sysmodel();
-        $sysm = $model->get($model_id);
-        if($sysm['is_sys']==1){
-            //如果是系统模型 取表名并取数据量
-            $_m =model($sysm['table_name']);
-            $mcount = $_m->where('category_id='.$id)->count()->value();
-            if($mcount>0){
-                return $this->error('栏目存在数据（包括回收站），清空后再删除！');
-            }
-        }else{
-            //如果是用户模型 取表名并取数据量
-            $mt= model('model_table');
-            $mtda = $mt->get($sysm['model_table_id']);
-            if(!$mtda){
-                return $this->error('用户模型表记录不存在！');
-            }
-
-
-            $_m =modeluser($mtda['name']);
-            $mcount = $_m->where('category_id='.$id)->count()->value();
-            if($mcount>0){
-                return $this->error('栏目存在数据（包括回收站），清空后再删除！');
-            }
+        $_m = model('article');
+        $mcount = $_m->where('category_id=' . $id)->count()->value();
+        if ($mcount > 0) {
+            return $this->error('栏目存在数据（包括回收站），清空后再删除！');
         }
 
         $re = $cate->delete($id);
-        if($re){
+        if ($re) {
             cache()->clear();
-            return $this->success('栏目删除成功！',url('manager'));
-        }else
+            return $this->success('栏目删除成功！', url('manager'));
+        } else
             return $this->error('栏目删除失败');
     }
 

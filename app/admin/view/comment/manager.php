@@ -27,7 +27,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <?import('/layout/toolsbar.php')?>
+                <?import('/layout/toolsbar.php',['hasnew'=>false])?>
                 <div class="card-body">
                     <table class="table">
                         <thead>
@@ -51,8 +51,8 @@
                                 <td><?=$m['create_user']['username']?></td>
                                 <td><?=$m['create_time']?></td>
                                 <td>
-                                    <a href="<?=url('edit/'.$m['comment_id'])?>" class="btn btn-primary btn-sm">编辑</a>
-                                    <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete/'.$m['article_id'])?>">删除</a>
+                                    <a href="<?=url('edit',[$m['comment_id']])?>" class="btn btn-primary btn-sm">编辑</a>
+                                    <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete',[$m['article_id']])?>">删除</a>
 
                                 </td>
                             </tr>
