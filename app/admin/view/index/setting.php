@@ -60,7 +60,12 @@
                                 邮件
                             </a>
                         </li>
-
+                        <li class="nav-item submenu">
+                            <a class="nav-link" id="pills-contact-tab-icon" role="tab" aria-selected="true" aria-controls="pills-mail-icon" href="#pills-pay-icon" data-toggle="pill">
+                                <i class="fab fa-amazon-pay"></i>
+                                支付
+                            </a>
+                        </li>
                     </ul>
                     </div>
                 </div>
@@ -74,7 +79,7 @@
                         import('setting/setting-watermark.php');
                         import('setting/setting-vcode.php');
                         import('setting/setting-mail.php');
-
+                        import('setting/setting-pay.php');
                         ?>
                     </div>
                     <div class="card-action">

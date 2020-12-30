@@ -29,9 +29,9 @@ class alipay extends base
             // 支付宝根证书（新版资金类接口转 alipay_root_cert_sn）
             'root_cert' => '',
             // 支付成功通知地址
-            'notify_url' => 'http://pay.thinkadmin.top/test/alipay-notify.php',
+            'notify_url' => 'http://'.$_SERVER["HTTP_HOST"].'/home/alipay/notify',
             // 网页支付回跳地址
-            'return_url' => 'http://pay.thinkadmin.top/test/alipay-notify.php',
+            'return_url' => 'http://'.$_SERVER["HTTP_HOST"].'/home/alipay/msg',
         ];
     }
 

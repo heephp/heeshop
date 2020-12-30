@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version: 5.7.26)
-# Date: 2020-11-10 10:25:05
+# Date: 2020-12-31 06:04:57
 # Generator: MySQL-Front 5.3  (Build 4.234)
 
 /*!40101 SET NAMES utf8 */;
@@ -49,6 +49,7 @@ CREATE TABLE `heecms_article` (
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
+  `price` double DEFAULT NULL,
   PRIMARY KEY (`article_id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
@@ -56,7 +57,7 @@ CREATE TABLE `heecms_article` (
 # Data for table "heecms_article"
 #
 
-INSERT INTO `heecms_article` VALUES (1,2,NULL,'测试内容','描述','&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot; title=&quot;1587782677251926.jpg&quot; alt=&quot;qiyeguanwang.jpg&quot;/&gt;&lt;/p&gt;',NULL,'作者','关键词',NULL,0,1587782763,NULL,NULL),(2,2,NULL,'测试内容标题','描述','&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588768789115185.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;',NULL,'作者','关键词,产品,网站,信息,软件','/upload/20200425/1587782677251926.jpg',1,1587782944,1589683402,NULL),(3,2,NULL,'标题2','描述2','&lt;p&gt;内容2&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;ujnnbbhjjvjjvvjhjjvjhvjvjvjvjvjvjhvjvj&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588768789115185.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;',NULL,'作者2','关键词2,信息','/upload/20200425/1587782677251926.jpg',1,1587784244,1589539497,NULL),(4,2,1,'价格','31','&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot; alt=&quot;1588760663359953.png&quot;/&gt;&lt;/p&gt;',NULL,'','','/upload/20200506/1588760663359953.png',0,1589681234,NULL,NULL);
+INSERT INTO `heecms_article` VALUES (1,2,NULL,'测试内容','描述','&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot; title=&quot;1587782677251926.jpg&quot; alt=&quot;qiyeguanwang.jpg&quot;/&gt;&lt;/p&gt;',NULL,'作者','关键词',NULL,0,1587782763,NULL,NULL,NULL),(2,2,NULL,'测试内容标题','描述','&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588768789115185.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;',NULL,'作者','关键词,产品,网站,信息,软件','/upload/20200425/1587782677251926.jpg',0,1587782944,1589683402,1608860061,NULL),(3,2,NULL,'标题2','描述2','&lt;p&gt;内容2&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;ujnnbbhjjvjjvvjhjjvjhvjvjvjvjvjvjhvjvj&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588768789115185.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;',NULL,'作者2','关键词2,信息','/upload/20200425/1587782677251926.jpg',1,1587784244,1589539497,1608860055,NULL),(4,2,1,'价格','31','&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot; alt=&quot;1588760663359953.png&quot;/&gt;&lt;/p&gt;',NULL,'','','/upload/20200506/1588760663359953.png',1,1589681234,NULL,1608860058,NULL);
 
 #
 # Structure for table "heecms_category"
@@ -75,17 +76,15 @@ CREATE TABLE `heecms_category` (
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
-  `model_id` int(255) DEFAULT NULL COMMENT '对应的模型Id',
-  `template_list` varchar(255) DEFAULT NULL COMMENT '列表页的模板',
-  `template_detail` varchar(255) DEFAULT NULL COMMENT '详细页模板',
+  `price` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`category_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 #
 # Data for table "heecms_category"
 #
 
-INSERT INTO `heecms_category` VALUES (1,0,'fas fa-align-justify','测试栏目','','测试 栏目','1',1,1587778965,1588493740,NULL,1,'list.php','detail.php'),(2,1,'','测试子栏目2','','子栏目','2',1,1587779599,1590112307,NULL,1,'/list','/detail'),(3,1,'','ceshi1','','key','3',1,1588303244,NULL,1588470128,2,'list.php','detail.php'),(4,1,'','测试栏目22','','22','2',1,1588472248,NULL,1588473611,3,'list.php','detail.php'),(5,1,'','测试栏目3','','11','2',1,1588473774,NULL,1588474366,4,'list.php','detail.php');
+INSERT INTO `heecms_category` VALUES (1,0,'fas fa-align-justify','测试栏目','','测试 栏目','1',1,1587778965,1588493740,NULL,NULL),(2,1,'','测试子栏目2','','子栏目','2',1,1587779599,1590112307,NULL,NULL),(3,1,'','ceshi1','','key','3',1,1588303244,NULL,1588470128,NULL),(4,1,'','测试栏目22','','22','2',1,1588472248,NULL,1588473611,NULL),(5,1,'','测试栏目3','','11','2',1,1588473774,NULL,1588474366,NULL),(6,0,'fas fa-air-freshener','演示分类','','关键词1','',1,1608838295,1608838317,1608860041,NULL);
 
 #
 # Structure for table "heecms_comment"
@@ -133,7 +132,7 @@ CREATE TABLE `heecms_config` (
 #
 
 /*!40000 ALTER TABLE `heecms_config` DISABLE KEYS */;
-INSERT INTO `heecms_config` VALUES (1,'网站名称','website_name','HeeCMS官网',NULL),(2,'网站关键词','website_keyword','HeeCMS HeePHP框架',NULL),(3,'网站描述','website_description','',NULL),(4,'网站网址','website_url','http://c.com',NULL),(5,'网站统计','website_tongji',NULL,NULL),(6,'网站Logo','website_logo','/static/skins/default/img/logo.png',NULL),(7,'公司名称','company_name','',NULL),(8,'公司地址','company_addr',NULL,NULL),(9,'公司电话','company_tel',NULL,NULL),(10,'公司联系人','company_contact','',NULL),(11,'公司联系人电话','company_contact_mobile','',NULL),(12,'公司邮箱','company_email','',NULL),(13,'开启验证码','is_vcode','1',NULL),(14,'上传文件目录','upload_dir','/upload/',NULL),(15,'上传文件大小','upload_size','500','单位K'),(16,'上传文件格式','upload_ext','jpg,png,gif,jpge','*.jpg,*.gif'),(17,'验证码宽度','vcode_width','100',NULL),(18,'验证码高度','vcode_heigh','36',NULL),(19,'验证码干扰数量','vcode_line_count','20','5-20'),(20,'上传文件命名','upload_file_name','md5','md5,timespan,guid'),(21,'分页数量','pagesize','0','如果该值为0，则采用系统配置的值'),(22,'新用户组','newusergroup',NULL,'新用户注册后的用户组'),(23,'是否开启水印','watermark','1',NULL),(24,'水印位置','watermark_postion','8',NULL),(25,'水印图片','watermark_img','',NULL),(26,'水印字体','watermark_font','',NULL),(27,'水印字体大小','watermark_fontsize','16',NULL),(28,'发邮件主机','mail_smtp_server','',NULL),(29,'发邮件用户名','mail_smtp_username','',NULL),(30,'发邮件密码','mail_smtp_password','',NULL),(31,'发邮件端口','mail_smtp_port','25',NULL),(32,'发件人邮箱','mail_sender','',NULL),(33,'短信AccessKeyId','sms_accessKeyId','',NULL),(34,'短信签名','sms_SingName','','短信签名多个用半角逗号分隔'),(35,'短信模板','sms_TemplateCode','','短信模板多个用半个逗号分隔'),(36,'公司介绍','company_desc','',NULL),(37,'水印文字','watermark_txt','水印文字',NULL),(38,'验证码位数','vcode_num','4','验证码生成的位数'),(39,'验证码字符','vcode_char','lower','all所有 char字母 upper大写 lower小写 number数字'),(40,'验证码字体大小','vcode_fontsize','20',NULL),(41,'短信AccessKeySecret','sms_accessKeySecret','',NULL),(42,'网站ICP','website_icp','沪ICP备14038410号-13',NULL),(44,'网站模板目录','website_skin','blueoffice',NULL),(45,'login_qq_appid','login_qq_appid','',NULL),(46,'login_qq_appkey','login_qq_appkey','',NULL),(47,'login_qq_callback','login_qq_callback','',NULL),(48,'login_wx_appsecrt','login_wx_appsecrt','',NULL),(49,'login_wx_appid','login_wx_appid','',NULL),(50,'login_wb_appid','login_wb_appid',NULL,NULL),(51,'login_wb_appsecrt','login_wb_appsecrt','',NULL),(52,'login_wb_appkey','login_wb_appkey','',NULL),(53,'login_bd_appkey','login_bd_appkey',NULL,NULL),(54,'login_bd_appsecrt','login_bd_appsecrt','',NULL),(55,'login_bd_domain','login_bd_domain','',NULL),(56,'login_ali_appid','login_ali_appid','',NULL),(57,'login_ali_private_key','login_ali_private_key','',NULL),(58,'login_ali_public_key','login_ali_public_key','',NULL),(59,'微信支付APPID','pay_wx_appid','wx9d24e93197f03db3',NULL),(60,'微信支付商户Id','pay_wx_mchid','1338307101',NULL),(61,'微信支付商户密钥','pay_wx_key','wangyingzhe1986091288wangyingzhe',NULL),(62,'微信支付Appsecrt','pay_wx_appsecrt','0371ce107606715cf4bfb9c5c8a53741',NULL),(63,'微信支付证书','pay_wx_apiclient_cert','',NULL),(64,'微信支付证书','pay_wx_apiclient_key','',NULL),(65,'支付宝支付APPId','pay_ali_appid','2018011901968294',NULL),(66,'支付宝账号','pay_ali_account','lvstech@foxmail.com',NULL),(67,'支付宝商户私钥','pay_ali_private_key','MIIEowIBAAKCAQEAjIE8pEP9KNTvakTLGia3YmawOcvtQ+MYR4zNzLMaANf0YInIQJWiL2HY+ocPaEJlLo24uIMxVWkB48Xonz/OAdHkQ1+XM9daU8FVcrXyu4JLuhomnxelJNDdrmNMa+iXK9T+lA3xPi9C5pcgvt5Wtfz8EMZWZaPpOc7wC0YDLFCOpS3SpOTtpGfWk7S4tdxIelW2XtjiaDS+AVxROlArShgk/TEdbxP18me4FAQ3eYv/F1uD/f+1fvAeiR2cEU78aVpG3H0uBa7bSSbhmLGTFvnP0hc+i4TUeIXrmnkmIKC9hZictGcvcXZ/LnLFCAaQI8yb1bpbaOsN/23YtIAmGQIDAQABAoIBAQCB4tbUY6WcIXxRmNbIjhHo/VTbmRD1OPIw8pEtMkRPk1NuCvD8A1eyxZl3v3MWxooSxyCEMYNhmXkNvt6UmL8wH4AMaEm2utXdp1P+fwStIn4uxA3/9DPOHOdRVqpG9vUIqBXPeDQTcE1ALWUwDQnLotrCBxfHTgdEUXDGeypjw5Su6h+FIhtR3ULqxQD87+NV+AXyqThH0LXNq6ERStLi/qgYl1hrHJKn1YlFMlAufnV++Es2GkOUkt7+0xu+CRPZuNGlOdFc7QXrGh2DMwBYeh5TNXl5IbcVehwjGQA0w6EU/TvQl+anlgJk5u/ylaVztxEuLq4FqaYhTH1JVIqBAoGBAM5/Eu7em1Z8sBzfw0HQsESMQ/YTF8AjQ7SMP1kxlGqUTMPEJfKa8wT11cA4CRPMN1c092PR1izATI0xf5AAXOYQn+LFUYVmjegMBFULMGEmSDQuzOhf5Q6RqH66QthMW1Vbeo0CHvSqgoNKFWI1MkXtlrq+ynCq8mEAG+z3DSuFAoGBAK4wLwsxiqltLt2JC7+Q9jKfbSQ1yP9yTYB0mZxWBwRt64O9fcJ24BSQXJ7OpaAkH/Aij59ih71ZXicFQt23NWrhG9WlvhIyn6ukCP2JwA5dBrLOGrhpXwDK1gyURBUMIih5fz7LhKzEdzQynbqbXdbmRyqXftuLrAZ/qfQIA4KFAoGAeC3g2QDZq0Y6QTPBsgZA8EQqMYb/JaXge628GK8QT88rtivsYfvoQBTLaGm0br9F3g1HheLUIYtxgiMyuJ5dctBuHU71mQwMvuZvhwdSCth64VPzkbJt30LKq6a/zJ7z8QOimXqIhaDPAJYXR+bp8WTLergbneL/2ZB0sD9AfPkCgYBNHtg1RIH38XdGbl7dOflHAH76ATY0ow7dSMKaDRyeQWx8r3D2oFslv6TCSwvZkyTw1Nxx3NXsZ5zf+dxY/byQzYndVbyJohA/lijE2DBIK7fDgq0h6MU/PI74ksxx5SVadjB4RPNA6ts8KQzcid1KQDpSCTEJUxWe6vb8LHAhYQKBgAu2m0E0afgXoYDDVrl+ltQB8z/4swJBoaZkuVBRKMoMqXTrNgPj72PNr1vMaEEV3sehuGXiXjKJQPavlexhdOdc9eQVG3Zghqly0SKdJiDsITr6QvlLASjvOE2Y/Q9Jj2Kvuus3493OEldxIlDR8zN1+WG0oZiHA0NBg17CZAQJ',NULL),(68,'支付宝公钥','pay_ali_public_key','MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjIE8pEP9KNTvakTLGia3YmawOcvtQ+MYR4zNzLMaANf0YInIQJWiL2HY+ocPaEJlLo24uIMxVWkB48Xonz/OAdHkQ1+XM9daU8FVcrXyu4JLuhomnxelJNDdrmNMa+iXK9T+lA3xPi9C5pcgvt5Wtfz8EMZWZaPpOc7wC0YDLFCOpS3SpOTtpGfWk7S4tdxIelW2XtjiaDS+AVxROlArShgk/TEdbxP18me4FAQ3eYv/F1uD/f+1fvAeiR2cEU78aVpG3H0uBa7bSSbhmLGTFvnP0hc+i4TUeIXrmnkmIKC9hZictGcvcXZ/LnLFCAaQI8yb1bpbaOsN/23YtIAmGQIDAQAB',NULL),(70,'微信公众号encoding','pay_wx_encodingaeskey','oYXBEIiGiURMXBUNQVZAkhSaqHDysKxZsRyvemNVTNh',NULL),(71,'微信公众号Token','pay_wx_token','dsfasfdasf352345235ERTWERSgYTU56',NULL),(72,'网站首页模板','skin_index','/index',NULL);
+INSERT INTO `heecms_config` VALUES (1,'网站名称','website_name','HeeCMS官网',NULL),(2,'网站关键词','website_keyword','HeeCMS HeePHP框架',NULL),(3,'网站描述','website_description','',NULL),(4,'网站网址','website_url','http://c.com',NULL),(5,'网站统计','website_tongji',NULL,NULL),(6,'网站Logo','website_logo','/static/skins/default/img/logo.png',NULL),(7,'公司名称','company_name','',NULL),(8,'公司地址','company_addr',NULL,NULL),(9,'公司电话','company_tel',NULL,NULL),(10,'公司联系人','company_contact','',NULL),(11,'公司联系人电话','company_contact_mobile','',NULL),(12,'公司邮箱','company_email','',NULL),(13,'开启验证码','is_vcode','1',NULL),(14,'上传文件目录','upload_dir','/upload/',NULL),(15,'上传文件大小','upload_size','500','单位K'),(16,'上传文件格式','upload_ext','jpg,png,gif,jpge','*.jpg,*.gif'),(17,'验证码宽度','vcode_width','100',NULL),(18,'验证码高度','vcode_heigh','36',NULL),(19,'验证码干扰数量','vcode_line_count','20','5-20'),(20,'上传文件命名','upload_file_name','md5','md5,timespan,guid'),(21,'分页数量','pagesize','0','如果该值为0，则采用系统配置的值'),(22,'新用户组','newusergroup',NULL,'新用户注册后的用户组'),(23,'是否开启水印','watermark','1',NULL),(24,'水印位置','watermark_postion','8',NULL),(25,'水印图片','watermark_img','',NULL),(26,'水印字体','watermark_font','',NULL),(27,'水印字体大小','watermark_fontsize','16',NULL),(28,'发邮件主机','mail_smtp_server','',NULL),(29,'发邮件用户名','mail_smtp_username','',NULL),(30,'发邮件密码','mail_smtp_password','',NULL),(31,'发邮件端口','mail_smtp_port','25',NULL),(32,'发件人邮箱','mail_sender','',NULL),(33,'短信AccessKeyId','sms_accessKeyId','',NULL),(34,'短信签名','sms_SingName','','短信签名多个用半角逗号分隔'),(35,'短信模板','sms_TemplateCode','','短信模板多个用半个逗号分隔'),(36,'公司介绍','company_desc','',NULL),(37,'水印文字','watermark_txt','水印文字',NULL),(38,'验证码位数','vcode_num','4','验证码生成的位数'),(39,'验证码字符','vcode_char','lower','all所有 char字母 upper大写 lower小写 number数字'),(40,'验证码字体大小','vcode_fontsize','20',NULL),(41,'短信AccessKeySecret','sms_accessKeySecret','',NULL),(42,'网站ICP','website_icp','沪ICP备14038410号-13',NULL),(44,'网站模板目录','website_skin','blueoffice',NULL),(45,'login_qq_appid','login_qq_appid','',NULL),(46,'login_qq_appkey','login_qq_appkey','',NULL),(47,'login_qq_callback','login_qq_callback','',NULL),(48,'login_wx_appsecrt','login_wx_appsecrt','',NULL),(49,'login_wx_appid','login_wx_appid','',NULL),(50,'login_wb_appid','login_wb_appid',NULL,NULL),(51,'login_wb_appsecrt','login_wb_appsecrt','',NULL),(52,'login_wb_appkey','login_wb_appkey','',NULL),(53,'login_bd_appkey','login_bd_appkey',NULL,NULL),(54,'login_bd_appsecrt','login_bd_appsecrt','',NULL),(55,'login_bd_domain','login_bd_domain','',NULL),(56,'login_ali_appid','login_ali_appid','',NULL),(57,'login_ali_private_key','login_ali_private_key','',NULL),(58,'login_ali_public_key','login_ali_public_key','',NULL),(59,'微信支付APPID','pay_wx_appid','',NULL),(60,'微信支付商户Id','pay_wx_mchid','',NULL),(61,'微信支付商户密钥','pay_wx_key','',NULL),(62,'微信支付Appsecrt','pay_wx_appsecrt','',NULL),(63,'微信支付证书','pay_wx_apiclient_cert','',NULL),(64,'微信支付证书','pay_wx_apiclient_key','',NULL),(65,'支付宝支付APPId','pay_ali_appid','',NULL),(66,'支付宝账号','pay_ali_account','',NULL),(67,'支付宝商户私钥','pay_ali_private_key','',NULL),(68,'支付宝公钥','pay_ali_public_key','',NULL),(70,'微信公众号encoding','pay_wx_encodingaeskey','',NULL),(71,'微信公众号Token','pay_wx_token','',NULL),(72,'网站首页模板','skin_index','/index',NULL);
 /*!40000 ALTER TABLE `heecms_config` ENABLE KEYS */;
 
 #
@@ -251,14 +250,14 @@ CREATE TABLE `heecms_menus` (
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`menus_id`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 
 #
 # Data for table "heecms_menus"
 #
 
 /*!40000 ALTER TABLE `heecms_menus` DISABLE KEYS */;
-INSERT INTO `heecms_menus` VALUES (5,0,'fas fa-link','链接','/','',3,1,1587761486,NULL,NULL),(6,5,'','链接管理','/link_group/manager','',1,1,1587761543,NULL,NULL),(8,0,'fas fa-columns','栏目','/','',1,1,1587761621,NULL,NULL),(9,8,'','栏目管理','/category/manager','',2,1,1587761691,NULL,NULL),(10,0,'fas fa-file-alt','信息','/','',2,1,1587761733,NULL,NULL),(11,10,'','信息管理','/category/managerinfo','',1,1,1587761857,1588294134,NULL),(12,0,'fab fa-modx','模型与表','/','',99,1,1588244382,1589939058,NULL),(13,12,'','模型管理','/model/manager','',1,1,1588244418,NULL,NULL),(14,12,'','数据表管理','/model_table/manager','',2,1,1588244441,NULL,NULL),(15,0,'fab fa-facebook-messenger','反馈','/','',3,1,1588942737,1588943102,NULL),(16,15,'','评论管理','/comment/manager','',1,1,1588943137,NULL,NULL),(17,15,'','留言管理','/guestbook/manager','',2,1,1588943168,1588943196,NULL),(18,0,'fas fa-adjust','营销与优化','/','',5,1,1589584735,1589938296,NULL),(19,18,'','广告管理','/ad/manager','',1,1,1589584779,NULL,NULL),(20,18,'','网站优化','/seo/edit','',2,1,1589586359,NULL,NULL),(21,0,'fab fa-pagelines','模板','/','',6,1,1589938348,1589938373,NULL),(22,21,'','本地模板','/moban/manager','',1,1,1589938412,1600179784,NULL),(23,21,'','在线模板','http://moban.heecms.cn','',2,1,1589938437,1600179771,1600179819),(24,0,'fab fa-html5','页面','/','',7,1,1589939046,NULL,NULL),(25,24,'','页面管理','/page/manager','',1,1,1589939125,NULL,NULL),(26,24,'','新增页面','/page/add','',2,1,1589939157,NULL,NULL),(27,21,'','模板设置','/moban/setting','',2,1,1589949367,NULL,1600179737);
+INSERT INTO `heecms_menus` VALUES (5,0,'fas fa-link','链接','/','',3,1,1587761486,NULL,NULL),(6,5,'','链接管理','/link_group/manager','',1,1,1587761543,NULL,NULL),(8,0,'fas fa-columns','栏目','/','',1,1,1587761621,NULL,NULL),(9,8,'','栏目管理','/category/manager','',2,1,1587761691,NULL,NULL),(10,0,'fas fa-file-alt','信息','/','',2,1,1587761733,NULL,NULL),(11,10,'','信息管理','/category/managerinfo','',1,1,1587761857,1588294134,NULL),(12,0,'fab fa-modx','模型与表','/','',99,1,1588244382,1589939058,1608836380),(13,12,'','模型管理','/model/manager','',1,1,1588244418,NULL,1608836343),(14,12,'','数据表管理','/model_table/manager','',2,1,1588244441,NULL,1608836338),(15,0,'fab fa-facebook-messenger','反馈','/','',3,1,1588942737,1588943102,NULL),(16,15,'','评论管理','/comment/manager','',1,1,1588943137,NULL,NULL),(17,15,'','留言管理','/guestbook/manager','',2,1,1588943168,1588943196,NULL),(18,0,'fas fa-adjust','营销与优化','/','',5,1,1589584735,1589938296,NULL),(19,18,'','广告管理','/ad/manager','',1,1,1589584779,NULL,NULL),(20,18,'','网站优化','/seo/edit','',2,1,1589586359,NULL,NULL),(21,0,'fab fa-pagelines','模板','/','',6,1,1589938348,1589938373,NULL),(22,21,'','本地模板','/moban/manager','',1,1,1589938412,1600179784,NULL),(23,21,'','在线模板','http://moban.heecms.cn','',2,1,1589938437,1600179771,1600179819),(24,0,'fab fa-html5','页面','/','',7,1,1589939046,NULL,NULL),(25,24,'','页面管理','/page/manager','',1,1,1589939125,NULL,NULL),(26,24,'','新增页面','/page/add','',2,1,1589939157,NULL,NULL),(27,21,'','模板设置','/moban/setting','',2,1,1589949367,NULL,1600179737),(28,0,'fab fa-amazon-pay','支付','#','',8,1,1609364831,NULL,NULL),(29,28,'','订单管理','/order/manager','',1,1,1609364882,1609364928,NULL);
 /*!40000 ALTER TABLE `heecms_menus` ENABLE KEYS */;
 
 #
@@ -289,81 +288,87 @@ INSERT INTO `heecms_message` VALUES (3,1,3,0,'title','contet',0,1586695173,NULL,
 /*!40000 ALTER TABLE `heecms_message` ENABLE KEYS */;
 
 #
-# Structure for table "heecms_model"
+# Structure for table "heecms_order"
 #
 
-DROP TABLE IF EXISTS `heecms_model`;
-CREATE TABLE `heecms_model` (
-  `model_id` int(11) NOT NULL AUTO_INCREMENT,
-  `model_table_id` int(11) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `remark` varchar(255) DEFAULT NULL,
+DROP TABLE IF EXISTS `heecms_order`;
+CREATE TABLE `heecms_order` (
+  `order_id` varchar(30) NOT NULL DEFAULT '',
+  `order_type` int(11) DEFAULT NULL COMMENT '订单类型 0为article类型订单 1为栏目订单 2为页面订单',
+  `tid` int(11) DEFAULT NULL COMMENT '对应订单类型相关表信息、栏目、页面的Id',
+  `sumprice` decimal(10,2) DEFAULT NULL COMMENT '总价',
+  `sourceprice` decimal(10,2) DEFAULT NULL COMMENT '原价',
+  `discount` decimal(10,2) DEFAULT NULL COMMENT '折扣',
   `create_users_id` int(11) DEFAULT NULL,
-  `is_sys` int(1) DEFAULT NULL COMMENT '是否是系统模型',
-  `table_name` varchar(255) DEFAULT NULL COMMENT '对应表名，系统模型需要在此取表',
+  `pcount` int(255) DEFAULT NULL COMMENT '商品总数',
+  `state` int(2) DEFAULT '0' COMMENT '订单状态 -3已完成退款 -2已确认退款 -1申请退款 0未支付 1已支付未发货 2已发货未确认 3已确认未评论 4已评论完成',
+  `address` varchar(255) DEFAULT NULL COMMENT '收件人地址',
+  `mobile` varchar(255) DEFAULT NULL COMMENT '收件人手机',
+  `contact` varchar(255) DEFAULT NULL COMMENT '收件人',
+  `remark` varchar(255) DEFAULT NULL COMMENT '备注',
   `create_time` int(11) DEFAULT NULL,
-  `upate_time` int(11) DEFAULT NULL,
+  `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
-  PRIMARY KEY (`model_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+  `paytype` varchar(255) DEFAULT NULL COMMENT '支付方式',
+  `paysum` decimal(10,2) DEFAULT NULL COMMENT '支付金额',
+  `stime` int(11) DEFAULT NULL COMMENT '订单生效时间',
+  `etime` int(11) DEFAULT NULL COMMENT '订单失效时间',
+  PRIMARY KEY (`order_id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 #
-# Data for table "heecms_model"
+# Data for table "heecms_order"
 #
 
-INSERT INTO `heecms_model` VALUES (1,NULL,'文章','文章模型',1,1,'article',NULL,NULL,NULL),(2,6,'图片','1',1,NULL,NULL,1588289984,NULL,1588470138),(3,10,'测试模型','',1,NULL,NULL,1588472218,NULL,1588473621),(4,11,'测试模型','',1,NULL,NULL,1588473746,NULL,1588474375),(5,18,'测试模型','',1,NULL,NULL,1588475395,NULL,NULL),(6,19,'测试模型22','',1,NULL,NULL,1589243825,NULL,NULL);
+INSERT INTO `heecms_order` VALUES ('201231055146320472574252',NULL,NULL,289.70,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 #
-# Structure for table "heecms_model_table"
+# Structure for table "heecms_order_detail"
 #
 
-DROP TABLE IF EXISTS `heecms_model_table`;
-CREATE TABLE `heecms_model_table` (
-  `model_table_id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
+DROP TABLE IF EXISTS `heecms_order_detail`;
+CREATE TABLE `heecms_order_detail` (
+  `order_detail_id` int(11) NOT NULL AUTO_INCREMENT,
+  `order_id` varchar(30) DEFAULT NULL,
+  `num` int(11) DEFAULT NULL COMMENT '商品数量',
+  `price` decimal(10,2) DEFAULT NULL COMMENT '商品单价',
+  `sumprice` decimal(10,2) DEFAULT NULL COMMENT '总价',
+  `create_users_id` int(11) DEFAULT NULL,
+  `create_time` int(11) DEFAULT NULL,
+  `update_time` int(11) DEFAULT NULL,
+  `delete_time` int(11) DEFAULT NULL,
+  `state` int(2) DEFAULT NULL COMMENT '和订单的状态一样',
+  `stime` int(11) DEFAULT NULL COMMENT '订单生效时间',
+  `etime` int(11) DEFAULT NULL COMMENT '订单失效时间',
+  PRIMARY KEY (`order_detail_id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+#
+# Data for table "heecms_order_detail"
+#
+
+
+#
+# Structure for table "heecms_order_pay"
+#
+
+DROP TABLE IF EXISTS `heecms_order_pay`;
+CREATE TABLE `heecms_order_pay` (
+  `order_pay_id` varchar(30) NOT NULL DEFAULT '',
+  `order_id` varchar(30) DEFAULT NULL,
+  `state` int(255) DEFAULT NULL,
+  `money` decimal(10,2) DEFAULT NULL,
+  `restr` varchar(3000) DEFAULT NULL,
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `create_users_id` int(11) DEFAULT NULL,
-  `allow_manger` varchar(3000) DEFAULT NULL COMMENT '显示在管理表格中的字段',
-  `allow_edit` varchar(3000) DEFAULT NULL COMMENT '显示在编辑表单中的字段',
-  `allow_delete` int(1) DEFAULT NULL COMMENT '是否允许后台删除记录',
-  `allow_user_edit` varchar(3000) DEFAULT NULL COMMENT '允许用户前台编辑的字段',
-  `allow_user_manager` varchar(3000) DEFAULT NULL COMMENT '允许用户前台管理表单显示的字段',
-  `allow_user_delete` int(1) DEFAULT NULL COMMENT '是否允许前台用户删除记录',
-  `validate_rule` varchar(3000) DEFAULT NULL COMMENT '验证规则',
-  `validate_msg` varchar(3000) DEFAULT NULL COMMENT '验证规则对应的错误消息',
-  PRIMARY KEY (`model_table_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+  PRIMARY KEY (`order_pay_id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 #
-# Data for table "heecms_model_table"
+# Data for table "heecms_order_pay"
 #
 
-INSERT INTO `heecms_model_table` VALUES (18,'news',1588475124,1589241759,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(19,'tbtest',1589241856,1589243867,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-
-#
-# Structure for table "heecms_model_table_field"
-#
-
-DROP TABLE IF EXISTS `heecms_model_table_field`;
-CREATE TABLE `heecms_model_table_field` (
-  `model_table_field_id` int(11) NOT NULL AUTO_INCREMENT,
-  `model_table_id` int(11) DEFAULT NULL,
-  `field_title` varchar(255) DEFAULT NULL COMMENT '字段标题',
-  `field_name` varchar(255) DEFAULT NULL,
-  `input_type` varchar(255) DEFAULT NULL COMMENT '输入框类型text number email date time datetime datetime-local editor',
-  `input_type_values` text COMMENT '输入框为select radios checkbox时的选项列表',
-  `create_time` int(11) DEFAULT NULL,
-  `update_time` int(11) DEFAULT NULL,
-  `create_users_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`model_table_field_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
-
-#
-# Data for table "heecms_model_table_field"
-#
-
-INSERT INTO `heecms_model_table_field` VALUES (34,18,'标题','title','text','',NULL,NULL,1),(35,18,'内容','context','editor','',NULL,NULL,1),(36,18,'ceshi','ceshi','text','',NULL,NULL,1),(37,18,'ceshi2','ceshi2','text','',NULL,NULL,1),(38,18,'列表','list','select','1,2,3,4,5',NULL,NULL,1),(39,18,'标题','title2','text','',NULL,NULL,1),(40,19,'标题','title','text','',NULL,NULL,1),(41,19,'内容','contxt','editor','',NULL,NULL,1);
 
 #
 # Structure for table "heecms_pages"
@@ -382,6 +387,7 @@ CREATE TABLE `heecms_pages` (
   `description` varchar(255) DEFAULT NULL,
   `template` varchar(255) DEFAULT NULL,
   `route` varchar(255) DEFAULT NULL COMMENT '路由',
+  `price` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`pages_id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
@@ -389,298 +395,7 @@ CREATE TABLE `heecms_pages` (
 # Data for table "heecms_pages"
 #
 
-INSERT INTO `heecms_pages` VALUES (1,'111','&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;111 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p&gt;',NULL,1590026334,1590111699,1,'','','/page.php',NULL),(2,'111','&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;111 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p&gt;',1590026170,NULL,1590026216,NULL,'','','/page.php',NULL),(3,'111','&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;111 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p&gt;',1590026176,NULL,1590026212,NULL,'','','/page.php',NULL),(4,'title','&lt;p&gt;neirong neirong&amp;nbsp;&lt;/p&gt;',1590026277,1590111714,NULL,1,'keyword','miaoshu','/page','tpage');
-
-#
-# Structure for table "heecms_shop_attr"
-#
-
-DROP TABLE IF EXISTS `heecms_shop_attr`;
-CREATE TABLE `heecms_shop_attr` (
-  `shop_attr_id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  `values` varchar(3000) DEFAULT NULL,
-  PRIMARY KEY (`shop_attr_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
-
-#
-# Data for table "heecms_shop_attr"
-#
-
-INSERT INTO `heecms_shop_attr` VALUES (1,'产地',',中国,香港,美国,'),(2,'品牌',',Nick,PAPA,360,尼康,索尼,联想,戴尔,');
-
-#
-# Structure for table "heecms_shop_cart"
-#
-
-DROP TABLE IF EXISTS `heecms_shop_cart`;
-CREATE TABLE `heecms_shop_cart` (
-  `shop_cart_id` int(11) NOT NULL AUTO_INCREMENT,
-  `shop_product_id` int(11) DEFAULT NULL,
-  `num` int(11) DEFAULT NULL,
-  `price` decimal(11,2) DEFAULT NULL,
-  `discount` decimal(11,2) DEFAULT NULL,
-  `create_users_id` int(11) DEFAULT NULL,
-  `create_time` int(11) DEFAULT NULL,
-  `update_time` int(11) DEFAULT NULL,
-  PRIMARY KEY (`shop_cart_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
-
-#
-# Data for table "heecms_shop_cart"
-#
-
-
-#
-# Structure for table "heecms_shop_category"
-#
-
-DROP TABLE IF EXISTS `heecms_shop_category`;
-CREATE TABLE `heecms_shop_category` (
-  `shop_category_id` int(11) NOT NULL AUTO_INCREMENT,
-  `parent_id` int(11) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `remark` varchar(255) DEFAULT NULL,
-  `ord` int(255) DEFAULT NULL,
-  `create_users_id` int(11) DEFAULT NULL,
-  `create_time` int(11) DEFAULT NULL,
-  `update_time` int(11) DEFAULT NULL,
-  `delete_time` int(11) DEFAULT NULL,
-  PRIMARY KEY (`shop_category_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
-
-#
-# Data for table "heecms_shop_category"
-#
-
-INSERT INTO `heecms_shop_category` VALUES (1,0,'nname1','',1,1,1588557112,1589360737,NULL),(2,1,'f167','',2,1,1588558731,1589593467,NULL);
-
-#
-# Structure for table "heecms_shop_category_attr"
-#
-
-DROP TABLE IF EXISTS `heecms_shop_category_attr`;
-CREATE TABLE `heecms_shop_category_attr` (
-  `shop_category_attr_id` int(11) NOT NULL AUTO_INCREMENT,
-  `shop_category_id` int(11) DEFAULT NULL,
-  `shop_attr_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`shop_category_attr_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
-
-#
-# Data for table "heecms_shop_category_attr"
-#
-
-INSERT INTO `heecms_shop_category_attr` VALUES (40,2,2),(42,2,2),(44,2,2),(46,2,2),(47,2,2),(48,2,2),(49,1,1),(50,2,2),(51,2,1),(52,2,2);
-
-#
-# Structure for table "heecms_shop_category_sku"
-#
-
-DROP TABLE IF EXISTS `heecms_shop_category_sku`;
-CREATE TABLE `heecms_shop_category_sku` (
-  `shop_category_sku_id` int(11) NOT NULL AUTO_INCREMENT,
-  `shop_category_id` int(11) DEFAULT NULL,
-  `shop_sku_cls` varchar(1000) DEFAULT NULL,
-  PRIMARY KEY (`shop_category_sku_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
-
-#
-# Data for table "heecms_shop_category_sku"
-#
-
-INSERT INTO `heecms_shop_category_sku` VALUES (1,1,'尺寸'),(18,2,'尺寸'),(21,1,'规格'),(24,2,'颜色');
-
-#
-# Structure for table "heecms_shop_order"
-#
-
-DROP TABLE IF EXISTS `heecms_shop_order`;
-CREATE TABLE `heecms_shop_order` (
-  `shop_order_id` varchar(30) NOT NULL,
-  `sumprice` decimal(10,2) DEFAULT NULL COMMENT '总价',
-  `sourceprice` decimal(10,2) DEFAULT NULL COMMENT '原价',
-  `discount` decimal(10,2) DEFAULT NULL COMMENT '折扣',
-  `create_users_id` int(11) DEFAULT NULL,
-  `pcount` int(255) DEFAULT NULL COMMENT '商品总数',
-  `state` int(2) DEFAULT '0' COMMENT '订单状态 -3已完成退款 -2已确认退款 -1申请退款 0未支付 1已支付未发货 2已发货未确认 3已确认未评论 4已评论完成',
-  `address` varchar(255) DEFAULT NULL COMMENT '收件人地址',
-  `mobile` varchar(255) DEFAULT NULL COMMENT '收件人手机',
-  `contact` varchar(255) DEFAULT NULL COMMENT '收件人',
-  `remark` varchar(255) DEFAULT NULL COMMENT '备注',
-  `create_time` int(11) DEFAULT NULL,
-  `update_time` int(11) DEFAULT NULL,
-  `delete_time` int(11) DEFAULT NULL,
-  `paytype` varchar(255) DEFAULT NULL COMMENT '支付方式',
-  `paysum` decimal(10,2) DEFAULT NULL COMMENT '支付金额',
-  PRIMARY KEY (`shop_order_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
-
-#
-# Data for table "heecms_shop_order"
-#
-
-INSERT INTO `heecms_shop_order` VALUES ('200511220617659533279431',12.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1589205977,NULL,1589362984,NULL,NULL),('200512061645483897243571',23.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1589235405,NULL,1589362990,NULL,NULL),('200512061650242004001193',123.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1589235410,NULL,NULL,NULL,NULL),('200512062138032811971442',123.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1589235698,NULL,NULL,NULL,NULL),('200512062221070932610004',123.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1589235741,NULL,NULL,NULL,NULL),('200512063224171210783816',235.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1589236344,NULL,NULL,NULL,NULL),('200529125316475526418204',3999.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1590727996,NULL,NULL,NULL,NULL),('200529125835899894242755',6500.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1590728315,NULL,NULL,NULL,NULL),('200529130601349105992103',4500.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1590728761,NULL,NULL,NULL,NULL),('200531162938795112963979',1150.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1590913778,NULL,NULL,NULL,NULL),('200601084947912695870190',3970.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1590972587,NULL,NULL,NULL,NULL),('200601132236912646689616',3635.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1590988956,NULL,NULL,NULL,NULL),('200601133015566109481501',3698.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1590989415,NULL,NULL,NULL,NULL),('200601133427000012529850',3690.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1590989667,NULL,NULL,NULL,NULL),('200604172957676855351413',1525.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1591262997,NULL,NULL,NULL,NULL),('200604184918182018287028',1582.00,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,1591267758,NULL,NULL,NULL,NULL);
-
-#
-# Structure for table "heecms_shop_order_detail"
-#
-
-DROP TABLE IF EXISTS `heecms_shop_order_detail`;
-CREATE TABLE `heecms_shop_order_detail` (
-  `shop_order_detail_id` int(11) NOT NULL AUTO_INCREMENT,
-  `shop_order_id` varchar(30) DEFAULT NULL,
-  `shop_product_id` int(255) DEFAULT NULL,
-  `num` int(11) DEFAULT NULL COMMENT '商品数量',
-  `price` decimal(10,2) DEFAULT NULL COMMENT '商品单价',
-  `sumprice` decimal(10,2) DEFAULT NULL COMMENT '总价',
-  `create_users_id` int(11) DEFAULT NULL,
-  `create_time` int(11) DEFAULT NULL,
-  `update_time` int(11) DEFAULT NULL,
-  `delete_time` int(11) DEFAULT NULL,
-  `state` int(2) DEFAULT NULL COMMENT '和订单的状态一样',
-  PRIMARY KEY (`shop_order_detail_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
-
-#
-# Data for table "heecms_shop_order_detail"
-#
-
-
-#
-# Structure for table "heecms_shop_pay"
-#
-
-DROP TABLE IF EXISTS `heecms_shop_pay`;
-CREATE TABLE `heecms_shop_pay` (
-  `shop_pay_id` varchar(30) NOT NULL,
-  `shop_order_id` varchar(30) DEFAULT NULL,
-  `state` int(255) DEFAULT NULL,
-  `money` decimal(10,2) DEFAULT NULL,
-  `restr` varchar(1000) DEFAULT NULL,
-  `create_time` int(11) DEFAULT NULL,
-  `update_time` int(11) DEFAULT NULL,
-  `create_users_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`shop_pay_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
-
-#
-# Data for table "heecms_shop_pay"
-#
-
-INSERT INTO `heecms_shop_pay` VALUES ('200531163001104080160332','200531162938795112963979',0,1150.00,NULL,NULL,NULL,NULL),('200601084958098389151266','200601084947912695870190',0,3970.00,NULL,NULL,NULL,NULL),('200601132245736358531751','200601132236912646689616',0,3635.00,NULL,NULL,NULL,NULL),('200601133023298006050671','200601133015566109481501',0,3698.00,NULL,NULL,NULL,NULL),('200601133436757010392717','200601133427000012529850',0,3690.00,NULL,NULL,NULL,NULL),('200601133556126361943302','200601133015566109481501',0,3698.00,NULL,NULL,NULL,NULL),('200604101316959305089511','200529125316475526418204',0,3999.00,NULL,NULL,NULL,NULL),('200604173008777579172496','200604172957676855351413',0,1525.00,NULL,NULL,NULL,NULL),('200604184929572503700629','200604184918182018287028',0,1582.00,NULL,NULL,NULL,NULL);
-
-#
-# Structure for table "heecms_shop_product"
-#
-
-DROP TABLE IF EXISTS `heecms_shop_product`;
-CREATE TABLE `heecms_shop_product` (
-  `shop_product_id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  `shop_category_id` int(11) DEFAULT NULL,
-  `create_time` int(11) DEFAULT NULL,
-  `update_time` int(11) DEFAULT NULL,
-  `delete_time` int(11) DEFAULT NULL,
-  `create_users_id` int(11) DEFAULT NULL,
-  `detail` text COMMENT '详细介绍',
-  `rate` int(11) DEFAULT NULL COMMENT '评分',
-  `hit` int(11) DEFAULT NULL COMMENT '点击',
-  `remark` varchar(255) DEFAULT NULL,
-  `price` decimal(10,2) DEFAULT NULL COMMENT '一口价',
-  `stock` int(255) DEFAULT NULL COMMENT '库存',
-  `pic` varchar(1000) DEFAULT NULL COMMENT '首图',
-  `sellcount` int(255) DEFAULT NULL COMMENT '销量',
-  PRIMARY KEY (`shop_product_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
-
-#
-# Data for table "heecms_shop_product"
-#
-
-INSERT INTO `heecms_shop_product` VALUES (1,'商品名1',2,1588860434,NULL,0,NULL,'&lt;p&gt;介绍&lt;/p&gt;',NULL,NULL,'jianjie',22.00,23,'/upload/20200506/1588768789115185.png',NULL),(2,'商品名1',2,1588860571,NULL,0,NULL,'&lt;p&gt;介绍&lt;/p&gt;',NULL,NULL,'jianjie',22.00,23,'/upload/20200506/1588768789115185.png',NULL),(3,'商品名1',2,1588860615,NULL,0,NULL,'&lt;p&gt;介绍&lt;/p&gt;',NULL,NULL,'jianjie',22.00,23,'/upload/20200506/1588768789115185.png',NULL),(4,'商品名1',2,1588860644,NULL,0,NULL,'&lt;p&gt;介绍&lt;/p&gt;',NULL,NULL,'jianjie',22.00,23,'/upload/20200506/1588768789115185.png',NULL),(5,'商品名1',2,1588860880,NULL,0,NULL,'&lt;p&gt;介绍&lt;/p&gt;',NULL,NULL,'jianjie',22.00,23,'/upload/20200506/1588768789115185.png',NULL),(6,'商品名1',2,1588861004,NULL,0,NULL,'&lt;p&gt;介绍&lt;/p&gt;',NULL,NULL,'jianjie',22.00,23,'/upload/20200506/1588768789115185.png',NULL),(7,'商品名1',2,1588861029,NULL,NULL,NULL,'&lt;p&gt;介绍&lt;/p&gt;',NULL,NULL,'jianjie',22.00,23,'/upload/20200506/1588768789115185.png',NULL),(8,'商品名1',2,1589591369,NULL,NULL,NULL,'&lt;p&gt;介绍&lt;/p&gt;',NULL,NULL,'jianjie',22.00,23,'/upload/20200425/1587782677251926.jpg',NULL);
-
-#
-# Structure for table "heecms_shop_product_attr"
-#
-
-DROP TABLE IF EXISTS `heecms_shop_product_attr`;
-CREATE TABLE `heecms_shop_product_attr` (
-  `shop_product_attr_id` int(11) NOT NULL AUTO_INCREMENT,
-  `shop_product_id` int(11) DEFAULT NULL,
-  `shop_attr_name` varchar(255) DEFAULT NULL,
-  `value` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`shop_product_attr_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
-
-#
-# Data for table "heecms_shop_product_attr"
-#
-
-INSERT INTO `heecms_shop_product_attr` VALUES (1,2,'产地','中国'),(2,2,'品牌','Nick'),(3,3,'产地','中国'),(4,3,'品牌','Nick'),(5,4,'产地','中国'),(6,4,'品牌','Nick'),(7,5,'产地','中国'),(8,5,'品牌','Nick'),(9,6,'产地','中国'),(10,6,'品牌','Nick'),(11,7,'产地','中国'),(12,7,'品牌','Nick'),(13,8,'品牌','');
-
-#
-# Structure for table "heecms_shop_product_pic"
-#
-
-DROP TABLE IF EXISTS `heecms_shop_product_pic`;
-CREATE TABLE `heecms_shop_product_pic` (
-  `shop_product_pic_id` int(11) NOT NULL AUTO_INCREMENT,
-  `shop_product_id` int(11) DEFAULT NULL,
-  `url` varchar(255) DEFAULT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `ord` int(11) DEFAULT NULL,
-  PRIMARY KEY (`shop_product_pic_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
-
-#
-# Data for table "heecms_shop_product_pic"
-#
-
-INSERT INTO `heecms_shop_product_pic` VALUES (1,2,'/upload/20200506/1588768789115185.png','商品名1',0),(2,2,'/upload/20200506/1588760663359953.png','商品名1',1),(3,3,'/upload/20200506/1588768789115185.png','商品名1',0),(4,3,'/upload/20200506/1588760663359953.png','商品名1',1),(5,4,'/upload/20200506/1588768789115185.png','商品名1',0),(6,4,'/upload/20200506/1588760663359953.png','商品名1',1),(7,5,'/upload/20200506/1588768789115185.png','商品名1',0),(8,5,'/upload/20200506/1588760663359953.png','商品名1',1),(9,6,'/upload/20200506/1588768789115185.png','商品名1',0),(10,6,'/upload/20200506/1588760663359953.png','商品名1',1),(11,7,'/upload/20200506/1588768789115185.png','商品名1',0),(12,7,'/upload/20200506/1588760663359953.png','商品名1',1),(13,8,'/upload/20200425/1587782677251926.jpg','商品名1',0);
-
-#
-# Structure for table "heecms_shop_product_sku"
-#
-
-DROP TABLE IF EXISTS `heecms_shop_product_sku`;
-CREATE TABLE `heecms_shop_product_sku` (
-  `shop_product_sku_id` int(11) NOT NULL AUTO_INCREMENT,
-  `shop_product_id` int(11) DEFAULT NULL,
-  `shop_sku_cls` varchar(350) DEFAULT NULL COMMENT 'sku ,号分隔',
-  `markprice` decimal(10,2) DEFAULT NULL,
-  `price` decimal(10,2) DEFAULT NULL,
-  `create_time` int(11) DEFAULT NULL,
-  `update_time` int(11) DEFAULT NULL,
-  `create_users_id` int(11) DEFAULT NULL,
-  `stock` int(11) DEFAULT NULL COMMENT '库存',
-  `sellcount` int(11) DEFAULT NULL COMMENT '销量',
-  PRIMARY KEY (`shop_product_sku_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
-
-#
-# Data for table "heecms_shop_product_sku"
-#
-
-
-#
-# Structure for table "heecms_shop_sku"
-#
-
-DROP TABLE IF EXISTS `heecms_shop_sku`;
-CREATE TABLE `heecms_shop_sku` (
-  `shop_sku_id` int(11) NOT NULL AUTO_INCREMENT,
-  `cls` varchar(255) DEFAULT NULL COMMENT '分类',
-  `val` varchar(255) DEFAULT NULL COMMENT '值',
-  `txt` varchar(255) DEFAULT NULL COMMENT '显示的文字',
-  PRIMARY KEY (`shop_sku_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
-
-#
-# Data for table "heecms_shop_sku"
-#
-
-INSERT INTO `heecms_shop_sku` VALUES (1,'颜色','红色','红色'),(2,'颜色','绿色','绿色'),(3,'颜色','蓝色','蓝色'),(4,'颜色','白色','白色'),(5,'颜色','黑色','黑色'),(6,'颜色','青色','青色'),(7,'尺寸','SM','SM'),(8,'尺寸','M','M'),(9,'尺寸','L','L'),(10,'尺寸','XL','XL'),(11,'尺寸','XXL','XXL'),(12,'规格','20*20','20*20');
+INSERT INTO `heecms_pages` VALUES (1,'111','&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;111 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p&gt;',NULL,1590026334,1590111699,1,'','','/page.php',NULL,NULL),(2,'111','&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;111 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p&gt;',1590026170,NULL,1590026216,NULL,'','','/page.php',NULL,NULL),(3,'111','&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;111 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p&gt;',1590026176,NULL,1590026212,NULL,'','','/page.php',NULL,NULL),(4,'title','&lt;p&gt;neirong neirong&amp;nbsp;&lt;/p&gt;',1590026277,1590111714,NULL,1,'keyword','miaoshu','/page','tpage',NULL);
 
 #
 # Structure for table "heecms_sys_resources"

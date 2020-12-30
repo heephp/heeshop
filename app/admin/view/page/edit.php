@@ -66,6 +66,14 @@
                                 <input type="button" id="select_template" class=" col-md-2 btn btn-primary" value="选择模板">
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <input type="checkbox" id="sprice" onclick="$('.price').css('display',$('.price').css('display')=='none'?'block':'none');$('.price input').val('')"><label for="sprice">需要购买<span class="text-info">如果不需要购买，则不需要填写</span></label>
+                        </div>
+                        <div class="form-group price" style="display: none">
+                            <label for="link">价格</label>
+                            <input type="text" class="form-control" name="price" placeholder="价格" value="<?=$m['price']?>">
+                        </div>
 <br><BR>
                         <div class="card-action">
                             <input type="submit" class="btn btn-success" value="提交">

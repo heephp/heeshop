@@ -103,7 +103,7 @@ class index extends adminBase {
         $data = request('post.');
         $cof = \model('config');
         foreach ($data as $k => $v) {
-            $result = $cof->update(['value' => $v], "`name`='$k'");
+            $result = $cof->where("`name`='$k'")->update(['value' => $v]);
         }
 
         cache()->remove(config('customer_config_name'));

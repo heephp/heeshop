@@ -33,16 +33,16 @@ class base extends controller
      */
     protected function _order_do_pay($orderid){
         //获取订单信息
-        $mo =model('shop_order');
+        $mo =model('order');
         $mo->get($orderid);
         $m=$mo->data;
         $money = $m['sumprice'];
         //创建支付流水
-        $spay=model('shop_pay');
+        $spay=model('pay');
         $date = new \DateTime();
         $pay_id=$date->format('ymdHisu').randChar(6,'number');
-        $d['shop_pay_id']=$pay_id;
-        $d['shop_order_id']=$orderid;
+        $d['pay_id']=$pay_id;
+        $d['order_id']=$orderid;
         $d['money']=$money;
         $d['state']=0;
         $spay->insert($d);
@@ -65,8 +65,8 @@ class base extends controller
     protected function _order_do_action($data,$out_trade_on,$type='微信', $money=-999)
     {
         //流水号金额对比 取订单信息 更新状态
-        $spay = model('shop_pay');
-        $m = $spay->where("`shop_pay_id`='$out_trade_on'")->find();
+        $spay = model('pay');
+        $m = $spay->where("`pay_id`='$out_trade_on'")->find();
         //支付金额对比
         if ($money == $m['money']||$money==-999) {
             $m['sate'] = 1;
@@ -78,8 +78,8 @@ class base extends controller
                 logger::info("订单号$out_trade_on 支付成功，但更新流水号状态失败！");
             }
             //更新订单状态
-            $mo = model('shop_order');
-            $morder = $mo->where("shop_order_id='" . $m['shop_order_id'] . "'")->find();
+            $mo = model('order');
+            $morder = $mo->where("order_id='" . $m['shop_order_id'] . "'")->find();
             $morder['state'] = 1;
             $re2 = $spay->update($m);
             if (!$re2) {
