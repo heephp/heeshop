@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version: 5.7.26)
-# Date: 2020-12-31 09:57:59
+# Date: 2021-01-02 13:12:13
 # Generator: MySQL-Front 5.3  (Build 4.234)
 
 /*!40101 SET NAMES utf8 */;
@@ -77,6 +77,7 @@ CREATE TABLE `heecms_category` (
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
   `price` decimal(10,2) DEFAULT NULL,
+  `template` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`category_id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
@@ -84,7 +85,7 @@ CREATE TABLE `heecms_category` (
 # Data for table "heecms_category"
 #
 
-INSERT INTO `heecms_category` VALUES (1,0,'fas fa-align-justify','测试栏目','','测试 栏目','1',1,1587778965,1588493740,NULL,NULL),(2,1,'','测试子栏目2','','子栏目','2',1,1587779599,1590112307,NULL,NULL),(3,1,'','ceshi1','','key','3',1,1588303244,NULL,1588470128,NULL),(4,1,'','测试栏目22','','22','2',1,1588472248,NULL,1588473611,NULL),(5,1,'','测试栏目3','','11','2',1,1588473774,NULL,1588474366,NULL),(6,0,'fas fa-air-freshener','演示分类','','关键词1','',1,1608838295,1608838317,1608860041,NULL);
+INSERT INTO `heecms_category` VALUES (1,0,'fas fa-align-justify','测试栏目','','测试 栏目','1',1,1587778965,1609544163,NULL,0.00,'list'),(2,1,'','测试子栏目2','','子栏目','2',1,1587779599,1609544158,NULL,0.00,'list'),(3,1,'','ceshi1','','key','3',1,1588303244,NULL,1588470128,NULL,NULL),(4,1,'','测试栏目22','','22','2',1,1588472248,NULL,1588473611,NULL,NULL),(5,1,'','测试栏目3','','11','2',1,1588473774,NULL,1588474366,NULL,NULL),(6,0,'fas fa-air-freshener','演示分类','','关键词1','',1,1608838295,1608838317,1608860041,NULL,NULL);
 
 #
 # Structure for table "heecms_comment"
@@ -483,7 +484,7 @@ CREATE TABLE `heecms_users` (
   `header` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `users_group_id` int(11) DEFAULT NULL,
   `sex` int(11) DEFAULT NULL,
-  `birthday` int(255) DEFAULT NULL,
+  `birthday` int(11) DEFAULT '0',
   `address` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `country_id` int(255) DEFAULT NULL,
   `city` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -495,6 +496,7 @@ CREATE TABLE `heecms_users` (
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
+  `num` int(11) DEFAULT '0' COMMENT '登录次数',
   PRIMARY KEY (`users_id`) USING BTREE
 ) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 
@@ -503,7 +505,7 @@ CREATE TABLE `heecms_users` (
 #
 
 /*!40000 ALTER TABLE `heecms_users` DISABLE KEYS */;
-INSERT INTO `heecms_users` VALUES (1,'admin','e10adc3949ba59abbe56e057f20f883e','admin_','/upload/20200413/82b64f473a8acaa3948bab0548090020.jpg',1,1,1586361600,'',1,'','','','123123','abc@qq.com','',999999999,NULL,NULL);
+INSERT INTO `heecms_users` VALUES (1,'admin','e10adc3949ba59abbe56e057f20f883e','admin_','/upload/20200413/82b64f473a8acaa3948bab0548090020.jpg',1,1,1586361600,'',1,'','','','123123','abc@qq.com','',999999999,1609559320,NULL,2);
 /*!40000 ALTER TABLE `heecms_users` ENABLE KEYS */;
 
 #
