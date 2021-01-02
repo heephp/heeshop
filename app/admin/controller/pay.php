@@ -7,7 +7,7 @@ class pay extends adminBase
 {
     public function manager($field='create_time',$order='asc'){
 
-        $mp=model('pay');
+        $mp=model('order_pay');
         $mp->order("$field $order")->page();
 
         $this->assign('list',$mp->data);
@@ -22,7 +22,7 @@ class pay extends adminBase
 
     public function clear_nopay()
     {
-        $mp = model('shop_pay');
+        $mp = model('order_pay');
         $result = $mp->where("state=0")->delete();
         if ($result) {
             return $this->success('清空未支付流水成功！', url('manager'));

@@ -1,4 +1,7 @@
-<?import('/layout/header.php');?>
+<?
+use heephp\view;
+view::create();
+view::import('../layout/header');?>
 <div class="page-inner">
     <div class="page-header">
         <h4 class="page-title">广告</h4>
@@ -68,7 +71,7 @@
     </div>
 
 </div>
-<?import('/layout/bottom.php');?>
+<?view::import('../layout/bottom');?>
 <?function js(){?>
 
 

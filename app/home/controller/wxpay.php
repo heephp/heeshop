@@ -22,8 +22,8 @@ class wxpay extends base
             'mch_key' => conf('pay_wx_key'),
             // 配置商户支付双向证书目录 （p12 | key,cert 二选一，两者都配置时p12优先）
             'ssl_p12' => '',
-            // 'ssl_key'        => __DIR__ . DIRECTORY_SEPARATOR . 'cert' . DIRECTORY_SEPARATOR . '1332187001_20181030_key.pem',
-            // 'ssl_cer'        => __DIR__ . DIRECTORY_SEPARATOR . 'cert' . DIRECTORY_SEPARATOR . '1332187001_20181030_cert.pem',
+            // 'ssl_key'        => __DIR__ . / . 'cert' . / . '1332187001_20181030_key.pem',
+            // 'ssl_cer'        => __DIR__ . / . 'cert' . / . '1332187001_20181030_cert.pem',
             // 配置缓存目录，需要拥有写权限
             'cache_path' => '',
         ];

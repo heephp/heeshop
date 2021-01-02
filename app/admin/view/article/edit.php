@@ -37,72 +37,99 @@
                 <div class="card-body">
                     <form action="<?=url('save')?>" method="post">
                         <input type="hidden" name="article_id" value="<?=$m['article_id']?>">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label for="parent_id">栏目</label>
-                                    <select class="form-control" name="category_id">
-                                        <option value="0">无</option>
-                                        <?foreach ($plist as $p){?>
-                                            <optgroup label="<?=$p['name']?>">
-                                                <?foreach ($p['child'] as $c){?>
-                                                <option value="<?=$c['category_id']?>" <?=($c['category_id']==$m['category_id']||$c['category_id']==$categoryid)?'selected':''?>><?=$c['name']?></option>
+
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">基本</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="adv-tab" data-toggle="tab" href="#adv" role="tab" aria-controls="adv" aria-selected="false">高级</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active mt-2" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                                    <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="parent_id">栏目</label>
+                                            <select class="form-control" name="category_id">
+                                                <option value="0">无</option>
+                                                <?foreach ($plist as $p){?>
+                                                    <optgroup label="<?=$p['name']?>">
+                                                        <?foreach ($p['child'] as $c){?>
+                                                        <option value="<?=$c['category_id']?>" <?=($c['category_id']==$m['category_id']||$c['category_id']==$categoryid)?'selected':''?>><?=$c['name']?></option>
+                                                        <?}?>
+                                                    </optgroup>
                                                 <?}?>
-                                            </optgroup>
-                                        <?}?>
-                                    </select>
-                                </div>
+                                            </select>
+                                        </div>
 
-                                <div class="form-group">
-                                    <label for="title">标题</label>
-                                    <input type="text" class="form-control" name="title" placeholder="标题" value="<?=$m['title']?>">
-                                </div>
-                                <div class="form-group">
-                                    <label for="remark">描述</label>
-                                    <textarea type="text" class="form-control" name="remark" placeholder="描述" >
-                                        <?=$m['remark']?>
-                                    </textarea>
-                                </div>
+                                        <div class="form-group">
+                                            <label for="title">标题</label>
+                                            <input type="text" class="form-control" name="title" placeholder="标题" value="<?=$m['title']?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="remark">描述</label>
+                                            <textarea type="text" class="form-control" name="remark" placeholder="描述" >
+                                                <?=$m['remark']?>
+                                            </textarea>
+                                        </div>
 
 
-                                <div class="form-group">
-                                    <label class="form-label">封面图</label>
-                                    <div class="d-flex flex-wrap justify-content-start" id="first_pics">
+                                        <div class="form-group">
+                                            <label class="form-label">封面图</label>
+                                            <div class="d-flex flex-wrap justify-content-start" id="first_pics">
 
 
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label for="container">内容</label>
+                                            <script id="container" name="context" type="text/plain">
+                                                <?= html_entity_decode($m['context'])?>
+                                            </script>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="link">关键词</label>
+                                            <select class="form-control select2input" name="keyword[]" multiple="multiple">
+                                                <?$ks = explode(',',$m['keyword']);
+                                                foreach ($ks as $k){?>
+                                                <option value="<?=$k?>" selected><?=$k?></option>
+                                                <?}?>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="link">作者</label>
+                                            <input type="text" class="form-control" name="author" placeholder="作者" value="<?=$m['author']?>">
+                                        </div>
 
                                     </div>
                                 </div>
 
-
+                            </div>
+                            <div class="tab-pane fade" id="adv" role="tabpanel" aria-labelledby="adv-tab">
                                 <div class="form-group">
-                                    <label for="container">内容</label>
-                                    <script id="container" name="context" type="text/plain">
-                                        <?= html_entity_decode($m['context'])?>
-                                    </script>
+                                    <label class="col-form-label" for="inlineinput">模板</label>
+                                    <div class="row">
+                                        <input class="form-control col-md-2 input-full" id="template" name="template" type="text" placeholder="" value="<?=$m['template']??'list'?>">
+                                        <input type="button" id="select_template" class=" col-md-1 btn btn-primary" value="选择模板">
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="link">关键词</label>
-                                    <select class="form-control select2input" name="keyword[]" multiple="multiple">
-                                        <?$ks = explode(',',$m['keyword']);
-                                        foreach ($ks as $k){?>
-                                        <option value="<?=$k?>" selected><?=$k?></option>
-                                        <?}?>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="link">作者</label>
-                                    <input type="text" class="form-control" name="author" placeholder="作者" value="<?=$m['author']?>">
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="sprice" onclick="$('.price').css('display',$('.price').css('display')=='none'?'block':'none');$('.price input').val('')"><label for="sprice">需要购买<span class="text-info">如果不需要购买，则不需要填写</span></label>
+                                    <input type="checkbox" id="sprice" onclick="$('.price').css('display',$('.price').css('display')=='none'?'block':'none');$('.price input').val('')"><label for="sprice">需要购买</label><span class="text-info">如果不需要购买，则不需要填写</span>
                                 </div>
                                 <div class="form-group price" style="display: none">
                                     <label for="link">价格</label>
-                                    <input type="text" class="form-control" name="price" placeholder="价格" value="<?=$m['price']?>">
+                                    <input type="number" class="form-control col-3" name="price" placeholder="价格" value="<?=$m['price']??'0'?>">
                                 </div>
+
                             </div>
                         </div>
+
 
                         <p></p><p></p>
                         <div class="card-action">
@@ -121,7 +148,9 @@
     <?
     import('/layout/bottom.php');
 
-    function js(){?>
+    function js(){
+        import('/moban/template_select.php');?>
+
         <!-- 配置文件 -->
         <script type="text/javascript" src="/assets/plugin/ueditor/ueditor.config.js"></script>
         <!-- 编辑器源码文件 -->

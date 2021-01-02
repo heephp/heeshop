@@ -105,33 +105,6 @@ class category extends adminBase
         return $this->fetch();
     }
 
-    function ajax_template_dir(){
-        $dir=urldecode(request('post.dir'));
 
-        $root = ROOT.'/skins/'.conf('website_skin');
-        $str='';
-        if( file_exists($root . $dir) ) {
-            $files = scandir($root . $dir);
-            natcasesort($files);
-            if( count($files) > 2 ) { /* The 2 accounts for . and .. */
-                $str =  "<ul class=\"jqueryFileTree\" style=\"display: none;\">";
-                // All dirs
-                foreach( $files as $file ) {
-                    if( file_exists($root . $dir . $file) && $file != '.' && $file != '..' && is_dir($root . $dir . $file) ) {
-                        $str.= "<li class=\"directory collapsed\"><a href=\"#\" rel=\"" . htmlentities($dir . $file) . "/\">" . htmlentities($file) . "</a></li>";
-                    }
-                }
-                // All files
-                foreach( $files as $file ) {
-                    if( file_exists($root . $dir . $file) && $file != '.' && $file != '..' && !is_dir($root . $dir . $file)&&pathinfo($file,PATHINFO_EXTENSION)=='php' ) {
-                        $ext = preg_replace('/^.*\./', '', $file);
-                        $str.= "<li class=\"file ext_$ext\"><a href=\"#\" rel=\"" . htmlentities($dir . $file) . "\">" . htmlentities($file) . "</a></li>";
-                    }
-                }
-                $str.= "</ul>";
-            }
-        }
-        return $str;
-    }
 
 }

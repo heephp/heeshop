@@ -1,124 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keyword" contect="<?=$c['website_keyword']?>">
-    <meta name="description" contect="<?=$c['website_description']?>">
-    <meta name="Author" contect="heecms 上海绿松信息技术有限公司">
-
-    <title><?=$c['website_name']?> <?=$c['website_keyword']?></title>
-
-    <!-- Bootstrap -->
-    <link type="text/css" rel="stylesheet" href="__res__css/bootstrap.min.css" />
-
-    <!-- Font Awesome Icon -->
-    <link rel="stylesheet" href="__res__css/font-awesome.min.css">
-
-    <!-- Custom stlylesheet -->
-    <link type="text/css" rel="stylesheet" href="__res__css/style.css" />
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <meta charset="UTF-8">
+    <meta type="keyword" content="<?=$kw?>">
+    <meta type="description" content="<?=$desc?>">
+    <title><?=$title?> HeeCMS 好用网站管理系统</title>
+    <link rel="stylesheet" href="__res__/css/Heeui.css">
+    <link rel="stylesheet" href="__res__/css/reset.css">
+    <link rel="stylesheet" href="__res__/lib/Heeiconfont/1.0.8/iconfont.css">
+    <link rel="stylesheet" href="__res__/css/default.css">
 
 </head>
-
 <body>
-<!-- HEADER -->
-<header id="header">
-    <!-- NAV -->
-    <div id="nav">
-        <!-- Top Nav -->
-        <div id="nav-top">
-            <div class="container">
-                <!-- social -->
-                <ul class="nav-social">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                </ul>
-                <!-- /social -->
+<div class="container">
 
-                <!-- logo -->
-                <div class="nav-logo">
-                    <a href="index.html" class="logo"><img src="<?=$c['website_logo']?>" alt=""></a>
-                </div>
-                <!-- /logo -->
-
-                <!-- search & aside toggle -->
-                <div class="nav-btns">
-                    <button class="aside-btn"><i class="fa fa-bars"></i></button>
-                    <button class="search-btn"><i class="fa fa-search"></i></button>
-                    <div id="nav-search">
-                        <form>
-                            <input class="input" name="search" placeholder="Enter your search...">
-                        </form>
-                        <button class="nav-close search-close">
-                            <span></span>
-                        </button>
-                    </div>
-                </div>
-                <!-- /search & aside toggle -->
-            </div>
-        </div>
-        <!-- /Top Nav -->
-
-        <!-- Main Nav -->
-        <div id="nav-bottom">
-            <div class="container">
-                <!-- nav -->
-                <ul class="nav-menu">
-                    <?foreach ($navlinks as $item){
-                        if(!empty($item['child'])){?>
-                    <li class="has-dropdown">
-                        <a href="<?=url($item['url'])?>"><?=$item['title']?></a>
-                        <div class="dropdown">
-                            <div class="dropdown-body">
-                                <ul class="dropdown-list">
-                                    <?foreach ($item['child'] as $c){?>
-                                    <li><a href="<?=url($item['url'])?>"><?=$c['title']?></a></li>
-                                    <?}?>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <?}else{?>
-                    <li><a href="<?=url($item['url'])?>" target="<?=$item['target']?>"><?=$item['title']?></a></li>
-                    <?}}?>
-                </ul>
-                <!-- /nav -->
-            </div>
-        </div>
-        <!-- /Main Nav -->
-
-        <!-- Aside Nav -->
-        <div id="nav-aside">
-            <ul class="nav-aside-menu">
-                <?foreach ($navlinks as $item){
-                if(!empty($item['child'])){?>
-                <li class="has-dropdown"><a><?=$item['title']?></a>
-                    <ul class="dropdown">
-                        <?foreach ($item['child'] as $c){?>
-                            <li><a href="<?=url($item['url'])?>"><?=$c['title']?></a></li>
-                        <?}?>
-                    </ul>
-                </li>
+    <div class="topnav">
+        <div class="wp cl pl-10 pr-10">
+            <div class="l">您好，欢迎使用HeeCMS 好用网站管理系统</div>
+            <div class="r">
+                <?if(!$islogin){?>
+                    <span class="r_nav">[ <a rel="nofollow" href="<?=url('user/login')?>">登录</a> ]</span>
+                    <span class="pipe">|</span><span class="r_nav">[ <a href="<?=url('user/reg')?>" rel="nofollow">注册</a> ]</span>
                 <?}else{?>
-                    <li><a href="<?=url($item['url'])?>" target="<?=$item['target']?>"><?=$item['title']?></a></li>
-                <?}}?>
-            </ul>
-            <button class="nav-close nav-aside-close"><span></span></button>
+                    <span class="r_nav"> 欢迎：<?=request('session.user_name')?>[ <a rel="nofollow" href="<?=url('user/usercenter')?>">用户中心</a> ]</span>
+                    <span class="pipe">|</span><span class="r_nav">[ <a href="<?=url('user/logout')?>" rel="nofollow">退出</a> ]</span>
+                <?}?>
+            </div>
+
         </div>
-        <!-- /Aside Nav -->
     </div>
-    <!-- /NAV -->
-</header>
-<!-- /HEADER -->
+    <div class="row cl" style="height: 80px;padding: 10px">
+        <div class="col-xs-12 col-md-3" align="center"><div class="radius" style="width: 220px; height: 80px;line-height:80px;background: #fff;font-size: 32px;color: #003366;font-style: italic;">HeeCMS </div></div>
+        <div class="col-lg-9 hidden-md hidden-xs hidden-sm"><img
+                src="__res__/imgs/banner1.gif" height="80" width="900"/></div>
+    </div>
+
+    <nav class="nav navbar-nav nav-collapse mt-20" role="navigation" id="Hui-navbar" style="background: #006699;">
+        <ul class="cl">
+            <li class="current"><a href="/">首页</a></li>
+            <li><a href="<?=url('_list',8)?>">公司中心</a></li>
+            <li><a href="<?=url('_list',9)?>">供应中心</a></li>
+            <li><a href="<?=url('_list',10)?>">商城购物</a></li>
+            <li><a href="<?=url('_list',11)?>">展会中心</a></li>
+            <li class="dropDown dropDown_hover"><a href="#" class="dropDown_A">资讯中心 <i class="Hui-iconfont">&#xe6d5;</i></a>
+                <ul class="dropDown-menu menu radius box-shadow">
+                    <li><a href="<?=url('_list',2)?>">产业资讯</a></li>
+                    <li><a href="<?=url('_list',7)?>">数据分析</a>
+                    </li>
+                    <li><a href="<?=url('_list',13)?>">头条资讯</a></li>
+                    <li><a href="<?=url('_list',14)?>">公司研报</a></li>
+                </ul>
+            </li>
+            <li><a href="<?=url('_list',12)?>">洽谈中心</a></li>
+        </ul>
+    </nav>

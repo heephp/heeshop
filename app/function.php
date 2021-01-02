@@ -83,7 +83,7 @@ function getcurl($url){
 function get_article($category_id,$top,$where='1=1',$recommend=1,$order='create_time desc'){
     $where=empty($where)?'1=1':$where;
     $mo = model('article');
-    $mo->where($where.' and '.'category_id='.$category_id.' and recommend='.$recommend)->order($order)->limit($top)->select();
+    $mo->where($where.' and '.'category_id in('.$category_id.') and recommend in('.$recommend.')')->order($order)->limit($top)->select();
     $mo->category();
     $mo->create_user();
     return $mo->data;

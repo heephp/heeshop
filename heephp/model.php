@@ -318,6 +318,42 @@ class model extends orm {
 
     }
 
+    /**
+     * 设置值 跳过自动字段
+     * @param $filed
+     * @param $value
+     */
+    public function setField($filed,$value)
+    {
+        return $this->db->update($this->table, [$filed => $value], $this->where);
+    }
+
+    /**
+     * 加值
+     * @param $filed
+     * @param $value
+     */
+    public function setInc($filed,$value)
+    {
+        $item = $this->db->select($this->table, $this->where);
+        $item[$filed] = settype($item[$filed],gettype($value));
+        $item[$filed] = $item[$filed] + $value;var_dump($item[$filed] );
+        return $this->db->update($this->table, $item, $this->where);
+    }
+
+    /**
+     * 减去值
+     * @param $filed
+     * @param $value
+     */
+    public function setDec($filed,$value)
+    {
+        $item = $this->db->select($this->table, $this->where);
+        $item[$filed] = settype($item[$filed],gettype($value));
+        $item[$filed] = $item[$filed] - $value;
+        return $this->db->update($this->table, $item, $this->where);
+    }
+
 
     public function __get($name)
     {

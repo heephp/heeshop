@@ -14,7 +14,7 @@
   'user_model_prefix' => 'user_model_',
   'html_replace' => 
   [
-    '__res__' => '/static/skins/merged/',
+    '__res__' => '/static/skins/default/',
     '__root__' => '/',
   ],
   'db' => 

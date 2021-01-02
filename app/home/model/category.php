@@ -9,7 +9,7 @@ class category extends model
     protected $update_message_validata = "分类名|必填+已经存在;关键词|必填;";
     protected $update_validata = "name|must+unique;keyword|must;";
     protected $softdel = true;
-    protected $key = 'categroy_id';
+    //protected $key = 'category_id';
 
     public function __construct()
     {
@@ -20,12 +20,12 @@ class category extends model
     }
 
     public function child(){
-        $re = new relation($this,'category','caregory_id','parent_id','child');
+        $re = new relation($this,'category','category_id','parent_id','child');
         return $re->hasmore(false);
     }
 
     public function parent(){
-        $re = new relation($this,'category','parent_id','caregory_id','parent');
+        $re = new relation($this,'category','parent_id','category_id','parent');
         return $re->belong();
     }
 

@@ -21,7 +21,7 @@ class article extends model
     }
 
     public function category(){
-        $re = new relation($this,'category','caregory_id','category_id');
+        $re = new relation($this,'category','category_id','category_id');
         return $re->belong();
     }
 

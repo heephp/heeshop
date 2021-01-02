@@ -41,6 +41,8 @@ class index extends adminBase {
             if(empty($users->data['users_group']['isadmin'])){
                 return $this->error('您不是管理员，无法登录！');
             }
+            $m['num']++;
+            $users->update($m);
             request($this->session_id_str, $m['users_id']);
             request($this->session_name_str, $m['username']);
             request($this->session_users_group_id_str, $m['users_group_id']);

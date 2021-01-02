@@ -1,6 +1,5 @@
 <?php
 namespace app\home\controller;
-use app\admin\controller\model;
 use app\home\model\category;
 use  heephp\controller;
 use heephp\formbulider;
@@ -10,11 +9,50 @@ use heephp\wherebuild;
 class index extends base
 {
 
-    /* public function  index(){
+     public function  index(){
 
-         return $this->fetch(conf('skin_index'));
-     }*/
+         return $this->fetch();
+     }
 
+    public function  _list($id)
+    {
+        $cates = model('category');
+        $cates->get($id);
+        $cates->parent();
+        $this->assign('cate',$cates->data);
+
+        $article = model('article');
+        $list = $article->where("category_id=$id")->order('create_time desc')->page();
+
+        $this->assign('list', $list);
+        $this->assign('pager', $article->pager['show']);
+
+        return $this->fetch();
+    }
+
+    public function plist(){
+
+        return $this->fetch();
+    }
+
+    public function  detail($id){
+
+        $article = model('article');
+        $m = $article->get($id);
+
+        $cates = model('category');
+        $cates->get($m['category_id']);
+        $cates->parent();
+        $this->assign('cate',$cates->data);
+
+        $this->assign('m',$m);
+        return $this->fetch();
+    }
+
+    public function pdetail(){
+
+        return $this->fetch();
+    }
 
     public function test()
     {
