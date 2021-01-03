@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version: 5.7.26)
-# Date: 2021-01-02 13:12:13
+# Date: 2021-01-03 14:27:18
 # Generator: MySQL-Front 5.3  (Build 4.234)
 
 /*!40101 SET NAMES utf8 */;
@@ -41,7 +41,7 @@ CREATE TABLE `heecms_article` (
   `title` varchar(255) DEFAULT NULL,
   `remark` varchar(255) DEFAULT NULL,
   `context` text,
-  `hit` int(255) DEFAULT NULL COMMENT '点击',
+  `hit` int(11) DEFAULT NULL COMMENT '点击',
   `author` varchar(255) DEFAULT NULL,
   `keyword` varchar(255) DEFAULT NULL,
   `first_pic` varchar(1000) DEFAULT NULL COMMENT '首图',
@@ -57,7 +57,7 @@ CREATE TABLE `heecms_article` (
 # Data for table "heecms_article"
 #
 
-INSERT INTO `heecms_article` VALUES (1,2,NULL,'测试内容','描述','&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot; title=&quot;1587782677251926.jpg&quot; alt=&quot;qiyeguanwang.jpg&quot;/&gt;&lt;/p&gt;',NULL,'作者','关键词',NULL,0,1587782763,NULL,NULL,NULL),(2,2,NULL,'测试内容标题','描述','&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588768789115185.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;',NULL,'作者','关键词,产品,网站,信息,软件','/upload/20200425/1587782677251926.jpg',0,1587782944,1589683402,1608860061,NULL),(3,2,NULL,'标题2','描述2','&lt;p&gt;内容2&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;ujnnbbhjjvjjvvjhjjvjhvjvjvjvjvjvjhvjvj&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588768789115185.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;',NULL,'作者2','关键词2,信息','/upload/20200425/1587782677251926.jpg',1,1587784244,1589539497,1608860055,NULL),(4,2,1,'价格','31','&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot; alt=&quot;1588760663359953.png&quot;/&gt;&lt;/p&gt;',NULL,'','','/upload/20200506/1588760663359953.png',1,1589681234,NULL,1608860058,NULL);
+INSERT INTO `heecms_article` VALUES (1,2,1,'测试内容','描述','&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot; title=&quot;1587782677251926.jpg&quot; alt=&quot;qiyeguanwang.jpg&quot;/&gt;&lt;/p&gt;',NULL,'作者','关键词',NULL,0,1587782763,NULL,NULL,NULL),(2,2,1,'测试内容标题','描述','&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588768789115185.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;',NULL,'作者','关键词,产品,网站,信息,软件','/upload/20200425/1587782677251926.jpg',0,1587782944,1589683402,NULL,NULL),(3,2,1,'标题2','描述2','&lt;p&gt;内容2&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;ujnnbbhjjvjjvvjhjjvjhvjvjvjvjvjvjhvjvj&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588768789115185.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926_small.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/upload/20200425/1587782677251926.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;',NULL,'作者2','关键词2,信息','/upload/20200425/1587782677251926.jpg',1,1587784244,1589539497,NULL,NULL),(4,2,1,'价格','31','&lt;p&gt;&lt;img src=&quot;/upload/20200506/1588760663359953.png&quot; alt=&quot;1588760663359953.png&quot;/&gt;&lt;img src=&quot;/upload/20210102/212d81fffdc88fa78a6bdbfd55b7924a.png&quot; alt=&quot;212d81fffdc88fa78a6bdbfd55b7924a.png&quot;/&gt;&lt;/p&gt;',1,'','','/upload/20210102/212d81fffdc88fa78a6bdbfd55b7924a.png',1,1589681234,1609643858,NULL,NULL);
 
 #
 # Structure for table "heecms_category"
@@ -270,7 +270,7 @@ CREATE TABLE `heecms_message` (
   `message_id` int(11) NOT NULL AUTO_INCREMENT,
   `users_id` int(11) DEFAULT NULL,
   `receiver_users_id` int(11) DEFAULT NULL,
-  `all` int(255) DEFAULT NULL COMMENT '是否是所有人都接收',
+  `all` int(1) DEFAULT NULL COMMENT '是否是所有人都接收',
   `title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `context` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `isread` int(1) DEFAULT '0' COMMENT '是否已读  1已读 0未读',
@@ -285,7 +285,7 @@ CREATE TABLE `heecms_message` (
 #
 
 /*!40000 ALTER TABLE `heecms_message` DISABLE KEYS */;
-INSERT INTO `heecms_message` VALUES (3,1,3,0,'title','contet',0,1586695173,NULL,0),(4,1,2,0,'欢迎使用','欢迎使用！！',0,1587103078,1587103078,0);
+INSERT INTO `heecms_message` VALUES (3,2,1,0,'title','contet',1,1586695173,NULL,0),(4,3,1,0,'欢迎使用','欢迎使用！！',1,1587103078,1587103078,0);
 /*!40000 ALTER TABLE `heecms_message` ENABLE KEYS */;
 
 #
@@ -295,13 +295,11 @@ INSERT INTO `heecms_message` VALUES (3,1,3,0,'title','contet',0,1586695173,NULL,
 DROP TABLE IF EXISTS `heecms_order`;
 CREATE TABLE `heecms_order` (
   `order_id` varchar(30) NOT NULL DEFAULT '',
-  `order_type` int(11) DEFAULT NULL COMMENT '订单类型 0为article类型订单 1为栏目订单 2为页面订单',
-  `tid` int(11) DEFAULT NULL COMMENT '对应订单类型相关表信息、栏目、页面的Id',
   `sumprice` decimal(10,2) DEFAULT NULL COMMENT '总价',
   `sourceprice` decimal(10,2) DEFAULT NULL COMMENT '原价',
   `discount` decimal(10,2) DEFAULT NULL COMMENT '折扣',
   `create_users_id` int(11) DEFAULT NULL,
-  `pcount` int(255) DEFAULT NULL COMMENT '商品总数',
+  `pcount` int(11) DEFAULT NULL COMMENT '商品总数',
   `state` int(2) DEFAULT '0' COMMENT '订单状态 -3已完成退款 -2已确认退款 -1申请退款 0未支付 1已支付未发货 2已发货未确认 3已确认未评论 4已评论完成',
   `address` varchar(255) DEFAULT NULL COMMENT '收件人地址',
   `mobile` varchar(255) DEFAULT NULL COMMENT '收件人手机',
@@ -314,6 +312,7 @@ CREATE TABLE `heecms_order` (
   `paysum` decimal(10,2) DEFAULT NULL COMMENT '支付金额',
   `stime` int(11) DEFAULT NULL COMMENT '订单生效时间',
   `etime` int(11) DEFAULT NULL COMMENT '订单失效时间',
+  `paytime` int(11) DEFAULT NULL COMMENT '支付时间',
   PRIMARY KEY (`order_id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
@@ -321,7 +320,7 @@ CREATE TABLE `heecms_order` (
 # Data for table "heecms_order"
 #
 
-INSERT INTO `heecms_order` VALUES ('201231055146320472574252',NULL,NULL,289.70,NULL,NULL,NULL,NULL,0,'1','1','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `heecms_order` VALUES ('201231055146320472574252',289.70,NULL,NULL,1,NULL,0,'1','1','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 #
 # Structure for table "heecms_order_detail"
@@ -330,6 +329,8 @@ INSERT INTO `heecms_order` VALUES ('201231055146320472574252',NULL,NULL,289.70,N
 DROP TABLE IF EXISTS `heecms_order_detail`;
 CREATE TABLE `heecms_order_detail` (
   `order_detail_id` int(11) NOT NULL AUTO_INCREMENT,
+  `order_type` int(11) DEFAULT NULL COMMENT '订单类型 0为article类型订单 1为栏目订单 2为页面订单',
+  `tid` int(11) DEFAULT NULL COMMENT '对应订单类型相关表信息、栏目、页面的Id',
   `order_id` varchar(30) DEFAULT NULL,
   `num` int(11) DEFAULT NULL COMMENT '商品数量',
   `price` decimal(10,2) DEFAULT NULL COMMENT '商品单价',
@@ -338,16 +339,14 @@ CREATE TABLE `heecms_order_detail` (
   `create_time` int(11) DEFAULT NULL,
   `update_time` int(11) DEFAULT NULL,
   `delete_time` int(11) DEFAULT NULL,
-  `state` int(2) DEFAULT NULL COMMENT '和订单的状态一样',
-  `stime` int(11) DEFAULT NULL COMMENT '订单生效时间',
-  `etime` int(11) DEFAULT NULL COMMENT '订单失效时间',
   PRIMARY KEY (`order_detail_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 #
 # Data for table "heecms_order_detail"
 #
 
+INSERT INTO `heecms_order_detail` VALUES (1,NULL,NULL,'201231055146320472574252',1,1.20,1.20,1,1525258252,NULL,NULL),(2,NULL,NULL,'201231055146320472574252',2,2.20,4.40,1,1525258252,NULL,NULL),(3,NULL,NULL,'1525258253',3,2.50,5.80,1,253535533,NULL,NULL);
 
 #
 # Structure for table "heecms_order_pay"
@@ -370,6 +369,7 @@ CREATE TABLE `heecms_order_pay` (
 # Data for table "heecms_order_pay"
 #
 
+INSERT INTO `heecms_order_pay` VALUES ('210103140425648857524331','201231055146320472574252',0,289.70,NULL,NULL,NULL,NULL),('210103140454052993702272','201231055146320472574252',0,289.70,NULL,NULL,NULL,NULL),('210103140457080783731906','201231055146320472574252',0,289.70,NULL,NULL,NULL,NULL),('210103140557803041013353','201231055146320472574252',0,289.70,NULL,NULL,NULL,NULL),('210103140624566535273018','201231055146320472574252',0,289.70,NULL,NULL,NULL,NULL),('210103140629412005861128','201231055146320472574252',0,289.70,NULL,NULL,NULL,NULL),('210103140703983469854304','201231055146320472574252',0,289.70,NULL,NULL,NULL,NULL),('210103140714365566766389','201231055146320472574252',0,289.70,NULL,NULL,NULL,NULL),('210103140815394068611677','201231055146320472574252',0,289.70,NULL,NULL,NULL,NULL),('210103140830379938612096','201231055146320472574252',0,289.70,NULL,NULL,NULL,NULL);
 
 #
 # Structure for table "heecms_pages"
@@ -505,7 +505,7 @@ CREATE TABLE `heecms_users` (
 #
 
 /*!40000 ALTER TABLE `heecms_users` DISABLE KEYS */;
-INSERT INTO `heecms_users` VALUES (1,'admin','e10adc3949ba59abbe56e057f20f883e','admin_','/upload/20200413/82b64f473a8acaa3948bab0548090020.jpg',1,1,1586361600,'',1,'','','','123123','abc@qq.com','',999999999,1609559320,NULL,2);
+INSERT INTO `heecms_users` VALUES (1,'admin','e10adc3949ba59abbe56e057f20f883e','admin_','/upload/20210102/212d81fffdc88fa78a6bdbfd55b7924a.png',1,0,1609516800,'',1,'','121212','','123123','abc@qq.com','',999999999,1609588678,NULL,2);
 /*!40000 ALTER TABLE `heecms_users` ENABLE KEYS */;
 
 #
