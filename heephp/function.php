@@ -112,10 +112,13 @@ function mulit_uploadfile($fname, $allowedExts, $allowfilesize, $dir='', $namety
  */
 function uploadfile($fname, $allowedExts, $allowfilesize, $dir='', $nametype = 'md5',$file=[])
 {
-    if(empty($dir)){
+    if(empty($dir)) {
         $dir1 = '/uploads/' . date('Ymd') . '/';
         $dir = ROOT . '/public' . $dir1;
-    }
+    }else
+        $dir1 = $dir;
+
+
     if(empty($file))
         $file = $_FILES[$fname];
 
@@ -194,7 +197,7 @@ function guid()
         . substr($charid, 12, 4) . $hyphen
         . substr($charid, 16, 4) . $hyphen
         . substr($charid, 20, 12);
-       // . chr(125);// "}"
+    // . chr(125);// "}"
     return $uuid;
 }
 
@@ -699,10 +702,10 @@ function imgToBase64($img_file) {
 }
 
 /**
-*功能：php完美实现下载远程图片保存到本地
-*参数：文件url,保存文件目录,保存文件名称，使用的下载方式
-*当保存文件名称为空时则使用远程文件原来的名称
-*/
+ *功能：php完美实现下载远程图片保存到本地
+ *参数：文件url,保存文件目录,保存文件名称，使用的下载方式
+ *当保存文件名称为空时则使用远程文件原来的名称
+ */
 /*function getImageFormURI($url,$ext,$save_dir='',$type=0)
 {
     if (trim($url) == '') {
@@ -751,6 +754,9 @@ function imgToBase64($img_file) {
 
 function download($url,$ext, $path)
 {
+    if(!is_dir($path)){
+        mkdir($path,0777,true);
+    }
     $filename = md5($url).'.' . $ext;
 
     $ch = curl_init();
@@ -759,7 +765,7 @@ function download($url,$ext, $path)
     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
     $file = curl_exec($ch);
     curl_close($ch);
-   // $filename = pathinfo($url, PATHINFO_BASENAME);
+    // $filename = pathinfo($url, PATHINFO_BASENAME);
     $resource = fopen($path . $filename, 'a');
     fwrite($resource, $file);
     fclose($resource);
@@ -814,7 +820,7 @@ function widget($path,$parm='')
     }
 }
 
- function json($data){
+function json($data){
     return json_encode($data,JSON_UNESCAPED_UNICODE);
 }
 
@@ -862,14 +868,14 @@ spl_autoload_register(function ($class_name) {
             if (is_file($file)) {
                 include_once($file) ;
 
-               /* $dir = dirname($file);
-                //取类目录中所有文件
-                foreach_dir($dir,function ($v,$p){
-                    $f = $p.'/'.$v;
-                    if(is_file($f)){
-                        include_once($f) ;
-                    }
-                });*/
+                /* $dir = dirname($file);
+                 //取类目录中所有文件
+                 foreach_dir($dir,function ($v,$p){
+                     $f = $p.'/'.$v;
+                     if(is_file($f)){
+                         include_once($f) ;
+                     }
+                 });*/
 
 
                 return;

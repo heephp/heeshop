@@ -53,6 +53,25 @@ h4{font-size:18px}
 h5{font-size:14px}
 h6{font-size:12px}
 
+p{margin-bottom:10px}		/*段落*/
+small{font-size:85%}		/*小型文本*/
+b,strong {font-weight: bold}	/*重要的文本，加粗*/
+em{font-style:italic}		/*被强调的文本*/
+i{}				/*斜体*/
+u{}				/*加下划线*/
+cite{font-style:normal}		/*引用*/
+mark{color:#000;background:#ff0}/*突出显示文本*/
+var{}				/*变量*/
+kbd{}				/*键盘文本*/
+code{}				/*计算机代码文本*/
+dfn{font-style: italic}	/*一个定义项目*/
+del{font-family:Simsun}		/*删除线*/
+code,kbd,pre,samp {font-family: monospace, serif;font-size: 1em}
+pre{white-space: pre-wrap}	/*预格式化的文本*/
+.uppercase{text-transform:uppercase} /*文字大写*/
+.lowercase{text-transform:lowercase} /*文字小写*/
+.capitalize{text-transform:capitalize} /*首字母大写*/
+
 .panel a{font-size: 16px;}
 .share a{font-size: 26px;}
 .pageNav{list-style: none;}

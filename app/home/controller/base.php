@@ -5,6 +5,15 @@ use heephp\logger;
 
 class base extends controller
 {
+    protected $session_id_str='session.user_id';
+    protected $session_name_str='session.user_name';
+    protected $session_users_group_id_str='session.user_group_id';
+    protected $session_users_group_name_str='session.user_group_name';
+    protected $session_users_header_str='session.user_header';
+    protected $session_users_email_str='session.user_email';
+    protected $session_users_num_str='session.user_login_num';
+    protected $userid;
+
     public function __construct()
     {
         parent::__construct();
@@ -23,6 +32,10 @@ class base extends controller
             $this->assign($l['tag'],$l['links']);
         }
 
+        if(CONTROLLER!='user'){
+            $this->cklogin();
+        }
+
     }
 
     /**
@@ -38,10 +51,10 @@ class base extends controller
         $m=$mo->data;
         $money = $m['sumprice'];
         //创建支付流水
-        $spay=model('pay');
+        $spay=model('order_pay');
         $date = new \DateTime();
         $pay_id=$date->format('ymdHisu').randChar(6,'number');
-        $d['pay_id']=$pay_id;
+        $d['order_pay_id']=$pay_id;
         $d['order_id']=$orderid;
         $d['money']=$money;
         $d['state']=0;
@@ -88,5 +101,25 @@ class base extends controller
         } else {
             logger::info("订单号$out_trade_on 支付成功，但金额不匹配：实际支付：$money 应支付：" . $m['money']);
         }
+    }
+
+    protected function cklogin()
+    {
+        //如果登录
+        if(!empty(request($this->session_id_str))&&!empty(request($this->session_name_str))){
+            $this->assign('user_id',request($this->session_id_str));
+            $this->assign('user_name',request($this->session_name_str));
+            $this->assign('usergroup',request($this->session_users_group_name_str));
+            $this->assign('usergroup_id',request($this->session_users_group_id_str));
+            $this->assign('user_header',request($this->session_users_header_str));
+            $this->assign('user_email',request($this->session_users_email_str));
+            $this->assign('user_loginnum',request($this->session_users_num_str));
+            $this->assign('islogin',true);
+            $noread = model('message')->where("isread=0 and receiver_users_id=".request($this->session_id_str))->count()->value();
+            $this->assign('noread',$noread);
+            return true;
+        }
+        $this->assign('islogin',false);
+        return false;
     }
 }

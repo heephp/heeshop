@@ -36,6 +36,7 @@ view::import('../layout/header',['title'=>'注册']);?>
                         </div>
                     <?}?>
                     <div class="row mt-10">
+                        <input type="hidden" name="crsf" value="<?=crsf()?>">
                         <div class="col-sm-12 col-md-4 col-md-offset-4"><input class="btn btn-primary radius" type="submit" value="提交"></div>
                     </div>
                 </form>

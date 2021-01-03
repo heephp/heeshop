@@ -34,26 +34,6 @@ function get_arr_val($arr,$key){
     return $rearr;
 }
 
-function modeluser($name)
-{
-    //取出用户模型表前缀
-    $user_model_pre = config('user_model_prefix');
-    //从数据表中取出验证规则
-    $mt = model('model_table')->where("`name`='$name'")->find();
-    if (!$mt) {
-        throw new sysExcption('自定义模型表名：' . $name . '不存在！');
-        return;
-    }
-    $validate_rule = $mt['validate_rule'];
-    $validate_msg = $mt['validate_msg'];
-    $model = model($user_model_pre . $name);
-    $model->softdel = true;
-    $model->autotimespan = true;
-    $model->validate_rule = $validate_rule;
-    $model->validate_msg = $validate_msg;
-    return $model;
-}
-
 /**
  * 管理表格 表头标题
  * @param $field 当前字段
@@ -89,20 +69,33 @@ function get_article($category_id,$top,$where='1=1',$recommend=1,$order='create_
     return $mo->data;
 }
 
-function get_shop_category(){
-    $cate = model('shop_category');
-    $cate_list = $cate->all();
-    return $cate_list;
-}
+function get_order_state($val){
 
-function get_shop_attr(){
-    $attr = model('shop_attr');
-    $attr_list = $attr->all();
-    return $attr_list;
-}
+        switch ($val){
+            case -3:
+                return '已完成退款';
+                break;
+            case -2:
+                return '已确认退款';
+                break;
+            case -1:
+                return '申请退款';
+                break;
+            case 0:
+                return '未支付';
+                break;
+            case 1:
+                return '已支付未发货';
+                break;
+            case 2:
+                return '已发货未确认';
+                break;
+            case 3:
+                return '已确认未评论';
+                break;
+            case 4:
+                return '已完成';
+                break;
+        }
 
-function get_shop_sku(){
-    $sku = model('shop_sku');
-    $sku_list = $sku->all();
-    return $sku_list;
 }

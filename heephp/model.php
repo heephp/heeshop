@@ -191,19 +191,19 @@ class model extends orm {
 
 
     public function find(){
-        $data = parent::find();
+        $data = [parent::find()];
         $this->get_autofield($data);
-        $this->data = $data;
+        $this->data = $data[0];
         $this->pager=null;
-        return $data;
+        return $data[0];
     }
 
     public function get($id=''){
-        $data=parent::get($id);
+        $data=[parent::get($id)];
         $this->get_autofield($data);
-        $this->data =$data;
+        $this->data =$data[0];
         $this->pager=null;
-        return $data;
+        return $data[0];
     }
 
     /**
@@ -285,6 +285,7 @@ class model extends orm {
             $line=$values[$i];
             foreach ($line as $k=>$v) {
                 $timeformat = config('db.timeformat');
+
                 if(!empty($timeformat)&&($k==$this->field_createtime||$k==$this->field_deletetime||$k==$this->field_updatetime)){
                     if(empty($values[$i][$k]))
                         $values[$i][$k]='';
@@ -292,6 +293,7 @@ class model extends orm {
                         $values[$i][$k]=date($timeformat,$values[$i][$k]);
                 }elseif (method_exists($this, 'get_' .$k)){
                     //自动数据处理
+
                     $mname = 'get_'.$k;
                     $values[$i][$k]=$this->$mname($values[$i][$k]);
 
@@ -299,6 +301,8 @@ class model extends orm {
             }
 
         }
+
+
     }
 
     /*将数据结果的值  自动转换字段的值*/
@@ -337,7 +341,7 @@ class model extends orm {
     {
         $item = $this->db->select($this->table, $this->where);
         $item[$filed] = settype($item[$filed],gettype($value));
-        $item[$filed] = $item[$filed] + $value;var_dump($item[$filed] );
+        $item[$filed] = $item[$filed] + $value;
         return $this->db->update($this->table, $item, $this->where);
     }
 

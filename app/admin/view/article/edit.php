@@ -71,9 +71,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="remark">描述</label>
-                                            <textarea type="text" class="form-control" name="remark" placeholder="描述" >
-                                                <?=$m['remark']?>
-                                            </textarea>
+                                            <textarea type="text" class="form-control" name="remark" placeholder="描述" ><?=$m['remark']?></textarea>
                                         </div>
 
 

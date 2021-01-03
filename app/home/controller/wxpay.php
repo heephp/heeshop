@@ -75,7 +75,7 @@ class wxpay extends base
         $errorCorrectionLevel = 'L';  //容错级别
         $matrixPointSize = 5;      //生成图片大小
         //生成二维码图片
-        require_once './../plugin/phpqrcode/phpqrcode.php';
+        require_once './../vendor/phpqrcode/phpqrcode.php';
         $QR = \QRcode::png($value,false,$errorCorrectionLevel, $matrixPointSize, 2);
     }
 

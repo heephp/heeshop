@@ -22,6 +22,9 @@ class view
 
         self::_getvar();
     }
+    public static function getvar($name){
+        return view::$vars[$name];
+    }
 
     public static function setvars($vars)
     {
@@ -82,10 +85,10 @@ class view
         }
     }
 
-    public static function part($name)
+    public static function part($name,$parms='')
     {
         if (function_exists('view_' . $name)) {
-            call_user_func('view_' . $name);
+            call_user_func('view_' . $name,$parms);
         }
     }
 

@@ -39,6 +39,7 @@ class index extends base
 
         $article = model('article');
         $m = $article->get($id);
+        $article->setDec('hit',$m['hit']++);
 
         $cates = model('category');
         $cates->get($m['category_id']);
