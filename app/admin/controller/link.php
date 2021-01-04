@@ -22,7 +22,7 @@ class link extends adminBase
         $lg = $lp->get($link_group_id);
         $this->assign('group',$lg);
 
-        $link = new \app\admin\model\link();
+        $link = model('link');
         $link->where("link_group_id=$link_group_id and (parent_id<1 or parent_id is NULL or parent_id='')")->page();
         $link->create_user();
         $link->child();
@@ -85,7 +85,7 @@ class link extends adminBase
             $result = $link->insert($data);
         }
         if ($result) {
-            return $this->success('保存成功！', url('manager/'.$data['link_group_id']));
+            return $this->success('保存成功！', url('manager',$data['link_group_id']));
         } else
             return $this->error('保存失败！');
     }

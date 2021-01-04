@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>用户登录 -- HeeFramework</title>
+    <title>管理登录 -- HeeCMS</title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
     <link rel="icon" href="/assets/img/icon.ico" type="image/x-icon"/>
     <style>
@@ -52,7 +52,7 @@
                     <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
                         <div>
                             <h2 class="text-white pb-2 fw-bold">用户登录</h2>
-                            <h5 class="text-white op-7 mb-2">欢迎使用</h5>
+                            <h5 class="text-white op-7 mb-2">欢迎使用HeeCMS 好用网站管理系统</h5>
                         </div>
                     </div>
                 </div>

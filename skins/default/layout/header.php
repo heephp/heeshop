@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta type="keyword" content="<?=$kw?>">
     <meta type="description" content="<?=$desc?>">
-    <title><?=$title?> HeeCMS 好用网站管理系统</title>
+    <title><?=$title?> <?=conf('website_name')?> 好用网站管理系统</title>
     <link rel="stylesheet" href="__res__/css/Heeui.css">
     <link rel="stylesheet" href="__res__/css/reset.css">
     <link rel="stylesheet" href="__res__/lib/Heeiconfont/1.0.8/iconfont.css">
@@ -37,20 +37,19 @@
 
     <nav class="nav navbar-nav nav-collapse mt-20" role="navigation" id="Hui-navbar" style="background: #006699;">
         <ul class="cl">
-            <li class="current"><a href="/">首页</a></li>
-            <li><a href="<?=url('_list',8)?>">公司中心</a></li>
-            <li><a href="<?=url('_list',9)?>">供应中心</a></li>
-            <li><a href="<?=url('_list',10)?>">商城购物</a></li>
-            <li><a href="<?=url('_list',11)?>">展会中心</a></li>
-            <li class="dropDown dropDown_hover"><a href="#" class="dropDown_A">资讯中心 <i class="Hui-iconfont">&#xe6d5;</i></a>
-                <ul class="dropDown-menu menu radius box-shadow">
-                    <li><a href="<?=url('_list',2)?>">产业资讯</a></li>
-                    <li><a href="<?=url('_list',7)?>">数据分析</a>
+            <?php foreach ($navlinks as $item){
+                list($cu,$ext)=explode('.',$_SERVER['REQUEST_URI']);
+                if(!empty($item['child'])){?>
+                    <li class="dropDown dropDown_hover"><a href="#" class="dropDown_A"><?=$item['title']?><i class="Hui-iconfont">&#xe6d5;</i></a>
+                        <ul class="dropDown-menu menu radius box-shadow">
+                            <?php foreach ($item['child'] as $ci){?>
+                                <li <?if($cu==$ci['url']){echo 'class="current"';}?>><a href="<?=url($ci['url'])?>" target="<?=url($ci['target'])?>"><?=$ci['title']?></a></li>
+                            <? }?>
+                        </ul>
                     </li>
-                    <li><a href="<?=url('_list',13)?>">头条资讯</a></li>
-                    <li><a href="<?=url('_list',14)?>">公司研报</a></li>
-                </ul>
-            </li>
-            <li><a href="<?=url('_list',12)?>">洽谈中心</a></li>
+                    <?}else{?>
+                    <li <?if($cu==$item['url']){echo 'class="current"';}?>><a href="<?=url($item['url'])?>" target="<?=url($ci['target'])?>"><?=$item['title']?></a></li>
+                    <?}?>
+            <?}?>
         </ul>
     </nav>

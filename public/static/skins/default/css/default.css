@@ -76,3 +76,5 @@ pre{white-space: pre-wrap}	/*预格式化的文本*/
 .share a{font-size: 26px;}
 .pageNav{list-style: none;}
 .pageNav .item{float: left;}
+
+#vcode{cursor: pointer;}

@@ -1,7 +1,7 @@
 <?
 use heephp\view;
 view::create();
-view::import('../layout/header.php');?>
+view::import('../layout/header');?>
 <div class="page-inner">
     <div class="page-header">
         <h4 class="page-title">广告</h4>
@@ -30,7 +30,7 @@ view::import('../layout/header.php');?>
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <?import('/layout/toolsbar.php')?>
+                <?view::import('../layout/toolsbar')?>
                 <div class="card-body">
                     <form action="<?=url('save')?>" method="post">
                         <input type="hidden" name="ad_id" value="<?=$m['ad_id']?>">
@@ -81,7 +81,7 @@ view::import('../layout/header.php');?>
     </div>
     <span id="upload_ue"></span>
     <?
-    view::import('/layout/bottom.php');
+    view::import('../layout/bottom');
 
     ?>
 

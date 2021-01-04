@@ -16,3 +16,9 @@ function uploadfile(url,file,form,success){
         msg('头像上传','文件格式错误，支持:jpg,png,gif')
     }
 }
+
+$(function (){
+    $('#vcode').on('click',function (){
+        $(this).attr('src','/home/user/vcode');
+    })
+})

@@ -38,21 +38,26 @@ function view_content(){
                         [<a href=""> 评价</a>]
                     <?}
                     if($item['state']==2){?>
-                        [<a href=""> 确认收货</a>]
+                        [<a href=""> 物流</a>]
+                        [<a class="c-red"  href="javascript:void(0)"  onclick="return confirm('确定要收货吗？')"> 确认收货</a>]
                     <? }
                     if($item['state']==0){?>
-                        [<a href="<?=url('pay',$item['order_id'])?>"> 支付</a>]
+                        [<a class="c-red" href="<?=url('pay',$item['order_id'])?>"> 支付</a>]
                     <? }
-                    if($item['state']==1){?>
-                        [<a href=""> 查看物流</a>]
-                    <? }
+
                     if($item['state']==-1||$item['state']==-2){?>
                         [<a href=""> 退款进度</a>]
                     <? }
+                    if($item['state']==1){?>
+                        [<a href="#" onclick="alert('已提醒！')"> 提醒发货</a>]
+                    <? }
                     if($item['state']==-3){?>
                         [已退款]
+                    <? }  if(in_array($item['state'],[-3,4])){?>
+
+                        [<a href="<?=url('delorder',$item['order_id'])?>"> 删除</a>]</td>
+
                     <? } ?>
-                [<a href="<?=url('delorder',$item['order_id'])?>"> 删除</a>]</td>
         </tr>
         <? }?>
         </tbody>

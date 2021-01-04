@@ -7,7 +7,7 @@ view::import('../layout/header',['title'=>'注册']);?>
         <div class="panel panel-primary">
             <div class="panel-header">注册新用户</div>
             <div class="panel-body">
-                <form action="<?=url('login_action')?>" method="post" enctype="application/x-www-form-urlencoded">
+                <form action="<?=url('reg_action')?>" method="post" enctype="application/x-www-form-urlencoded">
                     <div class="row">
                         <div class="col-sm-12 col-md-4">登录名*：</div>
                         <div class="col-sm-12 col-md-8"><input type="text" class="input-text radius" name="username" placeholder="登录名"></div>
@@ -31,8 +31,8 @@ view::import('../layout/header',['title'=>'注册']);?>
                     <?if(conf('is_vcode')){?>
                         <div class="row mt-10" style="overflow: hidden">
                             <div class="col-sm-12 col-md-4">验证码*：</div>
-                            <div class="col-sm-12 col-md-4"><input type="text" class="input-text radius" name="vcode" placeholder="验证码"></div>
-                            <div class="col-sm-12 col-md-4"><img src="<?=url('vcode')?>"></div>
+                            <div class="col-sm-12 col-md-4"><input type="text" class="input-text radius"  name="vcode" placeholder="验证码"></div>
+                            <div class="col-sm-12 col-md-4"><img src="<?=url('vcode')?>" id="vcode"></div>
                         </div>
                     <?}?>
                     <div class="row mt-10">

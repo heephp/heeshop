@@ -6,8 +6,8 @@ use heephp\relation;
 class users extends model{
 
     protected $autotimespan=true;
-    protected $update_message_validata="昵称|必填+字母数字下划线最少6位;email|不能为空+必须输入电子邮箱;";
-    protected $update_validata="nickname|must+alphaNumDash=6;email|must+email;";
+    protected $update_message_validata="昵称|必填;email|不能为空+必须输入电子邮箱;";
+    protected $update_validata="nickname|must=5;email|must+email;";
     protected $softdel=true;
     protected $key='users_id';
 

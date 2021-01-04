@@ -3,15 +3,15 @@ use heephp\view;
 view::create();
 view::import('uclayout',['title'=>'订单详细']);
 function view_content(){
-    $m=view::getvar('m');
+    $m=view::getvar('m');//var_dump($m);
     ?>
-        <h4>订单号：<?=$m['order_id']?>
+        <h4 style="line-height: 22px;">订单号：<?=$m['order_id']?>
         <br>
-        金额：<?=$m['sumprice']?><br>
+        金额：<span class="c-red"> <?=$m['sumprice']?></span><br>
             原价：<?=$m['sourceprice']?><br>
             折扣：<?=$m['discount']?><br>
             商品总数：<?=$m['pcount']?><br>
-            状态：<?=get_order_state($m['state'])?><br>
+            状态：<span class="c-red"><?=get_order_state($m['state'])?></span><br>
             创建时间：<?=$m['create_time']?><br>
             订单详细列表：
         </h4>
@@ -29,7 +29,7 @@ function view_content(){
         <tbody class="getData-list" data-currpage="1">
         <? foreach ($m['detail'] as $item){?>
             <tr class="text-c">
-                <td class="text-l"><a style="cursor:pointer" class="text-primary" href="<?=url('msg',$item['message_id'])?>" title="查看"><??></a></td>
+                <td class="text-l"><a style="cursor:pointer" class="text-primary" title="查看"><?=!empty($item['product']['title'])?$item['product']['title']:$item['product']['name']?></a></td>
                 <td><?=$item['num']?></td>
                 <td><?=$item['price']?></td>
                 <td><?=$item['sumprice']?></td>

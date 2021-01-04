@@ -334,7 +334,11 @@ function vercode($code = '', $fontsize = 20, $width = 80, $height = 25, $linecou
     request('session.' . config('validata_code_session'), $code);
 
     $heeimg = new heeimages();
-    $heeimg->fromNew($width,$height,'darkblue')->text($code,['fontFile'=>ROOT.'/heephp/res/font/arial.ttf','size'=>$fontsize,'color'=>'#fff'])->toScreen();
+    $heeimg->fromNew($width,$height,'darkblue');
+    for ($i=0;$i<$linecount;$i++){
+        $heeimg->line(mt_rand(0,$width),mt_rand(0,$height),mt_rand(0,$width),mt_rand(0,$height),'#ccc');
+    }
+    $heeimg->text($code,['fontFile'=>ROOT.'/heephp/res/font/arial.ttf','size'=>$fontsize,'color'=>'#fff'])->toScreen();
     unset($heeimg);
 }
 

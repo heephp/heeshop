@@ -54,11 +54,11 @@
                                 <td><?=$m['create_user']['username']?></td>
                                 <td><?=$m['create_time']?></td>
                                 <td>
-                                    <a href="<?=url('add/',[$m['link_id'],$m['link_group_id']])?>" class="btn btn-primary btn-sm">添加子菜单</a>
+                                    <a href="<?=url('add',[$m['link_id'],$m['link_group_id']])?>" class="btn btn-primary btn-sm">添加子菜单</a>
 
-                                    <a href="<?=url('edit/',[$m['link_id']])?>" class="btn btn-primary btn-sm">编辑</a>
+                                    <a href="<?=url('edit',[$m['link_id']])?>" class="btn btn-primary btn-sm">编辑</a>
 
-                                    <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete/'.$m['link_id'])?>">删除</a>
+                                    <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete',$m['link_id'])?>">删除</a>
 
                                 </td>
                             </tr>
@@ -75,9 +75,9 @@
                                         <td><?=$c['create_user']['username']?></td>
                                         <td><?=$c['create_time']?></td>
                                         <td>
-                                            <a href="<?=url('edit/'.$c['link_id'])?>" class="btn btn-primary btn-sm">编辑</a>
+                                            <a href="<?=url('edit',$c['link_id'])?>" class="btn btn-primary btn-sm">编辑</a>
 
-                                            <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete/'.$c['link_id'])?>">删除</a>
+                                            <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete',$c['link_id'])?>">删除</a>
 
                                         </td>
                                     </tr>

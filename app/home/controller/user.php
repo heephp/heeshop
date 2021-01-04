@@ -96,6 +96,7 @@ class user extends base
         $username = $data['username'];
         $password = $data['password'];
         $cpassword = $data['cfmpassword'];
+        unset($data['crsf']);
 
         if(empty($username)||empty($password)){
             return $this->error('请输入用户名或密码！');
@@ -103,7 +104,7 @@ class user extends base
         if($password!=$cpassword){
             return $this->error('两次输入的密码不同！');
         }
-        $data['password'] = md5($data['password']);
+        //$data['password'] = $data['password'];
         $data['users_group_id']=conf('newusergroup');
         unset($data['cfmpassword']);
         unset($data['vcode']);
@@ -111,18 +112,19 @@ class user extends base
         $users = model('users');
         $id = $users->insert($data);
         if($id){
-            return $this->success('恭喜您，注册成功！',url('login'));
+            return $this->success('恭喜您，注册成功！',url('login'),10);
         }else{
             return $this->error('抱歉，注册失败！');
         }
     }
 
     public function vcode(){
-        $char=randChar(conf('vcode_num'));
+        $char=randChar(conf('vcode_num'),'number');
         vercode($char,conf('vcode_fontsize'),conf('vcode_width'),conf('vcode_heigh'));
     }
 
     public function usercenter(){
+        $this->assign('ugname',request($this->session_users_group_name_str));
         return $this->fetch();
     }
 
@@ -285,6 +287,9 @@ class user extends base
         }
 
         $data = request('post.');
+        unset($data['crsf']);
+        $data['author']=request($this->session_name_str);
+
         $article = model('article');
         if (!empty($data['article_id'])) {
             $result = $article->update($data);

@@ -20,12 +20,12 @@ function view_content($parms){
 
                                 <div class="row cl mt-10">
                                     <label class="form-label col-sm-12 col-md-2" for="email2">昵称</label>
-                                    <div class="formControls col-sm-12 col-md-5"> <input type="text" class="input-text" name="nickname" placeholder="昵称" value="<?=$m['nickname']?>"> </div>
+                                    <div class="formControls col-sm-12 col-md-5"> <input type="text" class="input-text radius" name="nickname" placeholder="昵称" value="<?=$m['nickname']?>"> </div>
                                 </div>
                                 <div class="row cl mt-10">
                                     <label class="form-label col-sm-12 col-md-2">性别：</label>
                                     <div class="formControls col-sm-12 col-md-2">
-                                        <select class="select" name="sex">
+                                        <select class="select radius" name="sex">
                                             <option value="1" <?$m['sex']=='1'?'selected':''?>>男</option>
                                             <option value="0" <?$m['sex']=='0'?'selected':''?>>女</option>
                                         </select>
@@ -34,11 +34,11 @@ function view_content($parms){
 
                                 <div class="row cl mt-10">
                                     <label class="form-label col-sm-12 col-md-2" for="birthday">生日</label>
-                                    <div class="formControls col-sm-12 col-md-3"> <input type="text" class="input-text datepicker" name="birthday" value="<?=$m['birthday']?>" placeholder=""></div>
+                                    <div class="formControls col-sm-12 col-md-3"> <input type="text" class="input-text datepicker radius" name="birthday" value="<?=$m['birthday']?>" placeholder=""></div>
                                 </div>
                                 <div class="row cl mt-10">
                                     <label class="form-label col-sm-12 col-md-2" for="country">国家</label>
-                                    <div class="formControls col-sm-12 col-md-5"><select class="select" name="country_id">
+                                    <div class="formControls col-sm-12 col-md-5"><select class="select radius" name="country_id">
                                         <?foreach (view::getvar('countries') as $c){?>
                                             <option value="<?=$c['country_id']?>"><?=$c['name'].' - '.$c['code']?></option>
                                         <?}?>
@@ -46,31 +46,31 @@ function view_content($parms){
                                 </div>
                                 <div class="row cl mt-10">
                                     <label class="form-label col-sm-12 col-md-2" for="city">城市</label>
-                                    <div class="formControls col-sm-12 col-md-3"><input type="text" class="input-text" name="city" placeholder="城市" value="<?=$m['city']?>"></div>
+                                    <div class="formControls col-sm-12 col-md-3"><input type="text" class="input-text radius" name="city" placeholder="城市" value="<?=$m['city']?>"></div>
                                 </div>
                                 <div class="row cl mt-10">
                                     <label class="form-label col-sm-12 col-md-2" for="address">地址</label>
-                                    <div class="formControls col-sm-12 col-md-6"><input type="text" class="input-text" name="address" placeholder="地址" value="<?=$m['address']?>"></div>
+                                    <div class="formControls col-sm-12 col-md-6"><input type="text" class="input-text radius" name="address" placeholder="地址" value="<?=$m['address']?>"></div>
                                 </div>
                                 <div class="row cl mt-10">
                                     <label class="form-label col-sm-12 col-md-2" for="postcode">邮编</label>
-                                    <div class="formControls col-sm-12 col-md-3"><input type="number" style="width: 100%" class="input-text" name="postcode" placeholder="200010" value="<?=$m['postcode']?>"></div>
+                                    <div class="formControls col-sm-12 col-md-3"><input type="number" style="width: 100%" class="input-text radius" name="postcode" placeholder="200010" value="<?=$m['postcode']?>"></div>
                                 </div>
                                 <div class="row cl mt-10">
                                     <label class="form-label col-sm-12 col-md-2" for="email">邮箱</label>
-                                    <div class="formControls col-sm-12 col-md-5"><input type="email" class="input-text" name="email" placeholder="@abc.com" value="<?=$m['email']?>"></div>
+                                    <div class="formControls col-sm-12 col-md-5"><input type="email" class="input-text radius" name="email" placeholder="@abc.com" value="<?=$m['email']?>"></div>
                                 </div>
                                 <div class="row cl mt-10">
                                     <label class="form-label col-sm-12 col-md-2" for="wechat">微信</label>
-                                    <div class="formControls col-sm-12 col-md-3"><input type="text" class="input-text" name="wechat" placeholder="weixin" value="<?=$m['wechat']?>"></div>
+                                    <div class="formControls col-sm-12 col-md-3"><input type="text" class="input-text radius" name="wechat" placeholder="weixin" value="<?=$m['wechat']?>"></div>
                                 </div>
                                 <div class="row cl mt-10">
                                     <label class="form-label col-sm-12 col-md-2" for="mobile">手机</label>
-                                    <div class="formControls col-sm-12 col-md-3"><input type="tel" class="input-text" name="mobile" placeholder="131" value="<?=$m['mobile']?>"></div>
+                                    <div class="formControls col-sm-12 col-md-3"><input type="tel" class="input-text radius" name="mobile" placeholder="131" value="<?=$m['mobile']?>"></div>
                                 </div>
                                 <div class="row cl mt-10">
                                     <label class="form-label col-sm-12 col-md-2" for="qq">QQ</label>
-                                    <div class="formControls col-sm-12 col-md-3"><input type="number" style="width: 100%" class="input-text" name="qq" placeholder="QQ" value="<?=$m['qq']?>"></div>
+                                    <div class="formControls col-sm-12 col-md-3"><input type="number" style="width: 100%" class="input-text radius" name="qq" placeholder="QQ" value="<?=$m['qq']?>"></div>
                                 </div>
                             </div>
                         </div>

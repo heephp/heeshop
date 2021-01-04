@@ -85,7 +85,7 @@ class controller{
 
     public function json($data){
         header("Content-Type: json/application; charset=UTF-8");
-        echo json_encode($data);
+        return json($data);
     }
 
     public function file($file,$filename){

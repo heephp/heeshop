@@ -21,6 +21,7 @@ class order extends model
 
     public function detail(){
         $relation = new relation($this,/*'belong',*/'order_detail','order_id','order_id','detail');
+        $relation->set_rmodel_methods('product');
         return $relation->hasmore(false);
     }
 

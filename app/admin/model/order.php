@@ -19,33 +19,12 @@ class order extends model
         $this->insert_message_validata = $this->update_message_validata;
     }
 
-    public function get_state($val){
-        switch ($val){
-            case -3:
-                return '已完成退款';
-                break;
-            case -2:
-                return '已确认退款';
-                break;
-            case -1:
-                return '申请退款';
-                break;
-            case 0:
-                return '未支付';
-                break;
-            case 1:
-                return '已支付未发货';
-                break;
-            case 2:
-                return '已发货未确认';
-                break;
-            case 3:
-                return '已确认未评论';
-                break;
-            case 4:
-                return '已完成';
-                break;
-        }
+    public function detail(){
+        $relation = new relation($this,/*'belong',*/'order_detail','order_id','order_id','detail');
+        $relation->set_rmodel_methods('product');
+        return $relation->hasmore(false);
     }
+
+    
 
 }

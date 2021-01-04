@@ -101,13 +101,13 @@ class users extends adminBase
             request($this->session_users_header_str,$header);
 
             if($result){
-                return $this->json(['msg'=>$header,'state'=>'ok']);
+                return json(['msg'=>$header,'state'=>'ok']);
             }else{
-                return $this->json(['state'=>'error','msg'=>'数据库更新失败']);
+                return json(['state'=>'error','msg'=>'数据库更新失败']);
             }
 
         }else{
-            return $this->json(['state'=>'error','msg'=>$info['error']]);
+            return json(['state'=>'error','msg'=>$info['error']]);
         }
 
     }

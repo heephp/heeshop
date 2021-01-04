@@ -6,8 +6,8 @@ use heephp\relation;
 class link extends model
 {
     protected $autotimespan = true;
-    protected $update_message_validata = "连接分类|必填;标题|必填+唯一;网址|不能为空;排序|填写数字+必填";
-    protected $update_validata = "link_group_id|must;title|must+unique;url|must;ord|int+must";
+    protected $update_message_validata = "连接分类|必填;标题|必填;网址|不能为空;排序|填写数字+必填";
+    protected $update_validata = "link_group_id|must;title|must;url|must;ord|int+must";
     protected $softdel = false;
     protected $key = 'link_id';
 

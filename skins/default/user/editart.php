@@ -69,6 +69,7 @@ $m=view::getvar('m');
 
         <p></p>
         <div class="card-action col-offset-2">
+            <input type="hidden" name="crsf" value="<?=crsf()?>">
             <input type="submit" class="btn btn-success" value="提交">
             <input type="reset" class="btn btn-danger" value="重置">
         </div>
