@@ -46,6 +46,13 @@ class users extends adminBase
         return $this->fetch();
     }
 
+    function setting(){
+        $users = model('users');
+        $m=$users->get(request($this->session_id_str));
+        $this->assign('m',$users->data);
+        return $this->fetch();
+    }
+
     function delete($id){
         $users = model('users');
         $re = $users->delete($id);

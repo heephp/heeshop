@@ -21,7 +21,6 @@ class pages extends basefilter
 
     public function create_user()
     {
-
         $relation = new relation($this,/*'belong',*/ 'users', 'create_users_id', 'users_id', 'create_user');
         return $relation->belong();
     }

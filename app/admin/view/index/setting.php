@@ -24,45 +24,51 @@
                     <div class="col-md-12">
                     <ul class="nav nav-pills nav-secondary  nav-pills-no-bd nav-pills-icons justify-content-center" id="pills-tab-with-icon" role="tablist">
                         <li class="nav-item submenu">
-                            <a class="nav-link active show" id="pills-home-tab-icon" role="tab" aria-selected="false" aria-controls="pills-basic-icon" href="#pills-basic-icon" data-toggle="pill">
+                            <a class="nav-link active show" id="pills-basic-tab-icon" role="tab" aria-selected="false" aria-controls="pills-basic-icon" href="#pills-basic-icon" data-toggle="pill">
                                 <i class="icon-settings"></i>
                                 基本
                             </a>
                         </li>
                         <li class="nav-item submenu">
-                            <a class="nav-link" id="pills-profile-tab-icon" role="tab" aria-selected="false" aria-controls="pills-website-icon" href="#pills-website-icon" data-toggle="pill">
+                            <a class="nav-link" id="pills-website-tab-icon" role="tab" aria-selected="false" aria-controls="pills-website-icon" href="#pills-website-icon" data-toggle="pill">
                                 <i class="icon-screen-desktop"></i>
                                 网站
                             </a>
                         </li>
                         <li class="nav-item submenu">
-                            <a class="nav-link" id="pills-contact-tab-icon" role="tab" aria-selected="true" aria-controls="pills-upload-icon" href="#pills-upload-icon" data-toggle="pill">
+                            <a class="nav-link" id="pills-upload-tab-icon" role="tab" aria-selected="true" aria-controls="pills-upload-icon" href="#pills-upload-icon" data-toggle="pill">
                                 <i class="icon-arrow-up-circle"></i>
                                 上传
                             </a>
                         </li>
                         <li class="nav-item submenu">
-                            <a class="nav-link" id="pills-contact-tab-icon" role="tab" aria-selected="true" aria-controls="pills-watermark-icon" href="#pills-watermark-icon" data-toggle="pill">
+                            <a class="nav-link" id="pills-watermark-tab-icon" role="tab" aria-selected="true" aria-controls="pills-watermark-icon" href="#pills-watermark-icon" data-toggle="pill">
                                 <i class="icon-picture"></i>
                                 水印
                             </a>
                         </li>
                         <li class="nav-item submenu">
-                            <a class="nav-link" id="pills-contact-tab-icon" role="tab" aria-selected="true" aria-controls="pills-vcode-icon" href="#pills-vcode-icon" data-toggle="pill">
+                            <a class="nav-link" id="pills-vcode-tab-icon" role="tab" aria-selected="true" aria-controls="pills-vcode-icon" href="#pills-vcode-icon" data-toggle="pill">
                                 <i class="icon-social-stumbleupon"></i>
                                 验证码
                             </a>
                         </li>
                         <li class="nav-item submenu">
-                            <a class="nav-link" id="pills-contact-tab-icon" role="tab" aria-selected="true" aria-controls="pills-mail-icon" href="#pills-mail-icon" data-toggle="pill">
+                            <a class="nav-link" id="pills-mail-tab-icon" role="tab" aria-selected="true" aria-controls="pills-mail-icon" href="#pills-mail-icon" data-toggle="pill">
                                 <i class="icon-envelope-letter"></i>
                                 邮件
                             </a>
                         </li>
                         <li class="nav-item submenu">
-                            <a class="nav-link" id="pills-contact-tab-icon" role="tab" aria-selected="true" aria-controls="pills-mail-icon" href="#pills-pay-icon" data-toggle="pill">
+                            <a class="nav-link" id="pills-pay-tab-icon" role="tab" aria-selected="true" aria-controls="pills-mail-icon" href="#pills-pay-icon" data-toggle="pill">
                                 <i class="fab fa-amazon-pay"></i>
                                 支付
+                            </a>
+                        </li>
+                        <li class="nav-item submenu">
+                            <a class="nav-link" id="pills-account-tab-icon" role="tab" aria-selected="true" aria-controls="pills-mail-icon" href="#pills-account-icon" data-toggle="pill">
+                                <i class="icon-wrench"></i>
+                                账户
                             </a>
                         </li>
                     </ul>
@@ -70,7 +76,7 @@
                 </div>
                 <div class="card-body">
                     <form action="<?=url('save_setting')?>" method="post">
-                    <div class="tab-content mt-2 mb-3" id="pills-with-icon-tabContent">
+                    <div class="tab-content mt-2 mb-3 offset-3" id="pills-with-icon-tabContent">
                         <?
                         import('setting/setting-basic.php');
                         import('setting/setting-website.php');
@@ -79,9 +85,10 @@
                         import('setting/setting-vcode.php');
                         import('setting/setting-mail.php');
                         import('setting/setting-pay.php');
+                        import('setting/setting-account.php');
                         ?>
                     </div>
-                    <div class="card-action">
+                    <div class="card-action offset-3">
                         <input type="submit" class="btn btn-success" value="提交">
                         <input type="reset" class="btn btn-danger" value="重置">
                     </div>

@@ -20,6 +20,10 @@ class moban extends adminBase
         return $this->fetch();
     }
 
+    public function online(){
+        return $this->fetch();
+    }
+
     public function manager()
     {
 

@@ -53,7 +53,7 @@
 
             <div class="container-fluid">
                 <div class="collapse" id="search-nav">
-                    <form class="navbar-left navbar-form nav-search mr-md-3" method="get" action="<?=url('/'.APP.'/index/search/')?>">
+                    <form class="navbar-left navbar-form nav-search mr-md-3" method="get" action="<?=url('/index/search/')?>">
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <button type="submit" class="btn btn-search pr-1">
@@ -79,7 +79,7 @@
                             <li>
                                 <div class="dropdown-title d-flex justify-content-between align-items-center">
                                     消息
-                                    <a href="#" class="small" onclick="markallread('<?=url('/'.APP.'/message/markallread')?>')">标记所有为已读</a>
+                                    <a href="#" class="small" onclick="markallread('<?=url('/message/markallread')?>')">标记所有为已读</a>
                                 </div>
                             </li>
                             <li>
@@ -88,7 +88,7 @@
                                         <?
                                         if(count($message_list)>0){
                                         foreach ($message_list as $msg){?>
-                                        <a href="<?=url('/'.APP.'/message/detail/'.$msg['message_id'])?>">
+                                        <a href="<?=url('message/detail',$msg['message_id'])?>">
                                             <div class="notif-img">
                                                 <img src="/assets/img/jm_denis.jpg" alt="Img Profile">
                                             </div>
@@ -105,7 +105,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a class="see-all" href="<?=url('/'.APP.'/message/manager/0/'.$msg['receiver_users_id'])?>">查看所有<i class="fa fa-angle-right"></i> </a>
+                                <a class="see-all" href="<?=url('message/manager',[0,$msg['receiver_users_id']])?>">查看所有<i class="fa fa-angle-right"></i> </a>
                             </li>
                         </ul>
                     </li>
@@ -176,18 +176,17 @@
                                         <div class="avatar-lg"><img src="<?=(empty(request('session.admin_user_header'))?'/assets/img/profile.jpg':request('session.admin_user_header'))?>" alt="image profile" class="avatar-img rounded"></div>
                                         <div class="u-text">
                                             <h4><?=request('session.admin_user_name')?></h4>
-                                            <p class="text-muted"><?=request('session.admin_user_email')?></p><a href="<?=url('/'.APP.'/users/edit/'.request('session.admin_user_id'))?>" class="btn btn-xs btn-secondary btn-sm">个人资料</a>
+                                            <p class="text-muted"><?=request('session.admin_user_email')?></p><a href="<?=url('users/edit',request('session.admin_user_id'))?>" class="btn btn-xs btn-secondary btn-sm">个人资料</a>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="<?=url('/'.APP.'/users/edit/'.request('session.admin_user_id'))?>">个人资料</a>
-                                    <a class="dropdown-item" href="<?=url('/'.APP.'/message/inbox')?>">收件箱</a>
+                                    <a class="dropdown-item" href="<?=url('message/manager',[0,request('session.admin_user_id')])?>">收件箱</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="<?=url('/'.APP.'/users/edit'.request('session.admin_user_id'))?>">账户设置</a>
+                                    <a class="dropdown-item" href="<?=url('users/setting',request('session.admin_user_id'))?>">账户设置</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="<?=url('/'.APP.'/index/logout')?>">退出</a>
+                                    <a class="dropdown-item" href="<?=url('index/logout')?>">退出</a>
                                 </li>
                             </div>
                         </ul>

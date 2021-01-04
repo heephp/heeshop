@@ -70,93 +70,23 @@ class index extends base
 
     }
 
-    /*
-        public function page($id){
-
-            $mp = model('pages');
-            $p = $mp->get($id);
-
-            if(!$p){
-                return $this->error('页面不存在！');
-            }else{
-                $this->assign('m',$p);
-                return $this->fetch($p['template']);
-            }
-
+    public function api_get_setting(){
+        $safecode = request('get.safecode');
+        $username = request('get.username');
+        $sign = request('get.sign');
+        if($safecode!=conf('site_safecode')){
+            return json(['code'=>'error','msg'=>'安全码错误！']);
+        }
+        if($safecode!=conf('site_username')){
+            return json(['code'=>'error','msg'=>'登录名错误！']);
+        }
+        if($sign!=md5($safecode.$username.$safecode)){
+            return json(['code'=>'error','msg'=>'签名错误！']);
         }
 
-        public function list($category_id){
-            $cate = new category();
-            $mc = $cate->get($category_id);
-            if(!$mc){
-                return $this->error('栏目不存在~');
-            }
-
-            $cate->model();
-            //是否是系统模型
-            $issys = $cate['model']['is_sys'];
-            if($issys){
-                //如果是系统模型
-                $table = $cate['model']['table_name'];
-                $model = model($table);
-
-            }else{
-                //如果不是系统模型
-                $mt = model('model_table');
-                $mt->get($cate['model']['model_table_id']);
-                $table = $mt->data['name'];
-
-                $model = modeluser($table);
-            }
-
-
-            $model->where('category_id='.$category_id)->page();
-            $this->assign('list',$model->data);
-            $this->assign('pager',$model->pager['show']);
-
-            return $this->fetch($mc['template_list']);
-        }
-
-        public function detail($category_id,$id){
-            $cate = new category();
-            $mc = $cate->get($category_id);
-            if(!$mc){
-                return $this->error('栏目不存在~');
-            }
-
-            $cate->model();
-            //是否是系统模型
-            $issys = $cate['model']['is_sys'];
-            if($issys){
-                //如果是系统模型
-                $table = $cate['model']['table_name'];
-                $model = model($table);
-
-            }else{
-                //如果不是系统模型
-                $mt = model('model_table');
-                $mt->get($cate['model']['model_table_id']);
-                $table = $mt->data['name'];
-
-                $model = modeluser($table);
-            }
-
-
-            $model->get($id);
-            $this->assign('m',$model->data);
-
-            return $this->fetch($mc['template_detail']);
-        }
-
-        public function product($category_id=0){
-
-            $prod = model('shop_product');
-            $prod->where(empty($category_id)?'1=1':'category_id='.$category_id)->page();
-            $this->assign('list',$prod->data);
-            $this->assign('pager',$prod->pager['show']);
-
-            return $this->fetch('/product');
-        }*/
+        $conf = table('config')->field(['name','value'])->all();
+        return json(['code'=>'success','data'=>$conf]);
+    }
 
     public function Empty($name, $arguments)
     {

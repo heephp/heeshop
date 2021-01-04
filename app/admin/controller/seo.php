@@ -19,6 +19,9 @@ class seo extends adminBase
     public function save(){
         $data=request('post.');
         foreach ($data as $k=>$v) {
+            if($k=='website_keyword'){
+                $v = str_replace([',',';',' ','，','.','。','；',':','：'],'|',$v);
+            }
             conf($k, $v);
         }
         return $this->redirect('edit');

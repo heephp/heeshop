@@ -44,15 +44,15 @@
                         <?foreach($list as $m){?>
                         <tr>
                             <td><?=$m['message_id']?></td>
-                            <td><a href="<?=url('manager/'.$m['users_id'])?>"> <?=$m['sender']['username']?></a></td>
-                            <td><a href="<?=url('manager/0/'.$m['receiver_users_id'])?>"?><?=$m['receiver']['username']?></a></td>
-                            <td><a href="<?=url('detail/'.$m['message_id'])?>"?> <?=sstr($m['title'],10)?></a></td>
+                            <td><a href="<?=url('manager',$m['users_id'])?>"> <?=$m['sender']['username']?></a></td>
+                            <td><a href="<?=url('manager',[0,$m['receiver_users_id']])?>"?><?=$m['receiver']['username']?></a></td>
+                            <td><a href="<?=url('detail',$m['message_id'])?>"?> <?=sstr($m['title'],10)?></a></td>
                             <td><?=sstr($m['context'],10)?></td>
                             <td><?=$m['create_time']?></td>
                             <td>
-                                <a href="<?=url('edit/'.$m['message_id'])?>" class="btn btn-primary btn-sm">编辑</a>
+                                <a href="<?=url('edit',$m['message_id'])?>" class="btn btn-primary btn-sm">编辑</a>
 
-                                <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete/'.$m['message_id'])?>">删除</a>
+                                <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete',$m['message_id'])?>">删除</a>
 
                             </td>
                         </tr>
