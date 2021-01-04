@@ -15,7 +15,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content" >
             <div class="modal-header">
-                <div class="modal-title">这是一个标题</div>
+                <div class="modal-title">选择一个合适的图标</div>
                 <button class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">

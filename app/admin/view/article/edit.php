@@ -110,13 +110,7 @@
 
                             </div>
                             <div class="tab-pane fade" id="adv" role="tabpanel" aria-labelledby="adv-tab">
-                                <div class="form-group">
-                                    <label class="col-form-label" for="inlineinput">模板</label>
-                                    <div class="row">
-                                        <input class="form-control col-md-2 input-full" id="template" name="template" type="text" placeholder="" value="<?=$m['template']??'list'?>">
-                                        <input type="button" id="select_template" class=" col-md-1 btn btn-primary" value="选择模板">
-                                    </div>
-                                </div>
+
                                 <div class="form-group">
                                     <input type="checkbox" id="sprice" onclick="$('.price').css('display',$('.price').css('display')=='none'?'block':'none');$('.price input').val('')"><label for="sprice">需要购买</label><span class="text-info">如果不需要购买，则不需要填写</span>
                                 </div>

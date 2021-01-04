@@ -96,14 +96,14 @@ class heephp
         $controller = $uinfo['controller'];
         $method = $uinfo['method'];
         $parms = $uinfo['parms'];
+        $page = $uinfo['page'];
         //urlpaser($app, $controller, $method, $parms);
 
         define('APP', $app);
         define('CONTROLLER', $controller);
         define('METHOD', $method);
         define('PARMS', $parms);
-
-
+        define('PAGE',$page);
 
         aop('app_loaded');
 

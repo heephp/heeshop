@@ -195,7 +195,7 @@ class route
                 //如果是泛域名解析
                 if ($rs[0] == '*') {
                     //保存泛域名名字
-                    session('domain_name', $rs[0]);
+                    request('session.domain_name', $rs[0]);
                     unset($rs[0]);
                     unset($cdoms[0]);
                     $cdom = implode('.', $cdoms);
@@ -332,20 +332,6 @@ class route
 
         $urlinfos = explode('/', $urlinfo['path']);
 
-        //过滤page等参数
-        //-----------------------
-        $pagetags = $this->get_pagetag();
-        if (is_array($pagetags)) {
-            foreach ($pagetags as $p) {
-                for ($i = 3; $i > 0; $i--) {
-                    if (strstr($urlinfos[$i], $p . '_') == $urlinfos[$i]) {
-                        unset($urlinfos[$i]);
-                    }
-                }
-            }
-        }
-        //-------------------------
-
         return $urlinfos;
     }
 
@@ -376,17 +362,37 @@ class route
     }
 
     /**
-     * 从URL中获取 APP CONTROLLER METHOD PARMS
+     * 从URL中获取 APP CONTROLLER METHOD PARMS PAGE
      * 从URL中获取详细
      * @param $urlinfos
      */
     public function get_detail_form_urlinfos($urlinfos)
     {
+        //识别page
+        //-----------------------
+        $page=[];
+        $pagetags = $this->get_pagetag();
+        if (is_array($pagetags)) {
+            foreach ($pagetags as $p) {
+                for ($i = count($urlinfos); $i > 0; $i--) {
+                    if (strstr($urlinfos[$i], $p . '_') === $urlinfos[$i]) {
+                        $item = explode('_', $urlinfos[$i]);
+                        //将page值赋值到page参数中
+                        $page[$p] = $item[count($item) - 1];
+                        unset($urlinfos[$i]);
+                    }
+                }
+            }
+        }
+
+        //识别app controller method parms
         $parms = [];
         if (APPS) {
             $app = $urlinfos[1];
             $controller = $urlinfos[2];
             $method = $urlinfos[3];
+
+            //-------------------------
             for ($i = 4; $i < count($urlinfos); $i++) {
                 array_push($parms, $urlinfos[$i]);
             }
@@ -411,6 +417,7 @@ class route
         $re['controller'] = empty($controller) ? config('default_controller') : $controller;
         $re['method'] = empty($method) ? config('default_method') : $method;
         $re['parms'] = $parms;
+        $re['page'] = $page;
 
         return $re;
     }

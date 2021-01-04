@@ -53,7 +53,7 @@
                                 <td><?=$m['sourceprice']?></td>
                                 <td><?=$m['pcount']?></td>
                                 <td><?=$m['discount']?></td>
-                                <td><?=$m['state']?></td>
+                                <td><?=get_order_state($m['state'])?></td>
                                 <td><?=$m['create_time']?></td>
                                 <td>
                                     <?$paylink = '支付宝:\\r\\n'.$_SERVER["HTTP_HOST"].url('/home/alipay/pay',$m['order_id']).'\\r\\n';

@@ -99,3 +99,19 @@ function get_order_state($val){
         }
 
 }
+
+/**根据配置过滤内容
+ * @param $context
+ * @return string|string[]
+ */
+function replacetxt($context){
+    $fts = explode('|',conf('filtertxt'));
+     usort($fts,function ($a,$b){
+        return strlen($a)>strlen($b)?-1:1;
+    });
+    $rstr = conf('replacetxt');
+    foreach ($fts as $f) {
+        $context = str_replace($f,$rstr,$context);
+    }
+    return $context;
+}

@@ -69,7 +69,6 @@
                                         <td>
                                             <a href="<?=url('article/manager',$c['category_id'])?>" class="btn btn-primary btn-sm">信息管理</a>
 
-
                                         </td>
                                     </tr>
                                 <?}

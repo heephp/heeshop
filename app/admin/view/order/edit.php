@@ -12,6 +12,12 @@
                 <i class="flaticon-right-arrow"></i>
             </li>
             <li class="nav-item">
+                <a href="<?=url('order/manager')?>">订单管理</a>
+            </li>
+            <li class="separator">
+                <i class="flaticon-right-arrow"></i>
+            </li>
+            <li class="nav-item">
                 <a href="#">订单详细</a>
             </li>
         </ul>
@@ -22,39 +28,36 @@
             <div class="card">
                 <div class="card-body">
 
-                    <h5>订单号：<?=$order_id?>订单商品列表：<br></h5>
+                    <h4 style="line-height: 22px;">订单号：<?=$m['order_id']?>
+                        <br>
+                        金额：<span class="text-danger"> <?=$m['sumprice']?></span><br>
+                        原价：<?=$m['sourceprice']?><br>
+                        折扣：<?=$m['discount']?><br>
+                        商品总数：<?=$m['pcount']?><br>
+                        状态：<span class="text-danger"><?=get_order_state($m['state'])?></span><br>
+                        创建时间：<?=$m['create_time']?><br>
+                        订单详细列表：
+                    </h4>
                     <table class="table">
                         <thead>
-                        <tr>
-                            <th scope="col">商品</th>
-                            <th scope="col">数量</th>
-                            <th scope="col">单价</th>
-                            <th scope="col">总价</th>
-                            <th scope="col">状态</th>
-                            <th scope="col">创建时间</th>
-                            <th scope="col">操作</th>
+                        <tr class="text-c">
+                            <th>产品</th>
+                            <th>数量</th>
+                            <th>单价</th>
+                            <th>总价</th>
+                            <th>创建时间</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <?if(!empty($list))
-                            foreach($list as $m){?>
-                                <tr>
-                                    <td><?=$m['product']['name']?></td>
-                                    <td><?=$m['num']?></td>
-                                    <td><?=$m['price']?></td>
-                                    <td><?=($m['sumprice'])?></td>
-                                    <td><?=$m['state']?></td>
-                                    <td><?=$m['create_time']?></td>
-                                    <td>
-
-                                        <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('refund',$m['order_detail_id'])?>">退款</a>
-
-                                    </td>
-                                </tr>
-
-                                <?
-                            }?>
-
+                        <tbody class="getData-list" data-currpage="1">
+                        <? foreach ($m['detail'] as $item){?>
+                            <tr class="text-c">
+                                <td class="text-l"><a style="cursor:pointer" class="text-primary" title="查看"><?=!empty($item['product']['title'])?$item['product']['title']:$item['product']['name']?></a></td>
+                                <td><?=$item['num']?></td>
+                                <td><?=$item['price']?></td>
+                                <td><?=$item['sumprice']?></td>
+                                <td><?=$item['create_time']?></td>
+                            </tr>
+                        <? }?>
                         </tbody>
                     </table>
                     <?=$pager?>

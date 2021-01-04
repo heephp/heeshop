@@ -90,9 +90,9 @@ class orm
                     $w .= "`$k`='$v' $relation";
                 }
                 $w = substr($w, 0, strlen($w) - 4);
-                $this->where .= $relation . '(' . $w . ')';
+                $this->where = '(' . $this->where . ')' . $relation . '(' . $w . ')';
             } else {
-                $this->where .= $relation . "($where)";
+                $this->where = '(' . $this->where . ')' . $relation . "($where)";
             }
         }
         return $this;
@@ -414,8 +414,6 @@ class orm
 
     public function pageparm($val){
         $this->pageparm=empty($val)?'page':$val;
-        //路由中注册pagetag
-        \heephp\route::create()->reg_pagetag($this->pageparm);
         return $this;
     }
 
@@ -502,20 +500,14 @@ class orm
         $order=$this->order;
         $fields=empty($this->fields)?' * ':$this->fields;
         $pname=$this->pageparm;
+        //路由中注册pagetag
+        \heephp\route::create()->reg_pagetag(empty($pname)?'page':$pname);
 
         if(empty($where))
             $where='1=1';
 
         $pagesize=config('pagesize')??20;
-        $page=1;
-        $parms=[];
-        foreach (PARMS as $item) {
-            if(($item&($pname.'_'))==($pname.'_')){
-                $item = explode('_',$item);
-                $page = $item[1];
-            }else
-                $parms[]=$item;
-        }
+        $page=PAGE[$pname]??1;
 
         $re=[];
         $count=$this->count('*','c')->value('c');
@@ -530,7 +522,7 @@ class orm
         $this->limit(($page<=1)?"0,$pagesize":((($page-1)*$pagesize).','.$pagesize));
         $data=$this->select();
 
-        $re['show']=(new \heephp\bulider\pager())->bulider($page,$re['pagecount'],$parms,$pname);
+        $re['show']=(new \heephp\bulider\pager())->bulider($page,$re['pagecount'],PARMS,$pname);
 
         $redata['pager'] = $re;
         $redata['data'] = $data;

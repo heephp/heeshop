@@ -39,26 +39,26 @@
                     <table class="table">
                         <thead>
                         <tr>
-                            <th scope="col"><?=mtitle('shop_pay_id',$field,$order,'流水号')?></th>
-                            <th scope="col">订单号</th>
-                            <th scope="col">支付金额</th>
-                            <th scope="col">用户</th>
-                            <th scope="col">状态</th>
-                            <th scope="col">创建时间</th>
+                            <th scope="col"><?=mtitle('order_pay_id',$field,$order,'流水号')?></th>
+                            <th scope="col"><?=mtitle('order_id',$field,$order,'订单号')?></th>
+                            <th scope="col"><?=mtitle('money',$field,$order,'支付金额')?></th>
+                            <th scope="col"><?=mtitle('create_users_id',$field,$order,'用户')?></th>
+                            <th scope="col"><?=mtitle('state',$field,$order,'状态')?></th>
+                            <th scope="col"><?=mtitle('create_time',$field,$order,'创建时间')?></th>
                             <th scope="col">操作</th>
                         </tr>
                         </thead>
                         <tbody>
                         <?foreach($list as $m){?>
                             <tr>
-                                <td><?=$m['shop_pay_id']?></td>
-                                <td><?=$m['shop_order_id']?></td>
+                                <td><?=$m['order_pay_id']?></td>
+                                <td><?=$m['order_id']?></td>
                                 <td><?=$m['money']?></td>
                                 <td><?=$m['create_user']['username']?></td>
                                 <td><?=$m['state']?'已支付':'未支付'?></td>
                                 <td><?=$m['create_time']?></td>
                                 <td>
-                                    <a href="#" class="btn btn-warning btn-sm" onclick="alert('<?=$m['restr']?>')">详细</a>
+                                    <a href="#" class="btn btn-warning btn-sm" onclick="alert('<?=$m['restr']?>')">返回详细</a>
                                     <a href="#" class="btn btn-warning btn-sm delete" url="<?=url('delete/'.$m['shop_pay_id'])?>">删除</a>
                                 </td>
                             </tr>

@@ -51,7 +51,7 @@ class alipay extends base
             $result = $pay->apply([
                 'out_trade_no' => $re['pay_id'], // 商户订单号
                 'total_amount' => $re['money'], // 支付金额
-                'subject'      => '订单号：'.$re['desc'], // 支付订单描述
+                'subject'      => $re['desc'], // 支付订单描述
             ]);
 
             echo $result;

@@ -12,8 +12,11 @@ class order_detail extends model
     {
         parent::__construct(__CLASS__);
 
-        $this->insert_validata = $this->update_validata;
-        $this->insert_message_validata = $this->update_message_validata;
+    }
+
+    public function orderinfo(){
+        $relation = new relation($this,'order','order_id','order_id','order');
+        return $relation->belong();
     }
 
     public function product(){

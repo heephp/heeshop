@@ -45,7 +45,19 @@
                     <textarea type="text" class="form-control input-full" name="website_description" placeholder="统计代码" ><?=$m['website_description']?></textarea>
                 </div>
             </div>
-
+            <div class="form-group form-inline">
+                <label class="col-md-3 col-form-label" for="inlineinput">替换文本</label>
+                <div class="col-md-9 p-0">
+                    <textarea type="text" class="form-control input-full" name="filtertxt" placeholder="替换文本" ><?=$m['filtertxt']?></textarea><br>
+                    使用|分隔
+                </div>
+            </div>
+            <div class="form-group form-inline">
+                <label class="col-md-3 col-form-label" for="inlineinput">替换为文本</label>
+                <div class="col-md-9 p-0">
+                    <input class="form-control input-full" name="replacetxt" type="text" placeholder="" value="<?=$m['replacetxt']?>">
+                </div>
+            </div>
         </div>
     </div>
 

@@ -3,7 +3,7 @@ namespace app\admin\model;
 use heephp\model;
 use heephp\relation;
 
-class category extends model
+class category extends basefilter
 {
     protected $autotimespan = true;
     protected $update_message_validata = "分类名|必填+已经存在;关键词|必填;";

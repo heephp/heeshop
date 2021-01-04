@@ -93,6 +93,17 @@
                         </div>
                         <div class="tab-pane fade" id="adv" role="tabpanel" aria-labelledby="adv-tab">
                             <div class="form-group">
+                                <label class="col-form-label" for="inlineinput">用户是否可发布到该分类</label>
+                                <div class="row">
+                                    <div class="col-offset-1 col-md-2">
+                                    <select name="isuser" class="form-control">
+                                        <option value="0">不可以发布</option>
+                                        <option value="1">可以发布</option>
+                                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label class="col-form-label" for="inlineinput">模板</label>
                                 <div class="row">
                                     <input class="form-control col-md-2 input-full" id="template" name="template" type="text" placeholder="" value="<?=$m['template']??'list'?>">

@@ -257,7 +257,7 @@ class user extends base
     function publish(){
 
         $category = model('category');
-        $category->whereEmpty('parent_id')->select();
+         $category->whereEmpty('parent_id')->where("isuser=1")->all();
         $category->child();
         $this->assign('plist',$category->data);
 
@@ -306,7 +306,7 @@ class user extends base
     function editart($id){
 
         $category = model('category');
-        $category->whereEmpty('parent_id')->select();
+        $category->whereEmpty('parent_id')->whereAnd("isuser=1")->select();
         $category->child();
         $this->assign('plist',$category->data);
 

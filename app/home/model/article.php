@@ -6,7 +6,7 @@ use heephp\relation;
 class article extends model
 {
     protected $autotimespan = true;
-    protected $update_message_validata = "标题|必填;内容|必填;分类|不能为空;";
+    protected $update_message_validata = "标题|必填;内容|必填;栏目|不能为空;";
     protected $update_validata = "title|must;context|must;category_id|must;";
     protected $softdel = true;
     protected $key = 'article_id';

@@ -116,6 +116,8 @@ class model extends orm {
         $order=$this->order;
         $fields=empty($this->fields)?' * ':$this->fields;
         $pname=$this->pageparm;
+        //路由中注册pagetag
+        \heephp\route::create()->reg_pagetag(empty($pname)?'page':$pname);
 
         if(empty($where))
             $where='1=1';
@@ -123,15 +125,7 @@ class model extends orm {
             $where=$this->softdelwhere();
 
         $pagesize=config('pagesize')??20;
-        $page=1;
-        $parms=[];
-        foreach (PARMS as $item) {
-            if(($item&($pname.'_'))==($pname.'_')){
-                $item = explode('_',$item);
-                $page = $item[count($item)-1];
-            }else
-                $parms[]=$item;
-        }
+        $page=PAGE[$pname]??1;
 
         $re=[];
         $count=$this->count('*','c')->value('c');
@@ -148,7 +142,7 @@ class model extends orm {
         $data=parent::select();
         $this->get_autofield($data);
 
-        $re['show']=(new \heephp\bulider\pager())->bulider($page,$re['pagecount'],$parms,$pname);
+        $re['show']=(new \heephp\bulider\pager())->bulider($page,$re['pagecount'],PARMS,$pname);
 
         $this->pager = $re;
         $this->data = $data;

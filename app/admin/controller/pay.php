@@ -9,6 +9,7 @@ class pay extends adminBase
 
         $mp=model('order_pay');
         $mp->order("$field $order")->page();
+        $mp->create_user();
 
         $this->assign('list',$mp->data);
         $this->assign('pager',$mp->pager['show']);

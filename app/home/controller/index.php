@@ -17,7 +17,7 @@ class index extends base
     public function  _list($id)
     {
         $cates = model('category');
-        $cates->get($id);
+        $m = $cates->get($id);
         $cates->parent();
         $this->assign('cate',$cates->data);
 
@@ -27,7 +27,7 @@ class index extends base
         $this->assign('list', $list);
         $this->assign('pager', $article->pager['show']);
 
-        return $this->fetch();
+        return $this->fetch($m['template']);
     }
 
     public function plist(){
@@ -47,7 +47,7 @@ class index extends base
         $this->assign('cate',$cates->data);
 
         $this->assign('m',$m);
-        return $this->fetch();
+        return $this->fetch($m['template']);
     }
 
     public function pdetail(){

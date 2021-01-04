@@ -3,7 +3,7 @@ namespace app\admin\model;
 use heephp\model;
 use heephp\relation;
 
-class pages extends model
+class pages extends basefilter
 {
     protected $autotimespan = true;
     protected $update_message_validata = "路由|已经存在;标题|必填;内容|必填;模板|必须选择";

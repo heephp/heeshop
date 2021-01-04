@@ -19,6 +19,11 @@ class order extends model
         $this->insert_message_validata = $this->update_message_validata;
     }
 
+    public function create_user(){
+        $relation = new relation($this,'users','create_users_id','users_id','create_user');
+        return $relation->belong();
+    }
+
     public function detail(){
         $relation = new relation($this,/*'belong',*/'order_detail','order_id','order_id','detail');
         $relation->set_rmodel_methods('product');

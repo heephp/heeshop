@@ -11,6 +11,7 @@ class order extends adminBase
     public function manager($filed='create_time',$order='desc'){
         $so=model('order');
         $so->order("$filed $order")->page();
+        $so->create_user();
 
         $this->assign('list',$so->data);
         $this->assign('pager',$so->pager['show']);
@@ -26,15 +27,10 @@ class order extends adminBase
     }
 
     public function edit($id){
-        $od = model('order_detail');
-        $list = $od->where("order_id='$id'")->select();
-
-        if(empty($list)){
-            return $this->error('订单详细列表为空！');
-        }
-
-        $this->assign('list',$od->data);
-        $this->assign('order_id',$id);
+        $so=model('order');
+        $so->get($id);
+        $so->detail();
+        $this->assign('m',$so->data);
         return $this->fetch();
     }
 

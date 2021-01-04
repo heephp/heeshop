@@ -3,7 +3,7 @@
 namespace app\admin\model;
 use heephp\model;
 
-class guestbook extends model
+class guestbook extends basefilter
 {
     protected $autotimespan = true;
     protected $softdel=false;

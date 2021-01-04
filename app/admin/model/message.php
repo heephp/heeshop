@@ -3,7 +3,7 @@ namespace app\admin\model;
 use heephp\model;
 use heephp\relation;
 
-class message extends model
+class message extends basefilter
 {
     protected $autotimespan = true;
     protected $update_message_validata = "标题|必填;内容|不能为空;";

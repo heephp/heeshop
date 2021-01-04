@@ -4,7 +4,7 @@ use heephp\logger;
 use heephp\model;
 use heephp\relation;
 
-class comment extends model
+class comment extends basefilter
 {
     protected $autotimespan = true;
     protected $softdel=true;
@@ -18,7 +18,7 @@ class comment extends model
         parent::__construct(__CLASS__);
 
         $this->insert_validata = $this->update_validata;
-        $this->insert_message_validata=$this->insert_message_validata;
+        $this->insert_message_validata=$this->update_message_validata;
 
     }
 

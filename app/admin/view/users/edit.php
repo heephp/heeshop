@@ -113,6 +113,11 @@
                                 <label for="qq">QQ</label>
                                 <input type="number" class="form-control" name="qq" placeholder="QQ" value="<?=$m['qq']?>">
                             </div>
+                            <div class="form-group">
+                                <label for="authcode">授权码(<a href="http://www.heecms.cn" target="_blank">官网</a>)</label><span class="text-muted"> <a href="javascript:void();"> 如何免费获取授权码？</a></span>
+                                <input type="text" class="form-control" name="qq" placeholder="授权码" value="<?=$m['authcode']?>"><br>
+
+                            </div>
                         </div>
                     </div>
 
