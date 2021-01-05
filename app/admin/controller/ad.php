@@ -5,17 +5,28 @@ use heephp\validata;
 
 class ad extends adminBase
 {
-    function manager($field='create_time',$ord='desc')
+    function __construct()
+    {
+        parent::__construct();
+        $ad = model('ad');
+        $adgroup = $ad->field("`group` g")->group('g')->all();
+        $this->assign('adgroup',$adgroup);
+    }
+
+    function manager($group='_',$field='create_time',$ord='desc')
     {
 
         $ad = model('ad');
-        $ad->order("$field $ord")->page();
+        if(!empty($group)&&$group!='_')
+            $ad=$ad->where("`group` ='$group'");
+        $ad->order("`$field` $ord")->page();
         $ad->create_user();
         $this->assign('list', $ad->data);
         $this->assign('pager', $ad->pager['show']);
 
         $this->assign('field',$field);
         $this->assign('order',$ord);
+        $this->assign('group',$group);
         return $this->fetch();
     }
 
@@ -50,6 +61,7 @@ class ad extends adminBase
     {
         $data = request('post.');
         $ad = model('ad');
+        $data['create_users_id']=request($this->session_id_str);
         if (!empty($data['ad_id'])) {
             $result = $ad->update($data);
         } else {

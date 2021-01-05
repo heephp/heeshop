@@ -3,7 +3,7 @@ use heephp\view;
 view::create();
 view::import('../layout/header',['title'=>$m['title'].' -- '.$cate['name'],'kw'=>$m['keyword'],'desc'=>$m['remark']]); ?>
 
-    <div class="row cl mt-30" style="padding: 10px">
+    <div class="row cl mt-20" style="padding: 10px">
         <div class="col-xs-12 col-sm-9">
             <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> <a class="maincolor" href="/">首页</a><?if(isset($cate['parent'])){?><span class="c-666 en">&gt;</span><?=$cate['parent']['name']?><?}?><span class="c-666 en">&gt;</span><a href="<?=url('_list',$cate['category_id'])?>"> <?=$cate['name']?></a></nav>
 
@@ -15,7 +15,7 @@ view::import('../layout/header',['title'=>$m['title'].' -- '.$cate['name'],'kw'=
             </div>
 
             <!--分享代码-->
-            <section class="share cl mt-30">
+            <section class="share cl mt-20">
                 <div class="bdsharebuttonbox Hui-share">
                     <span class="share-text Hui-iconfont">&#xe715;</span>
                     <a href="#" class="bds_weixin Hui-iconfont" data-cmd="weixin" title="分享到微信">&#xe694;</a>
@@ -48,7 +48,7 @@ view::import('../layout/header',['title'=>$m['title'].' -- '.$cate['name'],'kw'=
                 </script>
             </section>
             <!--分享代码-->
-            <div class="panel mt-30 panel-default">
+            <div class="panel mt-20 panel-default">
                 <div class="panel-header">最新资讯</div>
                 <div class="panel-body">
                     <ul>

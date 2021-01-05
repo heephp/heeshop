@@ -3,15 +3,17 @@ use heephp\view;
 view::create();
 view::import('../layout/header'); ?>
 
-<div class="row cl mt-30" style="padding: 10px">
+<div class="row cl mt-20">
     <div class="col-xs-12 col-sm-9">
         <div id="sd1" >
             <div class="slider">
                 <div class="bd">
                     <ul>
-                        <li><a href="#" target="_blank"><img src="__res__/imgs/gg3.gif" ></a></li>
-                        <li><a href="#" target="_blank"><img src="__res__/imgs/gg2.gif" ></a></li>
-                        <li><a href="#" target="_blank"><img src="__res__/imgs/gg1.gif" ></a></li>
+                        <?$adcenters = get_ad('adcenter',3);
+                        foreach ($adcenters as $ad){
+                        ?>
+                        <li><a href="<?=url($ad['link'])?>" target="_blank"><img src="<?=$ad['img']?>"/></a></li>
+                        <?}?>
                     </ul>
                 </div>
                 <ol class="hd cl dots">
@@ -22,7 +24,7 @@ view::import('../layout/header'); ?>
             </div>
         </div>
     </div>
-    <div class="col-xs-12 col-sm-3" style="padding-left: 30px;">
+    <div class="col-xs-12 col-sm-3">
         <div class="panel panel-default">
             <div class="panel-header">公司介绍</div>
             <div class="panel-body">
@@ -40,7 +42,7 @@ view::import('../layout/header'); ?>
     </div>
 </div>
 
-<div class="row cl mt-30">
+<div class="row cl mt-20">
     <div class="col-xs-12 col-sm-3">
         <div class="panel panel-primary">
             <div class="panel-header">成功案例</div>

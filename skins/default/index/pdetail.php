@@ -3,7 +3,7 @@ use heephp\view;
 view::create();
 view::import('../layout/header'); ?>
 
-    <div class="row cl mt-30" style="padding: 10px">
+    <div class="row cl mt-20" style="padding: 10px">
         <div class="col-xs-12 col-sm-9">
             <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> <a class="maincolor" href="/">首页</a><span class="c-666 en">&gt;</span>组件<span class="c-666 en">&gt;</span><span class="c-666">菜单</span></nav>
 
@@ -46,7 +46,7 @@ view::import('../layout/header'); ?>
             </div>
             <!--产品介绍-->
             <!--分享代码-->
-            <section class="share cl mt-30">
+            <section class="share cl mt-20">
                 <div class="bdsharebuttonbox Hui-share">
                     <span class="share-text Hui-iconfont">&#xe715;</span>
                     <a href="#" class="bds_weixin Hui-iconfont" data-cmd="weixin" title="分享到微信">&#xe694;</a>

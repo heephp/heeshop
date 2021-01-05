@@ -36,7 +36,10 @@ view::import('../layout/header');?>
                         <input type="hidden" name="ad_id" value="<?=$m['ad_id']?>">
                         <div class="row">
                             <div class="col-lg-6">
-
+                                <div class="form-group">
+                                    <label for="title">分组</label>
+                                    <input type="text" class="form-control" name="group" placeholder="分组" value="<?=$m['group']?>">
+                                </div>
                                 <div class="form-group">
                                     <label for="title">标题</label>
                                     <input type="text" class="form-control" name="title" placeholder="标题" value="<?=$m['title']?>">
@@ -48,7 +51,7 @@ view::import('../layout/header');?>
                                 <div class="form-group">
                                     <label for="link">图片</label>
                                     <div class="row">
-                                    <input type="text" class="form-control col-md-9" name="img" id="img" placeholder="排序" value="<?=$m['content']?>">
+                                    <input type="text" class="form-control col-md-9" name="img" id="img" placeholder="图片" value="<?=$m['img']?>">
                                     <input type="button" class="btn btn-primary col-md-3" value="选择图片" onclick="selectpic()">
                                     </div>
                                     <div class="row">

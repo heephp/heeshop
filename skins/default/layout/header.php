@@ -31,8 +31,9 @@
     </div>
     <div class="row cl" style="height: 80px;padding: 10px">
         <div class="col-xs-12 col-md-3" align="center"><div class="radius" style="width: 220px; height: 80px;line-height:80px;background: #fff;font-size: 32px;color: #003366;font-style: italic;">HeeCMS </div></div>
-        <div class="col-lg-9 hidden-md hidden-xs hidden-sm"><img
-                src="__res__/imgs/banner1.gif" height="80" width="900"/></div>
+        <div class="col-lg-9 hidden-md hidden-xs hidden-sm">
+            <?$adb1 = get_ad('banner');?>
+            <a href="<?=url($adb1['link'])?>" target="_blank"><img src="<?=$adb1['img']?>" height="80" width="900"/></a></div>
     </div>
 
     <nav class="nav navbar-nav nav-collapse mt-20" role="navigation" id="Hui-navbar" style="background: #006699;">

@@ -16,6 +16,11 @@ class order_detail extends model
         $this->insert_message_validata = $this->update_message_validata;
     }
 
+    public function orderinfo(){
+        $relation = new relation($this,'order','order_id','order_id','order');
+        return $relation->belong();
+    }
+
     public function product(){
         $ds = $this->data;
         if(empty($ds))

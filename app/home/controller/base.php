@@ -98,7 +98,9 @@ class base extends controller
             //更新订单状态
             $mo = model('order');
             $morder = $mo->where("order_id='" . $m['shop_order_id'] . "'")->find();
-            $morder['state'] = 1;
+            $morder['state'] = conf('order_paysucc_state');
+            $morder['stime'] = time();
+            $morder['etime'] = time()+conf('pay_succ_endtime');
             $re2 = $spay->update($m);
             if (!$re2) {
                 logger::debug("订单号$out_trade_on 支付成功，但更新订单状态失败！");

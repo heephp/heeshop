@@ -69,6 +69,18 @@ function get_article($category_id,$top,$where='1=1',$recommend=1,$order='create_
     return $mo->data;
 }
 
+function get_ad($group,$num=1)
+{
+    //读取广告
+    $ad = model("ad");
+    $ad->field("ad_id,`group`,img,ord,CONCAT('/".APP."/ad/to/',ad_id) link")->where("`group`='$group'")->order('ord asc,RAND()')->limit($num);
+    if($num==1)
+        $adlist = $ad->get();
+    else
+        $adlist = $ad->all();
+    return $adlist;
+}
+
 function get_order_state($val){
 
         switch ($val){
@@ -98,6 +110,53 @@ function get_order_state($val){
                 break;
         }
 
+}
+
+
+/**返回用户是否已经购买某个栏目、信息、页面
+ * @param $users_id 用户ID
+ * @param $type category pages article
+ * @param $tid 相关表id
+ * @param bool $ischeckendtime 是否检测其服务时长到期  实物商品无需检测
+ */
+function get_ispay($users_id,$type,$tid,$ischeckendtime=false){
+    $minfo = model($type)->get($tid);
+    if(!$minfo)
+        return false;
+
+    $price = $minfo['price'];
+    if($price<0.01)
+        return true;
+
+    //查找该用户订单
+    $mod = model('order_detail');
+    $mod ->where("create_users_id=$users_id and ptype='$type' and tid='$tid'")->all();
+    $mod ->orderinfo();
+    $ordeinfo =[];
+    foreach ($mod->data as $md){
+        if($md['order']['state']>=1){
+            $ordeinfo = $md['order'];
+            break;
+        }
+    }
+
+    if(empty($ordeinfo)){
+        return false;
+    }
+
+    $state = $ordeinfo['state'];
+    $stime = $ordeinfo['stime'];
+    $etime = $ordeinfo['etime'];
+    //检测订单是否已支付
+    //如果不检测时长
+    if(!$ischeckendtime) {
+            return true;
+    }else {
+        //如果需要检测时长
+        if ($etime > time() && $stime < time())
+            return true;
+    }
+    return false;
 }
 
 /**根据配置过滤内容

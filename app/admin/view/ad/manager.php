@@ -31,16 +31,19 @@ view::import('../layout/header');?>
             <div class="card">
                 <?import('/layout/toolsbar.php')?>
                 <div class="card-body">
+                    广告分组：<a href="<?=url('manager','_')?>">全部分组</a>
+                    <?foreach ($adgroup as $g){?>&nbsp;&nbsp;&nbsp;<a href="<?=url('manager',$g['g'])?>"><?=$g['g']?></a> <?}?>
                     <table class="table">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col"><?=mtitle('title',$field,$order,'标题')?></th>
-                            <th scope="col"><?=mtitle('link',$field,$order,'链接')?></th>
+                            <th scope="col"><?=mtitle('group',$field,$order,'分组',$group)?></th>
+                            <th scope="col"><?=mtitle('title',$field,$order,'标题',$group)?></th>
+                            <th scope="col"><?=mtitle('link',$field,$order,'链接',$group)?></th>
                             <th scope="col">图片</th>
-                            <th scope="col"><?=mtitle('hit',$field,$order,'点击')?></th>
-                            <th scope="col"><?=mtitle('create_users_id',$field,$order,'创建人')?></th>
-                            <th scope="col"><?=mtitle('create_time',$field,$order,'创建时间')?></th>
+                            <th scope="col"><?=mtitle('hit',$field,$order,'点击',$group)?></th>
+                            <th scope="col"><?=mtitle('create_users_id',$field,$order,'创建人',$group)?></th>
+                            <th scope="col"><?=mtitle('create_time',$field,$order,'创建时间',$group)?></th>
                             <th scope="col">操作</th>
                         </tr>
                         </thead>
@@ -48,6 +51,7 @@ view::import('../layout/header');?>
                         <?foreach($list as $m){?>
                             <tr>
                                 <td><?=$m['ad_id']?></td>
+                                <td><?=$m['group']?></td>
                                 <td><?=$m['title']?></td>
                                 <td><?=$m['link']?></td>
                                 <td><a href="<?=$m['img']?>" target="_blank"> <img src="<?=$m['img']?>" width="50" height="50"></a></td>

@@ -306,7 +306,7 @@ class model extends orm {
             return;
 
             foreach ($values as $k=>$v) {
-                if($k==$this->field_createtime||$k==$this->field_deletetime||$k==$this->field_updatetime) {
+                if($k==$this->field_createtime||$k==$this->field_updatetime) {
                     $values[$k]=time();
                 }elseif (method_exists($this, 'set_' .$k)){
                     $mname = 'set_'.$k;

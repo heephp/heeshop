@@ -66,6 +66,19 @@
   ],
   'searcher' => 
   [
+      'article' =>
+          [
+              0 => 'title',
+              1 => 'context',
+              2 => 'keyword',
+              'alias' => '信息',
+          ],
+      'category' =>
+          [
+              0 => 'name',
+              1 => 'remark',
+              'alias' => '栏目',
+          ],
     'users' => 
     [
       0 => 'username',
@@ -101,4 +114,4 @@
     ],
   ],
 
-];
+ ];

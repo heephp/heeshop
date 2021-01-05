@@ -1,7 +1,7 @@
 nav>ul>li>a,nav>ul>li>a:hover{color: #fefefe}
 /*幻灯*/
  .slider{position:relative;text-align:center; margin:0 auto;z-index:1}
- #sd1 .slider .bd,#sd1 .slider .bd li,#sd1 .slider .bd img{width:960px; height:272px}/*首页幻灯*/
+ #sd1 .slider .bd,#sd1 .slider .bd li,#sd1 .slider .bd img{width:945px; height:270px}/*首页幻灯*/
  #sd2 .slider .bd,#sd2 .slider .bd li,#sd2 .slider .bd img{width:300px; height:300px}/*产品轮播*/
  .slider .bd{z-index:2;overflow:hidden}
  .slider .bd li{float:left;width: 100%;overflow:hidden; background-position:center; background-repeat:no-repeat}

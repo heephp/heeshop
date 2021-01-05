@@ -53,7 +53,7 @@
 
             <div class="container-fluid">
                 <div class="collapse" id="search-nav">
-                    <form class="navbar-left navbar-form nav-search mr-md-3" method="get" action="<?=url('/index/search/')?>">
+                    <form class="navbar-left navbar-form nav-search mr-md-3" method="get" action="<?=url('index/search')?>">
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <button type="submit" class="btn btn-search pr-1">

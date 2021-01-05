@@ -55,7 +55,7 @@ class index extends base
         return $this->fetch();
     }
 
-    public function test()
+   /* public function test()
     {
         $result =
             table('users')
@@ -68,7 +68,7 @@ class index extends base
                 ->sql();
         return var_dump($result);
 
-    }
+    }*/
 
     public function api_get_setting(){
         $safecode = request('get.safecode');
@@ -106,5 +106,36 @@ class index extends base
         }
 
         return $this->fetch('/' . $name);
+    }
+
+    public function test()
+    {
+        $begin = $this->getCurrentTime();
+        //$safecode = request('get.safecode');echo $safecode;
+
+        $s1 = 'QWERTYUIOPASDFGHKJLZXCVBNMqwertyuiopasdfghjklzxcvbnm123456789;$()\'"= %';
+        $str1 = str_shuffle($s1);
+        $str2 = str_shuffle($s1);
+
+        $encode = $str1 . $str2 . strtr(file_get_contents(ROOT.'/heephp/heephp.php'), $str2, $str1);
+        $encode = base64_encode($encode);
+
+        echo $encode;
+
+        $decode = base64_decode($encode);
+        $slen = strlen($s1);
+        $dstr1 = substr($decode, 0, $slen);
+        $dstr2 = substr($decode, $slen, $slen);
+        $code = substr($decode, $slen * 2, strlen($decode) - $slen * 2);
+        echo strtr($code,$dstr1,$dstr2);
+        $end = $this->getCurrentTime();
+
+        $spend = $end - $begin;
+        echo "脚本执行时间为:".$spend."\n";
+    }
+
+    function getCurrentTime ()  {
+        list ($msec, $sec) = explode(" ", microtime());
+        return (float)$msec + (float)$sec;
     }
 }
