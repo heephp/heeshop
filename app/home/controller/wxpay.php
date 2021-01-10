@@ -4,6 +4,7 @@ use heephp\bulider\form;
 use heephp\bulider\table;
 use  heephp\controller;
 use heephp\formbulider;
+use heephp\logger;
 use heephp\route;
 
 class wxpay extends base
@@ -45,8 +46,8 @@ class wxpay extends base
                 'total_fee' => $re['money']*100,
                 //'openid' => 'oQRNGt4yLABG34Q_NXV3RFQblAaU',
                 'trade_type' => 'NATIVE',//JSAPI  NATIVE
-                'notify_url' => 'http://a.com/text.html',
-                'spbill_create_ip' => '127.0.0.1',
+                'notify_url' => conf('website_url').'/home/wxpay/notify',
+                'spbill_create_ip' => $_SERVER["REMOTE_ADDR"],
             ];
             // 生成预支付码
             $result = $wechat->createOrder($options);
@@ -104,7 +105,7 @@ class wxpay extends base
     }
 
     public function notify(){
-
+        logger::debug('微信支付来过');
         try {
 
             $config = $this->config();
@@ -113,11 +114,11 @@ class wxpay extends base
             $wechat = \WeChat\Pay::instance($config);
 
             // 4. 获取通知参数
-            $data = $wechat->getNotify();
+            $data = $wechat->getNotify();logger::debug(json($data));
             if ($data['return_code'] === 'SUCCESS' && $data['result_code'] === 'SUCCESS') {
                 // @todo 去更新下原订单的支付状态
                 $order_no = $data['out_trade_no'];
-                parent::_order_do_action($data,$order_no);
+                parent::_order_do_action($data,$order_no,'微信支付',(floatval($data['cash_fee'])/100));
                 // 返回接收成功的回复
                 ob_clean();
                 echo $wechat->getNotifySuccessReply();

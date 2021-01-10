@@ -33,15 +33,15 @@
 
     $(function () {
 
-        $('#select_template,#template').on('click',function () {
-
+        $('.select_template').on('click',function () {
+            var t = $(this);
             $('#modal_selectfile').modal('show');
 
             $('#fileTree').fileTree({
                 root: '/',
                 script: '<?=url('moban/ajax_template_dir')?>'
             }, function (file) {
-                $('#template').val(file.substr(0,file.length-4));
+                $(t).prev().val(file.substr(0,file.length-4));
                 $('#modal_selectfile').modal('hide');
             });
 

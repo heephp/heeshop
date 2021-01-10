@@ -336,4 +336,18 @@ class mysqli implements databaseInterface
         return $sql;
     }
 
+    public static function BEGINTRAN(){
+        self::$link->autocommit(false);
+    }
+
+    public static function COMMIT(){
+        if (!self::$link->errno) {
+            self::$link->commit(); //提交事务
+            return true;
+        } else {
+            self::$link->rollback(); //失败回滚
+            return false;
+        }
+    }
+
 }

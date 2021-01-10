@@ -97,17 +97,24 @@
                                 <div class="row">
                                     <div class="col-offset-1 col-md-2">
                                     <select name="isuser" class="form-control">
-                                        <option value="0">不可以发布</option>
-                                        <option value="1">可以发布</option>
+                                        <option value="0" <?=$m['isuser']=='0'?'selected':''?>>不可以发布</option>
+                                        <option value="1" <?=$m['isuser']=='1'?'selected':''?>>可以发布</option>
                                     </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-form-label" for="inlineinput">模板</label>
+                                <label class="col-form-label" for="inlineinput">列表页模板</label>
                                 <div class="row">
                                     <input class="form-control col-md-2 input-full" id="template" name="template" type="text" placeholder="" value="<?=$m['template']??'list'?>">
-                                    <input type="button" id="select_template" class=" col-md-1 btn btn-primary" value="选择模板">
+                                    <input type="button" class=" col-md-1 btn btn-primary select_template" value="选择模板">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label" for="inlineinput">详细页模板</label>
+                                <div class="row">
+                                    <input class="form-control col-md-2 input-full" id="template_detail" name="template_detail" type="text" placeholder="" value="<?=$m['template_detail']??'detail'?>">
+                                    <input type="button" class=" col-md-1 btn btn-primary select_template" value="选择模板">
                                 </div>
                             </div>
                             <div class="form-group">

@@ -39,12 +39,13 @@ $m=view::getvar('m');
 
                         <div class="row cl mt-20">
                             <label class="col-xs-12 col-md-1" class="form-label">封面</label>
-                            <div class="d-flex flex-wrap justify-content-start" id="first_pics">
+                            <div class="col-xs-12 col-md-10" id="first_pics" style="max-height: 200px;overflow-x: hidden;overflow-y: scroll;">
 
 
 
                             </div>
                         </div>
+
 
 
                         <div class="row cl mt-20">
@@ -123,11 +124,11 @@ function view_script(){
         }
     </script>
     <script type="text/html" id="first_pic">
-        <div class="col-md-2 col-sm-2">
+        <div class="col-md-3 col-sm-2">
             <label class="imagecheck mb-2">
                 <input name="first_pic" type="checkbox" value="{img}" class="imagecheck-input" onclick="if($(this).prop('checked')){set_first_pic('{img}')}">
                 <figure class="imagecheck-figure">
-                    <img src="{img}" alt="{title}" class="imagecheck-image" height="100">
+                    <img src="{img}" alt="{title}" class="imagecheck-image" style="max-height: 100px;max-width: 100px;">
                 </figure>
             </label>
         </div>

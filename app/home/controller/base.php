@@ -33,7 +33,9 @@ class base extends controller
         }
 
         if(CONTROLLER!='user'){
-            $this->cklogin();
+            if($this->cklogin()){
+                $this->userid = request($this->session_id_str);
+            }
         }
 
     }
@@ -80,33 +82,63 @@ class base extends controller
      * @param $out_trade_on
      * @param $money
      */
-    protected function _order_do_action($data,$out_trade_on,$type='微信', $money=-99999)
+    protected function _order_do_action($data,$out_trade_on,$type='微信', $money=-1,$paytime=0)
     {
+        //读取默认配置成功状态和服务时间
+        $succstate = conf('order_paysucc_state')??1;
+        $etime = conf('pay_succ_endtime')*60*60;
+        //支付成功时间和开始结束服务时间
+        $paytime = empty($paytime)?time():$paytime;
+        $stime = $paytime;
+        $etime = $stime+$etime;
+
         //流水号金额对比 取订单信息 更新状态
         $spay = model('order_pay');
         $m = $spay->where("`order_pay_id`='$out_trade_on'")->find();
+        if(!$m){
+            logger::debug('找不到流水号：'.$out_trade_on.'的记录！');
+            return;
+        }
+
+        $orderid = $m['order_id'];
         //支付金额对比
-        if ($money == $m['money']||$money==-99999) {
-            $m['sate'] = 1;
+        if ($money == $m['money']/*||$money==-1*/) {
+            $m['state'] = $succstate;
             $m['paytype']=$type;
             $m['money']=$money;
             $m['restr']=json($data);
             $result = $spay->update($m);
             if (!$result) {
-                logger::debug("订单号$out_trade_on 支付成功，但更新流水号状态失败！");
+                logger::debug("订单号$orderid 支付成功 流水号 $out_trade_on 状态更新失败！");
             }
             //更新订单状态
+
             $mo = model('order');
-            $morder = $mo->where("order_id='" . $m['shop_order_id'] . "'")->find();
-            $morder['state'] = conf('order_paysucc_state');
-            $morder['stime'] = time();
-            $morder['etime'] = time()+conf('pay_succ_endtime');
-            $re2 = $spay->update($m);
+            $morder = $mo->where("order_id='$orderid'")->find();
+            $morder['state'] =$succstate;
+            $morder['paytype']=$type;
+            $morder['paysum']=$money;
+            $morder['paytime']=$paytime;
+            //$morder['stime'] = time();
+            //$morder['etime'] = time()+conf('pay_succ_endtime');
+            $re2 = $mo->update($morder);
             if (!$re2) {
-                logger::debug("订单号$out_trade_on 支付成功，但更新订单状态失败！");
+                logger::debug("订单号$orderid 支付成功，但更新订单状态失败！");
             }
+
+            //更新订单详细
+            $md = model('order_detail');
+            $mdda = $md->where("order_id='$orderid'")->find();
+            $mdda['state']=$succstate;
+            $mdda['stime']=$stime;
+            $mdda['etime']=$etime;
+            $st = $md->where("order_id='$orderid'")->update($mdda);
+            if(!$st){
+                logger::debug("订单号$orderid 支付成功，但更订单详细更新失败！");
+            }
+
         } else {
-            logger::debug("订单号$out_trade_on 支付成功，但金额不匹配：实际支付：$money 应支付：" . $m['money']);
+            logger::debug("订单号$orderid 支付成功，但金额不匹配：实际支付：$money 应支付：" . $m['money']);
         }
     }
 

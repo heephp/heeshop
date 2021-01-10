@@ -30,7 +30,7 @@ function view_content(){
         <? }?>
         </tbody>
     </table>
-    <?=$pager?>
+    <?=view::getvar('pager')?>
 <?php }
 function view_script(){?>
     <script src="__res__js/HeecheckAll.js"></script>

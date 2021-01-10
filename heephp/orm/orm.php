@@ -487,6 +487,11 @@ class orm
         $having = empty($this->having)||empty($this->groupby)?'':'having '.$this->having;
         $this->sql="select $fileds from $table $this->alias $this->join $where $groupby $having $order $limit";
         $this->fields ='';
+        $this->join ='';
+        $this->groupby='';
+        $this->having='';
+        $this->order ='';
+        $this->limit ='';
 
         return $this->sql;
     }

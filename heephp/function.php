@@ -856,6 +856,12 @@ function check_crsf(){
     return $exits;
 }
 
+
+function exhtml($html){
+    return stripslashes(html_entity_decode($html));
+}
+
+
 spl_autoload_register(function ($class_name) {
 
     //\heephp\logger::warn('自动加载类：' . $class_name);

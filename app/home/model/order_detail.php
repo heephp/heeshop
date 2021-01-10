@@ -7,6 +7,8 @@ class order_detail extends model
 {
     protected $autotimespan = true;
     protected $key = 'order_detail_id';
+    protected $update_message_validata = "订单类型|必填;关联表ID|必填;";
+    protected $update_validata = "ptype|must;tid|must;";
 
     public function __construct()
     {

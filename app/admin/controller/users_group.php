@@ -80,7 +80,7 @@ class users_group extends adminBase{
         $this->assign('uglist',$ug->data);
 
         $res = model('sys_resources');
-        $res->whereEmpty("parent_id")->page();
+        $res->whereEmpty("parent_id")->select();
         $res->child();
         $this->assign('resplist',$res->data);
 

@@ -89,8 +89,11 @@ class model extends orm {
             $where = $this->where;
         }
 
-        if ($this->autotimespan)
+        if ($this->autotimespan) {
             $data[$this->field_updatetime] = time();
+            unset($data[$this->field_createtime]);
+            unset($data[$this->field_deletetime]);
+        }
 
         $this->set_autofield($data);
         return $this->db->update($this->table, $data, $where);
@@ -305,14 +308,12 @@ class model extends orm {
         if(!is_array($values)||empty($values))
             return;
 
-            foreach ($values as $k=>$v) {
-                if($k==$this->field_createtime||$k==$this->field_updatetime) {
-                    $values[$k]=time();
-                }elseif (method_exists($this, 'set_' .$k)){
-                    $mname = 'set_'.$k;
-                    $values[$k]=$this->$mname($values[$k]);
-                }
+        foreach ($values as $k=>$v) {
+            if (method_exists($this, 'set_' .$k)){
+                $mname = 'set_'.$k;
+                $values[$k]=$this->$mname($values[$k]);
             }
+        }
 
     }
 

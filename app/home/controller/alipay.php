@@ -29,15 +29,13 @@ class alipay extends base
             // 支付宝根证书（新版资金类接口转 alipay_root_cert_sn）
             'root_cert' => '',
             // 支付成功通知地址
-            'notify_url' => 'http://'.$_SERVER["HTTP_HOST"].'/home/alipay/notify',
+            'notify_url' => conf('website_url').'/home/alipay/notify',
             // 网页支付回跳地址
-            'return_url' => 'http://'.$_SERVER["HTTP_HOST"].'/home/alipay/msg',
+            'return_url' => conf('website_url').'/home/alipay/paysuccess',
         ];
     }
 
     public function pay($orderid){
-
-
 
         $config=$this->config();
 
@@ -60,12 +58,8 @@ class alipay extends base
         }
     }
 
-    public function msg($msg){
-
-    }
-
     public function notify(){
-
+        logger::debug('支付宝来过');
         try {
             $config=$this->config();
             $pay = \AliPay\App::instance($config);
@@ -75,19 +69,55 @@ class alipay extends base
                 $out_trade_on = $data['out_trade_no'];
                 $money=$data['total_amount'];
                 // @todo 更新订单状态，支付完成
-                logger::info("收到来自支付宝的异步通知\r\n");
-                logger::info( '订单号：' . $data['out_trade_no'] );
-                logger::info('订单金额：' . $data['total_amount'] );
+                logger::debug("收到来自支付宝的异步通知\r\n");
+                logger::debug( '订单号：' . $data['out_trade_no'] );
+                logger::debug('订单金额：' . $data['total_amount'] );
 
                 parent::_order_do_action($data,$out_trade_on,'支付宝',$money);
 
             } else {
-                logger::info( "收到异步通知\r\n");
+
+                logger::debug( "收到异步通知\r\n");
             }
+            return 'success';
+        } catch (\Exception $e) {
+            // 异常处理
+            logger::debug('支付宝'.$e->getMessage());
+
+            echo $e->getMessage();
+        }
+    }
+
+    public function paysuccess()
+    {
+
+        try {
+            $config = $this->config();
+            $pay = \AliPay\App::instance($config);
+
+            $data = $pay->query(request('get.out_trade_no'));
+            if (in_array($data['trade_status'], ['TRADE_SUCCESS', 'TRADE_FINISHED'])) {
+
+                $out_trade_on = $data['out_trade_no'];
+                $money = $data['total_amount'];
+                $pay_time =  strtotime($data['send_pay_date']);
+                // @todo 更新订单状态，支付完成
+                //var_dump($pay_time);
+//var_dump($data);
+                parent::_order_do_action($data, $out_trade_on, '支付宝', $money,$pay_time);
+
+                echo '<h2><font color="red"> 支付宝支付成功！<br></font>';
+                echo '订单号：' . $data['out_trade_no'].'<br>';
+                echo '订单金额：' . $data['total_amount'].'</h2><br>';
+                echo '<a href="'.url('user/orders').'">跳转到用户中心</a>';
+
+            }
+
         } catch (\Exception $e) {
             // 异常处理
             echo $e->getMessage();
         }
+
     }
 
 }

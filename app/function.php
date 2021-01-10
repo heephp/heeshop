@@ -117,46 +117,29 @@ function get_order_state($val){
  * @param $users_id 用户ID
  * @param $type category pages article
  * @param $tid 相关表id
- * @param bool $ischeckendtime 是否检测其服务时长到期  实物商品无需检测
+ * @param bool $isservice 服务商品默认需要检测服务时长 实物商品无需检测
  */
-function get_ispay($users_id,$type,$tid,$ischeckendtime=false){
+function get_ispay($users_id,$type,$tid,$isservice=true){
     $minfo = model($type)->get($tid);
     if(!$minfo)
-        return false;
+        throw new sysExcption('找不到产品信息！');
 
     $price = $minfo['price'];
     if($price<0.01)
         return true;
 
-    //查找该用户订单
-    $mod = model('order_detail');
-    $mod ->where("create_users_id=$users_id and ptype='$type' and tid='$tid'")->all();
-    $mod ->orderinfo();
-    $ordeinfo =[];
-    foreach ($mod->data as $md){
-        if($md['order']['state']>=1){
-            $ordeinfo = $md['order'];
-            break;
-        }
+    //如果是服务商品，则检测是否在服务时间范围内
+    if($isservice){
+        $time = time();
+        $mod = model('order_detail');
+        $inslist = $mod->where("create_users_id=$users_id and ptype='$type' and tid='$tid' and state>0 and stime<$time and $time<etime")->find();
+        return !empty($inslist);
+    }else{
+        $mod = model('order_detail');
+        $mod->where("create_users_id=$users_id and ptype='$type' and tid='$tid' and state>0")->find();
+        $mod->orderinfo();
+        return $mod['order']['state']>0;
     }
-
-    if(empty($ordeinfo)){
-        return false;
-    }
-
-    $state = $ordeinfo['state'];
-    $stime = $ordeinfo['stime'];
-    $etime = $ordeinfo['etime'];
-    //检测订单是否已支付
-    //如果不检测时长
-    if(!$ischeckendtime) {
-            return true;
-    }else {
-        //如果需要检测时长
-        if ($etime > time() && $stime < time())
-            return true;
-    }
-    return false;
 }
 
 /**根据配置过滤内容
@@ -165,7 +148,7 @@ function get_ispay($users_id,$type,$tid,$ischeckendtime=false){
  */
 function replacetxt($context){
     $fts = explode('|',conf('filtertxt'));
-     usort($fts,function ($a,$b){
+    usort($fts,function ($a,$b){
         return strlen($a)>strlen($b)?-1:1;
     });
     $rstr = conf('replacetxt');
@@ -173,4 +156,65 @@ function replacetxt($context){
         $context = str_replace($f,$rstr,$context);
     }
     return $context;
+}
+
+/** 创建订单
+ * @param $type category article pages  三种类型
+ * @param $tid 对应的表的Id
+ */
+function create_order($users_id,$type,$tid,$discount=1,$pcount=1,$remark=''){
+    $so = model('order');
+
+    $date = new \DateTime();
+    $orderid = ($date->format('ymdHisu') . randChar(6, 'number'));
+    $data['order_id'] = $orderid;
+    //$data['order_type']=$type;
+    //$data['tid']=$tid;
+
+    //获取订单价格
+    $mt = model($type)->get($tid);
+    if(!$mt){
+        throw new sysExcption('找不到该商品信息！');
+    }
+    $price=$mt['price']*$discount;
+    $data['sumprice']=$price;
+    $data['sourceprice']=$mt['price'];
+    $data['discount']=$discount;
+    $data['pcount']=$pcount;
+
+
+    //获取购买人地址等
+    $mu = model('users')->get($users_id);
+    if(!$mu){
+        throw new sysExcption('找不到购买人信息！');
+    }
+
+    $data['create_users_id']=$users_id;
+    $data['address']=$mu['city'].$mu['address'];
+    $data['mobile']=$mu['address'];
+    $data['contact']=$mu['realname'];
+
+    $data['state']=0;
+    $data['remark']=$remark;
+
+    $mdd=model('order_detail');
+    //添加订单详细
+    $dd['ptype']=$type;
+    $dd['tid']=$tid;
+    $dd['order_id']=$orderid;
+    $dd['num']=1;
+    $dd['price']=$price;
+    $dd['sumprice']=$price;
+    $dd['create_users_id']=$users_id;
+
+    \heephp\database\mysqli::BEGINTRAN();
+    $eff = $so->insert($data);
+    $eff2 = $mdd->insert($dd);
+    $istrue = \heephp\database\mysqli::COMMIT();
+
+    if ($istrue) {
+        return $orderid;
+    } else {
+        return false;
+    }
 }

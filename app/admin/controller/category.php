@@ -21,7 +21,7 @@ class category extends adminBase
 
     function add(){
         $cate = model('category');
-        $cate->whereEmpty('parent_id')->page;
+        $cate->whereEmpty('parent_id')->select();
         $this->assign('plist',$cate->data);
 
         //$sysm =new sysmodel();
