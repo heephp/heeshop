@@ -130,22 +130,22 @@ class grabs extends adminBase
             $url = $item['url'];
             $html = trim(getcurl($url)['body']);if(empty($html)){ $this->log($id,'采集'.$url.'时，html返回空后跳过该页'); continue;}
             //查找标题
-            $title = $this->getNeedBetween($html,$mg['titlestart'],$mg['titleend']);//var_dump($title);exit;
+            $title = trim($this->getNeedBetween($html,$mg['titlestart'],$mg['titleend']));//var_dump($title);exit;
             if(empty($title)){
                 $this->log($id,'采集'.$url.'时，title返回空后跳过该页');
                 continue;
             }
             //查找作者
-            $author = $this->getNeedBetween($html,$mg['authorstart'],$mg['authorend']);
+            $author = trim($this->getNeedBetween($html,$mg['authorstart'],$mg['authorend']));
             //查找时间
-            $tim =  $this->getNeedBetween($html,$mg['timestart'],$mg['timeend']);
+            $tim =  trim($this->getNeedBetween($html,$mg['timestart'],$mg['timeend']));
             if(empty($tim))
                 $tim = time();
             else
                 $tim = strtotime($tim);
 
             //查找内容
-            $cont = $this->getNeedBetween($html,$mg['contentstart'],$mg['contentend']);//var_dump(mb_detect_encoding($cont,['gbk','gb2312','utf-8']));//var_dump($title);var_dump($cont===0);//exit;
+            $cont = trim($this->getNeedBetween($html,$mg['contentstart'],$mg['contentend']));//var_dump(mb_detect_encoding($cont,['gbk','gb2312','utf-8']));//var_dump($title);var_dump($cont===0);//exit;
             if(empty($cont)){
                 $msg.='url'.$url.' '.$title.'内容为空';
                 $this->log($id,$msg);
@@ -173,6 +173,7 @@ class grabs extends adminBase
             }
 
             try {
+
                 $lastid = $mgd->insert(['grabs_id' => $id, 'url' => $url, 'title' => addslashes($title), 'author' => addslashes($author), 'time' => addslashes($tim), 'content' => addslashes($cont), 'firstpic' => $firstpic, 'create_time' => time(), 'users_id' => $userid]);
                 if ($istest < 1) {
                     //如果是测试采集 则不需要入库
@@ -180,15 +181,16 @@ class grabs extends adminBase
                     if (!$lastid2) {
                         $this->log($id, '插入到采集时栏目已存在相同标题或未保存！' . $title . $url);
                     }
+                    if(!$lastid){
+                        $this->log($id,'插入详细采集记录时出错！'.$title.$url);
+                    }
                 }
-                $grabslist->update(['grabs_list_id'=>$item['grabs_list_id'],'isread'=>1]);
+                $grabslist->where('grabs_list_id='.$item['grabs_list_id'])->setField('isread',1);
 
-            }catch (sysExcption $ex){
-                $this->log($id,'插入详细采集记录时出错:'.$ex->getMessage().'标题：'.$title.$url);
-            } finally {
-                if(!$lastid){
-                    $this->log($id,'插入详细采集记录时出错！'.$title.$url);
-                }
+            }catch (sysExcption $ex) {
+                $msg.=$title.'写入数据库出错！<br>';
+                $grabslist->where('grabs_list_id='.$item['grabs_list_id'])->setField('isread',1);
+                $this->log($id, '插入详细采集记录时出错,标题：' . $title . $url);
             }
 
 
