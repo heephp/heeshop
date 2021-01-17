@@ -18,7 +18,8 @@ class grabs extends adminBase
 
     function add(){
         $cate = model('category');
-        $cate->select();
+        $cate->whereEmpty('parent_id')->select();
+        $cate->child();
         $this->assign('plist',$cate->data);
 
         return $this->fetch('edit');
@@ -26,7 +27,8 @@ class grabs extends adminBase
 
     function edit($id){
         $cate = model('category');
-        $cate->select();
+        $cate->whereEmpty('parent_id')->select();
+        $cate->child();
         $this->assign('plist',$cate->data);
 
         $grabs = model('grabs');

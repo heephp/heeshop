@@ -57,7 +57,11 @@
                                                 <select class="form-control select2" name="category_id">
                                                     <option value="0">无</option>
                                                     <?foreach ($plist as $p){?>
-                                                        <option value="<?=$p['category_id']?>" <?=$p['category_id']==$m['category_id']?'selected':''?>><?=$p['name']?></option>
+                                                        <optgroup label="<?=$p['name']?>">
+                                                            <?foreach ($p['child'] as $c){?>
+                                                                <option value="<?=$c['category_id']?>" <?=($c['category_id']==$m['category_id']||$c['category_id']==$categoryid)?'selected':''?>><?=$c['name']?></option>
+                                                            <?}?>
+                                                        </optgroup>
                                                     <?}?>
                                                 </select>
                                             </div>

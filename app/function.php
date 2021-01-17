@@ -52,32 +52,22 @@ function mtitle($field,$curfield,$order,$title,$categoryid=''){
 
 function getcurl($url,$host=''){
     $oCurl = curl_init();
-    // 设置请求头, 有时候需要,有时候不用,看请求网址是否有对应的要求
     $header[] = empty($header)?"Content-type: application/x-www-form-urlencoded":$header;
     $user_agent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.146 Safari/537.36";
     curl_setopt($oCurl, CURLOPT_URL, $url);
     curl_setopt($oCurl, CURLOPT_HTTPHEADER,$header);
-    // 返回 response_header, 该选项非常重要,如果不为 true, 只会获得响应的正文s
     curl_setopt($oCurl, CURLOPT_HEADER, true);
-    // 是否不需要响应的正文,为了节省带宽及时间,在只需要响应头的情况下可以不要正文
     curl_setopt($oCurl, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($oCurl, CURLOPT_SSL_VERIFYHOST, false);
     curl_setopt($oCurl, CURLOPT_NOBODY, false);
-    // 使用上面定义的 ua
     curl_setopt($oCurl, CURLOPT_USERAGENT,$user_agent);
     curl_setopt($oCurl, CURLOPT_RETURNTRANSFER, 1 );
-
-    // 不用 POST 方式请求, 意思就是通过 GET 请求
     curl_setopt($oCurl, CURLOPT_POST, false);
-
     $sContent = curl_exec($oCurl);
-
     $headerSize = curl_getinfo($oCurl, CURLINFO_HEADER_SIZE);
-    // 根据头大小去获取头信息内容
     $header = substr($sContent, 0, $headerSize);
     $hs = explode("\n",$header);
     $headall=[];
-    //var_dump($hs);
     foreach ($hs as $h){
         if(strrpos($h,':')){
             $headall[]= $h;
