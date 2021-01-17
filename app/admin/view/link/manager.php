@@ -68,7 +68,7 @@
                                     <tr>
                                         <td><?=$c['link_id']?></td>
                                         <td><?=$c['icon']?></td>
-                                        <td>-- <?=sstr($c['title'],10)?></td>
+                                        <td> ———— <?=sstr($c['title'],10)?></td>
                                         <td><?=sstr($c['url'],10)?></td>
                                         <td><?=sstr($c['remark'],10)?></td>
                                         <td><?=$c['ord']?></td>

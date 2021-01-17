@@ -25,6 +25,7 @@ class link_group extends model
     {
         $re = new relation($this, 'link', 'link_group_id', 'link_group_id', 'links');
         $re->set_rmodel_methods('child');
+        $re->set_rmodel_order('ord asc');
         return $re->hasmore(false);
     }
 

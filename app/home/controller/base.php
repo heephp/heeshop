@@ -28,7 +28,11 @@ class base extends controller
         $lg->select();
         $lg->links();
 
+
         foreach ($lg->data as $l){
+            $l['links'] = array_filter($l['links'],function($item){
+                return empty($item['parent_id']);
+            });
             $this->assign($l['tag'],$l['links']);
         }
 

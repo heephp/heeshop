@@ -23,7 +23,7 @@ class link extends adminBase
         $this->assign('group',$lg);
 
         $link = model('link');
-        $link->where("link_group_id=$link_group_id and (parent_id<1 or parent_id is NULL or parent_id='')")->page();
+        $link->where("link_group_id=$link_group_id and (parent_id<1 or parent_id is NULL or parent_id='')")->order('ord asc')->page();
         $link->create_user();
         $link->child();
         $this->assign('list', $link->data);
@@ -34,7 +34,7 @@ class link extends adminBase
     function add($parent_id=0,$link_group_id=0)
     {
         $link = model('link');
-        $link->where('link_group_id='.$link_group_id.' and (parent_id<1 or parent_id IS NULL or parent_id=\'\')')->select();
+        $link->where('link_group_id='.$link_group_id.' and (parent_id<1 or parent_id IS NULL or parent_id=\'\')')->order('ord asc')->select();
         $this->assign('plist',$link->data);
 
         $lp = model('link_group');
@@ -54,7 +54,7 @@ class link extends adminBase
         $link->get($id);
         $this->assign('m', $link->data);
 
-        $link->where('link_group_id='.$link->data['link_group_id'].' and (parent_id<1 or parent_id IS NULL or parent_id=\'\')')->select();
+        $link->where('link_group_id='.$link->data['link_group_id'].' and (parent_id<1 or parent_id IS NULL or parent_id=\'\')')->order('ord asc')->select();
         $this->assign('plist',$link->data);
 
         $lp = model('link_group');
