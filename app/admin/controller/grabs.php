@@ -58,6 +58,8 @@ class grabs extends adminBase
         if($page==0)
             $page = $m['startpage'];
 
+        $msg = '当前页：'.$page.'<br>';
+
         $url = str_replace('[p]',$page,$m['urls']);//exit();
 
         //获取html
