@@ -1,4 +1,4 @@
-# heecms
+# heeShop
 
 #### 介绍
 使用heephp框架开发，功能丰富、模板多样的CMS
@@ -36,4 +36,4 @@ php7.3+ mvc mysql 数据缓存可使用 文件、redis、memcache
 1.  [heephp网站](http://www.heephp.com)
 2.  [文件教程](http://doc.heephp.com)
 3.  [常见问题](http://www.heephp.com)
-4.  [HeeCMS](http://www.heecms.cn)
+4.  [HeeShop](http://www.heeshop.cn)
